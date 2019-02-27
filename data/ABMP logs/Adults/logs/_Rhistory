@@ -1,0 +1,512 @@
+nextRepIdx <- stimidx[stimidx>t][1] # next instance of the stimuli in current trial
+if (is.na(nextRepIdx)){
+nextRepIdx = t
+}
+if (isTRUE(grep("I",dblock$`C/I`[t]) == 1)  & dblock$fb[t] == 1 & dblock$resp[t]!= 0 & nextRepIdx != t & dblock$resp[t] == dblock$resp[nextRepIdx]) {
+count_corrStay <- count_corrStay + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0 &  nextRepIdx != t & dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_corrShift <- count_corrShift + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]== dblock$resp[nextRepIdx]) {
+count_incorrStay <- count_incorrStay + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 1 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_incorrShift <- count_incorrShift + 1
+}
+}
+prob_corrStay <- cbind(prob_corrStay,(count_corrStay/100))
+prob_corrShift <- cbind(prob_corrShift,(count_corrShift/100))
+prob_incorrStay <- cbind(prob_incorrStay,(count_incorrStay/100))
+prob_incorrShift <- cbind(prob_incorrShift,(count_incorrShift/100))
+rownames(prob_corrStay) <- substr(filename,1,4)
+rownames(prob_corrShift) <- substr(filename,1,4)
+rownames(prob_incorrStay) <- substr(filename,1,4)
+rownames(prob_incorrShift) <- substr(filename,1,4)
+}
+if (sblocks == 3){
+prob_corrStay <- cbind(prob_corrStay,NA)
+prob_corrShift <- cbind(prob_corrShift,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA)
+} else if (sblocks== 2){
+prob_corrStay <- cbind(prob_corrStay,NA,NA)
+prob_corrShift <- cbind(prob_corrShift,NA,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA,NA)
+}
+group_corrStay <- rbind(group_corrStay,prob_corrStay)
+group_corrShift <- rbind(group_corrShift,prob_corrShift)
+group_incorrStay <- rbind(group_incorrStay,prob_incorrStay)
+group_incorrShift <- rbind(group_incorrShift,prob_incorrShift)
+}
+colnames(group_corrStay) <- c("I_CorrStay_B1","I_CorrStay_B2","I_CorrStay_B3","I_CorrStay_B4")
+colnames(group_corrShift) <- c("I_CorrShift_B1","I_CorrShift_B2","I_CorrShift_B3","I_CorrShift_B4")
+colnames(group_incorrStay) <- c("I_IncorrStay_B1","I_IncorrStay_B2","I_IncorrStay_B3","I_IncorrStay_B4")
+colnames(group_incorrShift) <- c("I_IncorrShift_B1","I_IncorrShift_B2","I_IncorrShift_B3","I_IncorrShift_B4")
+setwd(diroutput)
+write.csv(as.data.frame(cbind(group_corrStay,group_corrShift,group_incorrStay,group_incorrShift)),file = paste("Inconsistent_",task,"_StayShift.csv",sep=''))
+# write.csv(as.data.frame(group_corrStay),file = paste("Inconsistent_",task,"_corrStay.csv",sep=''))
+# write.csv(as.data.frame(group_corrShift),file = paste("Inconsistent_",task,"_corrShift.csv",sep=''))
+# write.csv(as.data.frame(group_incorrStay),file = paste("Inconsistent_",task,"_incorrStay.csv",sep=''))
+# write.csv(as.data.frame(group_incorrShift),file = paste("Inconsistent_",task,"_incorrShift.csv",sep=''))
+setwd(dirinput)
+## =======================================================================================================
+## TASK PERFORMANCE KRAAK De COde
+## ======================================================================================================
+rm(list=ls(all=TRUE))
+dirinput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults/logs"
+diroutput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults"
+setwd(dirinput)
+## Define output parameters
+task <- "BIRD"
+ntrialsC <-100 # number of consistent trials per block
+ntrialsI <-100 # number of iconsistent trials per block
+stims <- matrix(c(1,1,2,2,1,2,1,2),nrow = 4,ncol=2) # different stimuli
+header <- c("block","trial","Vstim","Astim","match","C/I","resp","result","RT","fb","V-file","A-file")
+#list files
+files <- dir(pattern=paste(task,".txt",sep='')) # search for all files of interest
+setwd(dirinput)
+group_corrStay<-c()
+group_corrShift<-c()
+group_incorrStay<-c()
+group_incorrShift<-c()
+for (f in c(1:7,9:length(files))){
+filename <- files[f]
+d <- read.delim(filename,header = TRUE, sep="\t")
+#d <- read.table(filename,header = TRUE, sep="\t", fill = FALSE,fileEncoding="UTF-8") # header is channels list (columns).
+colnames(d) <- header #This solves the unicode symbol reading shit
+#FIND BLOCKS AVAILABLE
+sblocks <- as.numeric(max(levels(d$block)[which(levels(d$block)<= 4 & levels(d$block)>= 1 )]))
+nblock <- sblocks
+prob_corrStay <- c()
+prob_corrShift <- c()
+prob_incorrStay <- c()
+prob_incorrShift <- c()
+for (b in 1:nblock){
+dblock <- d[d$block==b,] # only block b data
+#add column with stimuli pair identifier
+dblock$STIM <- as.numeric(paste(dblock$Vstim,dblock$Astim,sep=''))
+count_corrStay <- 0
+count_corrShift <- 0
+count_incorrStay <- 0
+count_incorrShift <- 0
+for (t in 1:(dim(dblock)[1]-1)) { #loop thru trials
+stimidx <- which(dblock$STIM==dblock$STIM[t])
+nextRepIdx <- stimidx[stimidx>t][1] # next instance of the stimuli in current trial
+if (is.na(nextRepIdx)){
+nextRepIdx = t
+}
+if (isTRUE(grep("I",dblock$`C/I`[t]) == 1)  & dblock$fb[t] == 1 & dblock$resp[t]!= 0 & nextRepIdx != t & dblock$resp[t] == dblock$resp[nextRepIdx]) {
+count_corrStay <- count_corrStay + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0 &  nextRepIdx != t & dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_corrShift <- count_corrShift + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]== dblock$resp[nextRepIdx]) {
+count_incorrStay <- count_incorrStay + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 1 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_incorrShift <- count_incorrShift + 1
+}
+}
+prob_corrStay <- cbind(prob_corrStay,(count_corrStay/100))
+prob_corrShift <- cbind(prob_corrShift,(count_corrShift/100))
+prob_incorrStay <- cbind(prob_incorrStay,(count_incorrStay/100))
+prob_incorrShift <- cbind(prob_incorrShift,(count_incorrShift/100))
+rownames(prob_corrStay) <- substr(filename,1,4)
+rownames(prob_corrShift) <- substr(filename,1,4)
+rownames(prob_incorrStay) <- substr(filename,1,4)
+rownames(prob_incorrShift) <- substr(filename,1,4)
+}
+if (sblocks == 3){
+prob_corrStay <- cbind(prob_corrStay,NA)
+prob_corrShift <- cbind(prob_corrShift,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA)
+} else if (sblocks== 2){
+prob_corrStay <- cbind(prob_corrStay,NA,NA)
+prob_corrShift <- cbind(prob_corrShift,NA,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA,NA)
+}
+group_corrStay <- rbind(group_corrStay,prob_corrStay)
+group_corrShift <- rbind(group_corrShift,prob_corrShift)
+group_incorrStay <- rbind(group_incorrStay,prob_incorrStay)
+group_incorrShift <- rbind(group_incorrShift,prob_incorrShift)
+}
+colnames(group_corrStay) <- c("I_CorrStay_B1","I_CorrStay_B2","I_CorrStay_B3","I_CorrStay_B4")
+colnames(group_corrShift) <- c("I_CorrShift_B1","I_CorrShift_B2","I_CorrShift_B3","I_CorrShift_B4")
+colnames(group_incorrStay) <- c("I_IncorrStay_B1","I_IncorrStay_B2","I_IncorrStay_B3","I_IncorrStay_B4")
+colnames(group_incorrShift) <- c("I_IncorrShift_B1","I_IncorrShift_B2","I_IncorrShift_B3","I_IncorrShift_B4")
+setwd(diroutput)
+write.csv(as.data.frame(cbind(group_corrStay,group_corrShift,group_incorrStay,group_incorrShift)),file = paste("Inconsistent_",task,"_StayShift.csv",sep=''))
+# write.csv(as.data.frame(group_corrStay),file = paste("Inconsistent_",task,"_corrStay.csv",sep=''))
+# write.csv(as.data.frame(group_corrShift),file = paste("Inconsistent_",task,"_corrShift.csv",sep=''))
+# write.csv(as.data.frame(group_incorrStay),file = paste("Inconsistent_",task,"_incorrStay.csv",sep=''))
+# write.csv(as.data.frame(group_incorrShift),file = paste("Inconsistent_",task,"_incorrShift.csv",sep=''))
+setwd(dirinput)
+task
+c(paste(task,"_I_CorrStay_B1",sep=''),paste(task,"_I_CorrStay_B2",sep=''),paste(task,"_I_CorrStay_B3",sep=''),paste(task,"_I_CorrStay_B4",sep=''))
+## =======================================================================================================
+## TASK PERFORMANCE KRAAK De COde
+## ======================================================================================================
+rm(list=ls(all=TRUE))
+dirinput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults/logs"
+diroutput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults"
+setwd(dirinput)
+## Define output parameters
+task <- "LSB"
+ntrialsC <-100 # number of consistent trials per block
+ntrialsI <-100 # number of iconsistent trials per block
+stims <- matrix(c(1,1,2,2,1,2,1,2),nrow = 4,ncol=2) # different stimuli
+header <- c("block","trial","Vstim","Astim","match","C/I","resp","result","RT","fb","V-file","A-file")
+#list files
+files <- dir(pattern=paste(task,".txt",sep='')) # search for all files of interest
+setwd(dirinput)
+group_corrStay<-c()
+group_corrShift<-c()
+group_incorrStay<-c()
+group_incorrShift<-c()
+for (f in c(1:7,9:length(files))){
+filename <- files[f]
+d <- read.delim(filename,header = TRUE, sep="\t")
+#d <- read.table(filename,header = TRUE, sep="\t", fill = FALSE,fileEncoding="UTF-8") # header is channels list (columns).
+colnames(d) <- header #This solves the unicode symbol reading shit
+#FIND BLOCKS AVAILABLE
+sblocks <- as.numeric(max(levels(d$block)[which(levels(d$block)<= 4 & levels(d$block)>= 1 )]))
+nblock <- sblocks
+prob_corrStay <- c()
+prob_corrShift <- c()
+prob_incorrStay <- c()
+prob_incorrShift <- c()
+for (b in 1:nblock){
+dblock <- d[d$block==b,] # only block b data
+#add column with stimuli pair identifier
+dblock$STIM <- as.numeric(paste(dblock$Vstim,dblock$Astim,sep=''))
+count_corrStay <- 0
+count_corrShift <- 0
+count_incorrStay <- 0
+count_incorrShift <- 0
+for (t in 1:(dim(dblock)[1]-1)) { #loop thru trials
+stimidx <- which(dblock$STIM==dblock$STIM[t])
+nextRepIdx <- stimidx[stimidx>t][1] # next instance of the stimuli in current trial
+if (is.na(nextRepIdx)){
+nextRepIdx = t
+}
+if (isTRUE(grep("C",dblock$`C/I`[t]) == 1)  & dblock$fb[t] == 1 & dblock$resp[t]!= 0 & nextRepIdx != t & dblock$resp[t] == dblock$resp[nextRepIdx]) {
+count_corrStay <- count_corrStay + 1
+} else if (isTRUE(grep("C",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0 &  nextRepIdx != t & dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_corrShift <- count_corrShift + 1
+} else if (isTRUE(grep("C",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]== dblock$resp[nextRepIdx]) {
+count_incorrStay <- count_incorrStay + 1
+} else if (isTRUE(grep("C",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 1 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_incorrShift <- count_incorrShift + 1
+}
+}
+prob_corrStay <- cbind(prob_corrStay,(count_corrStay/100))
+prob_corrShift <- cbind(prob_corrShift,(count_corrShift/100))
+prob_incorrStay <- cbind(prob_incorrStay,(count_incorrStay/100))
+prob_incorrShift <- cbind(prob_incorrShift,(count_incorrShift/100))
+rownames(prob_corrStay) <- substr(filename,1,4)
+rownames(prob_corrShift) <- substr(filename,1,4)
+rownames(prob_incorrStay) <- substr(filename,1,4)
+rownames(prob_incorrShift) <- substr(filename,1,4)
+}
+if (sblocks == 3){
+prob_corrStay <- cbind(prob_corrStay,NA)
+prob_corrShift <- cbind(prob_corrShift,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA)
+} else if (sblocks== 2){
+prob_corrStay <- cbind(prob_corrStay,NA,NA)
+prob_corrShift <- cbind(prob_corrShift,NA,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA,NA)
+}
+group_corrStay <- rbind(group_corrStay,prob_corrStay)
+group_corrShift <- rbind(group_corrShift,prob_corrShift)
+group_incorrStay <- rbind(group_incorrStay,prob_incorrStay)
+group_incorrShift <- rbind(group_incorrShift,prob_incorrShift)
+}
+colnames(group_corrStay) <- c(paste(task,"_C_corrStay_B1",sep=''),paste(task,"_C_corrStay_B2",sep=''),paste(task,"_C_corrStay_B3",sep=''),paste(task,"_C_corrStay_B4",sep=''))
+colnames(group_corrShift) <- c(paste(task,"_C_corrShift_B1",sep=''),paste(task,"_C_corrShift_B2",sep=''),paste(task,"_C_corrShift_B3",sep=''),paste(task,"_C_corrShift_B4",sep=''))
+colnames(group_incorrStay) <- c(paste(task,"_C_incorrStay_B1",sep=''),paste(task,"_C_incorrStay_B2",sep=''),paste(task,"_C_incorrStay_B3",sep=''),paste(task,"_C_incorrStay_B4",sep=''))
+colnames(group_incorrShift) <- c(paste(task,"_C_incorrShift_B1",sep=''),paste(task,"_C_incorrShift_B2",sep=''),paste(task,"_C_incorrShift_B3",sep=''),paste(task,"_C_incorrShift_B4",sep=''))
+setwd(diroutput)
+write.csv(as.data.frame(cbind(group_corrStay,group_corrShift,group_incorrStay,group_incorrShift)),file = paste("Consistent_",task,"_StayShift.csv",sep=''))
+# write.csv(as.data.frame(group_corrStay),file = paste("Inconsistent_",task,"_corrStay.csv",sep=''))
+# write.csv(as.data.frame(group_corrShift),file = paste("Inconsistent_",task,"_corrShift.csv",sep=''))
+# write.csv(as.data.frame(group_incorrStay),file = paste("Inconsistent_",task,"_incorrStay.csv",sep=''))
+# write.csv(as.data.frame(group_incorrShift),file = paste("Inconsistent_",task,"_incorrShift.csv",sep=''))
+setwd(dirinput)
+## =======================================================================================================
+## TASK PERFORMANCE KRAAK De COde
+## ======================================================================================================
+rm(list=ls(all=TRUE))
+dirinput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults/logs"
+diroutput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults"
+setwd(dirinput)
+## Define output parameters
+task <- "BIRD"
+ntrialsC <-100 # number of consistent trials per block
+ntrialsI <-100 # number of iconsistent trials per block
+stims <- matrix(c(1,1,2,2,1,2,1,2),nrow = 4,ncol=2) # different stimuli
+header <- c("block","trial","Vstim","Astim","match","C/I","resp","result","RT","fb","V-file","A-file")
+#list files
+files <- dir(pattern=paste(task,".txt",sep='')) # search for all files of interest
+setwd(dirinput)
+group_corrStay<-c()
+group_corrShift<-c()
+group_incorrStay<-c()
+group_incorrShift<-c()
+for (f in c(1:7,9:length(files))){
+filename <- files[f]
+d <- read.delim(filename,header = TRUE, sep="\t")
+#d <- read.table(filename,header = TRUE, sep="\t", fill = FALSE,fileEncoding="UTF-8") # header is channels list (columns).
+colnames(d) <- header #This solves the unicode symbol reading shit
+#FIND BLOCKS AVAILABLE
+sblocks <- as.numeric(max(levels(d$block)[which(levels(d$block)<= 4 & levels(d$block)>= 1 )]))
+nblock <- sblocks
+prob_corrStay <- c()
+prob_corrShift <- c()
+prob_incorrStay <- c()
+prob_incorrShift <- c()
+for (b in 1:nblock){
+dblock <- d[d$block==b,] # only block b data
+#add column with stimuli pair identifier
+dblock$STIM <- as.numeric(paste(dblock$Vstim,dblock$Astim,sep=''))
+count_corrStay <- 0
+count_corrShift <- 0
+count_incorrStay <- 0
+count_incorrShift <- 0
+for (t in 1:(dim(dblock)[1]-1)) { #loop thru trials
+stimidx <- which(dblock$STIM==dblock$STIM[t])
+nextRepIdx <- stimidx[stimidx>t][1] # next instance of the stimuli in current trial
+if (is.na(nextRepIdx)){
+nextRepIdx = t
+}
+if (isTRUE(grep("C",dblock$`C/I`[t]) == 1)  & dblock$fb[t] == 1 & dblock$resp[t]!= 0 & nextRepIdx != t & dblock$resp[t] == dblock$resp[nextRepIdx]) {
+count_corrStay <- count_corrStay + 1
+} else if (isTRUE(grep("C",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0 &  nextRepIdx != t & dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_corrShift <- count_corrShift + 1
+} else if (isTRUE(grep("C",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]== dblock$resp[nextRepIdx]) {
+count_incorrStay <- count_incorrStay + 1
+} else if (isTRUE(grep("C",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 1 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_incorrShift <- count_incorrShift + 1
+}
+}
+prob_corrStay <- cbind(prob_corrStay,(count_corrStay/100))
+prob_corrShift <- cbind(prob_corrShift,(count_corrShift/100))
+prob_incorrStay <- cbind(prob_incorrStay,(count_incorrStay/100))
+prob_incorrShift <- cbind(prob_incorrShift,(count_incorrShift/100))
+rownames(prob_corrStay) <- substr(filename,1,4)
+rownames(prob_corrShift) <- substr(filename,1,4)
+rownames(prob_incorrStay) <- substr(filename,1,4)
+rownames(prob_incorrShift) <- substr(filename,1,4)
+}
+if (sblocks == 3){
+prob_corrStay <- cbind(prob_corrStay,NA)
+prob_corrShift <- cbind(prob_corrShift,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA)
+} else if (sblocks== 2){
+prob_corrStay <- cbind(prob_corrStay,NA,NA)
+prob_corrShift <- cbind(prob_corrShift,NA,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA,NA)
+}
+group_corrStay <- rbind(group_corrStay,prob_corrStay)
+group_corrShift <- rbind(group_corrShift,prob_corrShift)
+group_incorrStay <- rbind(group_incorrStay,prob_incorrStay)
+group_incorrShift <- rbind(group_incorrShift,prob_incorrShift)
+}
+colnames(group_corrStay) <- c(paste(task,"_C_corrStay_B1",sep=''),paste(task,"_C_corrStay_B2",sep=''),paste(task,"_C_corrStay_B3",sep=''),paste(task,"_C_corrStay_B4",sep=''))
+colnames(group_corrShift) <- c(paste(task,"_C_corrShift_B1",sep=''),paste(task,"_C_corrShift_B2",sep=''),paste(task,"_C_corrShift_B3",sep=''),paste(task,"_C_corrShift_B4",sep=''))
+colnames(group_incorrStay) <- c(paste(task,"_C_incorrStay_B1",sep=''),paste(task,"_C_incorrStay_B2",sep=''),paste(task,"_C_incorrStay_B3",sep=''),paste(task,"_C_incorrStay_B4",sep=''))
+colnames(group_incorrShift) <- c(paste(task,"_C_incorrShift_B1",sep=''),paste(task,"_C_incorrShift_B2",sep=''),paste(task,"_C_incorrShift_B3",sep=''),paste(task,"_C_incorrShift_B4",sep=''))
+setwd(diroutput)
+write.csv(as.data.frame(cbind(group_corrStay,group_corrShift,group_incorrStay,group_incorrShift)),file = paste("Consistent_",task,"_StayShift.csv",sep=''))
+# write.csv(as.data.frame(group_corrStay),file = paste("Inconsistent_",task,"_corrStay.csv",sep=''))
+# write.csv(as.data.frame(group_corrShift),file = paste("Inconsistent_",task,"_corrShift.csv",sep=''))
+# write.csv(as.data.frame(group_incorrStay),file = paste("Inconsistent_",task,"_incorrStay.csv",sep=''))
+# write.csv(as.data.frame(group_incorrShift),file = paste("Inconsistent_",task,"_incorrShift.csv",sep=''))
+setwd(dirinput)
+## =======================================================================================================
+## TASK PERFORMANCE KRAAK De COde
+## ======================================================================================================
+rm(list=ls(all=TRUE))
+dirinput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults/logs"
+diroutput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults"
+setwd(dirinput)
+## Define output parameters
+task <- "BIRD"
+ntrialsC <-100 # number of consistent trials per block
+ntrialsI <-100 # number of iconsistent trials per block
+stims <- matrix(c(1,1,2,2,1,2,1,2),nrow = 4,ncol=2) # different stimuli
+header <- c("block","trial","Vstim","Astim","match","C/I","resp","result","RT","fb","V-file","A-file")
+#list files
+files <- dir(pattern=paste(task,".txt",sep='')) # search for all files of interest
+setwd(dirinput)
+group_corrStay<-c()
+group_corrShift<-c()
+group_incorrStay<-c()
+group_incorrShift<-c()
+for (f in c(1:7,9:length(files))){
+filename <- files[f]
+d <- read.delim(filename,header = TRUE, sep="\t")
+#d <- read.table(filename,header = TRUE, sep="\t", fill = FALSE,fileEncoding="UTF-8") # header is channels list (columns).
+colnames(d) <- header #This solves the unicode symbol reading shit
+#FIND BLOCKS AVAILABLE
+sblocks <- as.numeric(max(levels(d$block)[which(levels(d$block)<= 4 & levels(d$block)>= 1 )]))
+nblock <- sblocks
+prob_corrStay <- c()
+prob_corrShift <- c()
+prob_incorrStay <- c()
+prob_incorrShift <- c()
+for (b in 1:nblock){
+dblock <- d[d$block==b,] # only block b data
+#add column with stimuli pair identifier
+dblock$STIM <- as.numeric(paste(dblock$Vstim,dblock$Astim,sep=''))
+count_corrStay <- 0
+count_corrShift <- 0
+count_incorrStay <- 0
+count_incorrShift <- 0
+for (t in 1:(dim(dblock)[1]-1)) { #loop thru trials
+stimidx <- which(dblock$STIM==dblock$STIM[t])
+nextRepIdx <- stimidx[stimidx>t][1] # next instance of the stimuli in current trial
+if (is.na(nextRepIdx)){
+nextRepIdx = t
+}
+if (isTRUE(grep("I",dblock$`C/I`[t]) == 1)  & dblock$fb[t] == 1 & dblock$resp[t]!= 0 & nextRepIdx != t & dblock$resp[t] == dblock$resp[nextRepIdx]) {
+count_corrStay <- count_corrStay + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0 &  nextRepIdx != t & dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_corrShift <- count_corrShift + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]== dblock$resp[nextRepIdx]) {
+count_incorrStay <- count_incorrStay + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 1 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_incorrShift <- count_incorrShift + 1
+}
+}
+prob_corrStay <- cbind(prob_corrStay,(count_corrStay/100))
+prob_corrShift <- cbind(prob_corrShift,(count_corrShift/100))
+prob_incorrStay <- cbind(prob_incorrStay,(count_incorrStay/100))
+prob_incorrShift <- cbind(prob_incorrShift,(count_incorrShift/100))
+rownames(prob_corrStay) <- substr(filename,1,4)
+rownames(prob_corrShift) <- substr(filename,1,4)
+rownames(prob_incorrStay) <- substr(filename,1,4)
+rownames(prob_incorrShift) <- substr(filename,1,4)
+}
+if (sblocks == 3){
+prob_corrStay <- cbind(prob_corrStay,NA)
+prob_corrShift <- cbind(prob_corrShift,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA)
+} else if (sblocks== 2){
+prob_corrStay <- cbind(prob_corrStay,NA,NA)
+prob_corrShift <- cbind(prob_corrShift,NA,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA,NA)
+}
+group_corrStay <- rbind(group_corrStay,prob_corrStay)
+group_corrShift <- rbind(group_corrShift,prob_corrShift)
+group_incorrStay <- rbind(group_incorrStay,prob_incorrStay)
+group_incorrShift <- rbind(group_incorrShift,prob_incorrShift)
+}
+colnames(group_corrStay) <- c(paste(task,"_I_corrStay_B1",sep=''),paste(task,"_I_corrStay_B2",sep=''),paste(task,"_I_corrStay_B3",sep=''),paste(task,"_I_corrStay_B4",sep=''))
+colnames(group_corrShift) <- c(paste(task,"_I_corrShift_B1",sep=''),paste(task,"_I_corrShift_B2",sep=''),paste(task,"_I_corrShift_B3",sep=''),paste(task,"_I_corrShift_B4",sep=''))
+colnames(group_incorrStay) <- c(paste(task,"_I_incorrStay_B1",sep=''),paste(task,"_I_incorrStay_B2",sep=''),paste(task,"_I_incorrStay_B3",sep=''),paste(task,"_I_incorrStay_B4",sep=''))
+colnames(group_incorrShift) <- c(paste(task,"_I_incorrShift_B1",sep=''),paste(task,"_I_incorrShift_B2",sep=''),paste(task,"_I_incorrShift_B3",sep=''),paste(task,"_I_incorrShift_B4",sep=''))
+setwd(diroutput)
+write.csv(as.data.frame(cbind(group_corrStay,group_corrShift,group_incorrStay,group_incorrShift)),file = paste("Inconsistent_",task,"_StayShift.csv",sep=''))
+# write.csv(as.data.frame(group_corrStay),file = paste("Inconsistent_",task,"_corrStay.csv",sep=''))
+# write.csv(as.data.frame(group_corrShift),file = paste("Inconsistent_",task,"_corrShift.csv",sep=''))
+# write.csv(as.data.frame(group_incorrStay),file = paste("Inconsistent_",task,"_incorrStay.csv",sep=''))
+# write.csv(as.data.frame(group_incorrShift),file = paste("Inconsistent_",task,"_incorrShift.csv",sep=''))
+setwd(dirinput)
+## =======================================================================================================
+## TASK PERFORMANCE KRAAK De COde
+## ======================================================================================================
+rm(list=ls(all=TRUE))
+dirinput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults/logs"
+diroutput <- "Z:/Psychology/Researchers/fraga/project 2015 - 2017 ABMP/ABMP_Kraak performance/Adults"
+setwd(dirinput)
+## Define output parameters
+task <- "LSB"
+ntrialsC <-100 # number of consistent trials per block
+ntrialsI <-100 # number of iconsistent trials per block
+stims <- matrix(c(1,1,2,2,1,2,1,2),nrow = 4,ncol=2) # different stimuli
+header <- c("block","trial","Vstim","Astim","match","C/I","resp","result","RT","fb","V-file","A-file")
+#list files
+files <- dir(pattern=paste(task,".txt",sep='')) # search for all files of interest
+setwd(dirinput)
+group_corrStay<-c()
+group_corrShift<-c()
+group_incorrStay<-c()
+group_incorrShift<-c()
+for (f in c(1:7,9:length(files))){
+filename <- files[f]
+d <- read.delim(filename,header = TRUE, sep="\t")
+#d <- read.table(filename,header = TRUE, sep="\t", fill = FALSE,fileEncoding="UTF-8") # header is channels list (columns).
+colnames(d) <- header #This solves the unicode symbol reading shit
+#FIND BLOCKS AVAILABLE
+sblocks <- as.numeric(max(levels(d$block)[which(levels(d$block)<= 4 & levels(d$block)>= 1 )]))
+nblock <- sblocks
+prob_corrStay <- c()
+prob_corrShift <- c()
+prob_incorrStay <- c()
+prob_incorrShift <- c()
+for (b in 1:nblock){
+dblock <- d[d$block==b,] # only block b data
+#add column with stimuli pair identifier
+dblock$STIM <- as.numeric(paste(dblock$Vstim,dblock$Astim,sep=''))
+count_corrStay <- 0
+count_corrShift <- 0
+count_incorrStay <- 0
+count_incorrShift <- 0
+for (t in 1:(dim(dblock)[1]-1)) { #loop thru trials
+stimidx <- which(dblock$STIM==dblock$STIM[t])
+nextRepIdx <- stimidx[stimidx>t][1] # next instance of the stimuli in current trial
+if (is.na(nextRepIdx)){
+nextRepIdx = t
+}
+if (isTRUE(grep("I",dblock$`C/I`[t]) == 1)  & dblock$fb[t] == 1 & dblock$resp[t]!= 0 & nextRepIdx != t & dblock$resp[t] == dblock$resp[nextRepIdx]) {
+count_corrStay <- count_corrStay + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0 &  nextRepIdx != t & dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_corrShift <- count_corrShift + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 0 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]== dblock$resp[nextRepIdx]) {
+count_incorrStay <- count_incorrStay + 1
+} else if (isTRUE(grep("I",dblock$`C/I`[t]) == 1) & dblock$fb[t] == 1 & dblock$resp[t]!= 0  & nextRepIdx != t &  dblock$resp[t]!= dblock$resp[nextRepIdx]) {
+count_incorrShift <- count_incorrShift + 1
+}
+}
+prob_corrStay <- cbind(prob_corrStay,(count_corrStay/100))
+prob_corrShift <- cbind(prob_corrShift,(count_corrShift/100))
+prob_incorrStay <- cbind(prob_incorrStay,(count_incorrStay/100))
+prob_incorrShift <- cbind(prob_incorrShift,(count_incorrShift/100))
+rownames(prob_corrStay) <- substr(filename,1,4)
+rownames(prob_corrShift) <- substr(filename,1,4)
+rownames(prob_incorrStay) <- substr(filename,1,4)
+rownames(prob_incorrShift) <- substr(filename,1,4)
+}
+if (sblocks == 3){
+prob_corrStay <- cbind(prob_corrStay,NA)
+prob_corrShift <- cbind(prob_corrShift,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA)
+} else if (sblocks== 2){
+prob_corrStay <- cbind(prob_corrStay,NA,NA)
+prob_corrShift <- cbind(prob_corrShift,NA,NA)
+prob_incorrStay <- cbind(prob_incorrStay,NA,NA)
+prob_incorrShift <- cbind(prob_incorrShift,NA,NA)
+}
+group_corrStay <- rbind(group_corrStay,prob_corrStay)
+group_corrShift <- rbind(group_corrShift,prob_corrShift)
+group_incorrStay <- rbind(group_incorrStay,prob_incorrStay)
+group_incorrShift <- rbind(group_incorrShift,prob_incorrShift)
+}
+colnames(group_corrStay) <- c(paste(task,"_I_corrStay_B1",sep=''),paste(task,"_I_corrStay_B2",sep=''),paste(task,"_I_corrStay_B3",sep=''),paste(task,"_I_corrStay_B4",sep=''))
+colnames(group_corrShift) <- c(paste(task,"_I_corrShift_B1",sep=''),paste(task,"_I_corrShift_B2",sep=''),paste(task,"_I_corrShift_B3",sep=''),paste(task,"_I_corrShift_B4",sep=''))
+colnames(group_incorrStay) <- c(paste(task,"_I_incorrStay_B1",sep=''),paste(task,"_I_incorrStay_B2",sep=''),paste(task,"_I_incorrStay_B3",sep=''),paste(task,"_I_incorrStay_B4",sep=''))
+colnames(group_incorrShift) <- c(paste(task,"_I_incorrShift_B1",sep=''),paste(task,"_I_incorrShift_B2",sep=''),paste(task,"_I_incorrShift_B3",sep=''),paste(task,"_I_incorrShift_B4",sep=''))
+setwd(diroutput)
+write.csv(as.data.frame(cbind(group_corrStay,group_corrShift,group_incorrStay,group_incorrShift)),file = paste("Inconsistent_",task,"_StayShift.csv",sep=''))
+# write.csv(as.data.frame(group_corrStay),file = paste("Inconsistent_",task,"_corrStay.csv",sep=''))
+# write.csv(as.data.frame(group_corrShift),file = paste("Inconsistent_",task,"_corrShift.csv",sep=''))
+# write.csv(as.data.frame(group_incorrStay),file = paste("Inconsistent_",task,"_incorrStay.csv",sep=''))
+# write.csv(as.data.frame(group_incorrShift),file = paste("Inconsistent_",task,"_incorrShift.csv",sep=''))
+setwd(dirinput)

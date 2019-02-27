@@ -1,0 +1,425 @@
+Scenario - FeedbacklearningMRI_GFG.sce
+Logfile written - 02/22/2019 13:27:18
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+Patrick	0	Pulse	199	0	0	NA
+Patrick	0	Pulse	199	10000	10000	NA
+Patrick	1	Pulse	199	20000	8999	NA
+Patrick	1	Pulse	199	30000	18999	NA
+Patrick	1	Pulse	199	40000	28999	NA
+Patrick	1	Pulse	199	50000	38999	NA
+Patrick	1	Pulse	199	60000	48999	NA
+Patrick	1	Response	16	65882	54882	0
+Patrick	2	Pulse	199	70000	4107	NA
+Patrick	2	Pulse	199	80000	14107	NA
+Patrick	2	Pulse	199	90000	24107	NA
+Patrick	2	Pulse	199	100000	34107	NA
+Patrick	2	Pulse	199	110000	44107	NA
+Patrick	3	Picture	fix	117083	0	1	30524	1	0	next	other	0
+Patrick	3	Pulse	199	120000	2917	NA
+Patrick	3	Pulse	199	130000	12917	NA
+Patrick	3	Pulse	199	140000	22917	NA
+Patrick	4	Picture	stim	147607	0	1	20182	1	0	20000	hit	20
+Patrick	4	Pulse	199	150000	2393	NA
+Patrick	4	Response	16	157881	10275	0
+Patrick	4	Pulse	199	160000	12393	NA
+Patrick	5	Picture	fix2	167956	0	1	19515	1	0	next	other	0
+Patrick	5	Pulse	199	170000	2044	NA
+Patrick	5	Pulse	199	180000	12044	NA
+Patrick	6	Picture	feedback	187471	0	1	20182	1	0	20000	other	0
+Patrick	6	Pulse	199	190000	2529	NA
+Patrick	6	Pulse	199	200000	12529	NA
+Patrick	7	Picture	fix	207820	0	1	28856	1	0	next	other	0
+Patrick	7	Pulse	199	210000	2180	NA
+Patrick	7	Pulse	199	220000	12180	NA
+Patrick	7	Pulse	199	230000	22180	NA
+Patrick	8	Picture	stim	236676	0	1	20349	1	0	20000	hit	34
+Patrick	8	Pulse	199	240000	3324	NA
+Patrick	8	Response	32	245562	8886	0
+Patrick	8	Pulse	199	250000	13324	NA
+Patrick	9	Picture	fix2	257359	0	1	23518	1	0	next	other	0
+Patrick	9	Pulse	199	260000	2641	NA
+Patrick	9	Pulse	199	270000	12641	NA
+Patrick	9	Pulse	199	280000	22641	NA
+Patrick	10	Picture	feedback	280877	0	1	20182	1	0	20000	other	0
+Patrick	10	Pulse	199	290000	9123	NA
+Patrick	10	Pulse	199	300000	19123	NA
+Patrick	11	Picture	fix	301393	0	1	34694	1	0	next	other	0
+Patrick	11	Pulse	199	310000	8607	NA
+Patrick	11	Pulse	199	320000	18607	NA
+Patrick	11	Pulse	199	330000	28607	NA
+Patrick	12	Picture	stim	336087	0	1	20182	1	0	20000	hit	49
+Patrick	12	Pulse	199	340000	3913	NA
+Patrick	12	Response	32	343641	7554	0
+Patrick	12	Pulse	199	350000	13913	NA
+Patrick	13	Picture	fix2	356436	0	1	10008	1	0	next	other	0
+Patrick	13	Pulse	199	360000	3564	NA
+Patrick	14	Picture	feedback	366444	0	1	20182	1	0	20000	other	0
+Patrick	14	Pulse	199	370000	3556	NA
+Patrick	14	Pulse	199	380000	13556	NA
+Patrick	15	Picture	fix	386960	0	1	41199	1	0	next	other	0
+Patrick	15	Pulse	199	390000	3040	NA
+Patrick	15	Pulse	199	400000	13040	NA
+Patrick	15	Pulse	199	410000	23040	NA
+Patrick	15	Pulse	199	420000	33040	NA
+Patrick	16	Picture	stim	428158	0	1	20182	1	0	20000	incorrect	63
+Patrick	16	Pulse	199	430000	1842	NA
+Patrick	16	Response	16	437321	9163	0
+Patrick	16	Pulse	199	440000	11842	NA
+Patrick	17	Picture	fix2	448508	0	1	12176	1	0	next	other	0
+Patrick	17	Pulse	199	450000	1492	NA
+Patrick	17	Pulse	199	460000	11492	NA
+Patrick	18	Picture	feedback	460684	0	1	20182	1	0	20000	other	0
+Patrick	18	Pulse	199	470000	9316	NA
+Patrick	18	Pulse	199	480000	19316	NA
+Patrick	19	Picture	fix	481200	0	1	38030	1	0	next	other	0
+Patrick	19	Pulse	199	490000	8800	NA
+Patrick	19	Pulse	199	500000	18800	NA
+Patrick	19	Pulse	199	510000	28800	NA
+Patrick	20	Picture	stim	519229	0	1	20182	1	0	20000	hit	77
+Patrick	20	Pulse	199	520000	771	NA
+Patrick	20	Response	16	527000	7771	0
+Patrick	20	Pulse	199	530000	10771	NA
+Patrick	21	Picture	fix2	539578	0	1	11009	1	0	next	other	0
+Patrick	21	Pulse	199	540000	422	NA
+Patrick	21	Pulse	199	550000	10422	NA
+Patrick	22	Picture	feedback	550587	0	1	20516	1	0	20000	other	0
+Patrick	22	Pulse	199	560000	9413	NA
+Patrick	22	Pulse	199	570000	19413	NA
+Patrick	23	Picture	fix	571437	0	1	24185	1	0	next	other	0
+Patrick	23	Pulse	199	580000	8564	NA
+Patrick	23	Pulse	199	590000	18564	NA
+Patrick	24	Picture	stim	595622	0	1	21684	1	0	20000	hit	90
+Patrick	24	Pulse	199	600000	4378	NA
+Patrick	24	Response	16	605641	10019	0
+Patrick	24	Pulse	199	610000	14378	NA
+Patrick	25	Picture	fix2	617639	0	1	20349	1	0	next	other	0
+Patrick	25	Pulse	199	620000	2361	NA
+Patrick	25	Pulse	199	630000	12361	NA
+Patrick	26	Picture	feedback	637988	0	1	20182	1	0	20000	other	0
+Patrick	26	Pulse	199	640000	2012	NA
+Patrick	26	Pulse	199	650000	12012	NA
+Patrick	27	Picture	fix	658504	0	1	33860	1	0	next	other	0
+Patrick	27	Pulse	199	660000	1496	NA
+Patrick	27	Pulse	199	670000	11496	NA
+Patrick	27	Pulse	199	680000	21496	NA
+Patrick	27	Pulse	199	690000	31496	NA
+Patrick	28	Picture	stim	692364	0	1	20182	1	0	20000	hit	105
+Patrick	28	Pulse	199	700000	7636	NA
+Patrick	28	Response	16	703880	11517	0
+Patrick	28	Pulse	199	710000	17636	NA
+Patrick	29	Picture	fix2	712713	0	1	14345	1	0	next	other	0
+Patrick	29	Pulse	199	720000	7287	NA
+Patrick	30	Picture	feedback	727058	0	1	20182	1	0	20000	other	0
+Patrick	30	Pulse	199	730000	2942	NA
+Patrick	30	Pulse	199	740000	12942	NA
+Patrick	31	Picture	fix	747407	0	1	30893	332	0	next	other	0
+Patrick	31	Pulse	199	750000	2593	NA
+Patrick	31	Pulse	199	760000	12593	NA
+Patrick	31	Pulse	199	770000	22593	NA
+Patrick	32	Picture	stim	778300	0	332	20146	332	0	20000	hit	118
+Patrick	32	Pulse	199	780000	1700	NA
+Patrick	32	Response	32	786363	8063	0
+Patrick	32	Pulse	199	790000	11700	NA
+Patrick	33	Picture	fix2	798613	0	1	16179	1	0	next	other	0
+Patrick	33	Pulse	199	800000	1387	NA
+Patrick	33	Pulse	199	810000	11387	NA
+Patrick	34	Picture	feedback	814792	0	1	20516	1	0	20000	other	0
+Patrick	34	Pulse	199	820000	5208	NA
+Patrick	34	Pulse	199	830000	15208	NA
+Patrick	35	Picture	fix	835642	0	1	27855	1	0	next	other	0
+Patrick	35	Pulse	199	840000	4358	NA
+Patrick	35	Pulse	199	850000	14358	NA
+Patrick	35	Pulse	199	860000	24358	NA
+Patrick	36	Picture	stim	863497	0	1	20516	1	0	20000	hit	132
+Patrick	36	Pulse	199	870000	6503	NA
+Patrick	36	Response	32	876201	12704	0
+Patrick	36	Pulse	199	880000	16503	NA
+Patrick	37	Picture	fix2	884180	0	1	16846	1	0	next	other	0
+Patrick	37	Pulse	199	890000	5820	NA
+Patrick	37	Pulse	199	900000	15820	NA
+Patrick	38	Picture	feedback	901026	0	1	20182	1	0	20000	other	0
+Patrick	38	Pulse	199	910000	8974	NA
+Patrick	38	Pulse	199	920000	18974	NA
+Patrick	39	Picture	fix	922043	0	1	26187	1	0	next	other	0
+Patrick	39	Pulse	199	930000	7957	NA
+Patrick	39	Pulse	199	940000	17957	NA
+Patrick	40	Picture	stim	948230	0	1	20182	1	0	20000	hit	145
+Patrick	40	Pulse	199	950000	1770	NA
+Patrick	40	Response	32	956924	8694	0
+Patrick	40	Pulse	199	960000	11770	NA
+Patrick	41	Picture	fix2	968746	0	1	13010	1	0	next	other	0
+Patrick	41	Pulse	199	970000	1254	NA
+Patrick	41	Pulse	199	980000	11254	NA
+Patrick	42	Picture	feedback	981756	0	1	20182	1	0	20000	other	0
+Patrick	42	Pulse	199	990000	8244	NA
+Patrick	42	Pulse	199	1000000	18244	NA
+Patrick	43	Picture	fix	1002272	0	1	27855	1	0	next	other	0
+Patrick	43	Pulse	199	1010000	7728	NA
+Patrick	43	Pulse	199	1020000	17728	NA
+Patrick	43	Pulse	199	1030000	27728	NA
+Patrick	44	Picture	stim	1030127	0	1	20182	1	0	20000	hit	159
+Patrick	44	Pulse	199	1040000	9873	NA
+Patrick	44	Response	16	1044681	14554	0
+Patrick	44	Pulse	199	1050000	19873	NA
+Patrick	45	Picture	fix2	1050476	0	1	14344	1	0	next	other	0
+Patrick	45	Pulse	199	1060000	9524	NA
+Patrick	46	Picture	feedback	1064820	0	1	20182	1	0	20000	other	0
+Patrick	46	Pulse	199	1070000	5180	NA
+Patrick	46	Pulse	199	1080000	15180	NA
+Patrick	47	Picture	fix	1085170	0	1	30691	1	0	next	other	0
+Patrick	47	Pulse	199	1090000	4830	NA
+Patrick	47	Pulse	199	1100000	14830	NA
+Patrick	47	Pulse	199	1110000	24830	NA
+Patrick	48	Picture	stim	1115860	0	1	20182	1	0	20000	hit	172
+Patrick	48	Pulse	199	1120000	4140	NA
+Patrick	48	Response	32	1124043	8183	0
+Patrick	48	Pulse	199	1130000	14140	NA
+Patrick	49	Picture	fix2	1136209	0	1	11077	345	0	next	other	0
+Patrick	49	Pulse	199	1140000	3791	NA
+Patrick	50	Picture	feedback	1147286	0	344	20114	345	0	20000	other	0
+Patrick	50	Pulse	199	1150000	2714	NA
+Patrick	50	Pulse	199	1160000	12714	NA
+Patrick	51	Picture	fix	1167734	0	1	17680	1	0	next	other	0
+Patrick	51	Pulse	199	1170000	2266	NA
+Patrick	51	Pulse	199	1180000	12266	NA
+Patrick	52	Picture	stim	1185414	0	1	20182	1	0	20000	hit	184
+Patrick	52	Pulse	199	1190000	4586	NA
+Patrick	52	Response	32	1193403	7989	0
+Patrick	52	Pulse	199	1200000	14586	NA
+Patrick	53	Picture	fix2	1205763	0	1	8411	324	0	next	other	0
+Patrick	53	Pulse	199	1210000	4237	NA
+Patrick	54	Picture	feedback	1214174	0	324	20111	325	0	20000	other	0
+Patrick	54	Pulse	199	1220000	5826	NA
+Patrick	54	Pulse	199	1230000	15826	NA
+Patrick	55	Picture	fix	1234786	0	1	33026	1	0	next	other	0
+Patrick	55	Pulse	199	1240000	5214	NA
+Patrick	55	Pulse	199	1250000	15214	NA
+Patrick	55	Pulse	199	1260000	25214	NA
+Patrick	56	Picture	stim	1267812	0	1	20182	1	0	20000	hit	197
+Patrick	56	Pulse	199	1270000	2188	NA
+Patrick	56	Response	16	1277403	9592	0
+Patrick	56	Pulse	199	1280000	12188	NA
+Patrick	57	Picture	fix2	1288161	0	1	19182	1	0	next	other	0
+Patrick	57	Pulse	199	1290000	1839	NA
+Patrick	57	Pulse	199	1300000	11839	NA
+Patrick	58	Picture	feedback	1307342	0	1	20182	1	0	20000	other	0
+Patrick	58	Pulse	199	1310000	2658	NA
+Patrick	58	Pulse	199	1320000	12658	NA
+Patrick	59	Picture	fix	1327858	0	1	28856	1	0	next	other	0
+Patrick	59	Pulse	199	1330000	2142	NA
+Patrick	59	Pulse	199	1340000	12142	NA
+Patrick	59	Pulse	199	1350000	22142	NA
+Patrick	60	Picture	stim	1356714	0	1	20183	1	0	20000	hit	211
+Patrick	60	Pulse	199	1360000	3286	NA
+Patrick	60	Response	16	1364603	7889	0
+Patrick	60	Pulse	199	1370000	13286	NA
+Patrick	61	Picture	fix2	1377063	0	1	21647	402	0	next	other	0
+Patrick	61	Pulse	199	1380000	2937	NA
+Patrick	61	Pulse	199	1390000	12937	NA
+Patrick	62	Picture	feedback	1398711	0	402	20218	402	0	20000	other	0
+Patrick	62	Pulse	199	1400000	1289	NA
+Patrick	62	Pulse	199	1410000	11289	NA
+Patrick	63	Picture	fix	1419263	0	1	32357	2	0	next	other	0
+Patrick	63	Pulse	199	1420000	737	NA
+Patrick	63	Pulse	199	1430000	10737	NA
+Patrick	63	Pulse	199	1440000	20737	NA
+Patrick	63	Pulse	199	1450000	30737	NA
+Patrick	64	Picture	stim	1451620	0	2	20184	2	0	20000	hit	226
+Patrick	64	Pulse	199	1460000	8380	NA
+Patrick	64	Response	32	1463562	11942	0
+Patrick	64	Pulse	199	1470000	18380	NA
+Patrick	65	Picture	fix2	1471971	0	1	14511	1	0	next	other	0
+Patrick	65	Pulse	199	1480000	8030	NA
+Patrick	66	Picture	feedback	1486482	0	1	20182	1	0	20000	other	0
+Patrick	66	Pulse	199	1490000	3518	NA
+Patrick	66	Pulse	199	1500000	13518	NA
+Patrick	67	Picture	fix	1506831	0	1	33526	1	0	next	other	0
+Patrick	67	Pulse	199	1510000	3169	NA
+Patrick	67	Pulse	199	1520000	13169	NA
+Patrick	67	Pulse	199	1530000	23169	NA
+Patrick	67	Pulse	199	1540000	33169	NA
+Patrick	68	Picture	stim	1540357	0	1	20182	1	0	20000	hit	239
+Patrick	68	Response	16	1548202	7845	0
+Patrick	68	Pulse	199	1550000	9643	NA
+Patrick	68	Pulse	199	1560000	19643	NA
+Patrick	69	Picture	fix2	1560706	0	1	16846	1	0	next	other	0
+Patrick	69	Pulse	199	1570000	9294	NA
+Patrick	70	Picture	feedback	1577553	0	1	20182	1	0	20000	other	0
+Patrick	70	Pulse	199	1580000	2447	NA
+Patrick	70	Pulse	199	1590000	12447	NA
+Patrick	71	Picture	fix	1598569	0	1	27021	1	0	next	other	0
+Patrick	71	Pulse	199	1600000	1431	NA
+Patrick	71	Pulse	199	1610000	11431	NA
+Patrick	71	Pulse	199	1620000	21431	NA
+Patrick	72	Picture	stim	1625590	0	1	20182	1	0	20000	hit	253
+Patrick	72	Pulse	199	1630000	4410	NA
+Patrick	72	Response	16	1633083	7493	0
+Patrick	72	Pulse	199	1640000	14410	NA
+Patrick	73	Picture	fix2	1645939	0	1	21850	1	0	next	other	0
+Patrick	73	Pulse	199	1650000	4061	NA
+Patrick	73	Pulse	199	1660000	14061	NA
+Patrick	74	Picture	feedback	1667789	0	1	20182	1	0	20000	other	0
+Patrick	74	Pulse	199	1670000	2211	NA
+Patrick	74	Pulse	199	1680000	12211	NA
+Patrick	75	Picture	fix	1688124	0	49	31873	49	0	next	other	0
+Patrick	75	Pulse	199	1690000	1876	NA
+Patrick	75	Pulse	199	1700000	11876	NA
+Patrick	75	Pulse	199	1710000	21876	NA
+Patrick	76	Picture	stim	1719997	0	1	20182	1	0	20000	hit	267
+Patrick	76	Pulse	199	1720000	3	NA
+Patrick	76	Response	32	1727722	7726	0
+Patrick	76	Pulse	199	1730000	10003	NA
+Patrick	76	Pulse	199	1740000	20003	NA
+Patrick	77	Picture	fix2	1740346	0	1	5504	1	0	next	other	0
+Patrick	78	Picture	feedback	1745850	0	1	20182	1	0	20000	other	0
+Patrick	78	Pulse	199	1750000	4150	NA
+Patrick	78	Pulse	199	1760000	14150	NA
+Patrick	79	Picture	fix	1766366	0	1	28771	287	0	next	other	0
+Patrick	79	Pulse	199	1770000	3634	NA
+Patrick	79	Pulse	199	1780000	13634	NA
+Patrick	79	Pulse	199	1790000	23634	NA
+Patrick	80	Picture	stim	1795137	0	287	20100	287	0	20000	hit	280
+Patrick	80	Pulse	199	1800000	4863	NA
+Patrick	80	Response	32	1806122	10984	0
+Patrick	80	Pulse	199	1810000	14863	NA
+Patrick	81	Picture	fix2	1815404	0	1	17514	1	0	next	other	0
+Patrick	81	Pulse	199	1820000	4596	NA
+Patrick	81	Pulse	199	1830000	14596	NA
+Patrick	82	Picture	feedback	1832918	0	1	20182	1	0	20000	other	0
+Patrick	82	Pulse	199	1840000	7082	NA
+Patrick	82	Pulse	199	1850000	17082	NA
+Patrick	83	Picture	fix	1853267	0	1	30023	1	0	next	other	0
+Patrick	83	Pulse	199	1860000	6733	NA
+Patrick	83	Pulse	199	1870000	16733	NA
+Patrick	83	Pulse	199	1880000	26733	NA
+Patrick	84	Picture	stim	1883290	0	1	20182	1	0	20000	hit	294
+Patrick	84	Pulse	199	1890000	6710	NA
+Patrick	84	Response	16	1891164	7873	0
+Patrick	84	Pulse	199	1900000	16710	NA
+Patrick	85	Picture	fix2	1903640	0	1	8006	1	0	next	other	0
+Patrick	85	Pulse	199	1910000	6360	NA
+Patrick	86	Picture	feedback	1911646	0	1	20182	1	0	20000	other	0
+Patrick	86	Pulse	199	1920000	8354	NA
+Patrick	86	Pulse	199	1930000	18354	NA
+Patrick	87	Picture	fix	1932162	0	1	23018	1	0	next	other	0
+Patrick	87	Pulse	199	1940000	7838	NA
+Patrick	87	Pulse	199	1950000	17838	NA
+Patrick	88	Picture	stim	1955180	0	1	20182	1	0	20000	hit	306
+Patrick	88	Pulse	199	1960000	4820	NA
+Patrick	88	Response	32	1963005	7825	0
+Patrick	88	Pulse	199	1970000	14820	NA
+Patrick	89	Picture	fix2	1975529	0	1	14346	317	0	next	other	0
+Patrick	89	Pulse	199	1980000	4471	NA
+Patrick	90	Picture	feedback	1989875	0	317	20181	317	0	20000	other	0
+Patrick	90	Pulse	199	1990000	125	NA
+Patrick	90	Pulse	199	2000000	10125	NA
+Patrick	90	Pulse	199	2010000	20125	NA
+Patrick	91	Picture	fix	2010389	0	1	39531	1	0	next	other	0
+Patrick	91	Pulse	199	2020000	9611	NA
+Patrick	91	Pulse	199	2030000	19611	NA
+Patrick	91	Pulse	199	2040000	29611	NA
+Patrick	92	Picture	stim	2049920	0	1	20182	1	0	20000	hit	320
+Patrick	92	Pulse	199	2050000	80	NA
+Patrick	92	Response	16	2056203	6283	0
+Patrick	92	Pulse	199	2060000	10080	NA
+Patrick	92	Pulse	199	2070000	20080	NA
+Patrick	93	Picture	fix2	2070269	0	1	10842	1	0	next	other	0
+Patrick	93	Pulse	199	2080000	9731	NA
+Patrick	94	Picture	feedback	2081111	0	1	20182	1	0	20000	other	0
+Patrick	94	Pulse	199	2090000	8889	NA
+Patrick	94	Pulse	199	2100000	18889	NA
+Patrick	95	Picture	fix	2101627	0	1	23185	1	0	next	other	0
+Patrick	95	Pulse	199	2110000	8373	NA
+Patrick	95	Pulse	199	2120000	18373	NA
+Patrick	96	Picture	stim	2124812	0	1	20182	1	0	20000	incorrect	333
+Patrick	96	Pulse	199	2130000	5188	NA
+Patrick	96	Response	32	2136284	11473	0
+Patrick	96	Pulse	199	2140000	15188	NA
+Patrick	97	Picture	fix2	2145161	0	1	8840	1	0	next	other	0
+Patrick	97	Pulse	199	2150000	4839	NA
+Patrick	98	Picture	feedback	2154001	0	1	20182	1	0	20000	other	0
+Patrick	98	Pulse	199	2160000	5999	NA
+Patrick	98	Pulse	199	2170000	15999	NA
+Patrick	99	Picture	fix	2174517	0	1	35861	1	0	next	other	0
+Patrick	99	Pulse	199	2180000	5483	NA
+Patrick	99	Pulse	199	2190000	15483	NA
+Patrick	99	Pulse	199	2200000	25483	NA
+Patrick	99	Pulse	199	2210000	35483	NA
+Patrick	100	Picture	stim	2210378	0	1	20182	1	0	20000	hit	346
+Patrick	100	Response	32	2217965	7587	0
+Patrick	100	Pulse	199	2220000	9622	NA
+Patrick	100	Pulse	199	2230000	19622	NA
+Patrick	101	Picture	fix2	2230894	0	1	15012	1	0	next	other	0
+Patrick	101	Pulse	199	2240000	9106	NA
+Patrick	102	Picture	feedback	2245906	0	1	20349	1	0	20000	other	0
+Patrick	102	Pulse	199	2250000	4094	NA
+Patrick	102	Pulse	199	2260000	14094	NA
+Patrick	103	Picture	fix	2266589	0	1	31858	1	0	next	other	0
+Patrick	103	Pulse	199	2270000	3411	NA
+Patrick	103	Pulse	199	2280000	13411	NA
+Patrick	103	Pulse	199	2290000	23411	NA
+Patrick	104	Picture	stim	2298447	0	1	20516	1	0	20000	hit	360
+Patrick	104	Pulse	199	2300000	1553	NA
+Patrick	104	Response	16	2308924	10477	0
+Patrick	104	Pulse	199	2310000	11553	NA
+Patrick	105	Picture	fix2	2319130	0	1	17514	1	0	next	other	0
+Patrick	105	Pulse	199	2320000	870	NA
+Patrick	105	Pulse	199	2330000	10870	NA
+Patrick	106	Picture	feedback	2336643	0	1	20182	1	0	20000	other	0
+Patrick	106	Pulse	199	2340000	3357	NA
+Patrick	106	Pulse	199	2350000	13357	NA
+Patrick	107	Picture	fix	2356992	0	1	27188	1	0	next	other	0
+Patrick	107	Pulse	199	2360000	3008	NA
+Patrick	107	Pulse	199	2370000	13008	NA
+Patrick	107	Pulse	199	2380000	23008	NA
+Patrick	108	Picture	stim	2384180	0	1	20349	1	0	20000	hit	374
+Patrick	108	Pulse	199	2390000	5820	NA
+Patrick	108	Response	32	2391724	7544	0
+Patrick	108	Pulse	199	2400000	15820	NA
+Patrick	109	Picture	fix2	2404696	0	1	15012	1	0	next	other	0
+Patrick	109	Pulse	199	2410000	5304	NA
+Patrick	110	Picture	feedback	2419708	0	1	20182	1	0	20000	other	0
+Patrick	110	Pulse	199	2420000	292	NA
+Patrick	110	Pulse	199	2430000	10292	NA
+Patrick	110	Pulse	199	2440000	20292	NA
+Patrick	111	Picture	fix	2440057	0	1	21183	1	0	next	other	0
+Patrick	111	Pulse	199	2450000	9943	NA
+Patrick	111	Pulse	199	2460000	19943	NA
+Patrick	112	Picture	stim	2461240	0	1	20182	1	0	20000	hit	387
+Patrick	112	Pulse	199	2470000	8760	NA
+Patrick	112	Response	16	2470684	9444	0
+Patrick	112	Pulse	199	2480000	18760	NA
+Patrick	113	Picture	fix2	2481589	0	1	17847	1	0	next	other	0
+Patrick	113	Pulse	199	2490000	8411	NA
+Patrick	114	Picture	feedback	2499436	0	1	20183	1	0	20000	other	0
+Patrick	114	Pulse	199	2500000	564	NA
+Patrick	114	Pulse	199	2510000	10564	NA
+Patrick	114	Pulse	199	2520000	20564	NA
+Patrick	115	Picture	fix	2520453	0	1	31024	1	0	next	other	0
+Patrick	115	Pulse	199	2530000	9547	NA
+Patrick	115	Pulse	199	2540000	19547	NA
+Patrick	115	Pulse	199	2550000	29547	NA
+Patrick	116	Picture	stim	2551477	0	1	20349	1	0	20000	hit	400
+Patrick	116	Response	16	2559886	8409	0
+Patrick	116	Pulse	199	2560000	8523	NA
+Patrick	116	Pulse	199	2570000	18523	NA
+Patrick	117	Picture	fix2	2571993	0	1	13844	1	0	next	other	0
+Patrick	117	Pulse	199	2580000	8007	NA
+Patrick	118	Picture	feedback	2585837	0	1	20182	1	0	20000	other	0
+Patrick	118	Pulse	199	2590000	4163	NA
+Patrick	118	Pulse	199	2600000	14163	NA
+Patrick	119	Picture	fix	2606186	0	1	25853	1	0	next	other	0
+Patrick	119	Pulse	199	2610000	3814	NA
+Patrick	119	Pulse	199	2620000	13814	NA
+Patrick	119	Pulse	199	2630000	23814	NA
+Patrick	120	Picture	stim	2632040	0	1	20182	1	0	20000	hit	413
+Patrick	120	Response	32	2639326	7286	0
+Patrick	120	Pulse	199	2640000	7960	NA
+Patrick	120	Pulse	199	2650000	17960	NA
+Patrick	121	Picture	fix2	2652389	0	1	11676	1	0	next	other	0
+Patrick	121	Pulse	199	2660000	7611	NA
+Patrick	122	Picture	feedback	2664064	0	1	20182	1	0	20000	other	0
+Patrick	122	Pulse	199	2670000	5936	NA
+Patrick	122	Pulse	199	2680000	15936	NA
