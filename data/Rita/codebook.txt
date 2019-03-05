@@ -1,0 +1,8 @@
+﻿file naming:
+gAB  <- group: A = primary or secondary school; B= class (e.g., g12= primary school 2nd class. g21 = secondary school, 1st class
+pXX  <- pXX (XX = participant nr)
+_LR_  <- response matching (e.g., LR = left is correct, right incorrect)
+LSB   <- task (letter-speech sound binding)
+
+Example: g11_c01_LR_LSB.txt  primary school, 1st year, child nr 1.
+If no group info (gXX) it means the course was not specified
