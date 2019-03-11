@@ -1,9 +1,10 @@
 # Gather task performance from txt files (Presentation output)
 #--------------------------------------------------------------
 library(readr)
+
 #set inputs
-dirinput <- "N:/Users/gfraga/2. Papers/6. Drift Model Kraak/Performance adults/LSB"
-diroutput <- "N:/Users/gfraga/2. Papers/6. Drift Model Kraak/Performance adults"
+dirinput <- "N:/studies/AllRead/Feedback learning/ABMP logs/Children/logs/"
+diroutput <- "N:/studies/AllRead/Feedback learning/ABMP logs/Children/"
 task = "LSB"
 
 #read files
@@ -91,4 +92,4 @@ Gather <- data.table::rbindlist(datalist) # combine all data frames in one
   
 #Save as CSV
 setwd(diroutput)
-write.csv(Gather,file = paste("Gathered_performance_",task,"_bins.csv",sep=""),row.names = FALSE)
+write.csv(Gather,file = paste("Gathered_performance_",task,"_bins.csv",sep=""),row.names = FALSE,quote=FALSE)
