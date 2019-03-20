@@ -1,0 +1,169 @@
+Scenario - FeedLearn_MRI_3x3.sce
+Logfile written - 03/19/2019 09:49:38
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+Goeta	0	Pulse	199	0	0	NA
+Goeta	0	Pulse	199	10000	10000	NA
+Goeta	1	Pulse	199	20000	2669	NA
+Goeta	1	Pulse	199	30000	12669	NA
+Goeta	1	Pulse	199	40000	22669	NA
+Goeta	1	Pulse	199	50000	32669	NA
+Goeta	1	Pulse	199	60000	42669	NA
+Goeta	1	Pulse	199	70000	52669	NA
+Goeta	1	Pulse	199	80000	62669	NA
+Goeta	1	Pulse	199	90000	72669	NA
+Goeta	1	Pulse	199	100000	82669	NA
+Goeta	1	Pulse	199	110000	92669	NA
+Goeta	1	Pulse	199	120000	102669	NA
+Goeta	1	Pulse	199	130000	112669	NA
+Goeta	1	Pulse	199	140000	122669	NA
+Goeta	1	Pulse	199	150000	132669	NA
+Goeta	1	Pulse	199	160000	142669	NA
+Goeta	1	Pulse	199	170000	152669	NA
+Goeta	1	Response	16	173415	156083	0
+Goeta	2	Picture	fix	173852	0	1	37175	1	0	next	other	0
+Goeta	2	Pulse	199	180000	6148	NA
+Goeta	2	Pulse	199	190000	16148	NA
+Goeta	2	Pulse	199	200000	26148	NA
+Goeta	3	Pulse	199	210000	9242	NA
+Goeta	4	Picture	stim	211027	0	1	20167	1	0	20000	miss	0
+Goeta	4	Pulse	199	220000	8973	NA
+Goeta	4	Pulse	199	230000	18973	NA
+Goeta	5	Picture	fix2	231194	0	1	25671	1	0	next	other	0
+Goeta	5	Pulse	199	240000	8806	NA
+Goeta	5	Response	32	247527	16333	0
+Goeta	5	Pulse	199	250000	18806	NA
+Goeta	6	Picture	feedback	256865	0	1	20336	1	0	next	other	0
+Goeta	6	Pulse	199	260000	3135	NA
+Goeta	6	Pulse	199	270000	13135	NA
+Goeta	6	Response	32	272195	15330	0
+Goeta	7	Picture	fix	277201	0	1	24170	1	0	next	other	0
+Goeta	7	Pulse	199	280000	2799	NA
+Goeta	7	Response	32	288537	11336	0
+Goeta	7	Pulse	199	290000	12799	NA
+Goeta	7	Pulse	199	300000	22799	NA
+Goeta	9	Picture	stim	301371	0	1	20170	1	0	20000	miss	0
+Goeta	9	Pulse	199	310000	8629	NA
+Goeta	9	Pulse	199	320000	18629	NA
+Goeta	10	Picture	fix2	321541	0	1	18673	1	0	next	other	0
+Goeta	10	Pulse	199	330000	8459	NA
+Goeta	10	Response	16	330887	9346	0
+Goeta	10	Pulse	199	340000	18459	NA
+Goeta	11	Picture	feedback	340214	0	1	20167	1	0	next	other	0
+Goeta	11	Pulse	199	350000	9786	NA
+Goeta	11	Pulse	199	360000	19786	NA
+Goeta	12	Picture	fix	360380	0	1	28838	1	0	next	other	0
+Goeta	12	Pulse	199	370000	9620	NA
+Goeta	12	Pulse	199	380000	19620	NA
+Goeta	14	Picture	stim	389218	0	1	20170	1	0	20000	miss	0
+Goeta	14	Pulse	199	390000	782	NA
+Goeta	14	Pulse	199	400000	10782	NA
+Goeta	15	Picture	fix2	409388	0	1	23670	1	0	next	other	0
+Goeta	15	Pulse	199	410000	612	NA
+Goeta	15	Response	32	413066	3678	0
+Goeta	15	Pulse	199	420000	10612	NA
+Goeta	15	Response	32	427893	18505	0
+Goeta	15	Pulse	199	430000	20612	NA
+Goeta	16	Picture	feedback	433058	0	1	20170	1	0	next	other	0
+Goeta	16	Pulse	199	440000	6942	NA
+Goeta	16	Pulse	199	450000	16942	NA
+Goeta	17	Picture	fix	453228	0	1	23006	1	0	next	other	0
+Goeta	17	Response	32	453246	18	0
+Goeta	17	Pulse	199	460000	6772	NA
+Goeta	17	Pulse	199	470000	16772	NA
+Goeta	19	Picture	stim	476234	0	1	20167	1	0	20000	miss	0
+Goeta	19	Pulse	199	480000	3766	NA
+Goeta	19	Pulse	199	490000	13766	NA
+Goeta	20	Picture	fix2	496401	0	1	13669	1	0	next	other	0
+Goeta	20	Pulse	199	500000	3599	NA
+Goeta	20	Pulse	199	510000	13599	NA
+Goeta	21	Picture	feedback	510070	0	1	20170	1	0	next	other	0
+Goeta	21	Response	16	513947	3877	0
+Goeta	21	Pulse	199	520000	9930	NA
+Goeta	21	Pulse	199	530000	19930	NA
+Goeta	22	Picture	fix	530240	0	1	30005	1	0	next	other	0
+Goeta	22	Response	16	530424	184	0
+Goeta	22	Pulse	199	540000	9760	NA
+Goeta	22	Pulse	199	550000	19760	NA
+Goeta	22	Pulse	199	560000	29760	NA
+Goeta	24	Picture	stim	560244	0	1	20670	1	0	20000	incorrect	87
+Goeta	24	Pulse	199	570000	9756	NA
+Goeta	24	Response	32	575180	14936	0
+Goeta	24	Pulse	199	580000	19756	NA
+Goeta	25	Picture	fix2	580914	0	1	18336	1	0	next	other	0
+Goeta	25	Pulse	199	590000	9086	NA
+Goeta	26	Picture	feedback	599250	0	1	20170	1	0	next	other	0
+Goeta	26	Pulse	199	600000	750	NA
+Goeta	26	Pulse	199	610000	10750	NA
+Goeta	27	Picture	fix	619420	0	1	27339	1	0	next	other	0
+Goeta	27	Pulse	199	620000	580	NA
+Goeta	27	Pulse	199	630000	10580	NA
+Goeta	27	Pulse	199	640000	20580	NA
+Goeta	29	Picture	stim	646758	0	1	20169	1	0	20000	miss	0
+Goeta	29	Pulse	199	650000	3242	NA
+Goeta	29	Pulse	199	660000	13242	NA
+Goeta	30	Picture	fix2	666927	0	1	16002	1	0	next	other	0
+Goeta	30	Pulse	199	670000	3073	NA
+Goeta	30	Response	16	679994	13067	0
+Goeta	30	Pulse	199	680000	13073	NA
+Goeta	31	Picture	feedback	682930	0	1	20170	1	0	next	other	0
+Goeta	31	Pulse	199	690000	7070	NA
+Goeta	31	Response	16	692525	9596	0
+Goeta	31	Pulse	199	700000	17070	NA
+Goeta	32	Picture	fix	703099	0	1	41006	1	0	next	other	0
+Goeta	32	Pulse	199	710000	6901	NA
+Goeta	32	Pulse	199	720000	16901	NA
+Goeta	32	Pulse	199	730000	26901	NA
+Goeta	32	Pulse	199	740000	36901	NA
+Goeta	34	Picture	stim	744105	0	1	20170	1	0	20000	miss	0
+Goeta	34	Pulse	199	750000	5895	NA
+Goeta	34	Pulse	199	760000	15895	NA
+Goeta	35	Picture	fix2	764275	0	1	12169	1	0	next	other	0
+Goeta	35	Pulse	199	770000	5725	NA
+Goeta	35	Response	16	772783	8508	0
+Goeta	36	Picture	feedback	776444	0	1	20170	1	0	next	other	0
+Goeta	36	Pulse	199	780000	3556	NA
+Goeta	36	Pulse	199	790000	13556	NA
+Goeta	37	Picture	fix	796614	0	1	35839	1	0	next	other	0
+Goeta	37	Pulse	199	800000	3386	NA
+Goeta	37	Pulse	199	810000	13386	NA
+Goeta	37	Pulse	199	820000	23386	NA
+Goeta	37	Pulse	199	830000	33386	NA
+Goeta	39	Picture	stim	832452	0	1	20170	1	0	20000	miss	0
+Goeta	39	Pulse	199	840000	7548	NA
+Goeta	39	Pulse	199	850000	17548	NA
+Goeta	40	Picture	fix2	852622	0	1	22670	1	0	next	other	0
+Goeta	40	Pulse	199	860000	7378	NA
+Goeta	40	Response	32	864038	11416	0
+Goeta	40	Pulse	199	870000	17378	NA
+Goeta	41	Picture	feedback	875292	0	1	20170	1	0	next	other	0
+Goeta	41	Pulse	199	880000	4708	NA
+Goeta	41	Pulse	199	890000	14708	NA
+Goeta	42	Picture	fix	895462	0	1	17669	1	0	next	other	0
+Goeta	42	Pulse	199	900000	4538	NA
+Goeta	42	Pulse	199	910000	14538	NA
+Goeta	44	Picture	stim	913131	0	1	20170	1	0	20000	incorrect	144
+Goeta	44	Pulse	199	920000	6869	NA
+Goeta	44	Pulse	199	930000	16869	NA
+Goeta	44	Response	32	930226	17095	0
+Goeta	45	Picture	fix2	933468	0	1	21503	1	0	next	other	0
+Goeta	45	Pulse	199	940000	6532	NA
+Goeta	45	Pulse	199	950000	16532	NA
+Goeta	46	Picture	feedback	954971	0	1	20170	1	0	next	other	0
+Goeta	46	Pulse	199	960000	5029	NA
+Goeta	46	Pulse	199	970000	15029	NA
+Goeta	47	Picture	fix	975141	0	1	32338	1	0	next	other	0
+Goeta	47	Pulse	199	980000	4859	NA
+Goeta	47	Pulse	199	990000	14859	NA
+Goeta	47	Pulse	199	1000000	24859	NA
+Goeta	49	Picture	stim	1007479	0	1	20171	1	0	20000	hit	158
+Goeta	49	Pulse	199	1010000	2521	NA
+Goeta	49	Pulse	199	1020000	12521	NA
+Goeta	49	Response	32	1022425	14946	0
+Goeta	50	Picture	fix2	1027815	0	1	20337	1	0	next	other	0
+Goeta	50	Pulse	199	1030000	2185	NA
+Goeta	50	Pulse	199	1040000	12185	NA
+Goeta	51	Picture	feedback	1048153	0	1	25824	1	0	next	other	0
+Goeta	51	Pulse	199	1050000	1847	NA
+Goeta	51	Pulse	199	1060000	11847	NA

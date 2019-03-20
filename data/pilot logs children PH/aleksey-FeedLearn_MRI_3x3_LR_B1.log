@@ -1,0 +1,237 @@
+Scenario - FeedLearn_MRI_3x3.sce
+Logfile written - 03/19/2019 09:51:16
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+aleksey	0	Pulse	199	0	0	NA
+aleksey	0	Pulse	199	10000	10000	NA
+aleksey	0	Pulse	199	20000	20000	NA
+aleksey	0	Pulse	199	30000	30000	NA
+aleksey	1	Pulse	199	40000	4495	NA
+aleksey	1	Pulse	199	50000	14495	NA
+aleksey	1	Pulse	199	60000	24495	NA
+aleksey	1	Response	16	64862	29357	0
+aleksey	2	Pulse	199	70000	5115	NA
+aleksey	2	Pulse	199	80000	15115	NA
+aleksey	2	Pulse	199	90000	25115	NA
+aleksey	2	Pulse	199	100000	35115	NA
+aleksey	2	Pulse	199	110000	45115	NA
+aleksey	3	Picture	fix	115356	0	1	25172	1	0	next	other	0
+aleksey	3	Pulse	199	120000	4644	NA
+aleksey	3	Pulse	199	130000	14644	NA
+aleksey	4	Pulse	199	140000	192	NA
+aleksey	5	Picture	stim	140528	0	1	20171	1	0	20000	hit	20
+aleksey	5	Pulse	199	150000	9472	NA
+aleksey	5	Response	32	156744	16216	0
+aleksey	5	Pulse	199	160000	19472	NA
+aleksey	6	Picture	fix2	160699	0	1	14336	1	0	next	other	0
+aleksey	6	Pulse	199	170000	9301	NA
+aleksey	7	Picture	feedback	175036	0	1	20171	1	0	next	other	0
+aleksey	7	Pulse	199	180000	4964	NA
+aleksey	7	Pulse	199	190000	14964	NA
+aleksey	8	Picture	fix	195207	0	1	28840	1	0	next	other	0
+aleksey	8	Pulse	199	200000	4793	NA
+aleksey	8	Pulse	199	210000	14793	NA
+aleksey	8	Pulse	199	220000	24793	NA
+aleksey	10	Picture	stim	224046	0	1	20171	1	0	20000	incorrect	34
+aleksey	10	Pulse	199	230000	5954	NA
+aleksey	10	Pulse	199	240000	15954	NA
+aleksey	10	Response	16	241002	16956	0
+aleksey	11	Picture	fix2	244217	0	1	22672	1	0	next	other	0
+aleksey	11	Pulse	199	250000	5783	NA
+aleksey	11	Pulse	199	260000	15783	NA
+aleksey	12	Picture	feedback	266889	0	1	20171	1	0	next	other	0
+aleksey	12	Pulse	199	270000	3111	NA
+aleksey	12	Pulse	199	280000	13111	NA
+aleksey	13	Picture	fix	287060	0	1	32340	1	0	next	other	0
+aleksey	13	Pulse	199	290000	2940	NA
+aleksey	13	Pulse	199	300000	12940	NA
+aleksey	13	Pulse	199	310000	22940	NA
+aleksey	15	Picture	stim	319400	0	1	20171	1	0	20000	hit	46
+aleksey	15	Response	32	319896	496	0
+aleksey	15	Pulse	199	320000	600	NA
+aleksey	15	Pulse	199	330000	10600	NA
+aleksey	15	Response	32	334320	14920	0
+aleksey	16	Picture	fix2	339738	0	1	12169	1	0	next	other	0
+aleksey	16	Pulse	199	340000	262	NA
+aleksey	16	Pulse	199	350000	10262	NA
+aleksey	17	Picture	feedback	351907	0	1	20171	1	0	next	other	0
+aleksey	17	Pulse	199	360000	8093	NA
+aleksey	17	Pulse	199	370000	18093	NA
+aleksey	18	Picture	fix	372078	0	1	27006	1	0	next	other	0
+aleksey	18	Pulse	199	380000	7922	NA
+aleksey	18	Pulse	199	390000	17922	NA
+aleksey	20	Picture	stim	399084	0	1	20171	1	0	20000	hit	62
+aleksey	20	Pulse	199	400000	916	NA
+aleksey	20	Pulse	199	410000	10916	NA
+aleksey	20	Response	32	416629	17545	0
+aleksey	21	Picture	fix2	419255	0	1	24839	1	0	next	other	0
+aleksey	21	Pulse	199	420000	745	NA
+aleksey	21	Pulse	199	430000	10745	NA
+aleksey	21	Pulse	199	440000	20745	NA
+aleksey	22	Picture	feedback	444094	0	1	20171	1	0	next	other	0
+aleksey	22	Pulse	199	450000	5906	NA
+aleksey	22	Pulse	199	460000	15906	NA
+aleksey	23	Picture	fix	464265	0	1	30840	1	0	next	other	0
+aleksey	23	Pulse	199	470000	5735	NA
+aleksey	23	Pulse	199	480000	15735	NA
+aleksey	23	Pulse	199	490000	25735	NA
+aleksey	25	Picture	stim	495105	0	1	20171	1	0	20000	incorrect	76
+aleksey	25	Pulse	199	500000	4895	NA
+aleksey	25	Response	32	509402	14297	0
+aleksey	25	Pulse	199	510000	14895	NA
+aleksey	26	Picture	fix2	515276	0	1	13503	1	0	next	other	0
+aleksey	26	Pulse	199	520000	4724	NA
+aleksey	27	Picture	feedback	528779	0	1	20171	1	0	next	other	0
+aleksey	27	Pulse	199	530000	1221	NA
+aleksey	27	Pulse	199	540000	11221	NA
+aleksey	28	Picture	fix	548950	0	1	26172	1	0	next	other	0
+aleksey	28	Pulse	199	550000	1050	NA
+aleksey	28	Pulse	199	560000	11050	NA
+aleksey	28	Pulse	199	570000	21050	NA
+aleksey	30	Picture	stim	575122	0	1	20171	1	0	20000	hit	89
+aleksey	30	Pulse	199	580000	4878	NA
+aleksey	30	Response	32	586005	10882	0
+aleksey	30	Pulse	199	590000	14878	NA
+aleksey	31	Picture	fix2	595460	0	1	27173	1	0	next	other	0
+aleksey	31	Pulse	199	600000	4540	NA
+aleksey	31	Pulse	199	610000	14540	NA
+aleksey	31	Pulse	199	620000	24540	NA
+aleksey	32	Picture	feedback	622633	0	1	20171	1	0	next	other	0
+aleksey	32	Pulse	199	630000	7367	NA
+aleksey	32	Pulse	199	640000	17367	NA
+aleksey	33	Picture	fix	642804	0	1	30673	1	0	next	other	0
+aleksey	33	Pulse	199	650000	7196	NA
+aleksey	33	Pulse	199	660000	17196	NA
+aleksey	33	Pulse	199	670000	27196	NA
+aleksey	35	Picture	stim	673477	0	1	20171	1	0	20000	miss	0
+aleksey	35	Pulse	199	680000	6523	NA
+aleksey	35	Pulse	199	690000	16523	NA
+aleksey	36	Picture	fix2	693648	0	1	25672	1	0	next	other	0
+aleksey	36	Response	32	697270	3622	0
+aleksey	36	Pulse	199	700000	6352	NA
+aleksey	36	Pulse	199	710000	16352	NA
+aleksey	37	Picture	feedback	719320	0	1	20171	1	0	next	other	0
+aleksey	37	Pulse	199	720000	680	NA
+aleksey	37	Response	32	726530	7210	0
+aleksey	37	Pulse	199	730000	10680	NA
+aleksey	38	Picture	fix	739491	0	1	30007	1	0	next	other	0
+aleksey	38	Pulse	199	740000	509	NA
+aleksey	38	Pulse	199	750000	10509	NA
+aleksey	38	Pulse	199	760000	20509	NA
+aleksey	40	Picture	stim	769498	0	1	20171	1	0	20000	incorrect	120
+aleksey	40	Pulse	199	770000	502	NA
+aleksey	40	Pulse	199	780000	10502	NA
+aleksey	40	Response	32	785753	16255	0
+aleksey	41	Picture	fix2	789836	0	1	10002	1	0	next	other	0
+aleksey	41	Pulse	199	790000	164	NA
+aleksey	42	Picture	feedback	799838	0	1	20171	1	0	next	other	0
+aleksey	42	Pulse	199	800000	162	NA
+aleksey	42	Pulse	199	810000	10162	NA
+aleksey	42	Pulse	199	820000	20162	NA
+aleksey	43	Picture	fix	820009	0	1	22005	1	0	next	other	0
+aleksey	43	Pulse	199	830000	9991	NA
+aleksey	43	Pulse	199	840000	19991	NA
+aleksey	45	Picture	stim	842014	0	1	20171	1	0	20000	hit	132
+aleksey	45	Pulse	199	850000	7986	NA
+aleksey	45	Response	32	855325	13311	0
+aleksey	45	Pulse	199	860000	17986	NA
+aleksey	46	Picture	fix2	862185	0	1	16504	1	0	next	other	0
+aleksey	46	Pulse	199	870000	7815	NA
+aleksey	47	Picture	feedback	878688	0	1	20171	1	0	next	other	0
+aleksey	47	Pulse	199	880000	1312	NA
+aleksey	47	Pulse	199	890000	11312	NA
+aleksey	48	Picture	fix	898859	0	1	32840	1	0	next	other	0
+aleksey	48	Pulse	199	900000	1141	NA
+aleksey	48	Pulse	199	910000	11141	NA
+aleksey	48	Pulse	199	920000	21141	NA
+aleksey	48	Pulse	199	930000	31141	NA
+aleksey	50	Picture	stim	931700	0	1	20171	1	0	20000	hit	146
+aleksey	50	Pulse	199	940000	8300	NA
+aleksey	50	Response	32	946213	14513	0
+aleksey	50	Pulse	199	950000	18300	NA
+aleksey	51	Picture	fix2	952038	0	1	18671	1	0	next	other	0
+aleksey	51	Pulse	199	960000	7962	NA
+aleksey	51	Pulse	199	970000	17962	NA
+aleksey	52	Picture	feedback	970708	0	1	20171	1	0	next	other	0
+aleksey	52	Pulse	199	980000	9292	NA
+aleksey	52	Pulse	199	990000	19292	NA
+aleksey	53	Picture	fix	990879	0	1	30673	1	0	next	other	0
+aleksey	53	Pulse	199	1000000	9121	NA
+aleksey	53	Pulse	199	1010000	19121	NA
+aleksey	53	Pulse	199	1020000	29121	NA
+aleksey	55	Picture	stim	1021553	0	1	20171	1	0	20000	incorrect	160
+aleksey	55	Pulse	199	1030000	8447	NA
+aleksey	55	Response	32	1036928	15375	0
+aleksey	55	Pulse	199	1040000	18447	NA
+aleksey	56	Picture	fix2	1041724	0	1	19504	1	0	next	other	0
+aleksey	56	Pulse	199	1050000	8276	NA
+aleksey	56	Response	32	1054104	12380	0
+aleksey	56	Pulse	199	1060000	18276	NA
+aleksey	57	Picture	feedback	1061228	0	1	20171	1	0	next	other	0
+aleksey	57	Pulse	199	1070000	8772	NA
+aleksey	57	Pulse	199	1080000	18772	NA
+aleksey	58	Picture	fix	1081399	0	1	28840	1	0	next	other	0
+aleksey	58	Pulse	199	1090000	8601	NA
+aleksey	58	Pulse	199	1100000	18601	NA
+aleksey	58	Pulse	199	1110000	28601	NA
+aleksey	60	Picture	stim	1110239	0	1	20171	1	0	20000	incorrect	175
+aleksey	60	Pulse	199	1120000	9761	NA
+aleksey	60	Response	32	1126545	16307	0
+aleksey	60	Pulse	199	1130000	19761	NA
+aleksey	61	Picture	fix2	1130576	0	1	11336	1	0	next	other	0
+aleksey	61	Pulse	199	1140000	9424	NA
+aleksey	62	Picture	feedback	1141912	0	1	20171	1	0	next	other	0
+aleksey	62	Pulse	199	1150000	8088	NA
+aleksey	62	Pulse	199	1160000	18088	NA
+aleksey	63	Picture	fix	1162083	0	1	27673	1	0	next	other	0
+aleksey	63	Pulse	199	1170000	7917	NA
+aleksey	63	Pulse	199	1180000	17917	NA
+aleksey	65	Picture	stim	1189756	0	1	20171	1	0	20000	hit	188
+aleksey	65	Pulse	199	1190000	244	NA
+aleksey	65	Pulse	199	1200000	10244	NA
+aleksey	65	Response	32	1208681	18925	0
+aleksey	66	Picture	fix2	1209927	0	1	15170	1	0	next	other	0
+aleksey	66	Pulse	199	1210000	73	NA
+aleksey	66	Pulse	199	1220000	10073	NA
+aleksey	67	Picture	feedback	1225097	0	1	20171	1	0	next	other	0
+aleksey	67	Pulse	199	1230000	4903	NA
+aleksey	67	Pulse	199	1240000	14903	NA
+aleksey	68	Picture	fix	1245268	0	1	21005	1	0	next	other	0
+aleksey	68	Pulse	199	1250000	4732	NA
+aleksey	68	Pulse	199	1260000	14732	NA
+aleksey	70	Picture	stim	1266273	0	1	20171	1	0	20000	incorrect	201
+aleksey	70	Pulse	199	1270000	3727	NA
+aleksey	70	Pulse	199	1280000	13727	NA
+aleksey	70	Response	32	1280296	14023	0
+aleksey	71	Picture	fix2	1286610	0	1	20171	1	0	next	other	0
+aleksey	71	Pulse	199	1290000	3390	NA
+aleksey	71	Pulse	199	1300000	13390	NA
+aleksey	72	Picture	feedback	1306781	0	1	20171	1	0	next	other	0
+aleksey	72	Pulse	199	1310000	3219	NA
+aleksey	72	Pulse	199	1320000	13219	NA
+aleksey	73	Picture	fix	1326952	0	1	30673	1	0	next	other	0
+aleksey	73	Pulse	199	1330000	3048	NA
+aleksey	73	Pulse	199	1340000	13048	NA
+aleksey	73	Pulse	199	1350000	23048	NA
+aleksey	75	Picture	stim	1357626	0	1	20171	1	0	20000	incorrect	215
+aleksey	75	Pulse	199	1360000	2374	NA
+aleksey	75	Pulse	199	1370000	12374	NA
+aleksey	75	Response	32	1371719	14093	0
+aleksey	76	Picture	fix2	1377797	0	1	20338	1	0	next	other	0
+aleksey	76	Pulse	199	1380000	2203	NA
+aleksey	76	Pulse	199	1390000	12203	NA
+aleksey	77	Picture	feedback	1398135	0	1	20171	1	0	next	other	0
+aleksey	77	Pulse	199	1400000	1865	NA
+aleksey	77	Pulse	199	1410000	11865	NA
+aleksey	78	Picture	fix	1418306	0	1	24005	1	0	next	other	0
+aleksey	78	Pulse	199	1420000	1694	NA
+aleksey	78	Pulse	199	1430000	11694	NA
+aleksey	78	Pulse	199	1440000	21694	NA
+aleksey	80	Picture	stim	1442311	0	1	20171	1	0	20000	hit	228
+aleksey	80	Pulse	199	1450000	7689	NA
+aleksey	80	Response	32	1458552	16242	0
+aleksey	80	Pulse	199	1460000	17689	NA
+aleksey	81	Picture	fix2	1462648	0	1	14547	1	0	next	other	0
+aleksey	81	Pulse	199	1470000	7352	NA
+aleksey	81	Quit		1472630	9982	NA

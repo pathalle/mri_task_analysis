@@ -1,0 +1,554 @@
+Scenario - FeedLearn_MRI_3x3.sce
+Logfile written - 03/19/2019 09:56:06
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+goeta	0	Pulse	199	0	0	NA
+goeta	0	Pulse	199	10000	10000	NA
+goeta	0	Pulse	199	20000	20000	NA
+goeta	0	Pulse	199	30000	30000	NA
+goeta	0	Pulse	199	40000	40000	NA
+goeta	0	Pulse	199	50000	50000	NA
+goeta	0	Pulse	199	60000	60000	NA
+goeta	0	Response	16	60880	60880	0
+goeta	0	Pulse	199	70000	70000	NA
+goeta	0	Pulse	199	80000	80000	NA
+goeta	0	Pulse	199	90000	90000	NA
+goeta	0	Pulse	199	100000	100000	NA
+goeta	0	Pulse	199	110000	110000	NA
+goeta	0	Pulse	199	120000	120000	NA
+goeta	0	Pulse	199	130000	130000	NA
+goeta	0	Pulse	199	140000	140000	NA
+goeta	0	Pulse	199	150000	150000	NA
+goeta	0	Pulse	199	160000	160000	NA
+goeta	0	Pulse	199	170000	170000	NA
+goeta	0	Pulse	199	180000	180000	NA
+goeta	0	Pulse	199	190000	190000	NA
+goeta	0	Pulse	199	200000	200000	NA
+goeta	0	Pulse	199	210000	210000	NA
+goeta	0	Pulse	199	220000	220000	NA
+goeta	0	Pulse	199	230000	230000	NA
+goeta	1	Pulse	199	240000	3799	NA
+goeta	1	Pulse	199	250000	13799	NA
+goeta	1	Pulse	199	260000	23799	NA
+goeta	1	Pulse	199	270000	33799	NA
+goeta	1	Pulse	199	280000	43799	NA
+goeta	1	Response	16	280131	43930	0
+goeta	2	Pulse	199	290000	9714	NA
+goeta	2	Pulse	199	300000	19714	NA
+goeta	2	Pulse	199	310000	29714	NA
+goeta	2	Pulse	199	320000	39714	NA
+goeta	2	Pulse	199	330000	49714	NA
+goeta	3	Picture	fix	330881	0	5	42008	5	0	next	other	0
+goeta	3	Pulse	199	340000	9119	NA
+goeta	3	Pulse	199	350000	19119	NA
+goeta	3	Pulse	199	360000	29119	NA
+goeta	4	Pulse	199	370000	4664	NA
+goeta	5	Picture	stim	372888	0	1	20170	1	0	20000	hit	44
+goeta	5	Pulse	199	380000	7112	NA
+goeta	5	Response	32	388966	16077	0
+goeta	5	Pulse	199	390000	17112	NA
+goeta	6	Picture	fix2	393059	0	1	19836	1	0	next	other	0
+goeta	6	Pulse	199	400000	6941	NA
+goeta	6	Pulse	199	410000	16941	NA
+goeta	7	Picture	feedback	412895	0	1	20336	1	0	next	other	0
+goeta	7	Pulse	199	420000	7105	NA
+goeta	7	Pulse	199	430000	17105	NA
+goeta	8	Picture	fix	433231	0	1	28838	1	0	next	other	0
+goeta	8	Pulse	199	440000	6769	NA
+goeta	8	Pulse	199	450000	16769	NA
+goeta	8	Pulse	199	460000	26769	NA
+goeta	10	Picture	stim	462069	0	1	20169	1	0	20000	incorrect	59
+goeta	10	Pulse	199	470000	7931	NA
+goeta	10	Pulse	199	480000	17931	NA
+goeta	10	Response	16	481244	19175	0
+goeta	11	Picture	fix2	482238	0	1	21837	1	0	next	other	0
+goeta	11	Pulse	199	490000	7762	NA
+goeta	11	Pulse	199	500000	17762	NA
+goeta	12	Picture	feedback	504076	0	1	20502	1	0	next	other	0
+goeta	12	Pulse	199	510000	5924	NA
+goeta	12	Pulse	199	520000	15924	NA
+goeta	13	Picture	fix	524578	0	1	31005	1	0	next	other	0
+goeta	13	Pulse	199	530000	5422	NA
+goeta	13	Pulse	199	540000	15422	NA
+goeta	13	Pulse	199	550000	25422	NA
+goeta	15	Picture	stim	555583	0	1	20170	1	0	20000	hit	72
+goeta	15	Pulse	199	560000	4417	NA
+goeta	15	Response	32	568558	12975	0
+goeta	15	Pulse	199	570000	14417	NA
+goeta	16	Picture	fix2	575752	0	1	12335	1	0	next	other	0
+goeta	16	Pulse	199	580000	4248	NA
+goeta	17	Picture	feedback	588088	0	1	20170	1	0	next	other	0
+goeta	17	Pulse	199	590000	1912	NA
+goeta	17	Pulse	199	600000	11912	NA
+goeta	18	Picture	fix	608257	0	1	17669	1	0	next	other	0
+goeta	18	Pulse	199	610000	1743	NA
+goeta	18	Pulse	199	620000	11743	NA
+goeta	20	Picture	stim	625927	0	1	20170	1	0	20000	incorrect	85
+goeta	20	Pulse	199	630000	4073	NA
+goeta	20	Pulse	199	640000	14073	NA
+goeta	20	Response	16	643547	17620	0
+goeta	21	Picture	fix2	646097	0	1	16003	1	0	next	other	0
+goeta	21	Pulse	199	650000	3903	NA
+goeta	21	Pulse	199	660000	13903	NA
+goeta	22	Picture	feedback	662100	0	1	20336	1	0	next	other	0
+goeta	22	Pulse	199	670000	7900	NA
+goeta	22	Pulse	199	680000	17900	NA
+goeta	23	Picture	fix	682435	0	1	22003	1	0	next	other	0
+goeta	23	Pulse	199	690000	7565	NA
+goeta	23	Pulse	199	700000	17565	NA
+goeta	25	Picture	stim	704439	0	1	20170	1	0	20000	incorrect	97
+goeta	25	Pulse	199	710000	5561	NA
+goeta	25	Response	32	715967	11528	0
+goeta	25	Pulse	199	720000	15561	NA
+goeta	26	Picture	fix2	724609	0	1	14335	1	0	next	other	0
+goeta	26	Pulse	199	730000	5391	NA
+goeta	27	Picture	feedback	738944	0	1	20170	1	0	next	other	0
+goeta	27	Pulse	199	740000	1056	NA
+goeta	27	Pulse	199	750000	11056	NA
+goeta	28	Picture	fix	759114	0	1	27837	2	0	next	other	0
+goeta	28	Pulse	199	760000	886	NA
+goeta	28	Pulse	199	770000	10886	NA
+goeta	28	Pulse	199	780000	20886	NA
+goeta	30	Picture	stim	786951	0	2	20170	2	0	20000	hit	111
+goeta	30	Pulse	199	790000	3049	NA
+goeta	30	Pulse	199	800000	13049	NA
+goeta	30	Response	16	801121	14170	0
+goeta	31	Picture	fix2	807121	0	1	11335	1	0	next	other	0
+goeta	31	Pulse	199	810000	2879	NA
+goeta	32	Picture	feedback	818456	0	1	20170	1	0	next	other	0
+goeta	32	Pulse	199	820000	1544	NA
+goeta	32	Pulse	199	830000	11544	NA
+goeta	33	Picture	fix	838626	0	1	30672	1	0	next	other	0
+goeta	33	Pulse	199	840000	1374	NA
+goeta	33	Pulse	199	850000	11374	NA
+goeta	33	Pulse	199	860000	21374	NA
+goeta	35	Picture	stim	869297	0	1	20170	1	0	20000	hit	123
+goeta	35	Pulse	199	870000	703	NA
+goeta	35	Response	16	877233	7936	0
+goeta	35	Pulse	199	880000	10703	NA
+goeta	36	Picture	fix2	889634	0	1	16503	1	0	next	other	0
+goeta	36	Pulse	199	890000	366	NA
+goeta	36	Pulse	199	900000	10366	NA
+goeta	37	Picture	feedback	906136	0	1	20170	1	0	next	other	0
+goeta	37	Pulse	199	910000	3864	NA
+goeta	37	Pulse	199	920000	13864	NA
+goeta	38	Picture	fix	926306	0	1	25671	1	0	next	other	0
+goeta	38	Pulse	199	930000	3694	NA
+goeta	38	Pulse	199	940000	13694	NA
+goeta	38	Pulse	199	950000	23694	NA
+goeta	40	Picture	stim	951977	0	1	20170	1	0	20000	hit	137
+goeta	40	Pulse	199	960000	8023	NA
+goeta	40	Response	16	962300	10323	0
+goeta	40	Pulse	199	970000	18023	NA
+goeta	41	Picture	fix2	972146	0	1	20003	1	0	next	other	0
+goeta	41	Pulse	199	980000	7854	NA
+goeta	41	Pulse	199	990000	17854	NA
+goeta	42	Picture	feedback	992149	0	1	20170	1	0	next	other	0
+goeta	42	Pulse	199	1000000	7851	NA
+goeta	42	Pulse	199	1010000	17851	NA
+goeta	43	Picture	fix	1012319	0	1	23004	1	0	next	other	0
+goeta	43	Pulse	199	1020000	7681	NA
+goeta	43	Pulse	199	1030000	17681	NA
+goeta	45	Picture	stim	1035323	0	1	20170	1	0	20000	incorrect	150
+goeta	45	Pulse	199	1040000	4677	NA
+goeta	45	Response	32	1043130	7807	0
+goeta	45	Pulse	199	1050000	14677	NA
+goeta	46	Picture	fix2	1055659	0	1	25671	1	0	next	other	0
+goeta	46	Pulse	199	1060000	4341	NA
+goeta	46	Pulse	199	1070000	14341	NA
+goeta	46	Pulse	199	1080000	24341	NA
+goeta	47	Picture	feedback	1081330	0	1	20170	1	0	next	other	0
+goeta	47	Pulse	199	1090000	8670	NA
+goeta	47	Pulse	199	1100000	18670	NA
+goeta	48	Picture	fix	1101499	0	1	33005	1	0	next	other	0
+goeta	48	Pulse	199	1110000	8501	NA
+goeta	48	Pulse	199	1120000	18501	NA
+goeta	48	Pulse	199	1130000	28501	NA
+goeta	50	Picture	stim	1134504	0	1	20170	1	0	20000	incorrect	165
+goeta	50	Pulse	199	1140000	5496	NA
+goeta	50	Response	16	1143649	9145	0
+goeta	50	Pulse	199	1150000	15496	NA
+goeta	51	Picture	fix2	1154674	0	1	18839	1	0	next	other	0
+goeta	51	Pulse	199	1160000	5326	NA
+goeta	51	Pulse	199	1170000	15326	NA
+goeta	52	Picture	feedback	1173513	0	1	20167	1	0	next	other	0
+goeta	52	Pulse	199	1180000	6487	NA
+goeta	52	Pulse	199	1190000	16487	NA
+goeta	53	Picture	fix	1193680	0	1	32838	1	0	next	other	0
+goeta	53	Pulse	199	1200000	6320	NA
+goeta	53	Pulse	199	1210000	16320	NA
+goeta	53	Pulse	199	1220000	26320	NA
+goeta	55	Picture	stim	1226518	0	1	20170	1	0	20000	hit	179
+goeta	55	Pulse	199	1230000	3482	NA
+goeta	55	Response	32	1235356	8838	0
+goeta	55	Pulse	199	1240000	13482	NA
+goeta	56	Picture	fix2	1246688	0	1	18836	1	0	next	other	0
+goeta	56	Pulse	199	1250000	3312	NA
+goeta	56	Pulse	199	1260000	13312	NA
+goeta	57	Picture	feedback	1265524	0	1	20170	1	0	next	other	0
+goeta	57	Pulse	199	1270000	4476	NA
+goeta	57	Pulse	199	1280000	14476	NA
+goeta	58	Picture	fix	1285694	0	1	24170	1	0	next	other	0
+goeta	58	Pulse	199	1290000	4306	NA
+goeta	58	Pulse	199	1300000	14306	NA
+goeta	60	Picture	stim	1309864	0	1	20170	1	0	20000	incorrect	193
+goeta	60	Pulse	199	1310000	136	NA
+goeta	60	Pulse	199	1320000	10136	NA
+goeta	60	Response	32	1323222	13357	0
+goeta	60	Pulse	199	1330000	20136	NA
+goeta	61	Picture	fix2	1330034	0	1	26837	1	0	next	other	0
+goeta	61	Pulse	199	1340000	9966	NA
+goeta	61	Pulse	199	1350000	19966	NA
+goeta	62	Picture	feedback	1356871	0	1	20170	1	0	next	other	0
+goeta	62	Pulse	199	1360000	3129	NA
+goeta	62	Pulse	199	1370000	13129	NA
+goeta	63	Picture	fix	1377041	0	1	38006	1	0	next	other	0
+goeta	63	Pulse	199	1380000	2959	NA
+goeta	63	Pulse	199	1390000	12959	NA
+goeta	63	Pulse	199	1400000	22959	NA
+goeta	63	Pulse	199	1410000	32959	NA
+goeta	65	Picture	stim	1415047	0	1	20170	1	0	20000	hit	208
+goeta	65	Pulse	199	1420000	4953	NA
+goeta	65	Response	16	1425621	10574	0
+goeta	65	Pulse	199	1430000	14953	NA
+goeta	66	Picture	fix2	1435217	0	1	14336	1	0	next	other	0
+goeta	66	Pulse	199	1440000	4783	NA
+goeta	67	Picture	feedback	1449552	0	1	20170	1	0	next	other	0
+goeta	67	Pulse	199	1450000	448	NA
+goeta	67	Pulse	199	1460000	10448	NA
+goeta	68	Picture	fix	1469722	0	1	35839	1	0	next	other	0
+goeta	68	Pulse	199	1470000	278	NA
+goeta	68	Pulse	199	1480000	10278	NA
+goeta	68	Response	32	1483883	14161	0
+goeta	68	Pulse	199	1490000	20278	NA
+goeta	68	Pulse	199	1500000	30278	NA
+goeta	70	Picture	stim	1505561	0	1	20170	1	0	20000	incorrect	223
+goeta	70	Pulse	199	1510000	4439	NA
+goeta	70	Response	32	1514704	9143	0
+goeta	70	Pulse	199	1520000	14439	NA
+goeta	71	Picture	fix2	1525730	0	1	25170	1	0	next	other	0
+goeta	71	Pulse	199	1530000	4270	NA
+goeta	71	Pulse	199	1540000	14270	NA
+goeta	71	Pulse	199	1550000	24270	NA
+goeta	72	Picture	feedback	1550901	0	1	20170	1	0	next	other	0
+goeta	72	Pulse	199	1560000	9099	NA
+goeta	72	Pulse	199	1570000	19099	NA
+goeta	73	Picture	fix	1571071	0	1	30671	1	0	next	other	0
+goeta	73	Pulse	199	1580000	8929	NA
+goeta	73	Pulse	199	1590000	18929	NA
+goeta	73	Pulse	199	1600000	28929	NA
+goeta	75	Picture	stim	1601742	0	1	20170	1	0	20000	incorrect	237
+goeta	75	Response	16	1609697	7955	0
+goeta	75	Pulse	199	1610000	8258	NA
+goeta	75	Pulse	199	1620000	18258	NA
+goeta	76	Picture	fix2	1621912	0	1	20337	1	0	next	other	0
+goeta	76	Pulse	199	1630000	8088	NA
+goeta	76	Pulse	199	1640000	18088	NA
+goeta	77	Picture	feedback	1642248	0	1	20170	1	0	next	other	0
+goeta	77	Pulse	199	1650000	7752	NA
+goeta	77	Pulse	199	1660000	17752	NA
+goeta	78	Picture	fix	1662418	0	1	27172	1	0	next	other	0
+goeta	78	Pulse	199	1670000	7582	NA
+goeta	78	Response	32	1674447	12029	3
+goeta	78	Pulse	199	1680000	17582	NA
+goeta	80	Picture	stim	1689590	0	1	20168	1	0	20000	incorrect	253
+goeta	80	Pulse	199	1690000	410	NA
+goeta	80	Pulse	199	1700000	10410	NA
+goeta	80	Response	16	1701030	11440	0
+goeta	81	Picture	fix2	1709758	0	1	23670	1	0	next	other	0
+goeta	81	Pulse	199	1710000	242	NA
+goeta	81	Pulse	199	1720000	10242	NA
+goeta	81	Pulse	199	1730000	20242	NA
+goeta	82	Picture	feedback	1733429	0	1	20170	1	0	next	other	0
+goeta	82	Pulse	199	1740000	6571	NA
+goeta	82	Pulse	199	1750000	16571	NA
+goeta	83	Picture	fix	1753598	0	1	30005	1	0	next	other	0
+goeta	83	Pulse	199	1760000	6402	NA
+goeta	83	Pulse	199	1770000	16402	NA
+goeta	83	Pulse	199	1780000	26402	NA
+goeta	85	Picture	stim	1783603	0	1	20170	1	0	20000	incorrect	267
+goeta	85	Pulse	199	1790000	6397	NA
+goeta	85	Response	32	1796253	12650	0
+goeta	85	Pulse	199	1800000	16397	NA
+goeta	86	Picture	fix2	1803939	0	1	10168	1	0	next	other	0
+goeta	86	Pulse	199	1810000	6061	NA
+goeta	87	Picture	feedback	1814108	0	1	20170	1	0	next	other	0
+goeta	87	Pulse	199	1820000	5892	NA
+goeta	87	Pulse	199	1830000	15892	NA
+goeta	88	Picture	fix	1834277	0	1	30505	1	0	next	other	0
+goeta	88	Pulse	199	1840000	5723	NA
+goeta	88	Pulse	199	1850000	15723	NA
+goeta	88	Pulse	199	1860000	25723	NA
+goeta	90	Picture	stim	1864782	0	1	20170	1	0	20000	incorrect	280
+goeta	90	Pulse	199	1870000	5218	NA
+goeta	90	Response	16	1875406	10623	0
+goeta	90	Pulse	199	1880000	15218	NA
+goeta	91	Picture	fix2	1885119	0	1	25837	1	0	next	other	0
+goeta	91	Pulse	199	1890000	4881	NA
+goeta	91	Pulse	199	1900000	14881	NA
+goeta	91	Pulse	199	1910000	24881	NA
+goeta	92	Picture	feedback	1910956	0	1	20170	1	0	next	other	0
+goeta	92	Pulse	199	1920000	9044	NA
+goeta	92	Pulse	199	1930000	19044	NA
+goeta	93	Picture	fix	1931126	0	1	27337	1	0	next	other	0
+goeta	93	Pulse	199	1940000	8874	NA
+goeta	93	Pulse	199	1950000	18874	NA
+goeta	95	Picture	stim	1958463	0	1	20170	1	0	20000	incorrect	295
+goeta	95	Pulse	199	1960000	1537	NA
+goeta	95	Pulse	199	1970000	11537	NA
+goeta	95	Response	32	1971519	13056	0
+goeta	96	Picture	fix2	1978633	0	1	21503	1	0	next	other	0
+goeta	96	Pulse	199	1980000	1367	NA
+goeta	96	Pulse	199	1990000	11367	NA
+goeta	96	Pulse	199	2000000	21367	NA
+goeta	97	Picture	feedback	2000136	0	1	20170	1	0	next	other	0
+goeta	97	Pulse	199	2010000	9864	NA
+goeta	97	Pulse	199	2020000	19864	NA
+goeta	98	Picture	fix	2020306	0	1	28838	1	0	next	other	0
+goeta	98	Pulse	199	2030000	9694	NA
+goeta	98	Pulse	199	2040000	19694	NA
+goeta	100	Picture	stim	2049144	0	1	20170	1	0	20000	hit	309
+goeta	100	Pulse	199	2050000	856	NA
+goeta	100	Pulse	199	2060000	10856	NA
+goeta	100	Response	32	2066113	16969	0
+goeta	101	Picture	fix2	2069313	0	1	18336	1	0	next	other	0
+goeta	101	Pulse	199	2070000	687	NA
+goeta	101	Pulse	199	2080000	10687	NA
+goeta	102	Picture	feedback	2087649	0	1	20170	1	0	next	other	0
+goeta	102	Pulse	199	2090000	2351	NA
+goeta	102	Pulse	199	2100000	12351	NA
+goeta	103	Picture	fix	2107819	0	1	32338	1	0	next	other	0
+goeta	103	Pulse	199	2110000	2181	NA
+goeta	103	Pulse	199	2120000	12181	NA
+goeta	103	Pulse	199	2130000	22181	NA
+goeta	103	Pulse	199	2140000	32181	NA
+goeta	105	Picture	stim	2140157	0	1	20170	1	0	20000	hit	323
+goeta	105	Pulse	199	2150000	9843	NA
+goeta	105	Response	16	2157426	17269	0
+goeta	105	Pulse	199	2160000	19843	NA
+goeta	106	Picture	fix2	2160327	0	1	13669	1	0	next	other	0
+goeta	106	Pulse	199	2170000	9673	NA
+goeta	107	Picture	feedback	2173996	0	1	20170	1	0	next	other	0
+goeta	107	Pulse	199	2180000	6004	NA
+goeta	107	Pulse	199	2190000	16004	NA
+goeta	108	Picture	fix	2194166	0	1	23170	1	0	next	other	0
+goeta	108	Pulse	199	2200000	5834	NA
+goeta	108	Pulse	199	2210000	15834	NA
+goeta	110	Picture	stim	2217336	0	1	20170	1	0	20000	incorrect	336
+goeta	110	Pulse	199	2220000	2664	NA
+goeta	110	Pulse	199	2230000	12664	NA
+goeta	110	Response	32	2235848	18513	0
+goeta	111	Picture	fix2	2237505	0	1	15169	1	0	next	other	0
+goeta	111	Pulse	199	2240000	2495	NA
+goeta	111	Pulse	199	2250000	12495	NA
+goeta	112	Picture	feedback	2252675	0	1	20170	1	0	next	other	0
+goeta	112	Pulse	199	2260000	7325	NA
+goeta	112	Pulse	199	2270000	17325	NA
+goeta	113	Picture	fix	2272844	0	1	33505	1	0	next	other	0
+goeta	113	Pulse	199	2280000	7156	NA
+goeta	113	Pulse	199	2290000	17156	NA
+goeta	113	Pulse	199	2300000	27156	NA
+goeta	115	Picture	stim	2306349	0	1	20170	1	0	20000	incorrect	350
+goeta	115	Pulse	199	2310000	3651	NA
+goeta	115	Pulse	199	2320000	13651	NA
+goeta	115	Response	32	2322281	15932	0
+goeta	116	Picture	fix2	2326519	0	1	18670	1	0	next	other	0
+goeta	116	Pulse	199	2330000	3481	NA
+goeta	116	Pulse	199	2340000	13481	NA
+goeta	117	Picture	feedback	2345189	0	1	20170	1	0	next	other	0
+goeta	117	Pulse	199	2350000	4811	NA
+goeta	117	Pulse	199	2360000	14811	NA
+goeta	118	Picture	fix	2365358	0	1	27004	1	0	next	other	0
+goeta	118	Pulse	199	2370000	4642	NA
+goeta	118	Pulse	199	2380000	14642	NA
+goeta	118	Pulse	199	2390000	24642	NA
+goeta	120	Picture	stim	2392362	0	1	20170	1	0	20000	hit	363
+goeta	120	Pulse	199	2400000	7638	NA
+goeta	120	Response	16	2403823	11461	0
+goeta	120	Pulse	199	2410000	17638	NA
+goeta	121	Picture	fix2	2412532	0	1	22670	1	0	next	other	0
+goeta	121	Pulse	199	2420000	7468	NA
+goeta	121	Pulse	199	2430000	17468	NA
+goeta	122	Picture	feedback	2435202	0	1	20170	1	0	next	other	0
+goeta	122	Pulse	199	2440000	4798	NA
+goeta	122	Pulse	199	2450000	14798	NA
+goeta	123	Picture	fix	2455372	0	1	31838	1	0	next	other	0
+goeta	123	Pulse	199	2460000	4628	NA
+goeta	123	Pulse	199	2470000	14628	NA
+goeta	123	Pulse	199	2480000	24628	NA
+goeta	125	Picture	stim	2487210	0	1	20170	1	0	20000	incorrect	377
+goeta	125	Pulse	199	2490000	2790	NA
+goeta	125	Response	16	2499937	12726	0
+goeta	125	Pulse	199	2500000	12790	NA
+goeta	126	Picture	fix2	2507380	0	1	20003	1	0	next	other	0
+goeta	126	Pulse	199	2510000	2620	NA
+goeta	126	Pulse	199	2520000	12620	NA
+goeta	127	Picture	feedback	2527383	0	1	20170	1	0	next	other	0
+goeta	127	Pulse	199	2530000	2617	NA
+goeta	127	Pulse	199	2540000	12617	NA
+goeta	128	Picture	fix	2547553	0	1	24671	1	0	next	other	0
+goeta	128	Pulse	199	2550000	2447	NA
+goeta	128	Pulse	199	2560000	12447	NA
+goeta	128	Pulse	199	2570000	22447	NA
+goeta	130	Picture	stim	2572223	0	1	20169	1	0	20000	incorrect	391
+goeta	130	Pulse	199	2580000	7777	NA
+goeta	130	Response	32	2581251	9027	0
+goeta	130	Pulse	199	2590000	17777	NA
+goeta	131	Picture	fix2	2592560	0	1	20171	1	0	next	other	0
+goeta	131	Pulse	199	2600000	7440	NA
+goeta	131	Pulse	199	2610000	17440	NA
+goeta	132	Picture	feedback	2612730	0	1	20169	1	0	next	other	0
+goeta	132	Pulse	199	2620000	7270	NA
+goeta	132	Pulse	199	2630000	17270	NA
+goeta	133	Picture	fix	2632900	0	1	30671	1	0	next	other	0
+goeta	133	Pulse	199	2640000	7100	NA
+goeta	133	Pulse	199	2650000	17100	NA
+goeta	133	Pulse	199	2660000	27100	NA
+goeta	135	Picture	stim	2663570	0	1	20171	1	0	20000	miss	0
+goeta	135	Pulse	199	2670000	6430	NA
+goeta	135	Pulse	199	2680000	16430	NA
+goeta	136	Picture	fix2	2683741	0	1	13502	1	0	next	other	0
+goeta	136	Response	32	2685217	1476	0
+goeta	136	Pulse	199	2690000	6259	NA
+goeta	137	Picture	feedback	2697243	0	1	20168	1	0	next	other	0
+goeta	137	Pulse	199	2700000	2757	NA
+goeta	137	Response	32	2707318	10075	0
+goeta	137	Pulse	199	2710000	12757	NA
+goeta	138	Picture	fix	2717412	0	1	28838	1	0	next	other	0
+goeta	138	Pulse	199	2720000	2588	NA
+goeta	138	Pulse	199	2730000	12588	NA
+goeta	138	Pulse	199	2740000	22588	NA
+goeta	140	Picture	stim	2746250	0	1	20170	1	0	20000	incorrect	420
+goeta	140	Pulse	199	2750000	3750	NA
+goeta	140	Pulse	199	2760000	13750	NA
+goeta	140	Response	16	2762629	16380	0
+goeta	141	Picture	fix2	2766586	0	1	17503	1	0	next	other	0
+goeta	141	Pulse	199	2770000	3414	NA
+goeta	141	Pulse	199	2780000	13414	NA
+goeta	142	Picture	feedback	2784089	0	1	20170	1	0	next	other	0
+goeta	142	Pulse	199	2790000	5911	NA
+goeta	142	Pulse	199	2800000	15911	NA
+goeta	143	Picture	fix	2804258	0	1	31838	1	0	next	other	0
+goeta	143	Pulse	199	2810000	5742	NA
+goeta	143	Pulse	199	2820000	15742	NA
+goeta	143	Pulse	199	2830000	25742	NA
+goeta	145	Picture	stim	2836097	0	1	20170	1	0	20000	hit	434
+goeta	145	Pulse	199	2840000	3903	NA
+goeta	145	Pulse	199	2850000	13903	NA
+goeta	145	Response	16	2850670	14573	0
+goeta	146	Picture	fix2	2856266	0	1	18672	1	0	next	other	0
+goeta	146	Pulse	199	2860000	3734	NA
+goeta	146	Pulse	199	2870000	13734	NA
+goeta	147	Picture	feedback	2874939	0	1	20168	1	0	next	other	0
+goeta	147	Pulse	199	2880000	5061	NA
+goeta	147	Pulse	199	2890000	15061	NA
+goeta	148	Picture	fix	2895106	0	1	21169	1	0	next	other	0
+goeta	148	Pulse	199	2900000	4894	NA
+goeta	148	Pulse	199	2910000	14894	NA
+goeta	150	Picture	stim	2916276	0	1	20170	1	0	20000	hit	447
+goeta	150	Pulse	199	2920000	3724	NA
+goeta	150	Pulse	199	2930000	13724	NA
+goeta	150	Response	32	2931267	14991	0
+goeta	151	Picture	fix2	2936445	0	1	19503	1	0	next	other	0
+goeta	151	Pulse	199	2940000	3555	NA
+goeta	151	Pulse	199	2950000	13555	NA
+goeta	152	Picture	feedback	2955948	0	1	20170	1	0	next	other	0
+goeta	152	Pulse	199	2960000	4052	NA
+goeta	152	Pulse	199	2970000	14052	NA
+goeta	153	Picture	fix	2976118	0	1	28838	1	0	next	other	0
+goeta	153	Pulse	199	2980000	3882	NA
+goeta	153	Pulse	199	2990000	13882	NA
+goeta	153	Pulse	199	3000000	23882	NA
+goeta	155	Picture	stim	3004956	0	1	20170	1	0	20000	hit	461
+goeta	155	Pulse	199	3010000	5044	NA
+goeta	155	Pulse	199	3020000	15044	NA
+goeta	155	Response	32	3020098	15142	0
+goeta	156	Picture	fix2	3025125	0	1	27174	1	0	next	other	0
+goeta	156	Pulse	199	3030000	4875	NA
+goeta	156	Pulse	199	3040000	14875	NA
+goeta	156	Pulse	199	3050000	24875	NA
+goeta	157	Picture	feedback	3052299	0	1	20168	1	0	next	other	0
+goeta	157	Pulse	199	3060000	7701	NA
+goeta	157	Pulse	199	3070000	17701	NA
+goeta	158	Picture	fix	3072467	0	1	41008	1	0	next	other	0
+goeta	158	Pulse	199	3080000	7533	NA
+goeta	158	Pulse	199	3090000	17533	NA
+goeta	158	Pulse	199	3100000	27533	NA
+goeta	158	Pulse	199	3110000	37533	NA
+goeta	160	Picture	stim	3113475	0	1	20167	1	0	20000	miss	0
+goeta	160	Pulse	199	3120000	6525	NA
+goeta	160	Pulse	199	3130000	16525	NA
+goeta	161	Picture	fix2	3133642	0	1	16006	1	0	next	other	0
+goeta	161	Response	32	3133992	350	0
+goeta	161	Pulse	199	3140000	6358	NA
+goeta	162	Picture	feedback	3149647	0	1	20167	1	0	next	other	0
+goeta	162	Pulse	199	3150000	353	NA
+goeta	162	Pulse	199	3160000	10353	NA
+goeta	163	Picture	fix	3169815	0	1	39506	1	0	next	other	0
+goeta	163	Pulse	199	3170000	185	NA
+goeta	163	Pulse	199	3180000	10185	NA
+goeta	163	Pulse	199	3190000	20185	NA
+goeta	163	Pulse	199	3200000	30185	NA
+goeta	165	Picture	stim	3209320	0	1	20170	1	0	20000	hit	491
+goeta	165	Pulse	199	3210000	680	NA
+goeta	165	Pulse	199	3220000	10680	NA
+goeta	165	Response	32	3222754	13434	0
+goeta	166	Picture	fix2	3229490	0	1	25004	1	0	next	other	0
+goeta	166	Pulse	199	3230000	510	NA
+goeta	166	Pulse	199	3240000	10510	NA
+goeta	166	Pulse	199	3250000	20510	NA
+goeta	167	Picture	feedback	3254494	0	1	20170	1	0	next	other	0
+goeta	167	Pulse	199	3260000	5506	NA
+goeta	167	Pulse	199	3270000	15506	NA
+goeta	168	Picture	fix	3274664	0	1	33838	1	0	next	other	0
+goeta	168	Pulse	199	3280000	5336	NA
+goeta	168	Pulse	199	3290000	15336	NA
+goeta	168	Pulse	199	3300000	25336	NA
+goeta	170	Picture	stim	3308502	0	1	20170	1	0	20000	incorrect	506
+goeta	170	Pulse	199	3310000	1498	NA
+goeta	170	Pulse	199	3320000	11498	NA
+goeta	170	Response	16	3320465	11963	0
+goeta	171	Picture	fix2	3328672	0	1	16169	1	0	next	other	0
+goeta	171	Pulse	199	3330000	1328	NA
+goeta	171	Pulse	199	3340000	11328	NA
+goeta	172	Picture	feedback	3344841	0	1	20169	1	0	next	other	0
+goeta	172	Pulse	199	3350000	5159	NA
+goeta	172	Pulse	199	3360000	15159	NA
+goeta	173	Picture	fix	3365010	0	1	26171	1	0	next	other	0
+goeta	173	Pulse	199	3370000	4990	NA
+goeta	173	Pulse	199	3380000	14990	NA
+goeta	173	Pulse	199	3390000	24990	NA
+goeta	175	Picture	stim	3391181	0	1	20170	1	0	20000	hit	519
+goeta	175	Pulse	199	3400000	8819	NA
+goeta	175	Response	32	3407956	16775	0
+goeta	175	Pulse	199	3410000	18819	NA
+goeta	176	Picture	fix2	3411351	0	1	23670	1	0	next	other	0
+goeta	176	Pulse	199	3420000	8649	NA
+goeta	176	Pulse	199	3430000	18649	NA
+goeta	177	Picture	feedback	3435021	0	1	20170	1	0	next	other	0
+goeta	177	Pulse	199	3440000	4979	NA
+goeta	177	Pulse	199	3450000	14979	NA
+goeta	178	Picture	fix	3455191	0	1	25337	1	0	next	other	0
+goeta	178	Pulse	199	3460000	4809	NA
+goeta	178	Pulse	199	3470000	14809	NA
+goeta	178	Pulse	199	3480000	24809	NA
+goeta	180	Picture	stim	3480528	0	1	20170	1	0	20000	hit	533
+goeta	180	Pulse	199	3490000	9472	NA
+goeta	180	Response	16	3496381	15853	0
+goeta	180	Pulse	199	3500000	19472	NA
+goeta	181	Picture	fix2	3500698	0	1	22673	1	0	next	other	0
+goeta	181	Pulse	199	3510000	9302	NA
+goeta	181	Pulse	199	3520000	19302	NA
+goeta	182	Picture	feedback	3523371	0	1	20167	1	0	next	other	0
+goeta	182	Pulse	199	3530000	6629	NA
+goeta	182	Pulse	199	3540000	16629	NA
+goeta	183	Picture	100	3543538	0	1	80181	1	0	80000	other	0
+goeta	183	Pulse	199	3550000	6462	NA
+goeta	183	Pulse	199	3560000	16462	NA
+goeta	183	Pulse	199	3570000	26462	NA
+goeta	183	Pulse	199	3580000	36462	NA
+goeta	183	Pulse	199	3590000	46462	NA
+goeta	183	Pulse	199	3600000	56462	NA
+goeta	183	Pulse	199	3610000	66462	NA
+goeta	183	Pulse	199	3620000	76462	NA
