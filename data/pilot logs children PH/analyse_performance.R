@@ -107,6 +107,9 @@ data_with_cumsum <- compute_cumulative_sums(data)
 p <- ggplot(summary_stats$miss_per_block, aes(subjID,n,fill=block)) + 
   geom_bar(stat="identity", position="dodge")
 
+
+
+attach(data_with_cumsum)
 for(i in unique(data_with_cumsum$subjID)){
   for (j in unique(data_with_cumsum$block)){
     subset = subset(data_with_cumsum, subjID==i & block==j)
@@ -128,24 +131,6 @@ for(i in unique(data_with_cumsum$subjID)){
     ggsave(cumSumPlot, file=paste("Accuracy","Subj_",i,"_block",j,".png", sep=""),width = 6, height = 6, scale=1)
   }
 }
-
-attach(data_with_cumsum)
-  cumSumPlot <- ggplot(data=data_with_cumsum, aes(x=trial_separate, y=cumsum_fb, group=pair, color=match)) +
-    geom_line()+
-    geom_point(aes(fill=pair),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
-    scale_x_continuous(breaks = unique(trial_separate),limits=c(1,6.5))  +
-    scale_y_continuous(breaks = c(0,1,2,3,4,5,6),limits=c(0,6))   +
-    guides(alpha=FALSE)+
-    theme(axis.title = element_text(size=12),
-          title = element_text(size=14),
-          plot.subtitle = element_text(size=14,color="darkblue"),
-          legend.text=element_text(size=12),
-          panel.grid.major = element_line(colour="white"),
-          panel.grid.minor = element_blank(),
-          panel.background = element_rect(fill = "gray88")) +
-    labs(title=paste(subjID," Cumulative sum of hits per pair",sep=""))
- #ggsave(cumSumPlot, file=paste("Accuracy","Subj_",subjID,".png", sep=""),width = 6, height = 6, scale=1)
-cumSumPlot
 
 
 #Save as CSV
