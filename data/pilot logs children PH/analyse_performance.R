@@ -1,10 +1,10 @@
 
-library(readr, lib="\\\\idnetapp-homes3.uzh.ch\\phalle$\\Documents\\R\\win-library\\3.5")
-library(rstudioapi, lib="\\\\idnetapp-homes3.uzh.ch\\phalle$\\Documents\\R\\win-library\\3.5")
-library(readr, lib="\\\\idnetapp-homes3.uzh.ch\\phalle$\\Documents\\R\\win-library\\3.5")
-library(data.table, lib="\\\\idnetapp-homes3.uzh.ch\\phalle$\\Documents\\R\\win-library\\3.5")
-library(dplyr, lib="\\\\idnetapp-homes3.uzh.ch\\phalle$\\Documents\\R\\win-library\\3.5")
-library(ggplot2, lib="\\\\idnetapp-homes3.uzh.ch\\phalle$\\Documents\\R\\win-library\\3.5")
+library(readr)
+library(rstudioapi)
+library(readr)
+library(data.table)
+library(dplyr)
+library(ggplot2)
 library(gridExtra)
 
 #set inputs
@@ -24,7 +24,7 @@ gather_data <- function(files){
   for (i in 1:length(files)){
     no_col <- max(count.fields(files[i], sep = "\t"))
     D <- read_delim(
-      files[i],"\t", escape_double = FALSE, locale = locale(), trim_ws = TRUE, skip_empty_rows=TRUE)
+      files[i],"\t", escape_double = FALSE, locale = locale(), trim_ws = TRUE)
     D <- D[2:dim(D)[1],] # remove first row (with LR or RL )
     D <- D[which(D$block==1|D$block==2|D$block==3|D$block==4),]  #exclude practice trials and unnecessary rows (e.g., with avg_resp). It should have now 200 x 4 = 800 rows
     D <- cbind(rep(as.integer(substr(files[i],1,2)),dim(D)[1]),D)
@@ -33,6 +33,7 @@ gather_data <- function(files){
     colnames(D)[1] <- "subjID"
     D[,1] <- as.factor(D[,1])
     D$trial = as.integer(D$trial)
+    D$match = as.factor(D$match)
     colnames(D)[grep("rt",colnames(D))] <- "RT" 
     D[grep("RT",colnames(D))] <- D[grep("RT",colnames(D))]/1000 # RTs in seconds
     # if frame does contain the colname resp -> change
@@ -106,14 +107,32 @@ data_with_cumsum <- compute_cumulative_sums(data)
 p <- ggplot(summary_stats$miss_per_block, aes(subjID,n,fill=block)) + 
   geom_bar(stat="identity", position="dodge")
 
-df <- split(data_with_cumsum,f = data_with_cumsum$subjID)
+for(i in unique(data_with_cumsum$subjID)){
+  for (j in unique(data_with_cumsum$block)){
+    subset = subset(data_with_cumsum, subjID==i & block==j)
+    cumSumPlot <- ggplot(data=subset, aes(x=trial_separate, y=cumsum_fb, group=pair)) +
+      facet_grid(vars(match))+
+      geom_line(alpha=0.6)+
+      geom_point(aes(fill=match),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+      scale_x_continuous(breaks = unique(trial_separate),limits=c(1,6.5))  +
+      scale_y_continuous(breaks = c(0,1,2,3,4,5,6),limits=c(0,6))   +
+      guides(alpha=FALSE)+
+      theme(axis.title = element_text(size=12),
+            title = element_text(size=14),
+            plot.subtitle = element_text(size=14,color="darkblue"),
+            legend.text=element_text(size=12),
+            panel.grid.major = element_line(colour="white"),
+            panel.grid.minor = element_blank(),
+            panel.background = element_rect(fill = "gray88")) +
+      labs(title=paste("Subj ",subjID, " Block ",j,": Cumulative sum of hits per pair",sep=""))
+    ggsave(cumSumPlot, file=paste("Accuracy","Subj_",i,"_block",j,".png", sep=""),width = 6, height = 6, scale=1)
+  }
+}
 
-attach(df)
-for(i in df){
-  cumSumPlot <- ggplot(data=i, aes(x=trial_separate, y=cumsum_fb, group=pair, color=pair)) +
+attach(data_with_cumsum)
+  cumSumPlot <- ggplot(data=data_with_cumsum, aes(x=trial_separate, y=cumsum_fb, group=pair, color=match)) +
     geom_line()+
     geom_point(aes(fill=pair),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
-    facet_grid(cols = vars(block)) +
     scale_x_continuous(breaks = unique(trial_separate),limits=c(1,6.5))  +
     scale_y_continuous(breaks = c(0,1,2,3,4,5,6),limits=c(0,6))   +
     guides(alpha=FALSE)+
@@ -125,9 +144,8 @@ for(i in df){
           panel.grid.minor = element_blank(),
           panel.background = element_rect(fill = "gray88")) +
     labs(title=paste(subjID," Cumulative sum of hits per pair",sep=""))
-  ggsave(cumSumPlot, file=paste("Accuracy","Subj_",i$subjID[1],".png", sep=""),width = 6, height = 6, scale=1)
-}
-
+ #ggsave(cumSumPlot, file=paste("Accuracy","Subj_",subjID,".png", sep=""),width = 6, height = 6, scale=1)
+cumSumPlot
 
 
 #Save as CSV
