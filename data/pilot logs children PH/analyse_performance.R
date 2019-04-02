@@ -108,27 +108,46 @@ p <- ggplot(summary_stats$miss_per_block, aes(subjID,n,fill=block)) +
   geom_bar(stat="identity", position="dodge")
 
 
+# df <- split(subset,f = subset$match)
+# attach(df)
+# p1 <- ggplot(data=df$`0`, aes(x=trial_separate, y=cumsum_fb, group=pair)) +
+#   geom_line(alpha=0.6)+
+#   geom_point(aes(fill=pair, colour=pair),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+#   scale_x_continuous(breaks = unique(trial_separate),limits=c(1,6.5))  +
+#   scale_y_continuous(breaks = c(0,1,2,3,4,5,6),limits=c(0,6)) +
+#   facet_wrap(~match, ncol=1)
+# 
+# p2 <- p1 %+% df$`1`
+# grid.arrange(p1,p2)
 
 attach(data_with_cumsum)
 for(i in unique(data_with_cumsum$subjID)){
   for (j in unique(data_with_cumsum$block)){
     subset = subset(data_with_cumsum, subjID==i & block==j)
-    cumSumPlot <- ggplot(data=subset, aes(x=trial_separate, y=cumsum_fb, group=pair)) +
-      facet_grid(vars(match))+
+    df <- split(subset,f = subset$match)
+    cumSumPlot <- ggplot(data=df$`0`, aes(x=trial_separate, y=cumsum_fb, group=pair)) +
+      #facet_grid(vars(match))+
       geom_line(alpha=0.6)+
-      geom_point(aes(fill=match),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+      geom_point(aes(fill=pair, colour=pair),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
       scale_x_continuous(breaks = unique(trial_separate),limits=c(1,6.5))  +
       scale_y_continuous(breaks = c(0,1,2,3,4,5,6),limits=c(0,6))   +
+      xlab('N° of stimulus presentation') +
+      ylab('cumulative sum') +
       guides(alpha=FALSE)+
-      theme(axis.title = element_text(size=12),
-            title = element_text(size=14),
+      theme(axis.title = element_text(size=10),
+            title = element_text(size=12),
             plot.subtitle = element_text(size=14,color="darkblue"),
-            legend.text=element_text(size=12),
+            legend.text=element_text(size=10),
             panel.grid.major = element_line(colour="white"),
             panel.grid.minor = element_blank(),
             panel.background = element_rect(fill = "gray88")) +
-      labs(title=paste("Subj ",subjID, " Block ",j,": Cumulative sum of hits per pair",sep=""))
-    ggsave(cumSumPlot, file=paste("Accuracy","Subj_",i,"_block",j,".png", sep=""),width = 6, height = 6, scale=1)
+      labs(title=paste("Cumulative sum of hits per pair ","S",subjID, " B",j,sep="")) +
+      facet_wrap(~match, ncol=1)
+    
+    cumSumPlot2 <- cumSumPlot %+% df$`1`
+    final <- grid.arrange(cumSumPlot, cumSumPlot2)
+    
+    ggsave(final, file=paste("Accuracy","Subj_",i,"_block",j,".png", sep=""),width = 6, height = 6, scale=1)
   }
 }
 
