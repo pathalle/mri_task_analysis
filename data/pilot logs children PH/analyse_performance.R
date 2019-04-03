@@ -28,7 +28,7 @@ gather_data <- function(files){
     D <- D[2:dim(D)[1],] # remove first row (with LR or RL )
     D <- D[which(D$block==1|D$block==2|D$block==3|D$block==4),]  #exclude practice trials and unnecessary rows (e.g., with avg_resp). It should have now 200 x 4 = 800 rows
     D <- cbind(rep(as.integer(substr(files[i],1,2)),dim(D)[1]),D)
-    D<-D[D$resp!=0,] # remove 'too slow ' responses 
+    #D<-D[D$resp!=0,] # remove 'too slow ' responses 
     ### Rename and transform some columns
     colnames(D)[1] <- "subjID"
     D[,1] <- as.factor(D[,1])
@@ -51,7 +51,7 @@ gather_data <- function(files){
 
 compute_cumulative_sums <- function(data){
   df_subj <- list()
-  data<-data[data$resp!=0,] # remove 'too slow ' responses 
+  data<-data[data$choice!=0,] # remove 'too slow ' responses 
   new_data <- data[FALSE,]
   new_cols <- data.frame(cumsum_fb = integer(0), trial_separate = integer(0))
   new_data <- cbind(new_cols,new_data)
@@ -62,7 +62,8 @@ compute_cumulative_sums <- function(data){
       # compute cumulative sum for each sound-symbol pair in a given block of a subject
       for(k in unique(df_subj_block$pair)){
         df_subj_block_pair <- list()
-        df_subj_block_pair[[k]] <- subset(df_subj_block, pair==k)
+        #df_subj_block_pair[[k]] <- subset(df_subj_block, pair==k & fb != 2 )
+        df_subj_block_pair[[k]] <- subset(df_subj_block, pair==k )
         new_col <- cumsum(df_subj_block_pair[[k]]$fb)
         new_col_trial <- 1:nrow(df_subj_block_pair[[k]])
         new_cols <- cbind(new_col,new_col_trial)
@@ -86,26 +87,79 @@ get_summary_stats <- function(data){
   ### #RTs per block
   RT_per_block <- data %>%
     select(subjID,RT, fb,block) %>%
+    filter(fb!=2)  %>%
     group_by(subjID, fb,block) %>%
     summarise(mean_rt = mean(RT))
   
   ### #RTs across blocks
   RT_across_blocks <- data %>%
     select(subjID,RT, fb) %>%
+    filter(fb!=2)  %>%
     group_by(subjID, fb) %>%
     summarise(mean_rt = mean(RT))
+
+  ## hits per sextile
+  correct_per_sextile <- data %>%
+    select(subjID, fb,block, sextile) %>%
+    filter(fb==1) %>%
+    group_by(subjID,block,sextile) %>%
+    tally()
   
   return(list(
-    "miss_per_block"=miss_per_block,"rt_per_block"=RT_per_block,"rt_across_blocks"=RT_across_blocks))
+    "miss_per_block"=miss_per_block,"rt_per_block"=RT_per_block,"rt_across_blocks"=RT_across_blocks,"hits_per_sextile"=correct_per_sextile))
 }
 
-data <- gather_data(files)
-summary_stats <- get_summary_stats(data)
-data_with_cumsum <- compute_cumulative_sums(data)
+split_trials <- function(data){
+  data$trial <- as.integer(data$trial)
+  data$sextile <- 0
+  data[which(data$trial <= 6),]$sextile = 1
+  data[which(data$trial > 6 & data$trial <= 12),]$sextile = 2
+  data[which(data$trial > 12 & data$trial <= 18),]$sextile = 3
+  data[which(data$trial > 18 & data$trial <= 24),]$sextile = 4
+  data[which(data$trial > 24 & data$trial <= 30),]$sextile = 5
+  data[which(data$trial > 25 & data$trial <= 36),]$sextile = 6
+  return(data)
+  }
 
-## misses per block
-p <- ggplot(summary_stats$miss_per_block, aes(subjID,n,fill=block)) + 
+data <- gather_data(files)
+data_sextiles <- split_trials(data)
+summary_stats <- get_summary_stats(data_sextiles)
+data_with_cumsum <- compute_cumulative_sums(data_sextiles)
+# add column with information to which sextile a sequence of trials belongs"
+
+
+
+## hits per sextile
+hits_per_sextile <- ggplot(data=summary_stats$hits_per_sextile, aes(x=sextile, y=n/6, fill=block, colour=block)) +
+  geom_line()+
+  scale_x_continuous(breaks = unique(trial_separate),limits=c(0.5,6.5))  +
+  scale_y_continuous(breaks = c(0,0.25,0.5,0.75,1),limits=c(0,1))   +
+  geom_point(aes(fill=block, colour=block),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+  xlab("Sextiles") +
+  ylab("Accuracy") +
+  labs(title="Accuracy across pair blocks (6 trials)") +
+  facet_grid(rows=vars(subjID)) 
+
+hits_per_sextile
+#ggsave(hits_per_sextile, file=paste("accuracy_per_6_trials.png",width = 6, height = 6, scale=1))
+
+
+miss_per_block <- ggplot(summary_stats$miss_per_block, aes(subjID,n,fill=block)) + 
   geom_bar(stat="identity", position="dodge")
+miss_per_block
+
+
+
+mean_rt_across_blocks <- ggplot(data=summary_stats$rt_per_block, aes(x=block, y=mean_rt, fill=fb, colour=fb)) +
+  geom_line()+
+  #scale_x_continuous(breaks = unique(trial_separate),limits=c(0.5,6.5))  +
+  scale_y_continuous(breaks = c(0,0.5,1,1.5),limits=c(0,1.75))   +
+  #geom_point(aes(fill=block, colour=block),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+  xlab("Block") +
+  ylab("mean RT") +
+  labs(title="RT across blocks") +
+  facet_grid(rows=vars(subjID)) 
+mean_rt_across_blocks
 
 
 # df <- split(subset,f = subset$match)
