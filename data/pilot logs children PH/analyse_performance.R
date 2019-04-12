@@ -6,6 +6,7 @@ library(data.table)
 library(dplyr)
 library(ggplot2)
 library(gridExtra)
+library(plyr)
 
 #set inputs
 dirinput <- dirname(rstudioapi::getActiveDocumentContext()$path)
@@ -16,8 +17,6 @@ task = "FeedLearn"
 
 setwd(dirinput)
 files <- dir(pattern=".txt")
-
-#For each block: accuracy (% correct) every six trials (irrespective of pair). And mean accuracy across blocks every six trials. 
 
 gather_data <- function(files){
   datalist <- list()
@@ -121,6 +120,8 @@ split_trials <- function(data){
   return(data)
   }
 
+
+########################### prepare data #########################
 data <- gather_data(files)
 data_sextiles <- split_trials(data)
 summary_stats <- get_summary_stats(data_sextiles)
@@ -128,9 +129,27 @@ data_with_cumsum <- compute_cumulative_sums(data_sextiles)
 # add column with information to which sextile a sequence of trials belongs"
 
 
-
+########################### start plotting #########################
 ## hits per sextile
-hits_per_sextile <- ggplot(data=summary_stats$hits_per_sextile, aes(x=sextile, y=n/6, fill=block, colour=block)) +
+summary_stats_sextiles <- summary_stats$hits_per_sextile
+attach(summary_stats_sextiles)
+for(i in unique(summary_stats_sextiles$subjID)){
+  for (j in unique(summary_stats_sextiles$block)){
+    subset_all = subset(summary_stats_sextiles, subjID==i)
+    plots_per_sextiles <- ggplot(data=summary_stats_sextiles, aes(x=sextile, y=n/6, fill=match, colour=match)) +
+      geom_line()+
+      scale_x_continuous(breaks = unique(sextile),limits=c(0.5,6.5))  +
+      scale_y_continuous(breaks = c(0,0.25,0.5,0.75,1),limits=c(0,1))   +
+      geom_point(aes(fill=block, colour=block),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+      xlab("Sextiles") +
+      ylab("Accuracy") +
+      labs(title="Accuracy across pair blocks (6 trials)") +
+      facet_grid(rows=vars(block))
+     ggsave(plots_per_sextiles, file=paste("accuracy_across_sextiles","_subj_",i,".png", sep=""),width = 6, height = 6, scale=1)
+  }
+}
+    
+plots_per_sextiles <- ggplot(data=summary_stats$hits_per_sextile, aes(x=sextile, y=n/6, fill=match, colour=match)) +
   geom_line()+
   scale_x_continuous(breaks = unique(trial_separate),limits=c(0.5,6.5))  +
   scale_y_continuous(breaks = c(0,0.25,0.5,0.75,1),limits=c(0,1))   +
@@ -138,72 +157,47 @@ hits_per_sextile <- ggplot(data=summary_stats$hits_per_sextile, aes(x=sextile, y
   xlab("Sextiles") +
   ylab("Accuracy") +
   labs(title="Accuracy across pair blocks (6 trials)") +
-  facet_grid(rows=vars(subjID)) 
+  facet_grid(rows=vars(block))
+
 
 hits_per_sextile
 #ggsave(hits_per_sextile, file=paste("accuracy_per_6_trials.png",width = 6, height = 6, scale=1))
 
-
 miss_per_block <- ggplot(summary_stats$miss_per_block, aes(subjID,n,fill=block)) + 
-  geom_bar(stat="identity", position="dodge")
+  geom_bar(stat="identity", position="dodge") +
+  ylab("N° of misses")
 miss_per_block
 
-
-
-mean_rt_across_blocks <- ggplot(data=summary_stats$rt_per_block, aes(x=block, y=mean_rt, fill=fb, colour=fb)) +
-  geom_line()+
-  #scale_x_continuous(breaks = unique(trial_separate),limits=c(0.5,6.5))  +
-  scale_y_continuous(breaks = c(0,0.5,1,1.5),limits=c(0,1.75))   +
-  #geom_point(aes(fill=block, colour=block),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
-  xlab("Block") +
-  ylab("mean RT") +
-  labs(title="RT across blocks") +
-  facet_grid(rows=vars(subjID)) 
-mean_rt_across_blocks
-
-
-# df <- split(subset,f = subset$match)
-# attach(df)
-# p1 <- ggplot(data=df$`0`, aes(x=trial_separate, y=cumsum_fb, group=pair)) +
-#   geom_line(alpha=0.6)+
-#   geom_point(aes(fill=pair, colour=pair),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
-#   scale_x_continuous(breaks = unique(trial_separate),limits=c(1,6.5))  +
-#   scale_y_continuous(breaks = c(0,1,2,3,4,5,6),limits=c(0,6)) +
-#   facet_wrap(~match, ncol=1)
-# 
-# p2 <- p1 %+% df$`1`
-# grid.arrange(p1,p2)
+data_with_cumsum$block <- revalue(data_with_cumsum$block, c("1"="Block 1", "2"="Block 2"))
 
 attach(data_with_cumsum)
 for(i in unique(data_with_cumsum$subjID)){
   for (j in unique(data_with_cumsum$block)){
-    subset = subset(data_with_cumsum, subjID==i & block==j)
-    df <- split(subset,f = subset$match)
-    cumSumPlot <- ggplot(data=df$`0`, aes(x=trial_separate, y=cumsum_fb, group=pair)) +
-      #facet_grid(vars(match))+
-      geom_line(alpha=0.6)+
-      geom_point(aes(fill=pair, colour=pair),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
-      scale_x_continuous(breaks = unique(trial_separate),limits=c(1,6.5))  +
-      scale_y_continuous(breaks = c(0,1,2,3,4,5,6),limits=c(0,6))   +
-      xlab('NÂ° of stimulus presentation') +
-      ylab('cumulative sum') +
-      guides(alpha=FALSE)+
-      theme(axis.title = element_text(size=10),
-            title = element_text(size=12),
-            plot.subtitle = element_text(size=14,color="darkblue"),
-            legend.text=element_text(size=10),
-            panel.grid.major = element_line(colour="white"),
-            panel.grid.minor = element_blank(),
-            panel.background = element_rect(fill = "gray88")) +
-      labs(title=paste("Cumulative sum of hits per pair ","S",subjID, " B",j,sep="")) +
-      facet_wrap(~match, ncol=1)
     
-    cumSumPlot2 <- cumSumPlot %+% df$`1`
-    final <- grid.arrange(cumSumPlot, cumSumPlot2)
-    
-    ggsave(final, file=paste("Accuracy","Subj_",i,"_block",j,".png", sep=""),width = 6, height = 6, scale=1)
+    subset_all = subset(data_with_cumsum, subjID==i)
+    subset_no_miss = subset(data_with_cumsum, subjID==i & fb!=2)
+    cdat <- ddply(subset_no_miss, c("block","fb"), summarise, RT.mean=mean(RT))
+    mean_rt_across_blocks <- ggplot(data=subset_no_miss, aes(x=trial, y=RT, fill=fb, colour=fb)) +
+      geom_line()+
+      geom_hline(data=cdat, aes(yintercept=RT.mean),color=c("black","blue","black","blue"),
+                 linetype="dashed", size=0.3) +
+      scale_x_continuous(breaks = c(1,7,13,19,25,31),limits=c(-0.5,37))  +
+      #scale_y_continuous(breaks = c(0,0.5,1,1.5),limits=c(0,1.75))   +
+      #geom_point(aes(fill=block, colour=block),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+      xlab("Trial") +
+      ylab("mean RT") +
+      labs(title=paste("RT across trials"," Subj ",i,sep="")) +
+      #annotate("text", x = c(36,36), y = c(1.8,2), label = cdat$RT.mean) +
+      facet_grid(rows = vars(block))
+      ggsave(mean_rt_across_blocks, file=paste("rt_across_blocks","_subj_",i,".png", sep=""),width = 6, height = 6, scale=1)
   }
 }
+
+cdat <- ddply(subset, c("block","match"), summarise, RT.mean=mean(RT))
+
+
+
+
 
 
 #Save as CSV
