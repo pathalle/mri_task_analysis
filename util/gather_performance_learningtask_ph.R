@@ -26,7 +26,7 @@ for (i in 1:length(files)){
   D <- D[2:dim(D)[1],] # remove first row (with LR or RL )
   D <- D[which(D$block==1|D$block==2|D$block==3|D$block==4),]  #exclude practice trials and unnecessary rows (e.g., with avg_resp). It should have now 200 x 4 = 800 rows
   D <- cbind(rep(as.integer(substr(files[i],14,15)),dim(D)[1]),D)
-  D<-D[D$resp!=0,] # remove 'too slow ' responses 
+  #D<-D[D$resp!=0,] # remove 'too slow ' responses 
   colnames(D)[1] <- "subjID"
   colnames(D)[grep("rt",colnames(D))] <- "RT" 
   D[grep("RT",colnames(D))] <- D[grep("RT",colnames(D))]/1000 # RTs in seconds
