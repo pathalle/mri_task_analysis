@@ -1,13 +1,13 @@
 
 library(readr)
 library(rstudioapi)
-library(readr, lib="\\\\idnetapp-homes3.uzh.ch\\phalle$\\Documents\\R\\win-library\\3.5")
+library(readr)
 library(data.table)
 
 #set inputs
 dirinput <- dirname(rstudioapi::getActiveDocumentContext()$path)
 # make sure output directory exists already
-diroutput <- paste(dirinput,"output",sep="/")
+#diroutput <- paste(dirinput,"output",sep="/")
 
 #dirinput <- "O:\studies\allread\models_PH\logs"
 #diroutput <- "O:\studies\allread\models_PH\logs\output"
@@ -34,7 +34,7 @@ for (i in 1:length(files)){
   # don't use grep here, because it will find all instances of 'resp' (even colnames with name respOnset) 
   names(D)[names(D) == "resp"] <- "choice"
   D <- D[complete.cases(D), ]
-  D <- D[,c(grep("subjID",colnames(D)),grep("choice",colnames(D)),grep("RT",colnames(D)))]
+  D <- D[,c(grep("subjID",colnames(D)),grep("choice",colnames(D)),grep("RT",colnames(D)),grep("block",colnames(D)))]
   datalist[[i]] <- D
 }
 
@@ -42,5 +42,5 @@ Gather <- data.table::rbindlist(datalist) # combine all data frames in one
 
 #Save as CSV
 setwd(diroutput)
-write.table(Gather,file = paste("performance_all_",task,".txt",sep=""),sep="\t",row.names = FALSE,quote=FALSE)
+write.table(Gather,file = paste("DDM_input",task,".txt",sep=""),sep="\t",row.names = FALSE,quote=FALSE)
 
