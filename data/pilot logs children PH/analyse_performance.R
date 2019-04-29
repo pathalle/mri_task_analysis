@@ -194,12 +194,6 @@ for(i in unique(data_with_cumsum$subjID)){
 }
 
 cdat <- ddply(subset, c("block","match"), summarise, RT.mean=mean(RT))
-
-
-
-
-
-
 #Save as CSV
 #setwd(diroutput)
 #write.table(Gather,file = paste("performance_all_",task,".txt",sep=""),sep="\t",row.names = FALSE,quote=FALSE)
