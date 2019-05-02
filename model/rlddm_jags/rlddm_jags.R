@@ -1,6 +1,8 @@
 library(rjags)
 library(coda)
 load.module("wiener")
+## for easy summary statistics of the chains
+library(mmcc)
 
 path <- dirname(rstudioapi::getActiveDocumentContext()$path)
 #path <- "/home/padraigh/Dokumente/Uni/NSC/Thesis/mri_task_analysis/model/rlddm_jags/"
@@ -52,16 +54,19 @@ raw_data$RT[last[1]-1] # -> correct!
 dat <- list("S" = n_subj, "iter" = raw_data$trial, "correct" = raw_data$correct, "incorrect" = raw_data$incorrect,
             "RT" = new_RT, "first" = first, "last" = last, "value"=value)  # names list of numbers
 
-##### Initial values (not needed here)
+##### Initial values
 inits <- list( etag_mu=0.2, ag_mu=1.7,ig_mu=0, mg_mu=3.5, tg_mu=0.3)
 
-jags.m <- jags.model( file = model_path, inits=inits,data=dat, n.chains=1, n.adapt=500)
+
+jags.m <- jags.model( file = model_path, inits=inits, data=dat, n.chains=4, n.adapt=1000)
 
 
 ### take a look at the posterior distributions
-params <- c("v")
-samps <- coda.samples(jags.m, params, n.iter = 2000)
-plot(samps)
+params <- c("eta","i","m","t")
+samples <- coda.samples(jags.m, params, n.iter = 4000)
+plot(samples_eta)
+
+tidy(samples, chain = TRUE)
 
 # these are the values for the positive and negative learning rates
 # eta[s,1] are the negative feedbacks 

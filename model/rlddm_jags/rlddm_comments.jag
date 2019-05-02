@@ -1,33 +1,31 @@
 model {
-### boundary sep
+###/// boundary sep
 ag_mu    ~  dunif(0.5,3)
 ag_sd    ~  dunif(0.001,5)
-ag_tau   <- pow(ag_sd,-2) ### precision values, by dividing 1 by the squared standard deviation value.
-
-### learning rate
+ag_tau   <- pow(ag_sd,-2) ###/// precision values, by dividing 1 by the squared standard deviation value.
+###/// learning rate
 etag_mu  ~  dunif(-5,5) 
 etag_sd  ~  dunif(0.001,5)
 etag_tau <- pow(etag_sd,-2)
-
-### choice consistency (in expression for drift rate)
+###/// choice consistency (in expression for drift rate)
 ig_mu    ~  dunif(-0.5,0.5)
 ig_sd    ~  dunif(0.001,5)
 ig_tau   <- pow(ig_sd,-2)
-
-### scaling parameter?
+###/// scaling parameter?
 mg_mu    ~  dunif(0,10)
 mg_sd    ~  dunif(0.001,5)
 mg_tau   <- pow(mg_sd,-2)
-
-### non-decision time(?)
+###/// non-decision time(?)
 tg_mu    ~  dunif(0.05,1)
 tg_sd    ~  dunif(0.001,5)
 tg_tau   <- pow(tg_sd,-2)
 
-###GROUP PARAMETERS
-etag     ~  dnorm(etag_mu,etag_tau)
-eta_sd   ~  dunif(0.001, 5)
-eta_tau  <- pow(eta_sd[v],-2)
+###///GROUP PARAMETERS
+for (v in 1:2){
+     etag[v]     ~  dnorm(etag_mu,etag_tau)
+     eta_sd[v]  ~  dunif(0.001, 5)
+     eta_tau[v]  <- pow(eta_sd[v],-2)
+}
 ag      ~  dnorm(ag_mu,ag_tau)
 a_sd    ~  dunif(0.001, 5)
 a_tau   <- pow(a_sd,-2) 
@@ -41,7 +39,7 @@ tg      ~  dnorm(tg_mu,tg_tau)
 t_sd    ~  dunif(0.001, 5)
 t_tau   <- pow(t_sd,-2)
 
-###SUBJECT PARAMETERS
+###///SUBJECT PARAMETERS
 for (s in 1:S) {
      for(v in 1:2){
           eta[s,v] ~ dnorm(etag[v], eta_tau[v])
@@ -52,32 +50,28 @@ for (s in 1:S) {
      t[s]   ~ dnorm(tg,t_tau)
 
 }
-###Loop through trials for each group and subject
+###///Loop through trials for each subject
 for (s in 1:S) {
-     ###Assign starting values to ev[trial,option]. 
-     ###first is a two-dimensional-array identifying first trial for each subject in each group.
-     ###ev: expectancy valence!
+     ###///Assign starting values to expectancy valence. 
+     ###///first: identifying first trial for each subject in each group.
           ev[first[s],1] <- 0
           ev[first[s],2] <- 0
-     ###Run through trials
-     ###last is a two-dimensional-array identifying last trial for each subject in each group.
+     ###///last: identifying last trial for each subject in each group.
           for (trial in (first[s]):(last[s]-1)) {  
-               ###Calculate drift rate parameter as ev-delta multiplited by m
-               v[trial] <- (ev[trial,1] - ev[trial,2]) * (m[s]) ### Define drift rate as 
-               ###Estimate likelihood of choices response time with dwiener. save log_likelihood for LOO
-               ### The JAGS Wiener module differentiates choices toward upper and lower boundary by the sign of the RT. 
-               ###Therefore, the RT of all choices in favor the suboptimal options are set to be negative by multiplying the nal RT with -1. 
-              ### dwiener(alpha:a,tau:ter,beta:z,delta:drift)
+               ###///Calculate drift rate parameter as ev-delta multiplited by m
+               v[trial] <- (ev[trial,1] - ev[trial,2]) * (m[s])
+               ###///Estimate likelihood of choices response time with dwiener. save log_likelihood for LOO
+               ###/// The JAGS Wiener module differentiates choices toward upper and lower boundary by the sign of the RT
+               ###///Therefore, the RT of all choices in favor the suboptimal options are set to be negative by multiplying the nal RT with -1. 
                RT[trial] ~ dwiener(a[s] * pow(iter[trial]/10,i[s]),t[s] ,0.5,v[trial])
                log_lik[trial] <- logdensity.wiener(RT[trial], a[s] * pow(iter[trial]/10,i[s]),t[s],0.5,v[trial])
-               ###Update ev-values for next trial.
-               ### in our case, reward, valence AND choice is the same, no?
+               ###///Update ev-values for next trial.
                ev[trial+1,choice[trial]] <- ev[trial,choice[trial]] + ilogit(eta[s,choice[trial]] * (value[trial]-ev[trial,choice[trial]]))
                ev[trial+1,nonchoice[trial],] <- ev[trial,nonchoice[trial]] + ilogit(eta[s,nonchoice[trial]] * (value[trial]-ev[trial,nonchoice[trial]]))
                ev[trial+1,1] <- ev[trial,1]
                ev[trial+1,2] <- ev[trial,2]
           }
-          ###EV-values are not updated in last trial
+          ###///EV-values are not updated in last trial
           for (trial in last[s]) {
                v[trial] <- (ev[trial,1] - ev[trial,2]) * m[s]
                RT[trial] ~ dwiener(a[s] * pow(iter[trial]/10,i[s]),t[s],0.5,v[trial])
