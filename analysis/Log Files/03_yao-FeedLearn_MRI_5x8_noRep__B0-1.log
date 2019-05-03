@@ -1,0 +1,27 @@
+Scenario - FeedLearn_MRI_5x8_fullRand.sce
+Logfile written - 04/29/2019 18:38:13
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+03_yao	0	Pulse	199	0	0	NA
+03_yao	0	Pulse	199	10000	10000	NA
+03_yao	1	Pulse	199	20000	9664	NA
+03_yao	1	Pulse	199	30000	19664	NA
+03_yao	1	Pulse	199	40000	29664	NA
+03_yao	1	Response	16	44028	33692	0
+03_yao	2	Picture	fix	44838	0	1	34172	1	0	next	other	0
+03_yao	2	Pulse	199	50000	5162	NA
+03_yao	2	Pulse	199	60000	15162	NA
+03_yao	2	Pulse	199	70000	25162	NA
+03_yao	4	Picture	stim	79010	0	1	20336	1	0	20000	miss	0
+03_yao	4	Pulse	199	80000	990	NA
+03_yao	4	Pulse	199	90000	10990	NA
+03_yao	5	Picture	fix2	99346	0	1	25671	1	0	next	other	0
+03_yao	5	Pulse	199	100000	654	NA
+03_yao	5	Pulse	199	110000	10654	NA
+03_yao	5	Pulse	199	120000	20654	NA
+03_yao	6	Picture	feedback	125017	0	1	20173	1	0	next	other	0
+03_yao	6	Pulse	199	130000	4983	NA
+03_yao	6	Pulse	199	140000	14983	NA
+03_yao	7	Picture	fix	145190	0	1	7619	1	0	next	other	0
+03_yao	7	Quit		147595	2405	NA

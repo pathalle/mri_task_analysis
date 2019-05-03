@@ -1,0 +1,583 @@
+Scenario - FeedLearn_MRI_5x8_fullRand.sce
+Logfile written - 04/11/2019 12:30:05
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+01_polo	0	Pulse	199	0	0	NA
+01_polo	0	Pulse	199	10000	10000	NA
+01_polo	1	Pulse	199	20000	9667	NA
+01_polo	1	Pulse	199	30000	19667	NA
+01_polo	1	Pulse	199	40000	29667	NA
+01_polo	1	Response	16	46706	36373	0
+01_polo	2	Pulse	199	50000	3235	NA
+01_polo	2	Pulse	199	60000	13235	NA
+01_polo	2	Pulse	199	70000	23235	NA
+01_polo	2	Pulse	199	80000	33235	NA
+01_polo	2	Pulse	199	90000	43235	NA
+01_polo	3	Picture	fix	97679	0	1	35839	1	0	next	other	0
+01_polo	3	Pulse	199	100000	2321	NA
+01_polo	3	Pulse	199	110000	12321	NA
+01_polo	3	Pulse	199	120000	22321	NA
+01_polo	4	Pulse	199	130000	5055	NA
+01_polo	5	Picture	stim	133518	0	1	20336	1	0	20000	incorrect	19
+01_polo	5	Pulse	199	140000	6482	NA
+01_polo	5	Response	32	141160	7642	0
+01_polo	5	Pulse	199	150000	16482	NA
+01_polo	6	Picture	fix2	153854	0	1	12169	1	0	next	other	0
+01_polo	6	Pulse	199	160000	6146	NA
+01_polo	7	Picture	feedback	166023	0	1	20336	1	0	next	other	0
+01_polo	7	Pulse	199	170000	3977	NA
+01_polo	7	Pulse	199	180000	13977	NA
+01_polo	8	Picture	fix	186359	0	1	25670	1	0	next	other	0
+01_polo	8	Pulse	199	190000	3641	NA
+01_polo	8	Pulse	199	200000	13641	NA
+01_polo	8	Pulse	199	210000	23641	NA
+01_polo	10	Picture	stim	212030	0	1	20170	1	0	20000	hit	32
+01_polo	10	Pulse	199	220000	7970	NA
+01_polo	10	Response	16	224009	11979	0
+01_polo	10	Pulse	199	230000	17970	NA
+01_polo	11	Picture	fix2	232700	0	1	23673	1	0	next	other	0
+01_polo	11	Pulse	199	240000	7300	NA
+01_polo	11	Pulse	199	250000	17300	NA
+01_polo	12	Picture	feedback	256373	0	1	20334	1	0	next	other	0
+01_polo	12	Pulse	199	260000	3627	NA
+01_polo	12	Pulse	199	270000	13627	NA
+01_polo	13	Picture	fix	276706	0	1	21170	1	0	next	other	0
+01_polo	13	Pulse	199	280000	3294	NA
+01_polo	13	Pulse	199	290000	13294	NA
+01_polo	15	Picture	stim	297876	0	1	20170	1	0	20000	hit	46
+01_polo	15	Pulse	199	300000	2124	NA
+01_polo	15	Pulse	199	310000	12124	NA
+01_polo	15	Response	16	312868	14991	0
+01_polo	16	Picture	fix2	318046	0	1	20003	1	0	next	other	0
+01_polo	16	Pulse	199	320000	1954	NA
+01_polo	16	Pulse	199	330000	11954	NA
+01_polo	17	Picture	feedback	338049	0	1	20336	1	0	next	other	0
+01_polo	17	Pulse	199	340000	1951	NA
+01_polo	17	Pulse	199	350000	11951	NA
+01_polo	18	Picture	fix	358385	0	1	28838	1	0	next	other	0
+01_polo	18	Pulse	199	360000	1615	NA
+01_polo	18	Pulse	199	370000	11615	NA
+01_polo	18	Pulse	199	380000	21615	NA
+01_polo	20	Picture	stim	387223	0	1	20170	1	0	20000	incorrect	60
+01_polo	20	Pulse	199	390000	2777	NA
+01_polo	20	Pulse	199	400000	12777	NA
+01_polo	20	Response	32	403959	16736	0
+01_polo	21	Picture	fix2	407393	0	1	15169	1	0	next	other	0
+01_polo	21	Pulse	199	410000	2607	NA
+01_polo	21	Pulse	199	420000	12607	NA
+01_polo	22	Picture	feedback	422562	0	1	20170	1	0	next	other	0
+01_polo	22	Pulse	199	430000	7438	NA
+01_polo	22	Pulse	199	440000	17438	NA
+01_polo	23	Picture	fix	442731	0	1	27841	1	0	next	other	0
+01_polo	23	Pulse	199	450000	7269	NA
+01_polo	23	Pulse	199	460000	17269	NA
+01_polo	23	Pulse	199	470000	27269	NA
+01_polo	25	Picture	stim	470572	0	1	20333	1	0	20000	incorrect	73
+01_polo	25	Pulse	199	480000	9428	NA
+01_polo	25	Response	32	485451	14880	0
+01_polo	25	Pulse	199	490000	19428	NA
+01_polo	26	Picture	fix2	490905	0	1	16336	1	0	next	other	0
+01_polo	26	Pulse	199	500000	9095	NA
+01_polo	27	Picture	feedback	507241	0	1	20170	1	0	next	other	0
+01_polo	27	Pulse	199	510000	2759	NA
+01_polo	27	Pulse	199	520000	12759	NA
+01_polo	28	Picture	fix	527411	0	1	31005	1	0	next	other	0
+01_polo	28	Pulse	199	530000	2589	NA
+01_polo	28	Pulse	199	540000	12589	NA
+01_polo	28	Pulse	199	550000	22589	NA
+01_polo	30	Picture	stim	558416	0	1	20170	1	0	20000	incorrect	86
+01_polo	30	Pulse	199	560000	1584	NA
+01_polo	30	Response	32	569257	10842	0
+01_polo	30	Pulse	199	570000	11584	NA
+01_polo	31	Picture	fix2	578585	0	1	10168	1	0	next	other	0
+01_polo	31	Pulse	199	580000	1415	NA
+01_polo	32	Picture	feedback	588753	0	1	20336	1	0	next	other	0
+01_polo	32	Pulse	199	590000	1247	NA
+01_polo	32	Pulse	199	600000	11247	NA
+01_polo	33	Picture	fix	609090	0	1	30671	1	0	next	other	0
+01_polo	33	Pulse	199	610000	910	NA
+01_polo	33	Pulse	199	620000	10910	NA
+01_polo	33	Pulse	199	630000	20910	NA
+01_polo	35	Picture	stim	639761	0	1	20170	1	0	20000	incorrect	100
+01_polo	35	Pulse	199	640000	239	NA
+01_polo	35	Pulse	199	650000	10239	NA
+01_polo	35	Response	32	653710	13949	0
+01_polo	35	Pulse	199	660000	20239	NA
+01_polo	36	Picture	fix2	660098	0	1	22670	1	0	next	other	0
+01_polo	36	Pulse	199	670000	9902	NA
+01_polo	36	Pulse	199	680000	19902	NA
+01_polo	37	Picture	feedback	682768	0	1	20170	1	0	next	other	0
+01_polo	37	Pulse	199	690000	7232	NA
+01_polo	37	Pulse	199	700000	17232	NA
+01_polo	38	Picture	fix	702937	0	1	27004	1	0	next	other	0
+01_polo	38	Pulse	199	710000	7063	NA
+01_polo	38	Pulse	199	720000	17063	NA
+01_polo	40	Picture	stim	729942	0	1	20170	1	0	20000	incorrect	114
+01_polo	40	Pulse	199	730000	58	NA
+01_polo	40	Pulse	199	740000	10058	NA
+01_polo	40	Response	32	748963	19021	0
+01_polo	40	Pulse	199	750000	20058	NA
+01_polo	41	Picture	fix2	750111	0	1	22670	1	0	next	other	0
+01_polo	41	Pulse	199	760000	9889	NA
+01_polo	41	Pulse	199	770000	19889	NA
+01_polo	42	Picture	feedback	772781	0	1	20173	1	0	next	other	0
+01_polo	42	Pulse	199	780000	7219	NA
+01_polo	42	Pulse	199	790000	17219	NA
+01_polo	43	Picture	fix	792954	0	1	17666	1	0	next	other	0
+01_polo	43	Pulse	199	800000	7046	NA
+01_polo	43	Pulse	199	810000	17046	NA
+01_polo	45	Picture	stim	810620	0	1	20170	1	0	20000	incorrect	127
+01_polo	45	Pulse	199	820000	9380	NA
+01_polo	45	Response	32	829415	18795	0
+01_polo	45	Pulse	199	830000	19380	NA
+01_polo	46	Picture	fix2	830790	0	1	22670	1	0	next	other	0
+01_polo	46	Pulse	199	840000	9210	NA
+01_polo	46	Pulse	199	850000	19210	NA
+01_polo	47	Picture	feedback	853460	0	1	20170	1	0	next	other	0
+01_polo	47	Pulse	199	860000	6540	NA
+01_polo	47	Pulse	199	870000	16540	NA
+01_polo	48	Picture	fix	873630	0	1	24670	1	0	next	other	0
+01_polo	48	Pulse	199	880000	6370	NA
+01_polo	48	Pulse	199	890000	16370	NA
+01_polo	50	Picture	stim	898300	0	1	20170	1	0	20000	incorrect	141
+01_polo	50	Pulse	199	900000	1700	NA
+01_polo	50	Pulse	199	910000	11700	NA
+01_polo	50	Response	32	910512	12212	0
+01_polo	51	Picture	fix2	918470	0	1	13502	1	0	next	other	0
+01_polo	51	Pulse	199	920000	1530	NA
+01_polo	51	Pulse	199	930000	11530	NA
+01_polo	52	Picture	feedback	931972	0	1	20170	1	0	next	other	0
+01_polo	52	Pulse	199	940000	8028	NA
+01_polo	52	Pulse	199	950000	18028	NA
+01_polo	53	Picture	fix	952141	0	1	27171	1	0	next	other	0
+01_polo	53	Pulse	199	960000	7859	NA
+01_polo	53	Pulse	199	970000	17859	NA
+01_polo	55	Picture	stim	979312	0	1	20170	1	0	20000	hit	154
+01_polo	55	Pulse	199	980000	688	NA
+01_polo	55	Pulse	199	990000	10688	NA
+01_polo	55	Response	16	991123	11811	0
+01_polo	56	Picture	fix2	999482	0	1	18836	1	0	next	other	0
+01_polo	56	Pulse	199	1000000	518	NA
+01_polo	56	Pulse	199	1010000	10518	NA
+01_polo	57	Picture	feedback	1018318	0	1	20170	1	0	next	other	0
+01_polo	57	Pulse	199	1020000	1682	NA
+01_polo	57	Pulse	199	1030000	11682	NA
+01_polo	58	Picture	fix	1038488	0	1	26171	1	0	next	other	0
+01_polo	58	Pulse	199	1040000	1512	NA
+01_polo	58	Pulse	199	1050000	11512	NA
+01_polo	58	Pulse	199	1060000	21512	NA
+01_polo	60	Picture	stim	1064658	0	1	20170	1	0	20000	hit	167
+01_polo	60	Pulse	199	1070000	5342	NA
+01_polo	60	Response	16	1077573	12915	0
+01_polo	60	Pulse	199	1080000	15342	NA
+01_polo	61	Picture	fix2	1084828	0	1	16169	1	0	next	other	0
+01_polo	61	Pulse	199	1090000	5172	NA
+01_polo	61	Pulse	199	1100000	15172	NA
+01_polo	62	Picture	feedback	1100997	0	1	20170	1	0	next	other	0
+01_polo	62	Pulse	199	1110000	9003	NA
+01_polo	62	Pulse	199	1120000	19003	NA
+01_polo	63	Picture	fix	1121167	0	1	32838	1	0	next	other	0
+01_polo	63	Pulse	199	1130000	8833	NA
+01_polo	63	Pulse	199	1140000	18833	NA
+01_polo	63	Pulse	199	1150000	28833	NA
+01_polo	65	Picture	stim	1154005	0	1	20170	1	0	20000	hit	182
+01_polo	65	Pulse	199	1160000	5995	NA
+01_polo	65	Pulse	199	1170000	15995	NA
+01_polo	65	Response	16	1173881	19876	0
+01_polo	66	Picture	fix2	1174175	0	1	16002	1	0	next	other	0
+01_polo	66	Pulse	199	1180000	5825	NA
+01_polo	66	Pulse	199	1190000	15825	NA
+01_polo	67	Picture	feedback	1190177	0	1	20170	1	0	next	other	0
+01_polo	67	Pulse	199	1200000	9823	NA
+01_polo	67	Pulse	199	1210000	19823	NA
+01_polo	68	Picture	fix	1210347	0	1	24170	1	0	next	other	0
+01_polo	68	Pulse	199	1220000	9653	NA
+01_polo	68	Pulse	199	1230000	19653	NA
+01_polo	70	Picture	stim	1234517	0	1	20170	1	0	20000	hit	194
+01_polo	70	Pulse	199	1240000	5483	NA
+01_polo	70	Response	16	1247294	12777	0
+01_polo	70	Pulse	199	1250000	15483	NA
+01_polo	71	Picture	fix2	1254687	0	1	18670	1	0	next	other	0
+01_polo	71	Pulse	199	1260000	5313	NA
+01_polo	71	Pulse	199	1270000	15313	NA
+01_polo	72	Picture	feedback	1273357	0	1	20169	1	0	next	other	0
+01_polo	72	Pulse	199	1280000	6643	NA
+01_polo	72	Pulse	199	1290000	16643	NA
+01_polo	73	Picture	fix	1293526	0	1	31838	1	0	next	other	0
+01_polo	73	Pulse	199	1300000	6474	NA
+01_polo	73	Pulse	199	1310000	16474	NA
+01_polo	73	Pulse	199	1320000	26474	NA
+01_polo	75	Picture	stim	1325364	0	1	20170	1	0	20000	hit	208
+01_polo	75	Pulse	199	1330000	4636	NA
+01_polo	75	Response	16	1339342	13978	0
+01_polo	75	Pulse	199	1340000	14636	NA
+01_polo	76	Picture	fix2	1345534	0	1	25004	1	0	next	other	0
+01_polo	76	Pulse	199	1350000	4466	NA
+01_polo	76	Pulse	199	1360000	14466	NA
+01_polo	76	Pulse	199	1370000	24466	NA
+01_polo	77	Picture	feedback	1370538	0	1	20170	1	0	next	other	0
+01_polo	77	Pulse	199	1380000	9462	NA
+01_polo	77	Pulse	199	1390000	19462	NA
+01_polo	78	Picture	fix	1390708	0	1	32338	1	0	next	other	0
+01_polo	78	Pulse	199	1400000	9292	NA
+01_polo	78	Pulse	199	1410000	19292	NA
+01_polo	78	Pulse	199	1420000	29292	NA
+01_polo	80	Picture	stim	1423046	0	1	20170	1	0	20000	incorrect	224
+01_polo	80	Pulse	199	1430000	6954	NA
+01_polo	80	Pulse	199	1440000	16954	NA
+01_polo	80	Response	32	1440527	17481	0
+01_polo	81	Picture	fix2	1443216	0	1	23170	1	0	next	other	0
+01_polo	81	Pulse	199	1450000	6784	NA
+01_polo	81	Pulse	199	1460000	16784	NA
+01_polo	82	Picture	feedback	1466386	0	1	20170	1	0	next	other	0
+01_polo	82	Pulse	199	1470000	3614	NA
+01_polo	82	Pulse	199	1480000	13614	NA
+01_polo	83	Picture	fix	1486555	0	1	23003	1	0	next	other	0
+01_polo	83	Pulse	199	1490000	3445	NA
+01_polo	83	Pulse	199	1500000	13445	NA
+01_polo	85	Picture	stim	1509559	0	1	20170	1	0	20000	hit	237
+01_polo	85	Pulse	199	1510000	441	NA
+01_polo	85	Pulse	199	1520000	10441	NA
+01_polo	85	Response	16	1524821	15263	0
+01_polo	85	Response	32	1528759	19200	0
+01_polo	86	Picture	fix2	1529729	0	1	14336	1	0	next	other	0
+01_polo	86	Pulse	199	1530000	271	NA
+01_polo	86	Pulse	199	1540000	10271	NA
+01_polo	87	Picture	feedback	1544065	0	1	20169	1	0	next	other	0
+01_polo	87	Pulse	199	1550000	5935	NA
+01_polo	87	Pulse	199	1560000	15935	NA
+01_polo	88	Picture	fix	1564234	0	1	28838	1	0	next	other	0
+01_polo	88	Pulse	199	1570000	5766	NA
+01_polo	88	Pulse	199	1580000	15766	NA
+01_polo	88	Pulse	199	1590000	25766	NA
+01_polo	90	Picture	stim	1593072	0	1	20170	1	0	20000	hit	252
+01_polo	90	Pulse	199	1600000	6928	NA
+01_polo	90	Pulse	199	1610000	16928	NA
+01_polo	90	Response	16	1610657	17586	0
+01_polo	91	Picture	fix2	1613241	0	1	20336	1	0	next	other	0
+01_polo	91	Pulse	199	1620000	6759	NA
+01_polo	91	Pulse	199	1630000	16759	NA
+01_polo	92	Picture	feedback	1633578	0	1	20170	1	0	next	other	0
+01_polo	92	Pulse	199	1640000	6422	NA
+01_polo	92	Pulse	199	1650000	16422	NA
+01_polo	93	Picture	fix	1653747	0	1	30671	1	0	next	other	0
+01_polo	93	Pulse	199	1660000	6253	NA
+01_polo	93	Pulse	199	1670000	16253	NA
+01_polo	93	Pulse	199	1680000	26253	NA
+01_polo	95	Picture	stim	1684419	0	1	20170	1	0	20000	incorrect	265
+01_polo	95	Pulse	199	1690000	5581	NA
+01_polo	95	Response	32	1693413	8995	0
+01_polo	95	Pulse	199	1700000	15581	NA
+01_polo	96	Picture	fix2	1704588	0	1	19503	1	0	next	other	0
+01_polo	96	Pulse	199	1710000	5412	NA
+01_polo	96	Pulse	199	1720000	15412	NA
+01_polo	97	Picture	feedback	1724091	0	1	20170	1	0	next	other	0
+01_polo	97	Pulse	199	1730000	5909	NA
+01_polo	97	Pulse	199	1740000	15909	NA
+01_polo	98	Picture	fix	1744261	0	1	30338	1	0	next	other	0
+01_polo	98	Pulse	199	1750000	5739	NA
+01_polo	98	Pulse	199	1760000	15739	NA
+01_polo	98	Pulse	199	1770000	25739	NA
+01_polo	100	Picture	stim	1774599	0	1	20170	1	0	20000	incorrect	279
+01_polo	100	Pulse	199	1780000	5401	NA
+01_polo	100	Response	32	1785319	10720	0
+01_polo	100	Pulse	199	1790000	15401	NA
+01_polo	101	Picture	fix2	1794769	0	1	26837	1	0	next	other	0
+01_polo	101	Pulse	199	1800000	5231	NA
+01_polo	101	Pulse	199	1810000	15231	NA
+01_polo	101	Pulse	199	1820000	25231	NA
+01_polo	102	Picture	feedback	1821606	0	1	20170	1	0	next	other	0
+01_polo	102	Pulse	199	1830000	8394	NA
+01_polo	102	Pulse	199	1840000	18394	NA
+01_polo	103	Picture	fix	1841776	0	1	39506	1	0	next	other	0
+01_polo	103	Pulse	199	1850000	8224	NA
+01_polo	103	Pulse	199	1860000	18224	NA
+01_polo	103	Pulse	199	1870000	28224	NA
+01_polo	103	Pulse	199	1880000	38224	NA
+01_polo	105	Picture	stim	1881282	0	1	20170	1	0	20000	hit	295
+01_polo	105	Pulse	199	1890000	8718	NA
+01_polo	105	Response	16	1899544	18262	0
+01_polo	105	Pulse	199	1900000	18718	NA
+01_polo	106	Picture	fix2	1901451	0	1	14336	1	0	next	other	0
+01_polo	106	Pulse	199	1910000	8549	NA
+01_polo	107	Picture	feedback	1915787	0	1	20170	1	0	next	other	0
+01_polo	107	Pulse	199	1920000	4213	NA
+01_polo	107	Pulse	199	1930000	14213	NA
+01_polo	108	Picture	fix	1935957	0	1	22837	1	0	next	other	0
+01_polo	108	Pulse	199	1940000	4043	NA
+01_polo	108	Pulse	199	1950000	14043	NA
+01_polo	110	Picture	stim	1958793	0	1	20170	1	0	20000	hit	308
+01_polo	110	Pulse	199	1960000	1207	NA
+01_polo	110	Pulse	199	1970000	11207	NA
+01_polo	110	Response	16	1971918	13124	0
+01_polo	111	Picture	fix2	1979130	0	1	16503	1	0	next	other	0
+01_polo	111	Pulse	199	1980000	870	NA
+01_polo	111	Pulse	199	1990000	10870	NA
+01_polo	112	Picture	feedback	1995632	0	1	20170	1	0	next	other	0
+01_polo	112	Pulse	199	2000000	4368	NA
+01_polo	112	Pulse	199	2010000	14368	NA
+01_polo	113	Picture	fix	2015802	0	1	31838	1	0	next	other	0
+01_polo	113	Pulse	199	2020000	4198	NA
+01_polo	113	Pulse	199	2030000	14198	NA
+01_polo	113	Pulse	199	2040000	24198	NA
+01_polo	115	Picture	stim	2047640	0	1	20170	1	0	20000	hit	321
+01_polo	115	Pulse	199	2050000	2360	NA
+01_polo	115	Response	16	2059976	12336	0
+01_polo	115	Pulse	199	2060000	12360	NA
+01_polo	116	Picture	fix2	2067810	0	1	25838	1	0	next	other	0
+01_polo	116	Pulse	199	2070000	2190	NA
+01_polo	116	Pulse	199	2080000	12190	NA
+01_polo	116	Pulse	199	2090000	22190	NA
+01_polo	117	Picture	feedback	2093648	0	1	20169	1	0	next	other	0
+01_polo	117	Pulse	199	2100000	6352	NA
+01_polo	117	Pulse	199	2110000	16352	NA
+01_polo	118	Picture	fix	2113817	0	1	19170	1	0	next	other	0
+01_polo	118	Pulse	199	2120000	6183	NA
+01_polo	118	Pulse	199	2130000	16183	NA
+01_polo	120	Picture	stim	2132986	0	1	20170	1	0	20000	hit	335
+01_polo	120	Pulse	199	2140000	7014	NA
+01_polo	120	Response	16	2146678	13692	0
+01_polo	120	Pulse	199	2150000	17014	NA
+01_polo	121	Picture	fix2	2153156	0	1	20003	1	0	next	other	0
+01_polo	121	Pulse	199	2160000	6844	NA
+01_polo	121	Pulse	199	2170000	16844	NA
+01_polo	122	Picture	feedback	2173159	0	1	20170	1	0	next	other	0
+01_polo	122	Pulse	199	2180000	6841	NA
+01_polo	122	Pulse	199	2190000	16841	NA
+01_polo	123	Picture	fix	2193329	0	1	28838	1	0	next	other	0
+01_polo	123	Pulse	199	2200000	6671	NA
+01_polo	123	Pulse	199	2210000	16671	NA
+01_polo	123	Pulse	199	2220000	26671	NA
+01_polo	125	Picture	stim	2222166	0	1	20170	1	0	20000	miss	0
+01_polo	125	Pulse	199	2230000	7834	NA
+01_polo	125	Pulse	199	2240000	17834	NA
+01_polo	126	Picture	fix2	2242336	0	1	23670	1	0	next	other	0
+01_polo	126	Response	16	2243148	812	0
+01_polo	126	Pulse	199	2250000	7664	NA
+01_polo	126	Pulse	199	2260000	17664	NA
+01_polo	127	Picture	feedback	2266006	0	1	20170	1	0	next	other	0
+01_polo	127	Pulse	199	2270000	3994	NA
+01_polo	127	Pulse	199	2280000	13994	NA
+01_polo	128	Picture	fix	2286176	0	1	23170	1	0	next	other	0
+01_polo	128	Pulse	199	2290000	3824	NA
+01_polo	128	Pulse	199	2300000	13824	NA
+01_polo	130	Picture	stim	2309346	0	1	20170	1	0	20000	miss	0
+01_polo	130	Pulse	199	2310000	654	NA
+01_polo	130	Pulse	199	2320000	10654	NA
+01_polo	131	Picture	fix2	2329516	0	1	19837	1	0	next	other	0
+01_polo	131	Response	32	2329996	480	0
+01_polo	131	Pulse	199	2330000	484	NA
+01_polo	131	Pulse	199	2340000	10484	NA
+01_polo	132	Picture	feedback	2349353	0	1	20169	1	0	next	other	0
+01_polo	132	Pulse	199	2350000	647	NA
+01_polo	132	Pulse	199	2360000	10647	NA
+01_polo	133	Picture	fix	2369522	0	1	34505	1	0	next	other	0
+01_polo	133	Pulse	199	2370000	478	NA
+01_polo	133	Pulse	199	2380000	10478	NA
+01_polo	133	Pulse	199	2390000	20478	NA
+01_polo	133	Pulse	199	2400000	30478	NA
+01_polo	135	Picture	stim	2404027	0	1	20170	1	0	20000	hit	378
+01_polo	135	Pulse	199	2410000	5973	NA
+01_polo	135	Pulse	199	2420000	15973	NA
+01_polo	135	Response	16	2422446	18419	0
+01_polo	136	Picture	fix2	2424197	0	1	21503	1	0	next	other	0
+01_polo	136	Pulse	199	2430000	5803	NA
+01_polo	136	Pulse	199	2440000	15803	NA
+01_polo	137	Picture	feedback	2445700	0	1	20170	1	0	next	other	0
+01_polo	137	Pulse	199	2450000	4300	NA
+01_polo	137	Pulse	199	2460000	14300	NA
+01_polo	138	Picture	fix	2465870	0	1	23337	1	0	next	other	0
+01_polo	138	Pulse	199	2470000	4130	NA
+01_polo	138	Pulse	199	2480000	14130	NA
+01_polo	140	Picture	stim	2489207	0	1	20170	1	0	20000	incorrect	391
+01_polo	140	Pulse	199	2490000	793	NA
+01_polo	140	Pulse	199	2500000	10793	NA
+01_polo	140	Response	32	2502259	13052	0
+01_polo	141	Picture	fix2	2509376	0	1	20336	1	0	next	other	0
+01_polo	141	Pulse	199	2510000	624	NA
+01_polo	141	Pulse	199	2520000	10624	NA
+01_polo	142	Picture	feedback	2529713	0	1	20169	2	0	next	other	0
+01_polo	142	Pulse	199	2530000	287	NA
+01_polo	142	Pulse	199	2540000	10287	NA
+01_polo	143	Picture	fix	2549881	0	2	25338	2	0	next	other	0
+01_polo	143	Pulse	199	2550000	119	NA
+01_polo	143	Pulse	199	2560000	10119	NA
+01_polo	143	Pulse	199	2570000	20119	NA
+01_polo	145	Picture	stim	2575220	0	1	20170	1	0	20000	hit	405
+01_polo	145	Pulse	199	2580000	4780	NA
+01_polo	145	Pulse	199	2590000	14780	NA
+01_polo	145	Response	16	2593993	18774	0
+01_polo	146	Picture	fix2	2595556	0	1	18838	1	0	next	other	0
+01_polo	146	Pulse	199	2600000	4444	NA
+01_polo	146	Pulse	199	2610000	14444	NA
+01_polo	147	Picture	feedback	2614394	0	1	20168	1	0	next	other	0
+01_polo	147	Pulse	199	2620000	5606	NA
+01_polo	147	Pulse	199	2630000	15606	NA
+01_polo	148	Picture	fix	2634562	0	1	30004	1	0	next	other	0
+01_polo	148	Pulse	199	2640000	5438	NA
+01_polo	148	Pulse	199	2650000	15438	NA
+01_polo	148	Pulse	199	2660000	25438	NA
+01_polo	150	Picture	stim	2664566	0	1	20170	1	0	20000	hit	418
+01_polo	150	Pulse	199	2670000	5434	NA
+01_polo	150	Response	16	2674928	10362	0
+01_polo	150	Pulse	199	2680000	15434	NA
+01_polo	151	Picture	fix2	2684736	0	1	18336	1	0	next	other	0
+01_polo	151	Pulse	199	2690000	5264	NA
+01_polo	151	Pulse	199	2700000	15264	NA
+01_polo	152	Picture	feedback	2703072	0	1	20170	1	0	next	other	0
+01_polo	152	Pulse	199	2710000	6928	NA
+01_polo	152	Pulse	199	2720000	16928	NA
+01_polo	153	Picture	fix	2723242	0	1	28838	1	0	next	other	0
+01_polo	153	Pulse	199	2730000	6758	NA
+01_polo	153	Pulse	199	2740000	16758	NA
+01_polo	153	Pulse	199	2750000	26758	NA
+01_polo	155	Picture	stim	2752080	0	1	20170	1	0	20000	hit	432
+01_polo	155	Pulse	199	2760000	7920	NA
+01_polo	155	Response	16	2768099	16020	0
+01_polo	155	Pulse	199	2770000	17920	NA
+01_polo	156	Picture	fix2	2772250	0	1	18669	1	0	next	other	0
+01_polo	156	Pulse	199	2780000	7750	NA
+01_polo	156	Pulse	199	2790000	17750	NA
+01_polo	157	Picture	feedback	2790919	0	1	20173	1	0	next	other	0
+01_polo	157	Pulse	199	2800000	9081	NA
+01_polo	157	Pulse	199	2810000	19081	NA
+01_polo	158	Picture	fix	2811092	0	1	33002	1	0	next	other	0
+01_polo	158	Pulse	199	2820000	8908	NA
+01_polo	158	Pulse	199	2830000	18908	NA
+01_polo	158	Pulse	199	2840000	28908	NA
+01_polo	160	Picture	stim	2844094	0	1	20170	1	0	20000	incorrect	446
+01_polo	160	Pulse	199	2850000	5906	NA
+01_polo	160	Response	32	2857996	13902	0
+01_polo	160	Pulse	199	2860000	15906	NA
+01_polo	161	Picture	fix2	2864263	0	1	21840	1	0	next	other	0
+01_polo	161	Pulse	199	2870000	5737	NA
+01_polo	161	Pulse	199	2880000	15737	NA
+01_polo	162	Picture	feedback	2886103	0	1	20167	1	0	next	other	0
+01_polo	162	Pulse	199	2890000	3897	NA
+01_polo	162	Pulse	199	2900000	13897	NA
+01_polo	163	Picture	fix	2906270	0	1	22003	1	0	next	other	0
+01_polo	163	Pulse	199	2910000	3730	NA
+01_polo	163	Pulse	199	2920000	13730	NA
+01_polo	165	Picture	stim	2928273	0	1	20170	1	0	20000	hit	460
+01_polo	165	Pulse	199	2930000	1727	NA
+01_polo	165	Pulse	199	2940000	11727	NA
+01_polo	165	Response	16	2940673	12400	0
+01_polo	165	Response	32	2943014	14741	0
+01_polo	166	Picture	fix2	2948443	0	1	16004	1	0	next	other	0
+01_polo	166	Pulse	199	2950000	1557	NA
+01_polo	166	Pulse	199	2960000	11557	NA
+01_polo	167	Picture	feedback	2964447	0	1	20168	1	0	next	other	0
+01_polo	167	Pulse	199	2970000	5553	NA
+01_polo	167	Pulse	199	2980000	15553	NA
+01_polo	168	Picture	fix	2984615	0	1	33505	1	0	next	other	0
+01_polo	168	Pulse	199	2990000	5385	NA
+01_polo	168	Pulse	199	3000000	15385	NA
+01_polo	168	Pulse	199	3010000	25385	NA
+01_polo	170	Picture	stim	3018120	0	1	20170	1	0	20000	hit	475
+01_polo	170	Pulse	199	3020000	1880	NA
+01_polo	170	Pulse	199	3030000	11880	NA
+01_polo	170	Response	16	3032118	13998	0
+01_polo	171	Picture	fix2	3038290	0	1	25173	1	0	next	other	0
+01_polo	171	Pulse	199	3040000	1710	NA
+01_polo	171	Pulse	199	3050000	11710	NA
+01_polo	171	Pulse	199	3060000	21710	NA
+01_polo	172	Picture	feedback	3063463	0	1	20170	1	0	next	other	0
+01_polo	172	Pulse	199	3070000	6537	NA
+01_polo	172	Pulse	199	3080000	16537	NA
+01_polo	173	Picture	fix	3083633	0	1	30669	1	0	next	other	0
+01_polo	173	Pulse	199	3090000	6367	NA
+01_polo	173	Pulse	199	3100000	16367	NA
+01_polo	173	Pulse	199	3110000	26367	NA
+01_polo	175	Picture	stim	3114301	0	1	20170	1	0	20000	incorrect	489
+01_polo	175	Pulse	199	3120000	5699	NA
+01_polo	175	Response	32	3125935	11634	0
+01_polo	175	Pulse	199	3130000	15699	NA
+01_polo	176	Picture	fix2	3134471	0	1	27174	1	0	next	other	0
+01_polo	176	Pulse	199	3140000	5529	NA
+01_polo	176	Pulse	199	3150000	15529	NA
+01_polo	176	Pulse	199	3160000	25529	NA
+01_polo	177	Picture	feedback	3161644	0	1	20167	1	0	next	other	0
+01_polo	177	Pulse	199	3170000	8356	NA
+01_polo	177	Pulse	199	3180000	18356	NA
+01_polo	178	Picture	fix	3181811	0	1	38006	1	0	next	other	0
+01_polo	178	Pulse	199	3190000	8189	NA
+01_polo	178	Pulse	199	3200000	18189	NA
+01_polo	178	Pulse	199	3210000	28189	NA
+01_polo	180	Picture	stim	3219817	0	1	20170	1	0	20000	hit	505
+01_polo	180	Pulse	199	3220000	183	NA
+01_polo	180	Pulse	199	3230000	10183	NA
+01_polo	180	Response	16	3237920	18103	0
+01_polo	180	Pulse	199	3240000	20183	NA
+01_polo	181	Picture	fix2	3240153	0	1	25674	1	0	next	other	0
+01_polo	181	Pulse	199	3250000	9847	NA
+01_polo	181	Pulse	199	3260000	19847	NA
+01_polo	182	Picture	feedback	3265827	0	1	20167	1	0	next	other	0
+01_polo	182	Pulse	199	3270000	4173	NA
+01_polo	182	Pulse	199	3280000	14173	NA
+01_polo	183	Picture	100	3285994	0	1	80179	1	0	80000	other	0
+01_polo	183	Pulse	199	3290000	4006	NA
+01_polo	183	Pulse	199	3300000	14006	NA
+01_polo	183	Pulse	199	3310000	24006	NA
+01_polo	183	Pulse	199	3320000	34006	NA
+01_polo	183	Pulse	199	3330000	44006	NA
+01_polo	183	Pulse	199	3340000	54006	NA
+01_polo	183	Pulse	199	3350000	64006	NA
+01_polo	183	Pulse	199	3360000	74006	NA
+01_polo	184	Picture	fix	3366339	0	1	33838	1	0	next	other	0
+01_polo	184	Pulse	199	3370000	3661	NA
+01_polo	184	Pulse	199	3380000	13661	NA
+01_polo	184	Pulse	199	3390000	23661	NA
+01_polo	184	Pulse	199	3400000	33661	NA
+01_polo	186	Picture	stim	3400178	0	1	20170	1	0	20000	incorrect	528
+01_polo	186	Response	32	3409850	9672	0
+01_polo	186	Pulse	199	3410000	9822	NA
+01_polo	186	Pulse	199	3420000	19822	NA
+01_polo	187	Picture	fix2	3420347	0	1	21837	1	0	next	other	0
+01_polo	187	Pulse	199	3430000	9653	NA
+01_polo	187	Pulse	199	3440000	19653	NA
+01_polo	188	Picture	feedback	3442184	0	1	20170	1	0	next	other	0
+01_polo	188	Pulse	199	3450000	7816	NA
+01_polo	188	Pulse	199	3460000	17816	NA
+01_polo	189	Picture	fix	3462353	0	1	41006	1	0	next	other	0
+01_polo	189	Pulse	199	3470000	7647	NA
+01_polo	189	Pulse	199	3480000	17647	NA
+01_polo	189	Pulse	199	3490000	27647	NA
+01_polo	189	Pulse	199	3500000	37647	NA
+01_polo	191	Picture	stim	3503360	0	1	20170	1	0	20000	incorrect	544
+01_polo	191	Pulse	199	3510000	6640	NA
+01_polo	191	Response	32	3514878	11518	0
+01_polo	191	Pulse	199	3520000	16640	NA
+01_polo	192	Picture	fix2	3523529	0	1	11335	1	0	next	other	0
+01_polo	192	Pulse	199	3530000	6471	NA
+01_polo	193	Picture	feedback	3534864	0	1	20172	1	0	next	other	0
+01_polo	193	Pulse	199	3540000	5136	NA
+01_polo	193	Pulse	199	3550000	15136	NA
+01_polo	194	Picture	fix	3555037	0	1	30836	1	0	next	other	0
+01_polo	194	Pulse	199	3560000	4963	NA
+01_polo	194	Pulse	199	3570000	14963	NA
+01_polo	194	Pulse	199	3580000	24963	NA
+01_polo	196	Picture	stim	3585872	0	1	20170	1	0	20000	hit	557
+01_polo	196	Pulse	199	3590000	4128	NA
+01_polo	196	Response	16	3596778	10906	0
+01_polo	196	Pulse	199	3600000	14128	NA
+01_polo	197	Picture	fix2	3606042	0	1	13669	1	0	next	other	0
+01_polo	197	Pulse	199	3610000	3958	NA
+01_polo	198	Picture	feedback	3619711	0	1	20170	1	0	next	other	0
+01_polo	198	Pulse	199	3620000	289	NA
+01_polo	198	Pulse	199	3630000	10289	NA
+01_polo	199	Picture	fix	3639880	0	1	35838	2	0	next	other	0
+01_polo	199	Pulse	199	3640000	120	NA
+01_polo	199	Pulse	199	3650000	10120	NA
+01_polo	199	Pulse	199	3660000	20120	NA
+01_polo	199	Pulse	199	3670000	30120	NA
+01_polo	201	Picture	stim	3675718	0	2	20171	2	0	20000	incorrect	571
+01_polo	201	Pulse	199	3680000	4282	NA
+01_polo	201	Response	32	3689959	14241	0
+01_polo	201	Pulse	199	3690000	14282	NA
+01_polo	202	Picture	fix2	3695889	0	1	17503	1	0	next	other	0
+01_polo	202	Pulse	199	3700000	4111	NA
+01_polo	202	Pulse	199	3710000	14111	NA
+01_polo	203	Picture	feedback	3713391	0	1	25702	1	0	next	other	0
+01_polo	203	Pulse	199	3720000	6609	NA
+01_polo	203	Pulse	199	3730000	16609	NA
