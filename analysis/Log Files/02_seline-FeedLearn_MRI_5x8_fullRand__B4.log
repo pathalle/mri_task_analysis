@@ -1,0 +1,525 @@
+Scenario - FeedLearn_MRI_5x8_fullRand.sce
+Logfile written - 04/26/2019 15:21:45
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+test_Seline04	0	Pulse	199	0	0	NA
+test_Seline04	0	Pulse	199	10000	10000	NA
+test_Seline04	1	Response	16	19642	9476	0
+test_Seline04	2	Pulse	199	20000	353	NA
+test_Seline04	2	Pulse	199	30000	10353	NA
+test_Seline04	2	Pulse	199	40000	20353	NA
+test_Seline04	2	Pulse	199	50000	30353	NA
+test_Seline04	2	Pulse	199	60000	40353	NA
+test_Seline04	2	Pulse	199	70000	50353	NA
+test_Seline04	3	Picture	fix	70672	0	1	33670	1	0	next	other	0
+test_Seline04	3	Pulse	199	80000	9328	NA
+test_Seline04	3	Pulse	199	90000	19328	NA
+test_Seline04	3	Pulse	199	100000	29328	NA
+test_Seline04	5	Picture	stim	104342	0	1	20168	1	0	20000	incorrect	17
+test_Seline04	5	Pulse	199	110000	5659	NA
+test_Seline04	5	Pulse	199	120000	15659	NA
+test_Seline04	5	Response	32	123020	18679	0
+test_Seline04	6	Picture	fix2	124677	0	1	23669	1	0	next	other	0
+test_Seline04	6	Pulse	199	130000	5323	NA
+test_Seline04	6	Pulse	199	140000	15323	NA
+test_Seline04	7	Picture	feedback	148345	0	1	20168	1	0	next	other	0
+test_Seline04	7	Pulse	199	150000	1655	NA
+test_Seline04	7	Pulse	199	160000	11655	NA
+test_Seline04	8	Picture	fix	168514	0	1	34503	1	0	next	other	0
+test_Seline04	8	Pulse	199	170000	1486	NA
+test_Seline04	8	Pulse	199	180000	11486	NA
+test_Seline04	8	Pulse	199	190000	21486	NA
+test_Seline04	8	Pulse	199	200000	31486	NA
+test_Seline04	10	Picture	stim	203017	0	1	20168	1	0	20000	incorrect	32
+test_Seline04	10	Pulse	199	210000	6983	NA
+test_Seline04	10	Pulse	199	220000	16983	NA
+test_Seline04	10	Response	32	221825	18809	0
+test_Seline04	11	Picture	fix2	223185	0	1	16168	1	0	next	other	0
+test_Seline04	11	Pulse	199	230000	6815	NA
+test_Seline04	12	Picture	feedback	239354	0	1	20168	1	0	next	other	0
+test_Seline04	12	Pulse	199	240000	646	NA
+test_Seline04	12	Pulse	199	250000	10646	NA
+test_Seline04	13	Picture	fix	259522	0	1	28836	1	0	next	other	0
+test_Seline04	13	Pulse	199	260000	478	NA
+test_Seline04	13	Pulse	199	270000	10478	NA
+test_Seline04	13	Pulse	199	280000	20478	NA
+test_Seline04	15	Picture	stim	288358	0	1	20168	1	0	20000	incorrect	45
+test_Seline04	15	Pulse	199	290000	1642	NA
+test_Seline04	15	Pulse	199	300000	11642	NA
+test_Seline04	15	Response	32	302959	14601	0
+test_Seline04	16	Picture	fix2	308693	0	1	21502	1	0	next	other	0
+test_Seline04	16	Pulse	199	310000	1307	NA
+test_Seline04	16	Pulse	199	320000	11307	NA
+test_Seline04	16	Pulse	199	330000	21307	NA
+test_Seline04	17	Picture	feedback	330195	0	1	20169	1	0	next	other	0
+test_Seline04	17	Pulse	199	340000	9805	NA
+test_Seline04	17	Pulse	199	350000	19805	NA
+test_Seline04	18	Picture	fix	350363	0	1	30003	1	0	next	other	0
+test_Seline04	18	Pulse	199	360000	9637	NA
+test_Seline04	18	Pulse	199	370000	19637	NA
+test_Seline04	18	Pulse	199	380000	29637	NA
+test_Seline04	20	Picture	stim	380366	0	1	20169	1	0	20000	miss	0
+test_Seline04	20	Pulse	199	390000	9634	NA
+test_Seline04	20	Pulse	199	400000	19634	NA
+test_Seline04	21	Picture	fix2	400534	0	1	20335	1	0	next	other	0
+test_Seline04	21	Pulse	199	410000	9466	NA
+test_Seline04	21	Pulse	199	420000	19466	NA
+test_Seline04	22	Picture	feedback	420870	0	1	20335	1	0	next	other	0
+test_Seline04	22	Pulse	199	430000	9130	NA
+test_Seline04	22	Pulse	199	440000	19130	NA
+test_Seline04	23	Picture	fix	441205	0	1	21169	1	0	next	other	0
+test_Seline04	23	Pulse	199	450000	8795	NA
+test_Seline04	23	Pulse	199	460000	18795	NA
+test_Seline04	25	Picture	stim	462373	0	1	20168	1	0	20000	incorrect	71
+test_Seline04	25	Pulse	199	470000	7627	NA
+test_Seline04	25	Response	32	477615	15242	0
+test_Seline04	25	Pulse	199	480000	17627	NA
+test_Seline04	26	Picture	fix2	482708	0	1	16335	1	0	next	other	0
+test_Seline04	26	Pulse	199	490000	7292	NA
+test_Seline04	27	Picture	feedback	499043	0	1	20335	1	0	next	other	0
+test_Seline04	27	Pulse	199	500000	957	NA
+test_Seline04	27	Pulse	199	510000	10957	NA
+test_Seline04	28	Picture	fix	519378	0	1	30503	1	0	next	other	0
+test_Seline04	28	Pulse	199	520000	622	NA
+test_Seline04	28	Pulse	199	530000	10622	NA
+test_Seline04	28	Pulse	199	540000	20622	NA
+test_Seline04	30	Picture	stim	549881	0	1	20168	1	0	20000	hit	85
+test_Seline04	30	Pulse	199	550000	119	NA
+test_Seline04	30	Pulse	199	560000	10119	NA
+test_Seline04	30	Response	16	562104	12223	0
+test_Seline04	30	Pulse	199	570000	20119	NA
+test_Seline04	31	Picture	fix2	570050	0	1	26836	1	0	next	other	0
+test_Seline04	31	Pulse	199	580000	9951	NA
+test_Seline04	31	Pulse	199	590000	19951	NA
+test_Seline04	32	Picture	feedback	596885	0	1	20168	1	0	next	other	0
+test_Seline04	32	Pulse	199	600000	3115	NA
+test_Seline04	32	Pulse	199	610000	13115	NA
+test_Seline04	33	Picture	fix	617054	0	1	31836	1	0	next	other	0
+test_Seline04	33	Pulse	199	620000	2946	NA
+test_Seline04	33	Pulse	199	630000	12946	NA
+test_Seline04	33	Pulse	199	640000	22946	NA
+test_Seline04	35	Picture	stim	648890	0	1	20168	1	0	20000	incorrect	100
+test_Seline04	35	Pulse	199	650000	1110	NA
+test_Seline04	35	Pulse	199	660000	11110	NA
+test_Seline04	35	Response	32	663716	14826	0
+test_Seline04	36	Picture	fix2	669225	0	1	18335	1	0	next	other	0
+test_Seline04	36	Pulse	199	670000	775	NA
+test_Seline04	36	Pulse	199	680000	10775	NA
+test_Seline04	37	Picture	feedback	687560	0	1	20335	1	0	next	other	0
+test_Seline04	37	Pulse	199	690000	2440	NA
+test_Seline04	37	Pulse	199	700000	12440	NA
+test_Seline04	38	Picture	fix	707895	0	1	28836	1	0	next	other	0
+test_Seline04	38	Pulse	199	710000	2105	NA
+test_Seline04	38	Pulse	199	720000	12105	NA
+test_Seline04	38	Pulse	199	730000	22105	NA
+test_Seline04	40	Picture	stim	736731	0	1	20168	1	0	20000	hit	114
+test_Seline04	40	Pulse	199	740000	3269	NA
+test_Seline04	40	Pulse	199	750000	13269	NA
+test_Seline04	40	Response	16	754769	18038	0
+test_Seline04	41	Picture	fix2	756899	0	1	19835	1	0	next	other	0
+test_Seline04	41	Pulse	199	760000	3101	NA
+test_Seline04	41	Pulse	199	770000	13101	NA
+test_Seline04	42	Picture	feedback	776734	0	1	20502	1	0	next	other	0
+test_Seline04	42	Pulse	199	780000	3266	NA
+test_Seline04	42	Pulse	199	790000	13266	NA
+test_Seline04	43	Picture	fix	797236	0	1	41004	1	0	next	other	0
+test_Seline04	43	Pulse	199	800000	2764	NA
+test_Seline04	43	Pulse	199	810000	12764	NA
+test_Seline04	43	Pulse	199	820000	22764	NA
+test_Seline04	43	Pulse	199	830000	32764	NA
+test_Seline04	45	Picture	stim	838240	0	1	20168	1	0	20000	hit	129
+test_Seline04	45	Pulse	199	840000	1760	NA
+test_Seline04	45	Pulse	199	850000	11760	NA
+test_Seline04	45	Response	16	854457	16217	0
+test_Seline04	46	Picture	fix2	858408	0	1	12168	1	0	next	other	0
+test_Seline04	46	Pulse	199	860000	1592	NA
+test_Seline04	46	Pulse	199	870000	11592	NA
+test_Seline04	47	Picture	feedback	870576	0	1	20335	1	0	next	other	0
+test_Seline04	47	Pulse	199	880000	9424	NA
+test_Seline04	47	Pulse	199	890000	19424	NA
+test_Seline04	48	Picture	fix	890911	0	1	24169	1	0	next	other	0
+test_Seline04	48	Pulse	199	900000	9089	NA
+test_Seline04	48	Pulse	199	910000	19089	NA
+test_Seline04	50	Picture	stim	915080	0	1	20168	1	0	20000	incorrect	141
+test_Seline04	50	Pulse	199	920000	4920	NA
+test_Seline04	50	Response	32	926945	11865	0
+test_Seline04	50	Pulse	199	930000	14920	NA
+test_Seline04	51	Picture	fix2	935249	0	1	18668	1	0	next	other	0
+test_Seline04	51	Pulse	199	940000	4751	NA
+test_Seline04	51	Pulse	199	950000	14751	NA
+test_Seline04	52	Picture	feedback	953917	0	1	20168	1	0	next	other	0
+test_Seline04	52	Pulse	199	960000	6083	NA
+test_Seline04	52	Pulse	199	970000	16083	NA
+test_Seline04	53	Picture	fix	974085	0	1	24502	1	0	next	other	0
+test_Seline04	53	Pulse	199	980000	5915	NA
+test_Seline04	53	Pulse	199	990000	15915	NA
+test_Seline04	55	Picture	stim	998588	0	1	20168	1	0	20000	incorrect	155
+test_Seline04	55	Pulse	199	1000000	1413	NA
+test_Seline04	55	Pulse	199	1010000	11413	NA
+test_Seline04	55	Response	32	1013594	15007	0
+test_Seline04	56	Picture	fix2	1018756	0	1	20168	1	0	next	other	0
+test_Seline04	56	Pulse	199	1020000	1244	NA
+test_Seline04	56	Pulse	199	1030000	11244	NA
+test_Seline04	57	Picture	feedback	1038924	0	1	20335	1	0	next	other	0
+test_Seline04	57	Pulse	199	1040000	1076	NA
+test_Seline04	57	Pulse	199	1050000	11076	NA
+test_Seline04	58	Picture	fix	1059260	0	1	30669	1	0	next	other	0
+test_Seline04	58	Pulse	199	1060000	741	NA
+test_Seline04	58	Pulse	199	1070000	10741	NA
+test_Seline04	58	Pulse	199	1080000	20741	NA
+test_Seline04	60	Picture	stim	1089929	0	1	20168	1	0	20000	incorrect	169
+test_Seline04	60	Pulse	199	1090000	71	NA
+test_Seline04	60	Pulse	199	1100000	10071	NA
+test_Seline04	60	Response	32	1102325	12396	0
+test_Seline04	60	Pulse	199	1110000	20071	NA
+test_Seline04	61	Picture	fix2	1110097	0	1	11334	1	0	next	other	0
+test_Seline04	61	Pulse	199	1120000	9903	NA
+test_Seline04	62	Picture	feedback	1121432	0	1	20168	1	0	next	other	0
+test_Seline04	62	Pulse	199	1130000	8568	NA
+test_Seline04	62	Pulse	199	1140000	18568	NA
+test_Seline04	63	Picture	fix	1141600	0	1	23002	1	0	next	other	0
+test_Seline04	63	Pulse	199	1150000	8400	NA
+test_Seline04	63	Pulse	199	1160000	18400	NA
+test_Seline04	65	Picture	stim	1164602	0	1	20169	1	0	20000	incorrect	181
+test_Seline04	65	Pulse	199	1170000	5398	NA
+test_Seline04	65	Response	32	1175857	11255	0
+test_Seline04	65	Pulse	199	1180000	15398	NA
+test_Seline04	66	Picture	fix2	1184771	0	1	14335	1	0	next	other	0
+test_Seline04	66	Pulse	199	1190000	5229	NA
+test_Seline04	67	Picture	feedback	1199105	0	1	20168	1	0	next	other	0
+test_Seline04	67	Pulse	199	1200000	895	NA
+test_Seline04	67	Pulse	199	1210000	10895	NA
+test_Seline04	68	Picture	fix	1219274	0	1	33003	1	0	next	other	0
+test_Seline04	68	Pulse	199	1220000	726	NA
+test_Seline04	68	Pulse	199	1230000	10726	NA
+test_Seline04	68	Pulse	199	1240000	20726	NA
+test_Seline04	68	Pulse	199	1250000	30726	NA
+test_Seline04	70	Picture	stim	1252277	0	1	20168	1	0	20000	incorrect	195
+test_Seline04	70	Pulse	199	1260000	7723	NA
+test_Seline04	70	Response	32	1269389	17112	0
+test_Seline04	70	Pulse	199	1270000	17723	NA
+test_Seline04	71	Picture	fix2	1272445	0	1	27336	1	0	next	other	0
+test_Seline04	71	Pulse	199	1280000	7555	NA
+test_Seline04	71	Pulse	199	1290000	17555	NA
+test_Seline04	72	Picture	feedback	1299781	0	1	20168	1	0	next	other	0
+test_Seline04	72	Pulse	199	1300000	219	NA
+test_Seline04	72	Pulse	199	1310000	10219	NA
+test_Seline04	73	Picture	fix	1319949	0	1	25336	1	0	next	other	0
+test_Seline04	73	Pulse	199	1320000	51	NA
+test_Seline04	73	Pulse	199	1330000	10051	NA
+test_Seline04	73	Pulse	199	1340000	20051	NA
+test_Seline04	75	Picture	stim	1345285	0	1	20168	1	0	20000	incorrect	210
+test_Seline04	75	Pulse	199	1350000	4715	NA
+test_Seline04	75	Pulse	199	1360000	14715	NA
+test_Seline04	75	Response	32	1362357	17073	0
+test_Seline04	76	Picture	fix2	1365620	0	1	17502	1	0	next	other	0
+test_Seline04	76	Pulse	199	1370000	4380	NA
+test_Seline04	76	Pulse	199	1380000	14380	NA
+test_Seline04	77	Picture	feedback	1383122	0	1	20312	1	0	next	other	0
+test_Seline04	77	Pulse	199	1390000	6878	NA
+test_Seline04	77	Pause		1390200	7078	NA	647914
+test_Seline04	77	Resume		1390200	7078	NA
+test_Seline04	77	Pulse	199	1400000	16878	NA
+test_Seline04	78	Picture	fix	1403434	0	1	28836	1	0	next	other	0
+test_Seline04	78	Pulse	199	1410000	6566	NA
+test_Seline04	78	Pulse	199	1420000	16566	NA
+test_Seline04	78	Pulse	199	1430000	26566	NA
+test_Seline04	80	Picture	stim	1432270	0	1	20169	1	0	20000	hit	225
+test_Seline04	80	Pulse	199	1440000	7730	NA
+test_Seline04	80	Response	16	1446042	13772	0
+test_Seline04	80	Pulse	199	1450000	17730	NA
+test_Seline04	81	Picture	fix2	1452438	0	1	23835	1	0	next	other	0
+test_Seline04	81	Pulse	199	1460000	7562	NA
+test_Seline04	81	Pulse	199	1470000	17562	NA
+test_Seline04	82	Picture	feedback	1476274	0	1	20502	1	0	next	other	0
+test_Seline04	82	Pulse	199	1480000	3726	NA
+test_Seline04	82	Pulse	199	1490000	13726	NA
+test_Seline04	83	Picture	fix	1496775	0	1	27002	1	0	next	other	0
+test_Seline04	83	Pulse	199	1500000	3225	NA
+test_Seline04	83	Pulse	199	1510000	13225	NA
+test_Seline04	83	Pulse	199	1520000	23225	NA
+test_Seline04	85	Picture	stim	1523778	0	1	20168	1	0	20000	incorrect	239
+test_Seline04	85	Pulse	199	1530000	6222	NA
+test_Seline04	85	Response	32	1535973	12195	0
+test_Seline04	85	Pulse	199	1540000	16222	NA
+test_Seline04	86	Picture	fix2	1543946	0	1	19502	1	0	next	other	0
+test_Seline04	86	Pulse	199	1550000	6054	NA
+test_Seline04	86	Pulse	199	1560000	16054	NA
+test_Seline04	87	Picture	feedback	1563448	0	1	20335	1	0	next	other	0
+test_Seline04	87	Pulse	199	1570000	6552	NA
+test_Seline04	87	Pulse	199	1580000	16552	NA
+test_Seline04	88	Picture	fix	1583783	0	1	25669	1	0	next	other	0
+test_Seline04	88	Pulse	199	1590000	6217	NA
+test_Seline04	88	Pulse	199	1600000	16217	NA
+test_Seline04	90	Picture	stim	1609452	0	1	20168	1	0	20000	incorrect	252
+test_Seline04	90	Pulse	199	1610000	548	NA
+test_Seline04	90	Response	32	1616382	6930	0
+test_Seline04	90	Pulse	199	1620000	10548	NA
+test_Seline04	91	Picture	fix2	1629620	0	1	25002	1	0	next	other	0
+test_Seline04	91	Pulse	199	1630000	380	NA
+test_Seline04	91	Pulse	199	1640000	10380	NA
+test_Seline04	91	Pulse	199	1650000	20380	NA
+test_Seline04	92	Picture	feedback	1654623	0	1	20168	1	0	next	other	0
+test_Seline04	92	Pulse	199	1660000	5377	NA
+test_Seline04	92	Pulse	199	1670000	15377	NA
+test_Seline04	93	Picture	fix	1674791	0	1	28836	1	0	next	other	0
+test_Seline04	93	Pulse	199	1680000	5209	NA
+test_Seline04	93	Pulse	199	1690000	15209	NA
+test_Seline04	93	Pulse	199	1700000	25209	NA
+test_Seline04	95	Picture	stim	1703627	0	1	20169	1	0	20000	hit	267
+test_Seline04	95	Pulse	199	1710000	6373	NA
+test_Seline04	95	Response	16	1718474	14847	0
+test_Seline04	95	Pulse	199	1720000	16373	NA
+test_Seline04	96	Picture	fix2	1723795	0	1	22669	1	0	next	other	0
+test_Seline04	96	Pulse	199	1730000	6205	NA
+test_Seline04	96	Pulse	199	1740000	16205	NA
+test_Seline04	97	Picture	feedback	1746464	0	1	20335	1	0	next	other	0
+test_Seline04	97	Pulse	199	1750000	3536	NA
+test_Seline04	97	Pulse	199	1760000	13536	NA
+test_Seline04	98	Picture	fix	1766799	0	1	38003	1	0	next	other	0
+test_Seline04	98	Pulse	199	1770000	3201	NA
+test_Seline04	98	Pulse	199	1780000	13201	NA
+test_Seline04	98	Pulse	199	1790000	23201	NA
+test_Seline04	98	Pulse	199	1800000	33201	NA
+test_Seline04	100	Picture	stim	1804802	0	1	20168	1	0	20000	incorrect	282
+test_Seline04	100	Pulse	199	1810000	5198	NA
+test_Seline04	100	Response	32	1811764	6962	0
+test_Seline04	100	Pulse	199	1820000	15198	NA
+test_Seline04	101	Picture	fix2	1824971	0	1	19002	1	0	next	other	0
+test_Seline04	101	Pulse	199	1830000	5029	NA
+test_Seline04	101	Pulse	199	1840000	15029	NA
+test_Seline04	102	Picture	feedback	1843973	0	1	20168	1	0	next	other	0
+test_Seline04	102	Pulse	199	1850000	6027	NA
+test_Seline04	102	Pulse	199	1860000	16027	NA
+test_Seline04	103	Picture	fix	1864141	0	1	31003	1	0	next	other	0
+test_Seline04	103	Pulse	199	1870000	5859	NA
+test_Seline04	103	Pulse	199	1880000	15859	NA
+test_Seline04	103	Pulse	199	1890000	25859	NA
+test_Seline04	105	Picture	stim	1895144	0	1	20168	1	0	20000	incorrect	296
+test_Seline04	105	Pulse	199	1900000	4856	NA
+test_Seline04	105	Response	32	1907135	11991	0
+test_Seline04	105	Pulse	199	1910000	14856	NA
+test_Seline04	106	Picture	fix2	1915312	0	1	18668	1	0	next	other	0
+test_Seline04	106	Pulse	199	1920000	4688	NA
+test_Seline04	106	Pulse	199	1930000	14688	NA
+test_Seline04	107	Picture	feedback	1933981	0	1	20168	1	0	next	other	0
+test_Seline04	107	Pulse	199	1940000	6019	NA
+test_Seline04	107	Pulse	199	1950000	16019	NA
+test_Seline04	108	Picture	fix	1954149	0	1	31836	1	0	next	other	0
+test_Seline04	108	Pulse	199	1960000	5851	NA
+test_Seline04	108	Pulse	199	1970000	15851	NA
+test_Seline04	108	Pulse	199	1980000	25851	NA
+test_Seline04	110	Picture	stim	1985985	0	1	20168	1	0	20000	hit	311
+test_Seline04	110	Pulse	199	1990000	4015	NA
+test_Seline04	110	Pulse	199	2000000	14015	NA
+test_Seline04	110	Response	16	2000749	14764	0
+test_Seline04	111	Picture	fix2	2006154	0	1	14335	1	0	next	other	0
+test_Seline04	111	Pulse	199	2010000	3846	NA
+test_Seline04	111	Pulse	199	2020000	13846	NA
+test_Seline04	112	Picture	feedback	2020488	0	1	20168	1	0	next	other	0
+test_Seline04	112	Pulse	199	2030000	9512	NA
+test_Seline04	112	Pulse	199	2040000	19512	NA
+test_Seline04	113	Picture	fix	2040657	0	1	30669	1	0	next	other	0
+test_Seline04	113	Pulse	199	2050000	9343	NA
+test_Seline04	113	Pulse	199	2060000	19343	NA
+test_Seline04	113	Pulse	199	2070000	29343	NA
+test_Seline04	115	Picture	stim	2071326	0	1	20169	1	0	20000	incorrect	324
+test_Seline04	115	Pulse	199	2080000	8674	NA
+test_Seline04	115	Response	32	2087959	16633	0
+test_Seline04	115	Pulse	199	2090000	18674	NA
+test_Seline04	116	Picture	fix2	2091495	0	1	10168	1	0	next	other	0
+test_Seline04	116	Pulse	199	2100000	8505	NA
+test_Seline04	117	Picture	feedback	2101662	0	1	20168	1	0	next	other	0
+test_Seline04	117	Pulse	199	2110000	8338	NA
+test_Seline04	117	Pulse	199	2120000	18338	NA
+test_Seline04	118	Picture	fix	2121831	0	1	27669	1	0	next	other	0
+test_Seline04	118	Pulse	199	2130000	8169	NA
+test_Seline04	118	Pulse	199	2140000	18169	NA
+test_Seline04	120	Picture	stim	2149500	0	1	20168	1	0	20000	incorrect	337
+test_Seline04	120	Pulse	199	2150000	500	NA
+test_Seline04	120	Pulse	199	2160000	10500	NA
+test_Seline04	120	Response	32	2164124	14624	0
+test_Seline04	121	Picture	fix2	2169668	0	1	25169	1	0	next	other	0
+test_Seline04	121	Pulse	199	2170000	332	NA
+test_Seline04	121	Pulse	199	2180000	10332	NA
+test_Seline04	121	Pulse	199	2190000	20332	NA
+test_Seline04	122	Picture	feedback	2194837	0	1	20168	1	0	next	other	0
+test_Seline04	122	Pulse	199	2200000	5163	NA
+test_Seline04	122	Pulse	199	2210000	15163	NA
+test_Seline04	123	Picture	fix	2215005	0	1	27169	1	0	next	other	0
+test_Seline04	123	Pulse	199	2220000	4995	NA
+test_Seline04	123	Pulse	199	2230000	14995	NA
+test_Seline04	123	Pulse	199	2240000	24995	NA
+test_Seline04	125	Picture	stim	2242175	0	1	20168	1	0	20000	incorrect	351
+test_Seline04	125	Pulse	199	2250000	7825	NA
+test_Seline04	125	Response	32	2253414	11240	0
+test_Seline04	125	Pulse	199	2260000	17825	NA
+test_Seline04	126	Picture	fix2	2262343	0	1	13501	1	0	next	other	0
+test_Seline04	126	Pulse	199	2270000	7657	NA
+test_Seline04	127	Picture	feedback	2275844	0	1	20168	1	0	next	other	0
+test_Seline04	127	Pulse	199	2280000	4156	NA
+test_Seline04	127	Pulse	199	2290000	14156	NA
+test_Seline04	128	Picture	fix	2296013	0	1	27336	1	0	next	other	0
+test_Seline04	128	Pulse	199	2300000	3987	NA
+test_Seline04	128	Pulse	199	2310000	13987	NA
+test_Seline04	128	Pulse	199	2320000	23987	NA
+test_Seline04	130	Picture	stim	2323348	0	1	20502	1	0	20000	incorrect	365
+test_Seline04	130	Pulse	199	2330000	6652	NA
+test_Seline04	130	Pulse	199	2340000	16652	NA
+test_Seline04	130	Response	32	2341506	18158	0
+test_Seline04	131	Picture	fix2	2343850	0	1	21835	1	0	next	other	0
+test_Seline04	131	Pulse	199	2350000	6150	NA
+test_Seline04	131	Pulse	199	2360000	16150	NA
+test_Seline04	132	Picture	feedback	2365685	0	1	20168	1	0	next	other	0
+test_Seline04	132	Pulse	199	2370000	4315	NA
+test_Seline04	132	Pulse	199	2380000	14315	NA
+test_Seline04	133	Picture	fix	2385854	0	1	22002	1	0	next	other	0
+test_Seline04	133	Pulse	199	2390000	4146	NA
+test_Seline04	133	Pulse	199	2400000	14146	NA
+test_Seline04	135	Picture	stim	2407856	0	1	20168	1	0	20000	incorrect	377
+test_Seline04	135	Pulse	199	2410000	2144	NA
+test_Seline04	135	Response	32	2415591	7735	0
+test_Seline04	135	Pulse	199	2420000	12144	NA
+test_Seline04	136	Picture	fix2	2428024	0	1	22835	1	0	next	other	0
+test_Seline04	136	Pulse	199	2430000	1976	NA
+test_Seline04	136	Pulse	199	2440000	11976	NA
+test_Seline04	136	Pulse	199	2450000	21976	NA
+test_Seline04	137	Picture	feedback	2450860	0	1	20168	1	0	next	other	0
+test_Seline04	137	Pulse	199	2460000	9140	NA
+test_Seline04	137	Pulse	199	2470000	19140	NA
+test_Seline04	138	Picture	fix	2471028	0	1	39503	1	0	next	other	0
+test_Seline04	138	Pulse	199	2480000	8972	NA
+test_Seline04	138	Pulse	199	2490000	18972	NA
+test_Seline04	138	Pulse	199	2500000	28972	NA
+test_Seline04	138	Pulse	199	2510000	38972	NA
+test_Seline04	140	Picture	stim	2510532	0	1	20168	1	0	20000	miss	0
+test_Seline04	140	Pulse	199	2520000	9468	NA
+test_Seline04	140	Pulse	199	2530000	19468	NA
+test_Seline04	141	Picture	fix2	2530700	0	1	25669	1	0	next	other	0
+test_Seline04	141	Response	16	2532568	1868	0
+test_Seline04	141	Pulse	199	2540000	9300	NA
+test_Seline04	141	Pulse	199	2550000	19300	NA
+test_Seline04	142	Picture	feedback	2556369	0	1	20168	1	0	next	other	0
+test_Seline04	142	Pulse	199	2560000	3631	NA
+test_Seline04	142	Pulse	199	2570000	13631	NA
+test_Seline04	143	Picture	fix	2576537	0	1	17668	1	0	next	other	0
+test_Seline04	143	Pulse	199	2580000	3463	NA
+test_Seline04	143	Pulse	199	2590000	13463	NA
+test_Seline04	145	Picture	stim	2594206	0	1	20168	1	0	20000	incorrect	406
+test_Seline04	145	Pulse	199	2600000	5794	NA
+test_Seline04	145	Response	32	2606333	12127	0
+test_Seline04	145	Pulse	199	2610000	15794	NA
+test_Seline04	146	Picture	fix2	2614374	0	1	13668	1	0	next	other	0
+test_Seline04	146	Pulse	199	2620000	5626	NA
+test_Seline04	147	Picture	feedback	2628042	0	1	20502	1	0	next	other	0
+test_Seline04	147	Pulse	199	2630000	1958	NA
+test_Seline04	147	Pulse	199	2640000	11958	NA
+test_Seline04	148	Picture	fix	2648544	0	1	30669	1	0	next	other	0
+test_Seline04	148	Pulse	199	2650000	1456	NA
+test_Seline04	148	Pulse	199	2660000	11456	NA
+test_Seline04	148	Pulse	199	2670000	21456	NA
+test_Seline04	150	Picture	stim	2679213	0	1	20168	1	0	20000	incorrect	420
+test_Seline04	150	Pulse	199	2680000	787	NA
+test_Seline04	150	Pulse	199	2690000	10787	NA
+test_Seline04	150	Response	32	2692423	13210	0
+test_Seline04	151	Picture	fix2	2699548	0	1	15168	1	0	next	other	0
+test_Seline04	151	Pulse	199	2700000	452	NA
+test_Seline04	151	Pulse	199	2710000	10452	NA
+test_Seline04	152	Picture	feedback	2714716	0	1	20169	1	0	next	other	0
+test_Seline04	152	Pulse	199	2720000	5284	NA
+test_Seline04	152	Pulse	199	2730000	15284	NA
+test_Seline04	153	Picture	fix	2734885	0	1	35836	1	0	next	other	0
+test_Seline04	153	Pulse	199	2740000	5115	NA
+test_Seline04	153	Pulse	199	2750000	15115	NA
+test_Seline04	153	Pulse	199	2760000	25115	NA
+test_Seline04	153	Pulse	199	2770000	35115	NA
+test_Seline04	155	Picture	stim	2770721	0	1	20168	1	0	20000	incorrect	434
+test_Seline04	155	Pulse	199	2780000	9279	NA
+test_Seline04	155	Response	32	2785558	14836	0
+test_Seline04	155	Pulse	199	2790000	19279	NA
+test_Seline04	156	Picture	fix2	2790890	0	1	16001	1	0	next	other	0
+test_Seline04	156	Pulse	199	2800000	9110	NA
+test_Seline04	157	Picture	feedback	2806891	0	1	20169	1	0	next	other	0
+test_Seline04	157	Pulse	199	2810000	3109	NA
+test_Seline04	157	Pulse	199	2820000	13109	NA
+test_Seline04	158	Picture	fix	2827060	0	1	32336	1	0	next	other	0
+test_Seline04	158	Pulse	199	2830000	2940	NA
+test_Seline04	158	Pulse	199	2840000	12940	NA
+test_Seline04	158	Pulse	199	2850000	22940	NA
+test_Seline04	160	Picture	stim	2859396	0	1	20168	1	0	20000	hit	447
+test_Seline04	160	Pulse	199	2860000	604	NA
+test_Seline04	160	Response	16	2869006	9611	0
+test_Seline04	160	Pulse	199	2870000	10604	NA
+test_Seline04	161	Picture	fix2	2879564	0	1	16668	1	0	next	other	0
+test_Seline04	161	Pulse	199	2880000	436	NA
+test_Seline04	161	Pulse	199	2890000	10436	NA
+test_Seline04	162	Picture	feedback	2896232	0	1	20168	1	0	next	other	0
+test_Seline04	162	Pulse	199	2900000	3768	NA
+test_Seline04	162	Pulse	199	2910000	13768	NA
+test_Seline04	163	Picture	fix	2916401	0	1	26169	1	0	next	other	0
+test_Seline04	163	Pulse	199	2920000	3599	NA
+test_Seline04	163	Pulse	199	2930000	13599	NA
+test_Seline04	163	Pulse	199	2940000	23599	NA
+test_Seline04	165	Picture	stim	2942570	0	1	20168	1	0	20000	incorrect	461
+test_Seline04	165	Pulse	199	2950000	7430	NA
+test_Seline04	165	Response	32	2956133	13563	0
+test_Seline04	165	Pulse	199	2960000	17430	NA
+test_Seline04	166	Picture	fix2	2962738	0	1	25836	1	0	next	other	0
+test_Seline04	166	Pulse	199	2970000	7262	NA
+test_Seline04	166	Pulse	199	2980000	17262	NA
+test_Seline04	167	Picture	feedback	2988574	0	1	20168	1	0	next	other	0
+test_Seline04	167	Pulse	199	2990000	1426	NA
+test_Seline04	167	Pulse	199	3000000	11426	NA
+test_Seline04	168	Picture	fix	3008742	0	1	23169	1	0	next	other	0
+test_Seline04	168	Pulse	199	3010000	1258	NA
+test_Seline04	168	Pulse	199	3020000	11258	NA
+test_Seline04	168	Pulse	199	3030000	21258	NA
+test_Seline04	170	Picture	stim	3031911	0	1	20168	1	0	20000	incorrect	475
+test_Seline04	170	Pulse	199	3040000	8089	NA
+test_Seline04	170	Response	32	3048388	16477	0
+test_Seline04	170	Pulse	199	3050000	18089	NA
+test_Seline04	171	Picture	fix2	3052079	0	1	20002	1	0	next	other	0
+test_Seline04	171	Pulse	199	3060000	7921	NA
+test_Seline04	171	Pulse	199	3070000	17921	NA
+test_Seline04	172	Picture	feedback	3072081	0	1	20168	1	0	next	other	0
+test_Seline04	172	Pulse	199	3080000	7919	NA
+test_Seline04	172	Pulse	199	3090000	17919	NA
+test_Seline04	173	Picture	fix	3092250	0	1	33836	1	0	next	other	0
+test_Seline04	173	Pulse	199	3100000	7750	NA
+test_Seline04	173	Pulse	199	3110000	17750	NA
+test_Seline04	173	Pulse	199	3120000	27750	NA
+test_Seline04	175	Picture	stim	3126086	0	1	20335	1	0	20000	incorrect	489
+test_Seline04	175	Pulse	199	3130000	3914	NA
+test_Seline04	175	Response	32	3135113	9027	0
+test_Seline04	175	Pulse	199	3140000	13914	NA
+test_Seline04	176	Picture	fix2	3146421	0	1	20002	1	0	next	other	0
+test_Seline04	176	Pulse	199	3150000	3579	NA
+test_Seline04	176	Pulse	199	3160000	13579	NA
+test_Seline04	177	Picture	feedback	3166423	0	1	20168	1	0	next	other	0
+test_Seline04	177	Pulse	199	3170000	3577	NA
+test_Seline04	177	Pulse	199	3180000	13577	NA
+test_Seline04	177	Response	32	3185358	18935	0
+test_Seline04	178	Picture	fix	3186591	0	1	32836	1	0	next	other	0
+test_Seline04	178	Pulse	199	3190000	3409	NA
+test_Seline04	178	Pulse	199	3200000	13409	NA
+test_Seline04	178	Pulse	199	3210000	23409	NA
+test_Seline04	180	Picture	stim	3219428	0	1	20169	1	0	20000	incorrect	505
+test_Seline04	180	Pulse	199	3220000	572	NA
+test_Seline04	180	Pulse	199	3230000	10572	NA
+test_Seline04	180	Response	32	3234087	14660	0
+test_Seline04	181	Picture	fix2	3239596	0	1	18835	1	0	next	other	0
+test_Seline04	181	Pulse	199	3240000	404	NA
+test_Seline04	181	Pulse	199	3250000	10404	NA
+test_Seline04	182	Picture	feedback	3258431	0	1	20168	1	0	next	other	0
+test_Seline04	182	Pulse	199	3260000	1569	NA
+test_Seline04	182	Pulse	199	3270000	11569	NA
+test_Seline04	183	Picture	100	3278599	0	1	80174	1	0	80000	other	0
+test_Seline04	183	Pulse	199	3280000	1401	NA
+test_Seline04	183	Pulse	199	3290000	11401	NA
+test_Seline04	183	Pulse	199	3300000	21401	NA
+test_Seline04	183	Pulse	199	3310000	31401	NA
+test_Seline04	183	Pulse	199	3320000	41401	NA
+test_Seline04	183	Pulse	199	3330000	51401	NA
+test_Seline04	183	Pulse	199	3340000	61401	NA
+test_Seline04	183	Pulse	199	3350000	71401	NA

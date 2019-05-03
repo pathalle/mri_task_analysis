@@ -1,0 +1,93 @@
+Scenario - FeedLearn_MRI_5x8_fullRand.sce
+Logfile written - 04/29/2019 18:39:33
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+03_yao	0	Pulse	199	0	0	NA
+03_yao	0	Pulse	199	10000	10000	NA
+03_yao	1	Pulse	199	20000	9667	NA
+03_yao	1	Pulse	199	30000	19667	NA
+03_yao	1	Response	16	30268	19935	0
+03_yao	2	Picture	fix	30503	0	1	28004	1	0	next	other	0
+03_yao	2	Pulse	199	40000	9497	NA
+03_yao	2	Pulse	199	50000	19497	NA
+03_yao	4	Picture	stim	58507	0	1	20170	1	0	20000	miss	0
+03_yao	4	Pulse	199	60000	1493	NA
+03_yao	4	Pulse	199	70000	11493	NA
+03_yao	5	Picture	fix2	78677	0	1	25671	1	0	next	other	0
+03_yao	5	Pulse	199	80000	1323	NA
+03_yao	5	Response	32	81829	3152	0
+03_yao	5	Pulse	199	90000	11323	NA
+03_yao	5	Pulse	199	100000	21323	NA
+03_yao	6	Picture	feedback	104347	0	1	20170	1	0	next	other	0
+03_yao	6	Pulse	199	110000	5653	NA
+03_yao	6	Pulse	199	120000	15653	NA
+03_yao	7	Picture	fix	124517	0	1	24170	1	0	next	other	0
+03_yao	7	Pulse	199	130000	5483	NA
+03_yao	7	Pulse	199	140000	15483	NA
+03_yao	9	Picture	stim	148687	0	1	20670	1	0	20000	hit	25
+03_yao	9	Pulse	199	150000	1313	NA
+03_yao	9	Response	16	157872	9185	0
+03_yao	9	Pulse	199	160000	11313	NA
+03_yao	10	Picture	fix2	169357	0	1	18669	1	0	next	other	0
+03_yao	10	Pulse	199	170000	643	NA
+03_yao	10	Pulse	199	180000	10643	NA
+03_yao	11	Picture	feedback	188027	0	1	20336	1	0	next	other	0
+03_yao	11	Pulse	199	190000	1973	NA
+03_yao	11	Pulse	199	200000	11973	NA
+03_yao	12	Picture	fix	208363	0	1	28838	1	0	next	other	0
+03_yao	12	Pulse	199	210000	1637	NA
+03_yao	12	Pulse	199	220000	11637	NA
+03_yao	12	Pulse	199	230000	21637	NA
+03_yao	14	Picture	stim	237201	0	1	20170	1	0	20000	hit	39
+03_yao	14	Pulse	199	240000	2799	NA
+03_yao	14	Response	16	248807	11606	0
+03_yao	14	Pulse	199	250000	12799	NA
+03_yao	14	Response	32	256912	19711	0
+03_yao	15	Picture	fix2	257370	0	1	23670	1	0	next	other	0
+03_yao	15	Pulse	199	260000	2630	NA
+03_yao	15	Pulse	199	270000	12630	NA
+03_yao	15	Pulse	199	280000	22630	NA
+03_yao	16	Picture	feedback	281041	0	1	20170	1	0	next	other	0
+03_yao	16	Pulse	199	290000	8959	NA
+03_yao	16	Pulse	199	300000	18959	NA
+03_yao	17	Picture	fix	301210	0	1	23004	1	0	next	other	0
+03_yao	17	Pulse	199	310000	8790	NA
+03_yao	17	Pulse	199	320000	18790	NA
+03_yao	19	Picture	stim	324214	0	1	20336	1	0	20000	hit	54
+03_yao	19	Pulse	199	330000	5786	NA
+03_yao	19	Response	16	331663	7449	0
+03_yao	19	Pulse	199	340000	15786	NA
+03_yao	20	Picture	fix2	344550	0	1	13669	1	0	next	other	0
+03_yao	20	Pulse	199	350000	5450	NA
+03_yao	21	Picture	feedback	358219	0	1	20173	1	0	next	other	0
+03_yao	21	Pulse	199	360000	1781	NA
+03_yao	21	Pulse	199	370000	11781	NA
+03_yao	22	Picture	fix	378392	0	1	30002	1	0	next	other	0
+03_yao	22	Pulse	199	380000	1608	NA
+03_yao	22	Pulse	199	390000	11608	NA
+03_yao	22	Pulse	199	400000	21608	NA
+03_yao	24	Picture	stim	408393	0	1	20173	1	0	20000	hit	68
+03_yao	24	Pulse	199	410000	1607	NA
+03_yao	24	Pulse	199	420000	11607	NA
+03_yao	24	Response	16	424599	16206	0
+03_yao	25	Picture	fix2	428730	0	1	18339	1	0	next	other	0
+03_yao	25	Pulse	199	430000	1270	NA
+03_yao	25	Pulse	199	440000	11270	NA
+03_yao	26	Picture	feedback	447069	0	1	20170	1	0	next	other	0
+03_yao	26	Pulse	199	450000	2931	NA
+03_yao	26	Pulse	199	460000	12931	NA
+03_yao	27	Picture	fix	467238	0	1	27335	1	0	next	other	0
+03_yao	27	Pulse	199	470000	2762	NA
+03_yao	27	Pulse	199	480000	12762	NA
+03_yao	27	Pulse	199	490000	22762	NA
+03_yao	29	Picture	stim	494574	0	1	20172	1	0	20000	miss	0
+03_yao	29	Pulse	199	500000	5426	NA
+03_yao	29	Pulse	199	510000	15426	NA
+03_yao	30	Picture	fix2	514746	0	1	16002	1	0	next	other	0
+03_yao	30	Response	32	517214	2469	0
+03_yao	30	Pulse	199	520000	5254	NA
+03_yao	30	Pulse	199	530000	15254	NA
+03_yao	31	Picture	feedback	530748	0	1	25360	1	0	next	other	0
+03_yao	31	Pulse	199	540000	9252	NA
+03_yao	31	Pulse	199	550000	19252	NA

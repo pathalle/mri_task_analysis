@@ -1,0 +1,98 @@
+Scenario - FeedLearn_MRI_5x8_fullRand.sce
+Logfile written - 04/11/2019 12:22:56
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+01_polo	0	Pulse	199	0	0	NA
+01_polo	0	Pulse	199	10000	10000	NA
+01_polo	1	Pulse	199	20000	9668	NA
+01_polo	1	Pulse	199	30000	19668	NA
+01_polo	1	Pulse	199	40000	29668	NA
+01_polo	1	Pulse	199	50000	39668	NA
+01_polo	1	Pulse	199	60000	49668	NA
+01_polo	1	Pulse	199	70000	59668	NA
+01_polo	1	Pulse	199	80000	69668	NA
+01_polo	1	Response	16	88232	77900	0
+01_polo	2	Picture	fix	88844	0	1	35669	7	0	next	other	0
+01_polo	2	Pulse	199	90000	1156	NA
+01_polo	2	Pulse	199	100000	11156	NA
+01_polo	2	Pulse	199	110000	21156	NA
+01_polo	3	Pulse	199	120000	4240	NA
+01_polo	4	Picture	stim	124513	0	6	20339	7	0	20000	miss	0
+01_polo	4	Pulse	199	130000	5487	NA
+01_polo	4	Pulse	199	140000	15487	NA
+01_polo	5	Picture	fix2	144852	0	1	25671	1	0	next	other	0
+01_polo	5	Pulse	199	150000	5148	NA
+01_polo	5	Response	16	151069	6216	0
+01_polo	5	Pulse	199	160000	15148	NA
+01_polo	5	Pulse	199	170000	25148	NA
+01_polo	6	Picture	feedback	170523	0	1	20170	1	0	next	other	0
+01_polo	6	Pulse	199	180000	9477	NA
+01_polo	6	Pulse	199	190000	19477	NA
+01_polo	7	Picture	fix	190692	0	1	24170	1	0	next	other	0
+01_polo	7	Pulse	199	200000	9308	NA
+01_polo	7	Pulse	199	210000	19308	NA
+01_polo	9	Picture	stim	214863	0	1	20503	1	0	20000	hit	32
+01_polo	9	Pulse	199	220000	5137	NA
+01_polo	9	Response	16	223201	8339	0
+01_polo	9	Pulse	199	230000	15137	NA
+01_polo	10	Picture	fix2	235366	0	1	18670	1	0	next	other	0
+01_polo	10	Pulse	199	240000	4634	NA
+01_polo	10	Pulse	199	250000	14634	NA
+01_polo	11	Picture	feedback	254036	0	1	20336	1	0	next	other	0
+01_polo	11	Pulse	199	260000	5964	NA
+01_polo	11	Pulse	199	270000	15964	NA
+01_polo	12	Picture	fix	274372	0	1	28838	1	0	next	other	0
+01_polo	12	Pulse	199	280000	5628	NA
+01_polo	12	Pulse	199	290000	15628	NA
+01_polo	12	Pulse	199	300000	25628	NA
+01_polo	14	Picture	stim	303210	0	1	20171	1	0	20000	miss	0
+01_polo	14	Pulse	199	310000	6790	NA
+01_polo	14	Pulse	199	320000	16790	NA
+01_polo	15	Picture	fix2	323380	0	1	23669	1	0	next	other	0
+01_polo	15	Response	16	325508	2127	0
+01_polo	15	Pulse	199	330000	6620	NA
+01_polo	15	Pulse	199	340000	16620	NA
+01_polo	16	Picture	feedback	347049	0	1	20170	1	0	next	other	0
+01_polo	16	Pulse	199	350000	2951	NA
+01_polo	16	Pulse	199	360000	12951	NA
+01_polo	17	Picture	fix	367219	0	1	23004	1	0	next	other	0
+01_polo	17	Pulse	199	370000	2781	NA
+01_polo	17	Pulse	199	380000	12781	NA
+01_polo	17	Pulse	199	390000	22781	NA
+01_polo	19	Picture	stim	390223	0	1	20336	1	0	20000	hit	60
+01_polo	19	Pulse	199	400000	9777	NA
+01_polo	19	Response	16	400909	10686	0
+01_polo	19	Pulse	199	410000	19777	NA
+01_polo	20	Picture	fix2	410559	0	1	13669	1	0	next	other	0
+01_polo	20	Pulse	199	420000	9441	NA
+01_polo	21	Picture	feedback	424228	0	1	20170	1	0	next	other	0
+01_polo	21	Pulse	199	430000	5772	NA
+01_polo	21	Pulse	199	440000	15772	NA
+01_polo	22	Picture	fix	444398	0	1	30004	1	0	next	other	0
+01_polo	22	Pulse	199	450000	5603	NA
+01_polo	22	Pulse	199	460000	15603	NA
+01_polo	22	Pulse	199	470000	25603	NA
+01_polo	24	Picture	stim	474402	0	1	20170	1	0	20000	hit	73
+01_polo	24	Pulse	199	480000	5598	NA
+01_polo	24	Response	16	487295	12893	0
+01_polo	24	Pulse	199	490000	15598	NA
+01_polo	25	Picture	fix2	494572	0	1	18336	1	0	next	other	0
+01_polo	25	Pulse	199	500000	5428	NA
+01_polo	25	Pulse	199	510000	15428	NA
+01_polo	26	Picture	feedback	512908	0	1	20170	1	0	next	other	0
+01_polo	26	Pulse	199	520000	7092	NA
+01_polo	26	Pulse	199	530000	17092	NA
+01_polo	27	Picture	fix	533078	0	1	27337	1	0	next	other	0
+01_polo	27	Pulse	199	540000	6922	NA
+01_polo	27	Pulse	199	550000	16922	NA
+01_polo	27	Pulse	199	560000	26922	NA
+01_polo	29	Picture	stim	560415	0	1	20170	1	0	20000	incorrect	87
+01_polo	29	Pulse	199	570000	9585	NA
+01_polo	29	Response	32	572452	12037	0
+01_polo	29	Pulse	199	580000	19585	NA
+01_polo	30	Picture	fix2	580751	0	1	16002	1	0	next	other	0
+01_polo	30	Pulse	199	590000	9249	NA
+01_polo	31	Picture	feedback	596754	0	1	25648	1	0	next	other	0
+01_polo	31	Pulse	199	600000	3246	NA
+01_polo	31	Pulse	199	610000	13246	NA
