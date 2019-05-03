@@ -391,7 +391,7 @@ hBayesDM_model <- function(task_name,
       } else {
         model_path <- system.file("stan_files", paste0(model, ".stan"),
                                   package="hBayesDM")
-        stanmodel_arg <- rstan::stan_model(model_path)
+        
       }
     } else if (is.character(stanmodel_arg)) {
       stanmodel_arg <- rstan::stan_model(stanmodel_arg)
