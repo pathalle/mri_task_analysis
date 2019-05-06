@@ -5,7 +5,7 @@ function [ onsets, congruent, correct, vstim, stimon_mri, feedon_mri ] = get_ere
     %congruent = content{5}(3:end);
     
     condition = content{7}(2:end);
-    condition(char(condition) == '2') = {'0'};
+    
     
     stimon_mri = str2num(char(content{12}(2:end)))./1000;
     feedon_mri = str2num(char(content{14}(2:end)))./1000;
@@ -70,14 +70,14 @@ function [ onsets, congruent, correct, vstim, stimon_mri, feedon_mri ] = get_ere
     condition = str2num(char(condition));
     
     % convert correct / result
-    correct = str2num(char(content{7}(2:end)));
+    correct = str2num(char(content{8}(2:end)));
     correct(correct == 2) = 0;
     
     % convert Vstim
-    astim = str2num(char(astim));
+    vstim = str2num(char(content{3}(2:end)));
     
-    onsets{5} =rt_pos_fb;
-    onsets{6} =rt_neg_fb ; 
+    onsets{3} =rt_congruent;
+    onsets{4} =rt_incongruent ; 
     
     %onsets = vec2mat(str2num(str2mat(onsets{:})),5)'./1000;
     fclose(fileID);
