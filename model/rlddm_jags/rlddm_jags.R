@@ -38,7 +38,7 @@ value <- ifelse(raw_data$correct==1, 0, 1)
 new_RT <- ifelse(raw_data$correct==1, raw_data$RT*-1, raw_data$RT)
 
 
-############# just for testing purposes
+#############  for testing purposes ############
 for(s in 1:length(subjs)){
   for (trial in (first[s]):(last[s]-1)) {  
   print(raw_data$RT[trial])
@@ -49,7 +49,8 @@ for(s in 1:length(subjs)){
 raw_data$RT[781] # -> error: correct!
 # for S1, the last trial is 0.931. Thus RT[last[1]-1] should be this number
 raw_data$RT[last[1]-1] # -> correct!
-############
+
+###############################################
 
 dat <- list("S" = n_subj, "iter" = raw_data$trial, "correct" = raw_data$correct, "incorrect" = raw_data$incorrect,
             "RT" = new_RT, "first" = first, "last" = last, "value"=value)  # names list of numbers

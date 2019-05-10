@@ -104,6 +104,9 @@ DDMsimu(0.4)
 
 ## generate random data
 library(RWiener)
-rwiener()
-?rwiener
-dat <- rwiener(20,30,.1,0.5,0.4)
+library(ggplot2)
+#rwiener(n, alpha,tau,beta,delta)
+#restrictions: 0 < ?? < 1, ?? > 0, ?? > 0
+dat <- rwiener(20,2.,0.1,0.5,0.6)
+ggplot(dat) + geom_density() + aes(x=q, fill=resp)
+wiener_plot(dat)
