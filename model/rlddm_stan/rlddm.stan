@@ -46,11 +46,11 @@ transformed parameters {
   eta[2] = exp(mu_pr[3] + sigma[3] * eta_pr[2]);
   a_mod = exp(mu_pr[4] + sigma[4] * a_mod_pr);
   v_mod = exp(mu_pr[5] + sigma[5] * v_mod_pr);
-  tau = exp(mu_pr[6] + sigma[6] * tau_pr)
+  tau = exp(mu_pr[6] + sigma[6] * tau_pr);
   for (i in 1:N) {
     // min RT >= RTbound
     tau[i]  = Phi_approx(mu_pr[6] + sigma[6] * tau_pr[i]) * (minRT[i] - RTbound) + RTbound;
-    tau[i] = abs(tau[i])
+    tau[i] = abs(tau[i]);
   }
 }
 

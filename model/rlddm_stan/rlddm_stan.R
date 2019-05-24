@@ -9,10 +9,12 @@ setwd(path)
 raw_data <- data.table::fread(file = data_path, header = TRUE, sep = "\t", data.table = TRUE,
                               fill = TRUE, stringsAsFactors = TRUE, logical01 = FALSE)
 
+raw_data$rt <- raw_data$rt/1000
+names(raw_data)[names(raw_data)=="rt"] <- "RT"
 raw_data <- raw_data[which(raw_data$RT > 0.15),]
 raw_data$subjID = rep('01',nrow(raw_data))
 
-names(raw_data)[names(raw_data)=="choice"] <- "correct"
+names(raw_data)[names(raw_data)=="fb"] <- "correct"
 
 ## prepare data for jags
 #raw_data$row <- seq.int(nrow(raw_data))
@@ -32,11 +34,11 @@ first <- which(raw_data$trial==1)
 # last is a Sx1 matrix identifying all last trials of a subject for each choice
 last <- as.integer(first + DT_trials$N - 1)
 # incorrect is the inverse vector of choice and is needed to update the ev for the non-choices
-raw_data$incorrect <- as.integer(ifelse(raw_data$correct==1, 2, 1))
+raw_data$incorrect <- as.integer(ifelse(raw_data$correct==1, 0, 1))
 # define the values for the rewards
 value <- ifelse(raw_data$correct==1, 0, 1)
 ## all RT with negative choices -> -1
-new_RT <- ifelse(raw_data$correct==1, raw_data$RT*-1, raw_data$RT)
+#new_RT <- ifelse(raw_data$correct==1, raw_data$RT*-1, raw_data$RT)
 ## # obs
 n_trials <- nrow(raw_data)
 ## 
@@ -45,7 +47,7 @@ stims <- raw_data$aStim
 
 
 dat <- list("N" = n_subj, "T"=n_trials,"RTbound" = 0.15,"minRT" = minRT, "iter" = raw_data$trial, "correct" = raw_data$correct, "incorrect" = raw_data$incorrect,
-            "RT" = new_RT, "first" = first, "last" = last, "value"=value)  # names list of numbers
+            "RT" = new_RT, "first" = first, "last" = last, "value"=value, "stims" = stims)  # names list of numbers
 
 
 ############ SIMULATE MODEL ###############
