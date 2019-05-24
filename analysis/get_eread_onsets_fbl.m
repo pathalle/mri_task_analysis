@@ -1,4 +1,4 @@
-function [ onsets, congruent, correct, vstim, stimon_mri, feedon_mri ] = get_eread_onsets_fbl( logfile )
+function [ onsets, half, correct, astim, stimon_mri, feedon_mri ] = get_eread_onsets_fbl( logfile )
     fileID = fopen(logfile);
     content = textscan(fileID,'%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s ','Delimiter','\t');
     
