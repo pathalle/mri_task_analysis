@@ -5,11 +5,11 @@ data {
   int last[N];         // last trial of subject
   int<lower=1> T;      // Number of observations
   real RTbound;        // lower bound of RT across all subjects (e.g., 0.1 second)
-  real iter[T];         // trial of given observation
+  real iter[T];        // trial of given observation
   int correct[T];      // encodes successful trial
   int incorrect[T];    // encodes unsuccessful trial (inverse of correct)
   real RT[T];          // reaction time
-  int value[T];               // value of trial: successful / unsuccessful -> encodes rewards
+  int value[T];        // value of trial: successful / unsuccessful -> encodes rewards
 }
 
 parameters {
@@ -37,8 +37,8 @@ transformed parameters {
   // Transform subject-level raw parameters
   vector<lower=0>[N] alpha;                       // boundary separation
   vector<lower=-5>[N] eta[2];                     // learning parameter
-  vector<lower=-0.5, upper=2>[N] a_mod;         // choice consistency
-  vector<lower=0, upper=10>[N] v_mod;                       // scaling parameter
+  vector<lower=-0.5, upper=2>[N] a_mod;           // choice consistency
+  vector<lower=0, upper=10>[N] v_mod;             // scaling parameter
   vector<lower=RTbound, upper=max(minRT)>[N] tau; // nondecision time
 
   alpha = exp(mu_pr[1] + sigma[1] * alpha_pr); // exp (.): natural exponential of argument.
@@ -46,13 +46,16 @@ transformed parameters {
   eta[2] = exp(mu_pr[3] + sigma[3] * eta_pr[2]);
   a_mod = exp(mu_pr[4] + sigma[4] * a_mod_pr);
   v_mod = exp(mu_pr[5] + sigma[5] * v_mod_pr);
+  tau = exp(mu_pr[6] + sigma[6] * tau_pr);
   for (i in 1:N) {
+    // min RT >= RTbound
     tau[i]  = Phi_approx(mu_pr[6] + sigma[6] * tau_pr[i]) * (minRT[i] - RTbound) + RTbound;
+    tau[i] = abs(tau[i]);
   }
 }
 
 model {
-  vector[N] ev[2];
+  vector[T] ev[2];
   vector[T] delta;
   vector[T] log_lik;
   // Hyperparameters
@@ -69,7 +72,7 @@ model {
   tau_pr   ~ normal(0, 1);
   // Begin subject loop
   // until second last 
-  for (s in 1:N-1) {
+  for (s in 1:N) {
     ev[first[s],1] = 0;
     ev[first[s],2] = 0;
     for(trial in (first[s]):(last[s]-1)) {
@@ -85,7 +88,7 @@ model {
   }
 }
 generated quantities {
-  vector[N] ev[2];
+  vector[T] ev[2];
   // For group level parameters
   real<lower=0> mu_alpha;          // boundary separation
   real<lower=0> mu_eta1;    // learning rate

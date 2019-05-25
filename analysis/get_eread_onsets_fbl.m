@@ -1,10 +1,11 @@
-function [ onsets, congruent, correct, vstim, stimon_mri, feedon_mri ] = get_eread_onsets_4( logfile )
+function [ onsets, half, correct, astim, stimon_mri, feedon_mri ] = get_eread_onsets_fbl( logfile )
     fileID = fopen(logfile);
     content = textscan(fileID,'%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s ','Delimiter','\t');
     
     %congruent = content{5}(3:end);
     
     condition = content{7}(2:end);
+    condition(char(condition) == '2') = {'0'};
     
     stimon_mri = str2num(char(content{12}(2:end)))./1000;
     feedon_mri = str2num(char(content{14}(2:end)))./1000;
@@ -30,46 +31,53 @@ function [ onsets, congruent, correct, vstim, stimon_mri, feedon_mri ] = get_ere
         end
     end
     half = transpose(half);
+    half = string(half);
     
-    onsets = [];
-    cond_names = {'Feedback positive','Feedback negative'};
+    onsets = {};
+    
+    cond_names = {'First half', 'Second half','Feedback positive','Feedback negative'};
     
     for i = 1:length(cond_names)
         switch i
             case 1
-                index = find(strcmp(congruent,'1'));
-                onsets = [ onsets stimon_mri(index) ];
+                % find stimuli presented <= 4 times
+                index = find(strcmp(half,'1'));
+                onsets{1} = stimon_mri(index) ;
             case 2
-                index = find(strcmp(congruent,'0'));
-                onsets = [ onsets stimon_mri(index) ];
+                % find stimuli presented > 4 times
+                index = find(strcmp(half,'2'));
+                onsets{2} = stimon_mri(index) ;
             case 3
-                index = find(strcmp(congruent,'1'));
-                onsets = [ onsets feedon_mri(index) ];
+                % find incorrect trials
+                index = find(strcmp(condition,'0'));
+                onsets{3} = feedon_mri(index) ;
             case 4
-                index = find(strcmp(congruent,'0'));
-                onsets = [ onsets feedon_mri(index) ];    
+                % find correct trials
+                index = find(strcmp(condition,'1'));
+                onsets{4} = feedon_mri(index) ;    
         end   
     end   
     
     % rt congruent
-    index = find(strcmp(congruent,'1'));
-    rt_congruent = rt(index);
+    index = find(strcmp(condition,'1'));
+    rt_pos_fb = rt(index);
     
     % rt incongruent
-    index = find(strcmp(congruent,'0'));
-    rt_incongruent = rt(index);
+    index = find(strcmp(condition,'0'));
+    rt_neg_fb = rt(index);
     
     % convert congruent
-    congruent = str2num(char(congruent));
+    condition = str2num(char(condition));
     
     % convert correct / result
-    correct = str2num(char(content{8}(2:end)));
+    correct = str2num(char(content{7}(2:end)));
     correct(correct == 2) = 0;
     
     % convert Vstim
-    vstim = str2num(char(content{3}(2:end)));
+    astim = str2num(char(astim));
     
-    onsets = [ onsets rt_congruent rt_incongruent ]; 
+    onsets{5} =rt_pos_fb;
+    onsets{6} =rt_neg_fb ; 
     
     %onsets = vec2mat(str2num(str2mat(onsets{:})),5)'./1000;
     fclose(fileID);
