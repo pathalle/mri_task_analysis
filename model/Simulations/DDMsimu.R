@@ -107,6 +107,7 @@ library(RWiener)
 library(ggplot2)
 #rwiener(n, alpha,tau,beta,delta)
 #restrictions: 0 < ?? < 1, ?? > 0, ?? > 0
-dat <- rwiener(20,2.,0.1,0.5,0.6)
+dat <- rwiener(40,1,0.1,0.5,3.5)
 ggplot(dat) + geom_density() + aes(x=q, fill=resp)
 wiener_plot(dat)
+??RWiener

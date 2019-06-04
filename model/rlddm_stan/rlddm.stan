@@ -6,8 +6,8 @@ data {
   int<lower=1> T;      // Number of observations
   real RTbound;        // lower bound of RT across all subjects (e.g., 0.1 second)
   real iter[T];        // trial of given observation
-  int correct[T];      // encodes successful trial
-  int incorrect[T];    // encodes unsuccessful trial (inverse of correct)
+  int response[T];      // encodes successful trial
+  int nonresponse[T];      // encodes successful trial
   real RT[T];          // reaction time
   int value[T];        // value of trial: successful / unsuccessful -> encodes rewards
 }
@@ -73,16 +73,16 @@ model {
   // Begin subject loop
   // until second last 
   for (s in 1:N) {
-    ev[first[s],1] = 0;
-    ev[first[s],2] = 0;
+    ev[first[s],1] = 0.5;
+    ev[first[s],2] = 0.5;
     for(trial in (first[s]):(last[s]-1)) {
-      delta[trial] = (ev[trial,1] - ev[trial,2]) * (v_mod[s]);
+      delta[trial] = (ev[trial,2] - ev[trial,1]) * (v_mod[s]);
       RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,delta[trial]);
       log_lik[trial] += wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,delta[trial]);
-      ev[trial+1,correct[trial]] = ev[trial,correct[trial]] + inv_logit(eta[s,correct[trial]] * (value[trial]-ev[trial,correct[trial]]));
-      ev[trial+1,incorrect[trial]] = ev[trial,incorrect[trial]] + inv_logit(eta[s,incorrect[trial]] * (value[trial]-ev[trial,incorrect[trial]]));
+      ev[trial+1,response[trial]] = ev[trial,response[trial]] + inv_logit(eta[s,response[trial]]) * (value[trial]-ev[trial,response[trial]]);
+      ev[trial+1,nonresponse[trial]] = ev[trial,nonresponse[trial]];
     }
-    delta[last[s]] = (ev[last[s]-1,1] - ev[last[s]-1,2]) * (v_mod[s]);
+    delta[last[s]] = (ev[last[s]-1,2] - ev[last[s]-1,1]) * (v_mod[s]);
     RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,delta[last[s]]);
     log_lik[last[s]] += wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,delta[last[s]]);
   }

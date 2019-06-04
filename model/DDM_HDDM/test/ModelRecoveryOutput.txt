@@ -1,0 +1,41 @@
+data loaded
+   subj_idx  block  trial vStims  aStim      ...        vSymbols              aFile  stimOnset  respOnset  feedbackOnset
+0         1      1      1    1_3      1      ...              02       t_sl_cut.wav       6969       8240           9994
+1         1      1      2    7_3      3      ...              62  d_sh_retr_cut.wav      14627      16429          18898
+2         1      1      3    4_2      2      ...              31    s_palat_cut.wav      23703      25623          28274
+3         1      1      6    6_2      2      ...              51    s_palat_cut.wav      51930      52941          56631
+4         1      1      8    2_6      2      ...              15    s_palat_cut.wav      70179      71990          74900
+5         1      1      9    6_1      1      ...              50       t_sl_cut.wav      79242      80942          83124
+6         1      1     11    6_4      4      ...              53      s_alv_cut.wav      97258      98500         100396
+7         1      1     12    2_7      2      ...              16    s_palat_cut.wav     106508     107720         110140
+8         1      1     13    8_3      3      ...              72  d_sh_retr_cut.wav     115433     116374         119719
+9         1      1     14    1_7      1      ...              06       t_sl_cut.wav     124618     125574         128807
+
+[10 rows x 15 columns]
+defining model...
+finding starting values...
+starting sampling...
+ [                  1%                  ] 32 of 2000 complete in 0.5 sec [-                 3%                  ] 66 of 2000 complete in 1.0 sec [-                 5%                  ] 102 of 2000 complete in 1.5 sec [--                6%                  ] 136 of 2000 complete in 2.0 sec [---               8%                  ] 171 of 2000 complete in 2.5 sec [---              10%                  ] 206 of 2000 complete in 3.1 sec [----             12%                  ] 241 of 2000 complete in 3.6 sec [-----            13%                  ] 275 of 2000 complete in 4.1 sec [-----            15%                  ] 309 of 2000 complete in 4.6 sec [------           17%                  ] 342 of 2000 complete in 5.1 sec [-------          18%                  ] 375 of 2000 complete in 5.6 sec [-------          20%                  ] 409 of 2000 complete in 6.1 sec [--------         22%                  ] 443 of 2000 complete in 6.6 sec [---------        23%                  ] 478 of 2000 complete in 7.1 sec [---------        25%                  ] 513 of 2000 complete in 7.6 sec [----------       27%                  ] 547 of 2000 complete in 8.1 sec [-----------      29%                  ] 581 of 2000 complete in 8.6 sec [-----------      30%                  ] 614 of 2000 complete in 9.1 sec [------------     32%                  ] 649 of 2000 complete in 9.6 sec [------------     34%                  ] 682 of 2000 complete in 10.1 sec [-------------    35%                  ] 716 of 2000 complete in 10.7 sec [--------------   37%                  ] 750 of 2000 complete in 11.2 sec [--------------   39%                  ] 784 of 2000 complete in 11.7 sec [---------------  40%                  ] 818 of 2000 complete in 12.2 sec [---------------- 42%                  ] 851 of 2000 complete in 12.7 sec [---------------- 44%                  ] 884 of 2000 complete in 13.2 sec [-----------------46%                  ] 920 of 2000 complete in 13.7 sec [-----------------47%                  ] 954 of 2000 complete in 14.2 sec [-----------------49%                  ] 989 of 2000 complete in 14.7 sec [-----------------51%                  ] 1020 of 2000 complete in 15.2 sec [-----------------52%                  ] 1055 of 2000 complete in 15.7 sec [-----------------54%                  ] 1088 of 2000 complete in 16.2 sec [-----------------56%-                 ] 1121 of 2000 complete in 16.7 sec [-----------------57%-                 ] 1154 of 2000 complete in 17.2 sec [-----------------59%--                ] 1189 of 2000 complete in 17.7 sec [-----------------61%---               ] 1224 of 2000 complete in 18.3 sec [-----------------62%---               ] 1259 of 2000 complete in 18.8 sec [-----------------64%----              ] 1294 of 2000 complete in 19.3 sec [-----------------66%-----             ] 1327 of 2000 complete in 19.8 sec [-----------------68%-----             ] 1361 of 2000 complete in 20.3 sec [-----------------69%------            ] 1396 of 2000 complete in 20.8 sec [-----------------71%-------           ] 1431 of 2000 complete in 21.3 sec [-----------------73%-------           ] 1465 of 2000 complete in 21.8 sec [-----------------74%--------          ] 1499 of 2000 complete in 22.3 sec [-----------------76%---------         ] 1532 of 2000 complete in 22.8 sec [-----------------78%---------         ] 1567 of 2000 complete in 23.3 sec [-----------------80%----------        ] 1602 of 2000 complete in 23.8 sec [-----------------81%-----------       ] 1636 of 2000 complete in 24.3 sec [-----------------83%-----------       ] 1670 of 2000 complete in 24.9 sec [-----------------85%------------      ] 1704 of 2000 complete in 25.4 sec [-----------------86%-------------     ] 1738 of 2000 complete in 25.9 sec [-----------------88%-------------     ] 1772 of 2000 complete in 26.4 sec [-----------------90%--------------    ] 1806 of 2000 complete in 26.9 sec [-----------------92%--------------    ] 1841 of 2000 complete in 27.4 sec [-----------------93%---------------   ] 1875 of 2000 complete in 27.9 sec [-----------------95%----------------  ] 1909 of 2000 complete in 28.4 sec [-----------------97%----------------  ] 1942 of 2000 complete in 28.9 sec [-----------------98%----------------- ] 1976 of 2000 complete in 29.4 sec [-----------------100%-----------------] 2000 of 2000 complete in 29.8 secCould not generate output statistics for t_subj.1
+Could not generate output statistics for v_subj.7
+Could not generate output statistics for t_subj.4
+Could not generate output statistics for t_subj.8
+Could not generate output statistics for a_subj.5
+Could not generate output statistics for t_subj.2
+Could not generate output statistics for a_subj.8
+Could not generate output statistics for t_subj.5
+Could not generate output statistics for t_subj.7
+Could not generate output statistics for v_subj.5
+Could not generate output statistics for t_subj.3
+Could not generate output statistics for v_subj.6
+Could not generate output statistics for v_subj.3
+Could not generate output statistics for v_subj.2
+Could not generate output statistics for a_subj.6
+Could not generate output statistics for v_subj.1
+Could not generate output statistics for a_subj.2
+Could not generate output statistics for a_subj.3
+Could not generate output statistics for v_subj.4
+Could not generate output statistics for a_subj.1
+Could not generate output statistics for v_subj.8
+Could not generate output statistics for t_subj.6
+Could not generate output statistics for a_subj.7
+Could not generate output statistics for a_subj.4
