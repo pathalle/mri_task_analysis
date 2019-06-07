@@ -1,6 +1,20 @@
-library(rstan)
-library(RWiener)
-library(boot) #needed for inverse logit
+.libPaths()
+
+assign(".lib.loc", "C:/Program Files/R/R-3.5.2/library", envir = environment(.libPaths))
+
+
+#install.packages("rstan", lib="C:\\Program Files\\R\\R-3.5.2\\library")
+#install.packages("StanHeaders", lib="C:\\Program Files\\R\\R-3.5.2\\library")
+#install.packages("rstantools", lib="C:\\Program Files\\R\\R-3.5.2\\library")
+#install.packages("hBayesDM", lib="C:\\Program Files\\R\\R-3.5.2\\library")
+#install.packages("Rcpp", lib="C:\\Program Files\\R\\R-3.5.2\\library")
+
+# after successful installation, load required packages
+library("StanHeaders", lib.loc="C:/Program Files/R/R-3.5.2/library")
+library("rstan", lib.loc="C:/Program Files/R/R-3.5.2/library")
+library("Rcpp", lib.loc="C:/Program Files/R/R-3.5.2/library")
+library("hBayesDM", lib.loc="C:/Program Files/R/R-3.5.2/library")
+
 
 ### data loading and preprocessing
 
@@ -30,6 +44,7 @@ subjs     <- DT_trials$subjID
 n_subj    <- length(subjs)
 # get minRT
 minRT <- with(raw_data, aggregate(RT, by = list(y = subjID), FUN = min)[["x"]])
+ifelse(is.null(dim(minRT)),minRT<-as.array(minRT))
 # assign new trial number for excluded decisions
 
 for (subj in subjs){
@@ -38,8 +53,11 @@ for (subj in subjs){
 }
 # first is Sx1 matrix identifying all first trials of a subject for each choice
 first <- which(raw_data$trial==1)
+# if N=1 transform int to 1-d array
+ifelse(is.null(dim(first)),first<-as.array(first))
 # last is a Sx1 matrix identifying all last trials of a subject for each choice
 last <- as.integer(first + DT_trials$N - 1)
+ifelse(is.null(dim(last)),last<-as.array(last))
 # incorrect is the inverse vector of choice and is needed to update the ev for the non-choices
 raw_data$incorrect <- as.integer(ifelse(raw_data$correct==1, 0, 1))
 # define the values for the rewards
@@ -70,6 +88,7 @@ fit <- rstan::sampling(object  = stanmodel_arg,
                        thin    = 1,
                        control = list(adapt_delta   = 0.95,
                                       stepsize      = 1,
-                                      max_treedepth = 10))
+                                      max_treedepth = 10),
+                       verbose = TRUE)
 
 parVals <- rstan::extract(fit, permuted = TRUE)

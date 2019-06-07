@@ -27,7 +27,8 @@ parameters {
 
   // Subject-level raw parameters (for Matt trick)
   vector[N] alpha_pr;
-  vector[N] eta_pr[2];
+  vector[N] eta_pr_pos;
+  vector[N] eta_pr_neg;
   vector[N] a_mod_pr;
   vector[N] v_mod_pr;
   vector[N] tau_pr;
@@ -36,26 +37,24 @@ parameters {
 transformed parameters {
   // Transform subject-level raw parameters
   vector<lower=0>[N] alpha;                       // boundary separation
-  vector<lower=-5>[N] eta[2];                     // learning parameter
-  vector<lower=-0.5, upper=2>[N] a_mod;           // choice consistency
+  real eta[N,2];                     // learning parameter
+  vector[N] a_mod;           // choice consistency
   vector<lower=0, upper=10>[N] v_mod;             // scaling parameter
   vector<lower=RTbound, upper=max(minRT)>[N] tau; // nondecision time
 
   alpha = exp(mu_pr[1] + sigma[1] * alpha_pr); // exp (.): natural exponential of argument.
-  eta[1] = exp(mu_pr[2] + sigma[2] * eta_pr[1]);
-  eta[2] = exp(mu_pr[3] + sigma[3] * eta_pr[2]);
+  for (s in 1:N) {
+    eta[s,1] = exp(mu_pr[2] + sigma[2] * eta_pr_pos[s]);
+    eta[s,2] = exp(mu_pr[3] + sigma[3] * eta_pr_neg[s]);
+    tau[s]  = Phi_approx(mu_pr[6] + sigma[6] * tau_pr[s]) * (minRT[s] - RTbound) + RTbound;
+    tau[s] = fabs(tau[s]);
+  }
   a_mod = exp(mu_pr[4] + sigma[4] * a_mod_pr);
   v_mod = exp(mu_pr[5] + sigma[5] * v_mod_pr);
-  tau = exp(mu_pr[6] + sigma[6] * tau_pr);
-  for (i in 1:N) {
-    // min RT >= RTbound
-    tau[i]  = Phi_approx(mu_pr[6] + sigma[6] * tau_pr[i]) * (minRT[i] - RTbound) + RTbound;
-    tau[i] = abs(tau[i]);
-  }
 }
 
 model {
-  vector[T] ev[2];
+  real ev[T,2];
   vector[T] delta;
   vector[T] log_lik;
   // Hyperparameters
@@ -64,9 +63,8 @@ model {
 
   // Individual parameters for non-centered parameterization
   alpha_pr ~ normal(0, 1);
-  for(v in 1:2){
-    eta_pr[v]  ~ normal(0, 1);
-  }
+  eta_pr_pos ~ normal(0,1);
+  eta_pr_neg ~ normal(0,1);
   a_mod_pr ~ normal(0, 1);
   v_mod_pr ~ normal(0, 1);
   tau_pr   ~ normal(0, 1);
