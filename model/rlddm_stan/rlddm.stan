@@ -83,18 +83,17 @@ model {
         RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,-delta[trial]);
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,-delta[trial]);
       }
-      
       ev[trial+1,response[trial]] = ev[trial,response[trial]] + (eta[s,response[trial]]) * (value[trial]-ev[trial,response[trial]]);
       ev[trial+1,nonresponse[trial]] = ev[trial,nonresponse[trial]];
     }
     delta[last[s]] = (ev[last[s]-1,2] - ev[last[s]-1,1]) * (v_mod[s]);
     RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,delta[last[s]]);
-    if (response[last[s]])
-    log_lik[last[s]] = wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,delta[last[s]]);
+    if (response[last[s]]){
+      log_lik[last[s]] = wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,delta[last[s]]);
+    }
   }
 }
 generated quantities {
-  vector[T] ev[2];
   // For group level parameters
   real<lower=0> mu_alpha;          // boundary separation
   real<lower=0> mu_eta1;    // learning rate
@@ -110,5 +109,4 @@ generated quantities {
   mu_a_mod =  exp(mu_pr[4]);
   mu_v_mod =  exp(mu_pr[5]);
   mu_tau = Phi_approx(mu_pr[6]) * (mean(minRT)-RTbound) + RTbound;
-
 }
