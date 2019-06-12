@@ -19,7 +19,7 @@ library("hBayesDM", lib.loc="C:/Program Files/R/R-3.5.2/library")
 ### data loading and preprocessing
 
 path <- dirname(rstudioapi::getActiveDocumentContext()$path)
-model_path <- paste0(path,"/rlddm.stan")
+model_path <- paste0(path,"/rlddm_invlog.stan")
 data_path <- paste0(path,"/test_input.txt")
 setwd(path)
 raw_data <- data.table::fread(file = data_path, header = TRUE, sep = "\t", data.table = TRUE,
@@ -32,9 +32,11 @@ colnames(raw_data)[1] <- "subjID"
 
 raw_data$rt <- raw_data$rt/1000
 names(raw_data)[names(raw_data)=="rt"] <- "RT"
+# automatically filter missed responses (since RT = 0)
 raw_data <- raw_data[which(raw_data$RT > 0.15),]
 raw_data$subjID = rep('01',nrow(raw_data))
 
+# fb = 0 incorrect, fb = 1 correct, (fb = 2 missed)
 names(raw_data)[names(raw_data)=="fb"] <- "correct"
 
 ## prepare data for jags
@@ -69,7 +71,7 @@ n_trials <- nrow(raw_data)
 ## 
 stims <- raw_data$aStim
 
-# encoding for simulation: lower response=1, upper response =2 
+# encoding for simulation: lower (incorrect) response=1, upper (correct) response =2 
 raw_data$response = raw_data$correct+1
 raw_data$nonresponse = abs(raw_data$correct-2)
 
@@ -77,9 +79,9 @@ dat <- list("N" = n_subj, "T"=n_trials,"RTbound" = 0.15,"minRT" = minRT, "iter" 
             "RT" = raw_data$RT, "first" = first, "last" = last, "value"=value, "stims" = stims)  # names list of numbers
 
 
-stanmodel_arg <- rstan::stan_model(model_path)
+stanmodel_invlog <- rstan::stan_model(model_path)
 
-fit <- rstan::sampling(object  = stanmodel_arg,
+fit_invlog <- rstan::sampling(object  = stanmodel_invlog,
                        data    = dat,
                        init    = "random",
                        chains  = 2,
@@ -89,6 +91,39 @@ fit <- rstan::sampling(object  = stanmodel_arg,
                        control = list(adapt_delta   = 0.95,
                                       stepsize      = 1,
                                       max_treedepth = 10),
-                       verbose = TRUE)
+                       verbose =TRUE)
+
+parValsinvl <- rstan::extract(fit_invlog, permuted = TRUE)
+
+## now access the data of the fit 
+
+
+fit_summary_invlog <- summary(fit_invlog)
+
+print(fit_summary_invlog$summary)
+
+
+#########
+
+
 
 parVals <- rstan::extract(fit, permuted = TRUE)
+
+## now access the data of the fit 
+print(names(parVals))
+
+head(parVals$mu_pr)
+
+
+fit_summary <- summary(fit)
+# In fit_summary$summary all chains are merged whereas fit_summary$c_summary contains summaries for each chain individually. 
+# Typically we want the summary for all chains merged
+print(names(fit_summary))
+print(fit_summary$summary)
+
+
+mean(parVals$alpha)
+mean(parVals$tau)
+# eta is 3 dimensional: 1-d: iteration, 2-d: subject, 3-d: pos or neg eta
+mean(parVals$eta_pos)
+mean(parVals$eta_neg)

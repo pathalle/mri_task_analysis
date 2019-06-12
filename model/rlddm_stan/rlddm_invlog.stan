@@ -77,13 +77,13 @@ model {
     // ev for neg values
     ev[first[s],2] = 0.5;
     for(trial in (first[s]):(last[s]-1)) {
-      delta[trial] = (ev[trial,2] - ev[trial,1]) * (v_mod[s]);
+      delta[trial] = (ev[trial,2] - ev[trial,1]) * v_mod[s];
       // if lower bound
       if (response[trial]==1){
         RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,-delta[trial]);
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,-delta[trial]);
         // if the anwswer is wrong, update ev for lower value with neg lr, ev for positive answer stays the same
-        ev[trial+1,1] = ev[trial,1] + eta_neg[s] * (value[trial]-ev[trial,1]);
+        ev[trial+1,1] = ev[trial,1] + inv_logit(eta_neg[s] * (value[trial]-ev[trial,1]));
         ev[trial+1,2] = ev[trial,2];
       }
       // if upper bound (resp = 2)
@@ -91,12 +91,12 @@ model {
         RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,delta[trial]);
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,delta[trial]);
         // if the anwswer is correct, update ev for upper value with pos lr, ev for neg answer stays the same
-        ev[trial+1,2] = ev[trial,2] + eta_pos[s] * (value[trial]-ev[trial,2]);
+        ev[trial+1,2] = ev[trial,2] + inv_logit(eta_pos[s] * (value[trial]-ev[trial,2]));
         ev[trial+1,1] = ev[trial,1];
       }
     }
     // in last cycle, don't update anymore
-    delta[last[s]] = (ev[last[s]-1,2] - ev[last[s]-1,1]) * (v_mod[s]);
+    delta[last[s]] = (ev[last[s]-1,2] - ev[last[s]-1,1]) * v_mod[s];
     if (response[last[s]]==1){
       RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,-delta[last[s]]);
       log_lik[last[s]] = wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,-delta[last[s]]);
