@@ -1,0 +1,470 @@
+Scenario - FeedLearn_MRI_5x8_fullRand.sce
+Logfile written - 06/11/2019 11:57:46
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+2ndgrade_2x4-14	0	Pulse	199	0	0	NA
+2ndgrade_2x4-14	0	Pulse	199	10000	10000	NA
+2ndgrade_2x4-14	1	Picture	intro	10167	0	1	77998	1	0	next	other	0
+2ndgrade_2x4-14	1	Pulse	199	20000	9834	NA
+2ndgrade_2x4-14	1	Pulse	199	30000	19834	NA
+2ndgrade_2x4-14	1	Pulse	199	40000	29834	NA
+2ndgrade_2x4-14	1	Pulse	199	50000	39834	NA
+2ndgrade_2x4-14	1	Pulse	199	60000	49834	NA
+2ndgrade_2x4-14	1	Pulse	199	70000	59834	NA
+2ndgrade_2x4-14	1	Pulse	199	80000	69834	NA
+2ndgrade_2x4-14	1	Response	16	87934	77767	0
+2ndgrade_2x4-14	2	Picture	start	88165	0	1	50165	1	0	next	other	0
+2ndgrade_2x4-14	2	Pulse	199	90000	1835	NA
+2ndgrade_2x4-14	2	Pulse	199	100000	11835	NA
+2ndgrade_2x4-14	2	Pulse	199	110000	21835	NA
+2ndgrade_2x4-14	2	Pulse	199	120000	31835	NA
+2ndgrade_2x4-14	2	Pulse	199	130000	41835	NA
+2ndgrade_2x4-14	3	Pulse	199	140000	1831	NA
+2ndgrade_2x4-14	3	Pulse	199	150000	11831	NA
+2ndgrade_2x4-14	3	Pulse	199	160000	21831	NA
+2ndgrade_2x4-14	3	Pulse	199	170000	31831	NA
+2ndgrade_2x4-14	3	Pulse	199	180000	41831	NA
+2ndgrade_2x4-14	4	Picture	fix	188662	0	1	30999	1	0	next	other	0
+2ndgrade_2x4-14	4	Pulse	199	190000	1338	NA
+2ndgrade_2x4-14	4	Pulse	199	200000	11338	NA
+2ndgrade_2x4-14	4	Pulse	199	210000	21338	NA
+2ndgrade_2x4-14	6	Picture	stim	219662	0	1	20166	1	0	20000	hit	30
+2ndgrade_2x4-14	6	Pulse	199	220000	338	NA
+2ndgrade_2x4-14	6	Pulse	199	230000	10338	NA
+2ndgrade_2x4-14	6	Response	16	231099	11438	0
+2ndgrade_2x4-14	7	Picture	fix2	239828	0	1	16000	1	0	next	other	0
+2ndgrade_2x4-14	7	Pulse	199	240000	172	NA
+2ndgrade_2x4-14	7	Pulse	199	250000	10172	NA
+2ndgrade_2x4-14	8	Picture	feedback	255827	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	8	Pulse	199	260000	4173	NA
+2ndgrade_2x4-14	8	Pulse	199	270000	14173	NA
+2ndgrade_2x4-14	9	Picture	fix	275994	0	1	30666	1	0	next	other	0
+2ndgrade_2x4-14	9	Pulse	199	280000	4006	NA
+2ndgrade_2x4-14	9	Pulse	199	290000	14006	NA
+2ndgrade_2x4-14	9	Pulse	199	300000	24006	NA
+2ndgrade_2x4-14	11	Picture	stim	306660	0	1	20166	1	0	20000	incorrect	44
+2ndgrade_2x4-14	11	Pulse	199	310000	3340	NA
+2ndgrade_2x4-14	11	Pulse	199	320000	13340	NA
+2ndgrade_2x4-14	11	Response	32	324898	18239	0
+2ndgrade_2x4-14	12	Picture	fix2	326826	0	1	23833	1	0	next	other	0
+2ndgrade_2x4-14	12	Pulse	199	330000	3174	NA
+2ndgrade_2x4-14	12	Pulse	199	340000	13174	NA
+2ndgrade_2x4-14	12	Pulse	199	350000	23174	NA
+2ndgrade_2x4-14	13	Picture	feedback	350659	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	13	Pulse	199	360000	9341	NA
+2ndgrade_2x4-14	13	Pulse	199	370000	19341	NA
+2ndgrade_2x4-14	14	Picture	fix	370825	0	1	23999	1	0	next	other	0
+2ndgrade_2x4-14	14	Pulse	199	380000	9175	NA
+2ndgrade_2x4-14	14	Pulse	199	390000	19175	NA
+2ndgrade_2x4-14	16	Picture	stim	394824	0	1	20166	1	0	20000	hit	58
+2ndgrade_2x4-14	16	Pulse	199	400000	5176	NA
+2ndgrade_2x4-14	16	Pulse	199	410000	15176	NA
+2ndgrade_2x4-14	16	Response	16	412634	17810	0
+2ndgrade_2x4-14	17	Picture	fix2	414990	0	1	21666	1	0	next	other	0
+2ndgrade_2x4-14	17	Pulse	199	420000	5010	NA
+2ndgrade_2x4-14	17	Pulse	199	430000	15010	NA
+2ndgrade_2x4-14	18	Picture	feedback	436657	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	18	Pulse	199	440000	3343	NA
+2ndgrade_2x4-14	18	Pulse	199	450000	13343	NA
+2ndgrade_2x4-14	19	Picture	fix	456823	0	1	27833	1	0	next	other	0
+2ndgrade_2x4-14	19	Pulse	199	460000	3177	NA
+2ndgrade_2x4-14	19	Pulse	199	470000	13177	NA
+2ndgrade_2x4-14	19	Pulse	199	480000	23177	NA
+2ndgrade_2x4-14	21	Picture	stim	484655	0	1	20166	1	0	20000	incorrect	71
+2ndgrade_2x4-14	21	Pulse	199	490000	5345	NA
+2ndgrade_2x4-14	21	Response	32	498878	14222	0
+2ndgrade_2x4-14	21	Pulse	199	500000	15345	NA
+2ndgrade_2x4-14	22	Picture	fix2	504822	0	1	19166	1	0	next	other	0
+2ndgrade_2x4-14	22	Pulse	199	510000	5178	NA
+2ndgrade_2x4-14	22	Pulse	199	520000	15178	NA
+2ndgrade_2x4-14	23	Picture	feedback	523988	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	23	Pulse	199	530000	6012	NA
+2ndgrade_2x4-14	23	Pulse	199	540000	16012	NA
+2ndgrade_2x4-14	24	Picture	fix	544154	0	1	24999	1	0	next	other	0
+2ndgrade_2x4-14	24	Pulse	199	550000	5846	NA
+2ndgrade_2x4-14	24	Pulse	199	560000	15846	NA
+2ndgrade_2x4-14	26	Picture	stim	569153	0	1	20166	1	0	20000	miss	0
+2ndgrade_2x4-14	26	Pulse	199	570000	847	NA
+2ndgrade_2x4-14	26	Pulse	199	580000	10847	NA
+2ndgrade_2x4-14	27	Picture	fix2	589320	0	1	18833	1	0	next	other	0
+2ndgrade_2x4-14	27	Pulse	199	590000	680	NA
+2ndgrade_2x4-14	27	Pulse	199	600000	10680	NA
+2ndgrade_2x4-14	28	Picture	feedback	608153	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	28	Pulse	199	610000	1848	NA
+2ndgrade_2x4-14	28	Pulse	199	620000	11848	NA
+2ndgrade_2x4-14	29	Picture	fix	628319	0	1	21499	1	0	next	other	0
+2ndgrade_2x4-14	29	Pulse	199	630000	1681	NA
+2ndgrade_2x4-14	29	Pulse	199	640000	11681	NA
+2ndgrade_2x4-14	31	Picture	stim	649818	0	1	20166	1	0	20000	incorrect	97
+2ndgrade_2x4-14	31	Pulse	199	650000	182	NA
+2ndgrade_2x4-14	31	Pulse	199	660000	10182	NA
+2ndgrade_2x4-14	31	Response	32	666958	17140	0
+2ndgrade_2x4-14	32	Picture	fix2	669984	0	1	16000	1	0	next	other	0
+2ndgrade_2x4-14	32	Pulse	199	670000	16	NA
+2ndgrade_2x4-14	32	Pulse	199	680000	10016	NA
+2ndgrade_2x4-14	33	Picture	feedback	685984	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	33	Pulse	199	690000	4016	NA
+2ndgrade_2x4-14	33	Pulse	199	700000	14016	NA
+2ndgrade_2x4-14	34	Picture	fix	706150	0	1	20833	1	0	next	other	0
+2ndgrade_2x4-14	34	Pulse	199	710000	3850	NA
+2ndgrade_2x4-14	34	Pulse	199	720000	13850	NA
+2ndgrade_2x4-14	36	Picture	stim	726983	0	1	20166	1	0	20000	hit	110
+2ndgrade_2x4-14	36	Pulse	199	730000	3017	NA
+2ndgrade_2x4-14	36	Pulse	199	740000	13017	NA
+2ndgrade_2x4-14	36	Response	16	742455	15472	0
+2ndgrade_2x4-14	37	Picture	fix2	747316	0	1	10333	1	0	next	other	0
+2ndgrade_2x4-14	37	Pulse	199	750000	2684	NA
+2ndgrade_2x4-14	38	Picture	feedback	757649	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	38	Pulse	199	760000	2351	NA
+2ndgrade_2x4-14	38	Pulse	199	770000	12351	NA
+2ndgrade_2x4-14	39	Picture	fix	777815	0	1	20833	1	0	next	other	0
+2ndgrade_2x4-14	39	Pulse	199	780000	2185	NA
+2ndgrade_2x4-14	39	Pulse	199	790000	12185	NA
+2ndgrade_2x4-14	41	Picture	stim	798648	0	1	20166	1	0	20000	incorrect	121
+2ndgrade_2x4-14	41	Pulse	199	800000	1352	NA
+2ndgrade_2x4-14	41	Response	32	809181	10533	0
+2ndgrade_2x4-14	41	Pulse	199	810000	11352	NA
+2ndgrade_2x4-14	42	Picture	fix2	818814	0	1	14833	1	0	next	other	0
+2ndgrade_2x4-14	42	Pulse	199	820000	1186	NA
+2ndgrade_2x4-14	42	Pulse	199	830000	11186	NA
+2ndgrade_2x4-14	43	Picture	feedback	833647	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	43	Pulse	199	840000	6353	NA
+2ndgrade_2x4-14	43	Pulse	199	850000	16353	NA
+2ndgrade_2x4-14	44	Picture	fix	853813	0	1	30666	1	0	next	other	0
+2ndgrade_2x4-14	44	Pulse	199	860000	6187	NA
+2ndgrade_2x4-14	44	Pulse	199	870000	16187	NA
+2ndgrade_2x4-14	44	Pulse	199	880000	26187	NA
+2ndgrade_2x4-14	46	Picture	stim	884479	0	1	20166	1	0	20000	hit	136
+2ndgrade_2x4-14	46	Pulse	199	890000	5521	NA
+2ndgrade_2x4-14	46	Pulse	199	900000	15521	NA
+2ndgrade_2x4-14	46	Response	16	902042	17563	0
+2ndgrade_2x4-14	47	Picture	fix2	904646	0	1	24333	1	0	next	other	0
+2ndgrade_2x4-14	47	Pulse	199	910000	5354	NA
+2ndgrade_2x4-14	47	Pulse	199	920000	15354	NA
+2ndgrade_2x4-14	48	Picture	feedback	928978	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	48	Pulse	199	930000	1022	NA
+2ndgrade_2x4-14	48	Pulse	199	940000	11022	NA
+2ndgrade_2x4-14	49	Picture	fix	949145	0	1	32833	1	0	next	other	0
+2ndgrade_2x4-14	49	Pulse	199	950000	856	NA
+2ndgrade_2x4-14	49	Pulse	199	960000	10856	NA
+2ndgrade_2x4-14	49	Pulse	199	970000	20856	NA
+2ndgrade_2x4-14	49	Pulse	199	980000	30856	NA
+2ndgrade_2x4-14	51	Picture	stim	981977	0	1	20166	1	0	20000	hit	150
+2ndgrade_2x4-14	51	Pulse	199	990000	8023	NA
+2ndgrade_2x4-14	51	Response	16	992765	10788	0
+2ndgrade_2x4-14	51	Pulse	199	1000000	18023	NA
+2ndgrade_2x4-14	52	Picture	fix2	1002143	0	1	34666	1	0	next	other	0
+2ndgrade_2x4-14	52	Response	32	1003091	948	0
+2ndgrade_2x4-14	52	Pulse	199	1010000	7857	NA
+2ndgrade_2x4-14	52	Pulse	199	1020000	17857	NA
+2ndgrade_2x4-14	52	Pulse	199	1030000	27857	NA
+2ndgrade_2x4-14	53	Picture	feedback	1036809	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	53	Pulse	199	1040000	3191	NA
+2ndgrade_2x4-14	53	Pulse	199	1050000	13191	NA
+2ndgrade_2x4-14	54	Picture	fix	1056975	0	1	25333	1	0	next	other	0
+2ndgrade_2x4-14	54	Pulse	199	1060000	3025	NA
+2ndgrade_2x4-14	54	Pulse	199	1070000	13025	NA
+2ndgrade_2x4-14	54	Pulse	199	1080000	23025	NA
+2ndgrade_2x4-14	56	Picture	stim	1082308	0	1	20166	1	0	20000	hit	166
+2ndgrade_2x4-14	56	Pulse	199	1090000	7692	NA
+2ndgrade_2x4-14	56	Response	16	1097301	14993	0
+2ndgrade_2x4-14	56	Pulse	199	1100000	17692	NA
+2ndgrade_2x4-14	57	Picture	fix2	1102474	0	1	17833	1	0	next	other	0
+2ndgrade_2x4-14	57	Pulse	199	1110000	7526	NA
+2ndgrade_2x4-14	57	Pulse	199	1120000	17526	NA
+2ndgrade_2x4-14	58	Picture	feedback	1120307	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	58	Pulse	199	1130000	9693	NA
+2ndgrade_2x4-14	58	Pulse	199	1140000	19693	NA
+2ndgrade_2x4-14	59	Picture	fix	1140473	0	1	19000	1	0	next	other	0
+2ndgrade_2x4-14	59	Pulse	199	1150000	9527	NA
+2ndgrade_2x4-14	61	Picture	stim	1159473	0	1	20166	1	0	20000	hit	179
+2ndgrade_2x4-14	61	Pulse	199	1160000	527	NA
+2ndgrade_2x4-14	61	Pulse	199	1170000	10527	NA
+2ndgrade_2x4-14	61	Response	16	1171198	11725	0
+2ndgrade_2x4-14	62	Picture	fix2	1179639	0	1	20833	1	0	next	other	0
+2ndgrade_2x4-14	62	Pulse	199	1180000	361	NA
+2ndgrade_2x4-14	62	Pulse	199	1190000	10361	NA
+2ndgrade_2x4-14	62	Pulse	199	1200000	20361	NA
+2ndgrade_2x4-14	63	Picture	feedback	1200472	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	63	Pulse	199	1210000	9528	NA
+2ndgrade_2x4-14	63	Pulse	199	1220000	19528	NA
+2ndgrade_2x4-14	64	Picture	fix	1220638	0	1	25499	1	0	next	other	0
+2ndgrade_2x4-14	64	Pulse	199	1230000	9362	NA
+2ndgrade_2x4-14	64	Pulse	199	1240000	19362	NA
+2ndgrade_2x4-14	66	Picture	stim	1246138	0	1	20166	1	0	20000	incorrect	193
+2ndgrade_2x4-14	66	Pulse	199	1250000	3862	NA
+2ndgrade_2x4-14	66	Pulse	199	1260000	13862	NA
+2ndgrade_2x4-14	66	Response	32	1261580	15442	0
+2ndgrade_2x4-14	67	Picture	fix2	1266304	0	1	27333	1	0	next	other	0
+2ndgrade_2x4-14	67	Pulse	199	1270000	3696	NA
+2ndgrade_2x4-14	67	Pulse	199	1280000	13696	NA
+2ndgrade_2x4-14	67	Pulse	199	1290000	23696	NA
+2ndgrade_2x4-14	68	Picture	feedback	1293636	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	68	Pulse	199	1300000	6364	NA
+2ndgrade_2x4-14	68	Pulse	199	1310000	16364	NA
+2ndgrade_2x4-14	69	Picture	fix	1313803	0	1	26833	1	0	next	other	0
+2ndgrade_2x4-14	69	Pulse	199	1320000	6197	NA
+2ndgrade_2x4-14	69	Pulse	199	1330000	16197	NA
+2ndgrade_2x4-14	69	Pulse	199	1340000	26197	NA
+2ndgrade_2x4-14	71	Picture	stim	1340635	0	1	20166	1	0	20000	hit	207
+2ndgrade_2x4-14	71	Pulse	199	1350000	9365	NA
+2ndgrade_2x4-14	71	Response	16	1358402	17766	0
+2ndgrade_2x4-14	71	Pulse	199	1360000	19365	NA
+2ndgrade_2x4-14	72	Picture	fix2	1360802	0	1	24999	1	0	next	other	0
+2ndgrade_2x4-14	72	Pulse	199	1370000	9198	NA
+2ndgrade_2x4-14	72	Pulse	199	1380000	19198	NA
+2ndgrade_2x4-14	73	Picture	feedback	1385801	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	73	Pulse	199	1390000	4199	NA
+2ndgrade_2x4-14	73	Pulse	199	1400000	14199	NA
+2ndgrade_2x4-14	74	Picture	fix	1405967	0	1	26999	1	0	next	other	0
+2ndgrade_2x4-14	74	Pulse	199	1410000	4033	NA
+2ndgrade_2x4-14	74	Pulse	199	1420000	14033	NA
+2ndgrade_2x4-14	74	Pulse	199	1430000	24033	NA
+2ndgrade_2x4-14	76	Picture	stim	1432966	0	1	20166	1	0	20000	hit	221
+2ndgrade_2x4-14	76	Pulse	199	1440000	7034	NA
+2ndgrade_2x4-14	76	Response	16	1444624	11658	0
+2ndgrade_2x4-14	76	Pulse	199	1450000	17034	NA
+2ndgrade_2x4-14	77	Picture	fix2	1453133	0	1	26999	1	0	next	other	0
+2ndgrade_2x4-14	77	Pulse	199	1460000	6867	NA
+2ndgrade_2x4-14	77	Pulse	199	1470000	16867	NA
+2ndgrade_2x4-14	77	Pulse	199	1480000	26867	NA
+2ndgrade_2x4-14	78	Picture	feedback	1480132	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	78	Pulse	199	1490000	9868	NA
+2ndgrade_2x4-14	78	Pulse	199	1500000	19868	NA
+2ndgrade_2x4-14	79	Picture	fix	1500298	0	1	17666	1	0	next	other	0
+2ndgrade_2x4-14	79	Pulse	199	1510000	9702	NA
+2ndgrade_2x4-14	81	Picture	stim	1517965	0	1	20166	1	0	20000	incorrect	235
+2ndgrade_2x4-14	81	Pulse	199	1520000	2036	NA
+2ndgrade_2x4-14	81	Pulse	199	1530000	12036	NA
+2ndgrade_2x4-14	81	Response	32	1533299	15334	0
+2ndgrade_2x4-14	82	Picture	fix2	1538131	0	1	19166	1	0	next	other	0
+2ndgrade_2x4-14	82	Pulse	199	1540000	1869	NA
+2ndgrade_2x4-14	82	Pulse	199	1550000	11869	NA
+2ndgrade_2x4-14	83	Picture	feedback	1557297	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	83	Pulse	199	1560000	2703	NA
+2ndgrade_2x4-14	83	Pulse	199	1570000	12703	NA
+2ndgrade_2x4-14	84	Picture	fix	1577463	0	1	24333	1	0	next	other	0
+2ndgrade_2x4-14	84	Pulse	199	1580000	2537	NA
+2ndgrade_2x4-14	84	Pulse	199	1590000	12537	NA
+2ndgrade_2x4-14	84	Pulse	199	1600000	22537	NA
+2ndgrade_2x4-14	86	Picture	stim	1601796	0	1	20166	1	0	20000	incorrect	248
+2ndgrade_2x4-14	86	Pulse	199	1610000	8204	NA
+2ndgrade_2x4-14	86	Response	32	1617733	15937	0
+2ndgrade_2x4-14	86	Pulse	199	1620000	18204	NA
+2ndgrade_2x4-14	87	Picture	fix2	1621962	0	1	14166	1	0	next	other	0
+2ndgrade_2x4-14	87	Pulse	199	1630000	8038	NA
+2ndgrade_2x4-14	88	Picture	feedback	1636128	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	88	Pulse	199	1640000	3872	NA
+2ndgrade_2x4-14	88	Pulse	199	1650000	13872	NA
+2ndgrade_2x4-14	89	Picture	fix	1656295	0	1	16666	1	0	next	other	0
+2ndgrade_2x4-14	89	Pulse	199	1660000	3705	NA
+2ndgrade_2x4-14	89	Pulse	199	1670000	13705	NA
+2ndgrade_2x4-14	91	Picture	stim	1672961	0	1	20166	1	0	20000	incorrect	261
+2ndgrade_2x4-14	91	Pulse	199	1680000	7039	NA
+2ndgrade_2x4-14	91	Pulse	199	1690000	17039	NA
+2ndgrade_2x4-14	91	Response	32	1691192	18231	0
+2ndgrade_2x4-14	92	Picture	fix2	1693127	0	1	9833	1	0	next	other	0
+2ndgrade_2x4-14	92	Pulse	199	1700000	6873	NA
+2ndgrade_2x4-14	93	Picture	feedback	1702960	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	93	Pulse	199	1710000	7040	NA
+2ndgrade_2x4-14	93	Pulse	199	1720000	17040	NA
+2ndgrade_2x4-14	94	Picture	fix	1723126	0	1	28333	1	0	next	other	0
+2ndgrade_2x4-14	94	Pulse	199	1730000	6874	NA
+2ndgrade_2x4-14	94	Pulse	199	1740000	16874	NA
+2ndgrade_2x4-14	94	Pulse	199	1750000	26874	NA
+2ndgrade_2x4-14	96	Picture	stim	1751459	0	1	20166	1	0	20000	hit	273
+2ndgrade_2x4-14	96	Pulse	199	1760000	8541	NA
+2ndgrade_2x4-14	96	Response	16	1764447	12988	0
+2ndgrade_2x4-14	96	Pulse	199	1770000	18541	NA
+2ndgrade_2x4-14	97	Picture	fix2	1771625	0	1	9500	1	0	next	other	0
+2ndgrade_2x4-14	97	Pulse	199	1780000	8375	NA
+2ndgrade_2x4-14	98	Picture	feedback	1781125	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	98	Pulse	199	1790000	8875	NA
+2ndgrade_2x4-14	98	Pulse	199	1800000	18875	NA
+2ndgrade_2x4-14	99	Picture	fix	1801291	0	1	19500	1	0	next	other	0
+2ndgrade_2x4-14	99	Pulse	199	1810000	8709	NA
+2ndgrade_2x4-14	99	Pulse	199	1820000	18709	NA
+2ndgrade_2x4-14	101	Picture	stim	1820791	0	1	20166	1	0	20000	hit	285
+2ndgrade_2x4-14	101	Pulse	199	1830000	9209	NA
+2ndgrade_2x4-14	101	Response	16	1835915	15124	0
+2ndgrade_2x4-14	101	Pulse	199	1840000	19209	NA
+2ndgrade_2x4-14	102	Picture	fix2	1840957	0	1	22666	1	0	next	other	0
+2ndgrade_2x4-14	102	Pulse	199	1850000	9043	NA
+2ndgrade_2x4-14	102	Pulse	199	1860000	19043	NA
+2ndgrade_2x4-14	103	Picture	feedback	1863623	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	103	Pulse	199	1870000	6377	NA
+2ndgrade_2x4-14	103	Pulse	199	1880000	16377	NA
+2ndgrade_2x4-14	104	Picture	fix	1883789	0	1	23999	1	0	next	other	0
+2ndgrade_2x4-14	104	Pulse	199	1890000	6211	NA
+2ndgrade_2x4-14	104	Pulse	199	1900000	16211	NA
+2ndgrade_2x4-14	106	Picture	stim	1907789	0	1	20166	1	0	20000	hit	299
+2ndgrade_2x4-14	106	Pulse	199	1910000	2211	NA
+2ndgrade_2x4-14	106	Pulse	199	1920000	12211	NA
+2ndgrade_2x4-14	106	Response	16	1920788	12999	0
+2ndgrade_2x4-14	107	Picture	fix2	1927955	0	1	22666	1	0	next	other	0
+2ndgrade_2x4-14	107	Pulse	199	1930000	2045	NA
+2ndgrade_2x4-14	107	Pulse	199	1940000	12045	NA
+2ndgrade_2x4-14	107	Pulse	199	1950000	22045	NA
+2ndgrade_2x4-14	108	Picture	feedback	1950621	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	108	Pulse	199	1960000	9379	NA
+2ndgrade_2x4-14	108	Pulse	199	1970000	19379	NA
+2ndgrade_2x4-14	109	Picture	fix	1970787	0	1	21333	1	0	next	other	0
+2ndgrade_2x4-14	109	Pulse	199	1980000	9213	NA
+2ndgrade_2x4-14	109	Pulse	199	1990000	19213	NA
+2ndgrade_2x4-14	111	Picture	stim	1992120	0	1	20166	1	0	20000	hit	312
+2ndgrade_2x4-14	111	Pulse	199	2000000	7880	NA
+2ndgrade_2x4-14	111	Response	16	2004491	12371	0
+2ndgrade_2x4-14	111	Pulse	199	2010000	17880	NA
+2ndgrade_2x4-14	112	Picture	fix2	2012453	0	1	14833	1	0	next	other	0
+2ndgrade_2x4-14	112	Pulse	199	2020000	7547	NA
+2ndgrade_2x4-14	113	Picture	feedback	2027286	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	113	Pulse	199	2030000	2714	NA
+2ndgrade_2x4-14	113	Pulse	199	2040000	12714	NA
+2ndgrade_2x4-14	114	Picture	fix	2047452	0	1	32833	1	0	next	other	0
+2ndgrade_2x4-14	114	Pulse	199	2050000	2548	NA
+2ndgrade_2x4-14	114	Pulse	199	2060000	12548	NA
+2ndgrade_2x4-14	114	Pulse	199	2070000	22548	NA
+2ndgrade_2x4-14	114	Pulse	199	2080000	32548	NA
+2ndgrade_2x4-14	116	Picture	stim	2080285	0	1	20166	1	0	20000	hit	326
+2ndgrade_2x4-14	116	Pulse	199	2090000	9715	NA
+2ndgrade_2x4-14	116	Response	16	2092870	12585	0
+2ndgrade_2x4-14	116	Pulse	199	2100000	19715	NA
+2ndgrade_2x4-14	117	Picture	fix2	2100451	0	1	25666	1	0	next	other	0
+2ndgrade_2x4-14	117	Pulse	199	2110000	9549	NA
+2ndgrade_2x4-14	117	Pulse	199	2120000	19549	NA
+2ndgrade_2x4-14	118	Picture	feedback	2126117	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	118	Pulse	199	2130000	3883	NA
+2ndgrade_2x4-14	118	Pulse	199	2140000	13883	NA
+2ndgrade_2x4-14	119	Picture	fix	2146283	0	1	26666	1	0	next	other	0
+2ndgrade_2x4-14	119	Pulse	199	2150000	3717	NA
+2ndgrade_2x4-14	119	Pulse	199	2160000	13717	NA
+2ndgrade_2x4-14	119	Pulse	199	2170000	23717	NA
+2ndgrade_2x4-14	121	Picture	stim	2172949	0	1	20166	1	0	20000	incorrect	341
+2ndgrade_2x4-14	121	Pulse	199	2180000	7051	NA
+2ndgrade_2x4-14	121	Pulse	199	2190000	17051	NA
+2ndgrade_2x4-14	121	Response	32	2190179	17230	0
+2ndgrade_2x4-14	122	Picture	fix2	2193115	0	1	21499	1	0	next	other	0
+2ndgrade_2x4-14	122	Pulse	199	2200000	6885	NA
+2ndgrade_2x4-14	122	Pulse	199	2210000	16885	NA
+2ndgrade_2x4-14	123	Picture	feedback	2214615	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	123	Pulse	199	2220000	5385	NA
+2ndgrade_2x4-14	123	Pulse	199	2230000	15385	NA
+2ndgrade_2x4-14	124	Picture	fix	2234781	0	1	30666	1	0	next	other	0
+2ndgrade_2x4-14	124	Pulse	199	2240000	5219	NA
+2ndgrade_2x4-14	124	Pulse	199	2250000	15219	NA
+2ndgrade_2x4-14	124	Pulse	199	2260000	25219	NA
+2ndgrade_2x4-14	126	Picture	stim	2265447	0	1	20166	1	0	20000	hit	354
+2ndgrade_2x4-14	126	Pulse	199	2270000	4553	NA
+2ndgrade_2x4-14	126	Response	16	2277366	11919	0
+2ndgrade_2x4-14	126	Pulse	199	2280000	14553	NA
+2ndgrade_2x4-14	127	Picture	fix2	2285613	0	1	18333	1	0	next	other	0
+2ndgrade_2x4-14	127	Pulse	199	2290000	4387	NA
+2ndgrade_2x4-14	127	Pulse	199	2300000	14387	NA
+2ndgrade_2x4-14	128	Picture	feedback	2303946	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	128	Pulse	199	2310000	6054	NA
+2ndgrade_2x4-14	128	Pulse	199	2320000	16054	NA
+2ndgrade_2x4-14	129	Picture	fix	2324112	0	1	26666	1	0	next	other	0
+2ndgrade_2x4-14	129	Pulse	199	2330000	5888	NA
+2ndgrade_2x4-14	129	Pulse	199	2340000	15888	NA
+2ndgrade_2x4-14	129	Pulse	199	2350000	25888	NA
+2ndgrade_2x4-14	131	Picture	stim	2350778	0	1	20166	1	0	20000	hit	368
+2ndgrade_2x4-14	131	Pulse	199	2360000	9222	NA
+2ndgrade_2x4-14	131	Response	16	2363779	13000	0
+2ndgrade_2x4-14	131	Pulse	199	2370000	19222	NA
+2ndgrade_2x4-14	132	Picture	fix2	2370945	0	1	12333	1	0	next	other	0
+2ndgrade_2x4-14	132	Pulse	199	2380000	9055	NA
+2ndgrade_2x4-14	133	Picture	feedback	2383278	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	133	Pulse	199	2390000	6722	NA
+2ndgrade_2x4-14	133	Pulse	199	2400000	16722	NA
+2ndgrade_2x4-14	134	Picture	fix	2403444	0	1	19666	1	0	next	other	0
+2ndgrade_2x4-14	134	Pulse	199	2410000	6556	NA
+2ndgrade_2x4-14	134	Pulse	199	2420000	16556	NA
+2ndgrade_2x4-14	136	Picture	stim	2423110	0	1	20166	1	0	20000	incorrect	380
+2ndgrade_2x4-14	136	Pulse	199	2430000	6890	NA
+2ndgrade_2x4-14	136	Response	32	2437617	14507	0
+2ndgrade_2x4-14	136	Pulse	199	2440000	16890	NA
+2ndgrade_2x4-14	137	Picture	fix2	2443443	0	1	20333	1	0	next	other	0
+2ndgrade_2x4-14	137	Pulse	199	2450000	6557	NA
+2ndgrade_2x4-14	137	Pulse	199	2460000	16557	NA
+2ndgrade_2x4-14	138	Picture	feedback	2463776	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	138	Pulse	199	2470000	6224	NA
+2ndgrade_2x4-14	138	Pulse	199	2480000	16224	NA
+2ndgrade_2x4-14	139	Picture	fix	2483942	0	1	21333	1	0	next	other	0
+2ndgrade_2x4-14	139	Pulse	199	2490000	6058	NA
+2ndgrade_2x4-14	139	Pulse	199	2500000	16058	NA
+2ndgrade_2x4-14	141	Picture	stim	2505275	0	1	20166	1	0	20000	incorrect	393
+2ndgrade_2x4-14	141	Pulse	199	2510000	4725	NA
+2ndgrade_2x4-14	141	Response	32	2517819	12544	0
+2ndgrade_2x4-14	141	Pulse	199	2520000	14725	NA
+2ndgrade_2x4-14	142	Picture	fix2	2525441	0	1	17166	1	0	next	other	0
+2ndgrade_2x4-14	142	Pulse	199	2530000	4559	NA
+2ndgrade_2x4-14	142	Pulse	199	2540000	14559	NA
+2ndgrade_2x4-14	143	Picture	feedback	2542607	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	143	Pulse	199	2550000	7393	NA
+2ndgrade_2x4-14	143	Pulse	199	2560000	17393	NA
+2ndgrade_2x4-14	144	Picture	fix	2562773	0	1	31999	1	0	next	other	0
+2ndgrade_2x4-14	144	Pulse	199	2570000	7227	NA
+2ndgrade_2x4-14	144	Pulse	199	2580000	17227	NA
+2ndgrade_2x4-14	144	Pulse	199	2590000	27227	NA
+2ndgrade_2x4-14	146	Picture	stim	2594773	0	1	20166	1	0	20000	hit	407
+2ndgrade_2x4-14	146	Pulse	199	2600000	5227	NA
+2ndgrade_2x4-14	146	Response	16	2605642	10869	0
+2ndgrade_2x4-14	146	Pulse	199	2610000	15227	NA
+2ndgrade_2x4-14	147	Picture	fix2	2614939	0	1	18833	1	0	next	other	0
+2ndgrade_2x4-14	147	Pulse	199	2620000	5061	NA
+2ndgrade_2x4-14	147	Pulse	199	2630000	15061	NA
+2ndgrade_2x4-14	148	Picture	feedback	2633772	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	148	Pulse	199	2640000	6228	NA
+2ndgrade_2x4-14	148	Pulse	199	2650000	16228	NA
+2ndgrade_2x4-14	149	Picture	fix	2653938	0	1	24666	1	0	next	other	0
+2ndgrade_2x4-14	149	Pulse	199	2660000	6062	NA
+2ndgrade_2x4-14	149	Pulse	199	2670000	16062	NA
+2ndgrade_2x4-14	151	Picture	stim	2678604	0	1	20166	1	0	20000	incorrect	421
+2ndgrade_2x4-14	151	Pulse	199	2680000	1396	NA
+2ndgrade_2x4-14	151	Pulse	199	2690000	11396	NA
+2ndgrade_2x4-14	151	Response	32	2690626	12022	0
+2ndgrade_2x4-14	152	Picture	fix2	2698770	0	1	28666	1	0	next	other	0
+2ndgrade_2x4-14	152	Pulse	199	2700000	1230	NA
+2ndgrade_2x4-14	152	Pulse	199	2710000	11230	NA
+2ndgrade_2x4-14	152	Pulse	199	2720000	21230	NA
+2ndgrade_2x4-14	153	Picture	feedback	2727436	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	153	Pulse	199	2730000	2564	NA
+2ndgrade_2x4-14	153	Pulse	199	2740000	12564	NA
+2ndgrade_2x4-14	154	Picture	fix	2747602	0	1	25166	1	0	next	other	0
+2ndgrade_2x4-14	154	Pulse	199	2750000	2398	NA
+2ndgrade_2x4-14	154	Pulse	199	2760000	12398	NA
+2ndgrade_2x4-14	154	Pulse	199	2770000	22398	NA
+2ndgrade_2x4-14	156	Picture	stim	2772768	0	1	20166	1	0	20000	hit	435
+2ndgrade_2x4-14	156	Pulse	199	2780000	7232	NA
+2ndgrade_2x4-14	156	Response	16	2784290	11522	0
+2ndgrade_2x4-14	156	Pulse	199	2790000	17232	NA
+2ndgrade_2x4-14	157	Picture	fix2	2792935	0	1	26833	1	0	next	other	0
+2ndgrade_2x4-14	157	Pulse	199	2800000	7065	NA
+2ndgrade_2x4-14	157	Pulse	199	2810000	17065	NA
+2ndgrade_2x4-14	158	Picture	feedback	2819767	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	158	Pulse	199	2820000	233	NA
+2ndgrade_2x4-14	158	Pulse	199	2830000	10233	NA
+2ndgrade_2x4-14	159	Picture	fix	2839934	0	1	25499	1	0	next	other	0
+2ndgrade_2x4-14	159	Pulse	199	2840000	66	NA
+2ndgrade_2x4-14	159	Pulse	199	2850000	10066	NA
+2ndgrade_2x4-14	159	Pulse	199	2860000	20066	NA
+2ndgrade_2x4-14	161	Picture	stim	2865433	0	1	20166	1	0	20000	incorrect	449
+2ndgrade_2x4-14	161	Pulse	199	2870000	4567	NA
+2ndgrade_2x4-14	161	Response	32	2879800	14367	0
+2ndgrade_2x4-14	161	Pulse	199	2880000	14567	NA
+2ndgrade_2x4-14	162	Picture	fix2	2885766	0	1	23666	1	0	next	other	0
+2ndgrade_2x4-14	162	Pulse	199	2890000	4234	NA
+2ndgrade_2x4-14	162	Pulse	199	2900000	14234	NA
+2ndgrade_2x4-14	163	Picture	feedback	2909432	0	1	20166	1	0	next	other	0
+2ndgrade_2x4-14	163	Pulse	199	2910000	568	NA
+2ndgrade_2x4-14	163	Pulse	199	2920000	10568	NA
+2ndgrade_2x4-14	164	Picture	100	2929598	0	1	80165	1	0	80000	other	0
+2ndgrade_2x4-14	164	Pulse	199	2930000	402	NA
+2ndgrade_2x4-14	164	Pulse	199	2940000	10402	NA
+2ndgrade_2x4-14	164	Pulse	199	2950000	20402	NA
+2ndgrade_2x4-14	164	Pulse	199	2960000	30402	NA
+2ndgrade_2x4-14	164	Pulse	199	2970000	40402	NA
+2ndgrade_2x4-14	164	Pulse	199	2980000	50402	NA
+2ndgrade_2x4-14	164	Pulse	199	2990000	60402	NA
+2ndgrade_2x4-14	164	Pulse	199	3000000	70402	NA

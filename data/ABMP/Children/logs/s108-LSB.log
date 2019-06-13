@@ -1,0 +1,2573 @@
+Scenario - 
+Logfile written - 05/02/2017 13:26:31
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+s108	1	Response	3	223472	212806	1
+s108	2	Response	3	350327	126674	1
+s108	3	Picture	consistent	355978	5166	1	19999	2	5000	next	miss	0
+s108	4	Picture	pos_feedback	381143	5166	1	14999	2	5000	next	other	0
+s108	5	Picture	consistent	406475	5166	1	19999	2	5000	next	miss	0
+s108	6	Picture	pos_feedback	431640	5166	1	14999	2	5000	next	other	0
+s108	7	Picture	consistent	459638	5166	2	19999	3	5000	next	miss	0
+s108	8	Response	32	482467	2830	1
+s108	8	Picture	pos_feedback	484803	5166	2	15000	3	5000	next	other	0
+s108	9	Picture	consistent	515135	5166	1	11499	2	5000	next	hit	11
+s108	9	Response	32	526540	16571	1
+s108	10	Picture	pos_feedback	531801	5167	1	14999	2	5000	next	other	0
+s108	11	Picture	consistent	557132	5166	1	15333	2	5000	next	hit	14
+s108	11	Response	16	572368	20402	1
+s108	12	Picture	pos_feedback	577631	5166	1	14999	2	5000	next	other	0
+s108	13	Picture	consistent	605463	5167	1	15665	3	5000	next	hit	17
+s108	13	Response	32	621106	20810	1
+s108	14	Picture	pos_feedback	626295	5167	1	14999	2	5000	next	other	0
+s108	15	Picture	consistent	656626	5166	1	19999	2	5000	next	miss	0
+s108	16	Picture	pos_feedback	681791	5166	2	14999	3	5000	next	other	0
+s108	17	Picture	consistent	707123	5166	1	15332	3	5000	next	hit	22
+s108	17	Response	32	722315	20358	1
+s108	18	Picture	pos_feedback	727622	5167	1	14999	2	5000	next	other	0
+s108	19	Picture	consistent	755453	5166	2	19999	3	5000	next	miss	0
+s108	20	Response	32	780152	4700	1
+s108	20	Picture	pos_feedback	780619	5167	1	14999	2	5000	next	other	0
+s108	21	Picture	consistent	810950	5166	1	18999	2	5000	next	hit	28
+s108	21	Response	16	829917	24133	2
+s108	22	Picture	pos_feedback	835115	5166	1	14999	2	5000	next	other	0
+s108	23	Picture	consistent	860447	5166	1	18665	3	5000	next	hit	31
+s108	23	Response	32	879068	23787	2
+s108	24	Picture	pos_feedback	884279	5167	1	14999	2	5000	next	other	0
+s108	25	Picture	consistent	912110	5166	2	14333	3	5000	next	hit	34
+s108	25	Response	16	926262	19318	2
+s108	26	Picture	pos_feedback	931609	5166	1	14999	2	5000	next	other	0
+s108	27	Picture	consistent	961941	5167	1	11166	2	5000	next	hit	37
+s108	27	Response	32	973042	16268	1
+s108	28	Picture	pos_feedback	978273	5166	1	14999	2	5000	next	other	0
+s108	29	Picture	consistent	1003605	5167	1	15499	2	5000	next	hit	40
+s108	29	Response	32	1019040	20602	2
+s108	30	Picture	pos_feedback	1024270	5166	1	14999	2	5000	next	other	0
+s108	31	Picture	consistent	1052102	5167	1	13666	2	5000	next	hit	43
+s108	31	Response	16	1065663	18728	2
+s108	32	Picture	pos_feedback	1070934	5166	1	14999	2	5000	next	other	0
+s108	33	Picture	consistent	1101265	5166	2	15666	3	5000	next	hit	46
+s108	33	Response	16	1116832	20733	1
+s108	34	Picture	pos_feedback	1122097	5166	2	15000	3	5000	next	other	0
+s108	35	Picture	consistent	1147429	5166	1	14499	2	5000	next	hit	49
+s108	35	Response	16	1161793	19530	1
+s108	36	Picture	pos_feedback	1167095	5167	1	14999	2	5000	next	other	0
+s108	37	Picture	consistent	1194926	5166	1	12833	2	5000	next	hit	52
+s108	37	Response	32	1207690	17930	1
+s108	38	Picture	pos_feedback	1212925	5166	1	14999	2	5000	next	other	0
+s108	39	Picture	consistent	1243257	5167	1	15499	2	5000	next	hit	55
+s108	39	Response	32	1258594	20504	1
+s108	40	Picture	pos_feedback	1263922	5166	1	14999	2	5000	next	other	0
+s108	41	Picture	consistent	1289254	5167	1	13499	2	5000	next	hit	58
+s108	41	Response	16	1302596	18509	1
+s108	42	Picture	pos_feedback	1307919	5166	1	14999	3	5000	next	other	0
+s108	43	Picture	consistent	1335751	5166	1	12999	2	5000	next	hit	61
+s108	43	Response	16	1348645	18060	1
+s108	44	Picture	pos_feedback	1353916	5166	2	14999	4	5000	next	other	0
+s108	45	Picture	consistent	1384248	5166	1	18665	3	5000	next	hit	64
+s108	45	Response	16	1402873	23791	1
+s108	46	Picture	pos_feedback	1408080	5167	1	14999	2	5000	next	other	0
+s108	47	Picture	consistent	1433412	5167	1	16499	2	5000	next	hit	67
+s108	47	Response	16	1449751	21506	1
+s108	48	Picture	pos_feedback	1455077	5166	1	14999	2	5000	next	other	0
+s108	49	Picture	consistent	1482908	5166	2	9667	3	5000	next	hit	70
+s108	49	Response	32	1492467	14725	1
+s108	50	Picture	pos_feedback	1497741	5166	1	14999	2	5000	next	other	0
+s108	51	Picture	consistent	1528072	5166	2	13333	3	5000	next	hit	73
+s108	51	Response	32	1541355	18449	1
+s108	52	Picture	pos_feedback	1546571	5166	1	14999	2	5000	next	other	0
+s108	53	Picture	consistent	1571903	5166	1	11166	2	5000	next	hit	76
+s108	53	Response	16	1582943	16206	1
+s108	54	Picture	pos_feedback	1588235	5166	2	14999	4	5000	next	other	0
+s108	55	Picture	consistent	1616067	5166	1	16832	2	5000	next	hit	79
+s108	55	Response	16	1632750	21849	1
+s108	56	Picture	pos_feedback	1638066	5167	1	14999	2	5000	next	other	0
+s108	57	Picture	consistent	1668397	5166	1	15832	2	5000	next	hit	82
+s108	57	Response	16	1684091	20860	1
+s108	58	Picture	pos_feedback	1689396	5167	1	14999	2	5000	next	other	0
+s108	59	Picture	consistent	1714728	5167	1	16832	2	5000	next	hit	85
+s108	59	Response	32	1731457	21896	2
+s108	60	Picture	pos_feedback	1736726	5166	1	14999	2	5000	next	other	0
+s108	61	Picture	consistent	1764558	5167	1	14999	2	5000	next	hit	88
+s108	61	Response	32	1779431	20040	1
+s108	62	Picture	pos_feedback	1784723	5166	1	14999	2	5000	next	other	0
+s108	63	Response	3	1960953	151065	1
+s108	64	Picture	consistent	1966379	5167	1	19998	3	5000	next	miss	0
+s108	65	Response	32	1990538	4161	1
+s108	65	Picture	pos_feedback	1991544	5167	1	14999	2	5000	next	other	0
+s108	66	Picture	consistent	2021875	5166	1	11999	3	5000	next	hit	95
+s108	66	Response	16	2033820	17111	1
+s108	67	Picture	pos_feedback	2039041	5167	1	14999	2	5000	next	other	0
+s108	68	Picture	consistent	2064373	5167	1	10999	2	5000	next	hit	98
+s108	68	Response	32	2075326	16120	2
+s108	69	Picture	pos_feedback	2080538	5166	1	14999	2	5000	next	other	0
+s108	70	Picture	consistent	2106037	5167	1	11499	2	5000	next	hit	101
+s108	70	Response	32	2117457	16587	1
+s108	71	Picture	pos_feedback	2122702	5166	1	14999	2	5000	next	other	0
+s108	72	Picture	consistent	2148034	5166	1	12166	2	5000	next	hit	104
+s108	72	Response	32	2160032	17164	1
+s108	73	Picture	pos_feedback	2165366	5166	1	14999	2	5000	next	other	0
+s108	74	Picture	consistent	2193198	5166	1	9166	2	5000	next	hit	107
+s108	74	Response	16	2202220	14188	1
+s108	75	Picture	pos_feedback	2207530	5166	2	14999	4	5000	next	other	0
+s108	76	Picture	consistent	2235362	5166	1	11166	2	5000	next	hit	110
+s108	76	Response	16	2246477	16281	1
+s108	77	Picture	pos_feedback	2251694	5166	2	14999	4	5000	next	other	0
+s108	78	Picture	consistent	2282026	5167	1	10166	2	5000	next	hit	113
+s108	78	Response	16	2292040	15181	1
+s108	79	Picture	pos_feedback	2297358	5166	1	14999	2	5000	next	other	0
+s108	80	Picture	consistent	2327690	5167	1	10999	2	5000	next	hit	116
+s108	80	Response	16	2338625	16102	1
+s108	81	Picture	pos_feedback	2343855	5166	1	14999	3	5000	next	other	0
+s108	82	Picture	consistent	2371687	5166	1	13999	2	5000	next	hit	119
+s108	82	Response	16	2385541	19020	2
+s108	83	Picture	pos_feedback	2390852	5166	2	14999	4	5000	next	other	0
+s108	84	Picture	consistent	2416184	5166	1	9333	2	5000	next	hit	122
+s108	84	Response	16	2425442	14424	1
+s108	85	Picture	pos_feedback	2430683	5166	1	14999	2	5000	next	other	0
+s108	86	Picture	consistent	2461015	5167	1	12666	2	5000	next	hit	125
+s108	86	Response	32	2473620	17772	1
+s108	87	Picture	pos_feedback	2478847	5166	1	14999	2	5000	next	other	0
+s108	88	Picture	consistent	2504179	5167	1	16832	2	5000	next	hit	128
+s108	88	Response	32	2520839	21827	2
+s108	88	Response	16	2520885	21873	1
+s108	89	Picture	pos_feedback	2526177	5166	2	14999	4	5000	next	other	0
+s108	90	Picture	consistent	2554009	5166	1	13166	2	5000	next	hit	132
+s108	90	Response	32	2567023	18180	1
+s108	91	Picture	pos_feedback	2572341	5166	1	14999	2	5000	next	other	0
+s108	92	Picture	consistent	2602673	5167	1	10499	2	5000	next	hit	135
+s108	92	Response	32	2613041	15535	1
+s108	93	Picture	pos_feedback	2618338	5166	1	14999	3	5000	next	other	0
+s108	94	Picture	consistent	2646170	5166	1	12166	2	5000	next	hit	138
+s108	94	Response	32	2658253	17249	1
+s108	95	Picture	pos_feedback	2663502	5166	1	14999	2	5000	next	other	0
+s108	96	Picture	consistent	2688834	5166	1	11833	2	5000	next	hit	141
+s108	96	Response	16	2700508	16840	1
+s108	97	Picture	pos_feedback	2705833	5166	1	14999	2	5000	next	other	0
+s108	98	Picture	consistent	2736164	5166	2	14999	4	5000	next	hit	144
+s108	98	Response	32	2751083	20085	1
+s108	99	Picture	pos_feedback	2756330	5167	1	14999	2	5000	next	other	0
+s108	100	Picture	consistent	2784161	5166	2	11500	3	5000	next	hit	147
+s108	100	Response	16	2795579	16584	1
+s108	101	Picture	pos_feedback	2800827	5166	1	14999	2	5000	next	other	0
+s108	102	Picture	consistent	2828659	5167	1	8999	2	5000	next	hit	150
+s108	102	Response	32	2837535	14043	2
+s108	103	Picture	pos_feedback	2842824	5166	2	15000	3	5000	next	other	0
+s108	104	Picture	consistent	2873156	5166	1	13666	2	5000	next	hit	153
+s108	104	Response	32	2886651	18661	2
+s108	105	Picture	pos_feedback	2891988	5166	1	14999	2	5000	next	other	0
+s108	106	Picture	consistent	2917320	5167	1	13166	2	5000	next	hit	156
+s108	106	Response	16	2930446	18293	2
+s108	107	Picture	pos_feedback	2935652	5166	1	14999	2	5000	next	other	0
+s108	108	Picture	consistent	2960984	5167	1	13332	2	5000	next	hit	159
+s108	108	Response	16	2974159	18342	1
+s108	109	Picture	pos_feedback	2979483	5167	1	14999	2	5000	next	other	0
+s108	110	Picture	consistent	3007314	5166	1	12666	2	5000	next	hit	162
+s108	110	Response	32	3019794	17646	1
+s108	111	Picture	pos_feedback	3025147	5167	1	14999	2	5000	next	other	0
+s108	112	Picture	consistent	3050478	5166	1	12333	2	5000	next	hit	165
+s108	112	Response	16	3062672	17360	1
+s108	113	Picture	pos_feedback	3067977	5166	1	14999	2	5000	next	other	0
+s108	114	Picture	consistent	3095809	5167	1	11332	3	5000	next	hit	168
+s108	114	Response	32	3107101	16459	1
+s108	115	Picture	pos_feedback	3112308	5167	1	14999	2	5000	next	other	0
+s108	116	Picture	consistent	3142639	5166	1	10500	2	5000	next	hit	171
+s108	116	Response	16	3153009	15536	1
+s108	117	Picture	pos_feedback	3158305	5166	1	14999	2	5000	next	other	0
+s108	118	Picture	consistent	3188636	5166	2	7667	3	5000	next	hit	174
+s108	118	Response	32	3196209	12739	1
+s108	119	Picture	pos_feedback	3201469	5166	1	14999	2	5000	next	other	0
+s108	120	Picture	consistent	3229300	5166	2	10666	4	5000	next	hit	177
+s108	120	Response	32	3239844	15710	2
+s108	121	Picture	pos_feedback	3245133	5167	1	14999	2	5000	next	other	0
+s108	122	Picture	consistent	3272964	5166	2	8667	3	5000	next	hit	180
+s108	122	Response	16	3281567	13769	1
+s108	123	Picture	pos_feedback	3286797	5166	1	14999	2	5000	next	other	0
+s108	124	Picture	consistent	3312129	5167	1	7666	2	5000	next	hit	183
+s108	124	Response	32	3319631	12669	1
+s108	125	Picture	pos_feedback	3324961	5166	1	14999	2	5000	next	other	0
+s108	126	Picture	consistent	3350293	5166	1	19999	2	5000	next	miss	0
+s108	127	Picture	pos_feedback	3375458	5166	1	14999	2	5000	next	other	0
+s108	127	Response	16	3377213	6921	1
+s108	128	Picture	consistent	3405790	5167	1	8666	2	5000	next	hit	189
+s108	128	Response	32	3414372	13749	1
+s108	129	Picture	pos_feedback	3419622	5166	1	14999	2	5000	next	other	0
+s108	130	Picture	consistent	3449953	5166	2	7667	3	5000	next	hit	192
+s108	130	Response	32	3457483	12696	1
+s108	131	Picture	pos_feedback	3462786	5166	1	14999	2	5000	next	other	0
+s108	132	Picture	consistent	3493117	5166	2	6167	3	5000	next	hit	195
+s108	132	Response	16	3499238	11287	1
+s108	133	Picture	pos_feedback	3504450	5166	2	14999	3	5000	next	other	0
+s108	134	Picture	consistent	3532282	5167	1	7999	2	5000	next	hit	198
+s108	134	Response	32	3540255	13140	1
+s108	135	Picture	pos_feedback	3545448	5167	1	14999	2	5000	next	other	0
+s108	136	Picture	consistent	3570779	5166	1	18666	2	5000	next	hit	201
+s108	136	Response	16	3589369	23756	1
+s108	137	Picture	pos_feedback	3594611	5166	1	14999	2	5000	next	other	0
+s108	138	Picture	consistent	3619943	5166	1	8833	2	5000	next	hit	204
+s108	138	Response	32	3628606	13829	1
+s108	139	Picture	pos_feedback	3633942	5166	1	14999	2	5000	next	other	0
+s108	140	Picture	consistent	3664274	5167	1	16499	2	5000	next	hit	207
+s108	140	Response	32	3680696	21589	1
+s108	141	Picture	pos_feedback	3685939	5166	1	14999	2	5000	next	other	0
+s108	142	Picture	consistent	3716270	5166	2	11166	3	5000	next	hit	210
+s108	142	Response	16	3727362	16258	2
+s108	143	Picture	pos_feedback	3732603	5167	1	14999	2	5000	next	other	0
+s108	144	Picture	consistent	3762934	5166	1	9166	2	5000	next	hit	213
+s108	144	Response	32	3771938	14170	2
+s108	145	Picture	pos_feedback	3777267	5167	1	14999	2	5000	next	other	0
+s108	146	Picture	consistent	3805098	5166	1	9333	2	5000	next	hit	216
+s108	146	Response	16	3814290	14358	1
+s108	147	Picture	pos_feedback	3819597	5166	1	14999	2	5000	next	other	0
+s108	148	Picture	consistent	3844929	5166	1	11499	2	5000	next	hit	219
+s108	148	Response	32	3856384	16621	1
+s108	149	Picture	pos_feedback	3861595	5167	1	14999	2	5000	next	other	0
+s108	150	Picture	consistent	3889426	5166	1	7666	3	5000	next	hit	222
+s108	150	Response	16	3896942	12682	1
+s108	151	Picture	pos_feedback	3902259	5167	1	14999	2	5000	next	other	0
+s108	152	Picture	consistent	3927591	5167	1	10832	2	5000	next	hit	225
+s108	152	Response	16	3938283	15859	1
+s108	153	Picture	pos_feedback	3943590	5167	1	14999	2	5000	next	other	0
+s108	154	Picture	consistent	3971421	5166	1	9333	2	5000	next	hit	228
+s108	154	Response	32	3980642	14387	2
+s108	155	Picture	pos_feedback	3985920	5166	2	14999	4	5000	next	other	0
+s108	156	Picture	consistent	4011252	5166	1	15499	2	5000	next	hit	231
+s108	156	Response	32	4026610	20524	1
+s108	157	Picture	pos_feedback	4031917	5166	2	15000	3	5000	next	other	0
+s108	158	Picture	consistent	4059749	5166	1	16832	2	5000	next	hit	234
+s108	158	Response	16	4076408	21825	1
+s108	159	Picture	pos_feedback	4081748	5167	1	14999	2	5000	next	other	0
+s108	160	Picture	consistent	4107079	5166	2	10000	3	5000	next	hit	237
+s108	160	Response	16	4117042	15129	1
+s108	161	Picture	pos_feedback	4122245	5166	1	14999	2	5000	next	other	0
+s108	162	Picture	consistent	4150077	5167	1	9833	2	5000	next	hit	240
+s108	162	Response	32	4159869	14959	1
+s108	163	Picture	pos_feedback	4165076	5166	1	14999	2	5000	next	other	0
+s108	164	Picture	consistent	4195407	5166	1	11166	2	5000	next	hit	243
+s108	164	Response	16	4206457	16216	1
+s108	165	Picture	pos_feedback	4211739	5166	2	15000	3	5000	next	other	0
+s108	166	Picture	consistent	4237071	5166	2	12166	3	5000	next	hit	246
+s108	166	Response	16	4249159	17254	1
+s108	167	Picture	pos_feedback	4254404	5167	1	14999	2	5000	next	other	0
+s108	168	Picture	consistent	4282235	5166	2	17166	3	5000	next	hit	249
+s108	168	Response	16	4299330	22261	1
+s108	169	Picture	pos_feedback	4304567	5166	1	14999	2	5000	next	other	0
+s108	170	Picture	consistent	4334899	5167	1	9499	2	5000	next	hit	252
+s108	170	Response	32	4344282	14550	1
+s108	171	Picture	pos_feedback	4349564	5166	2	15000	3	5000	next	other	0
+s108	172	Picture	consistent	4379896	5166	1	10333	2	5000	next	hit	255
+s108	172	Response	16	4390171	15441	1
+s108	173	Picture	pos_feedback	4395395	5166	1	14999	2	5000	next	other	0
+s108	174	Picture	consistent	4420727	5167	1	8333	2	5000	next	hit	258
+s108	174	Response	32	4429025	13465	1
+s108	175	Picture	pos_feedback	4434226	5166	1	14999	2	5000	next	other	0
+s108	176	Picture	consistent	4464557	5166	2	8166	4	5000	next	hit	261
+s108	176	Response	32	4472606	13215	1
+s108	177	Picture	pos_feedback	4477890	5167	1	14999	2	5000	next	other	0
+s108	178	Picture	consistent	4505721	5166	2	11000	3	5000	next	hit	264
+s108	178	Response	16	4516618	16063	2
+s108	179	Picture	pos_feedback	4521887	5166	1	14999	2	5000	next	other	0
+s108	180	Picture	consistent	4549719	5167	1	15665	3	5000	next	hit	267
+s108	180	Response	16	4565222	20670	1
+s108	181	Picture	pos_feedback	4570551	5167	1	14999	2	5000	next	other	0
+s108	181	Response	32	4586963	21579	2
+s108	182	Picture	consistent	4595883	5167	1	12999	2	5000	next	hit	271
+s108	182	Response	32	4608839	18123	1
+s108	183	Picture	pos_feedback	4614048	5166	1	14999	2	5000	next	other	0
+s108	184	Picture	consistent	4644379	5166	2	13500	3	5000	next	hit	274
+s108	184	Response	16	4657787	18574	1
+s108	185	Picture	pos_feedback	4663045	5166	1	14999	2	5000	next	other	0
+s108	186	Picture	consistent	4693377	5167	1	11166	2	5000	next	hit	277
+s108	186	Response	32	4704475	16265	1
+s108	187	Picture	pos_feedback	4709709	5166	1	14999	2	5000	next	other	0
+s108	188	Picture	consistent	4737540	5166	2	14000	3	5000	next	hit	280
+s108	188	Response	16	4751499	19125	1
+s108	189	Picture	pos_feedback	4756706	5166	1	14999	2	5000	next	other	0
+s108	190	Picture	consistent	4782038	5167	1	15332	2	5000	next	hit	283
+s108	190	Response	32	4797320	20449	1
+s108	191	Picture	pos_feedback	4802536	5166	2	14999	4	5000	next	other	0
+s108	192	Picture	consistent	4832868	5167	1	9166	2	5000	next	hit	286
+s108	192	Response	32	4841982	14281	1
+s108	193	Picture	pos_feedback	4847200	5166	1	14999	3	5000	next	other	0
+s108	194	Picture	consistent	4877532	5167	1	13499	2	5000	next	hit	289
+s108	194	Response	16	4890999	18634	1
+s108	195	Picture	pos_feedback	4896197	5166	1	14999	2	5000	next	other	0
+s108	196	Picture	consistent	4924029	5166	1	14666	2	5000	next	hit	292
+s108	196	Response	16	4938569	19706	1
+s108	197	Picture	pos_feedback	4943861	5166	1	14999	2	5000	next	other	0
+s108	198	Picture	consistent	4971693	5167	1	16998	3	5000	next	hit	295
+s108	198	Response	32	4988519	21993	1
+s108	199	Picture	pos_feedback	4993858	5167	1	14999	2	5000	next	other	0
+s108	200	Picture	consistent	5019190	5167	1	18332	2	5000	next	hit	298
+s108	200	Response	32	5037471	23448	1
+s108	201	Response	16	5037552	30	1
+s108	201	Picture	pos_feedback	5042688	5166	1	14999	2	5000	next	other	0
+s108	202	Picture	consistent	5070520	5167	1	12166	2	5000	next	hit	302
+s108	202	Response	32	5082532	17179	1
+s108	203	Picture	pos_feedback	5087852	5166	1	14999	2	5000	next	other	0
+s108	204	Picture	consistent	5118184	5167	1	15499	2	5000	next	hit	305
+s108	204	Response	16	5133656	20639	1
+s108	205	Picture	pos_feedback	5138849	5166	1	14999	2	5000	next	other	0
+s108	206	Picture	consistent	5164181	5167	1	13332	2	5000	next	hit	308
+s108	206	Response	32	5177478	18464	1
+s108	207	Picture	pos_feedback	5182680	5167	1	14999	2	5000	next	other	0
+s108	208	Picture	consistent	5208011	5166	1	17666	2	5000	next	hit	311
+s108	208	Response	16	5225532	22687	1
+s108	209	Picture	pos_feedback	5230843	5166	1	14999	2	5000	next	other	0
+s108	210	Picture	consistent	5258675	5167	1	19999	2	5000	next	miss	0
+s108	211	Picture	pos_feedback	5283840	5166	1	14999	2	5000	next	other	0
+s108	211	Response	32	5284985	6311	1
+s108	212	Picture	consistent	5311671	5166	2	15666	3	5000	next	hit	317
+s108	212	Response	32	5327195	20690	2
+s108	213	Picture	pos_feedback	5332504	5167	1	14999	2	5000	next	other	0
+s108	214	Picture	consistent	5360335	5166	1	9666	2	5000	next	hit	320
+s108	214	Response	32	5369930	14761	1
+s108	215	Picture	pos_feedback	5375168	5167	1	14999	2	5000	next	other	0
+s108	216	Picture	consistent	5400499	5166	2	7167	3	5000	next	hit	323
+s108	216	Response	32	5407590	12257	1
+s108	217	Response	16	5408051	385	1
+s108	217	Picture	pos_feedback	5412832	5166	1	14999	2	5000	next	other	0
+s108	218	Picture	consistent	5443163	5166	2	11500	3	5000	next	hit	327
+s108	218	Response	16	5454557	16560	1
+s108	219	Response	32	5454998	335	1
+s108	219	Picture	pos_feedback	5459829	5166	1	14999	2	5000	next	other	0
+s108	220	Picture	consistent	5490160	5166	2	17333	3	5000	next	hit	331
+s108	220	Response	32	5507358	22364	1
+s108	221	Picture	pos_feedback	5512659	5166	1	14999	2	5000	next	other	0
+s108	222	Picture	consistent	5537991	5166	1	19999	2	5000	next	miss	0
+s108	223	Picture	pos_feedback	5563156	5166	1	14999	2	5000	next	other	0
+s108	224	Picture	consistent	5593487	5166	2	7167	3	5000	next	hit	336
+s108	224	Response	32	5600470	12149	1
+s108	225	Picture	pos_feedback	5605820	5166	1	14999	2	5000	next	other	0
+s108	226	Picture	consistent	5631152	5167	1	19998	3	5000	next	miss	0
+s108	227	Picture	pos_feedback	5656317	5167	1	14999	2	5000	next	other	0
+s108	228	Picture	consistent	5681649	5167	1	8499	2	5000	next	hit	341
+s108	228	Response	32	5690008	13526	1
+s108	229	Picture	pos_feedback	5695314	5166	2	14999	4	5000	next	other	0
+s108	230	Picture	consistent	5720646	5166	1	19999	2	5000	next	miss	0
+s108	231	Picture	pos_feedback	5745811	5166	1	14999	2	5000	next	other	0
+s108	232	Picture	consistent	5773643	5166	1	7999	3	5000	next	hit	346
+s108	232	Response	32	5781455	12978	2
+s108	233	Picture	pos_feedback	5786809	5167	1	14999	2	5000	next	other	0
+s108	234	Picture	consistent	5817140	5166	1	13666	2	5000	next	hit	349
+s108	234	Response	16	5830632	18658	1
+s108	235	Picture	pos_feedback	5835972	5166	2	14999	4	5000	next	other	0
+s108	236	Picture	consistent	5863804	5166	1	7666	2	5000	next	hit	352
+s108	236	Response	16	5871296	12658	1
+s108	237	Picture	pos_feedback	5876637	5167	1	14999	2	5000	next	other	0
+s108	238	Picture	consistent	5906968	5166	1	19999	2	5000	next	miss	0
+s108	239	Picture	pos_feedback	5932133	5166	1	14999	2	5000	next	other	0
+s108	240	Picture	consistent	5957465	5166	1	14166	2	5000	next	hit	357
+s108	240	Response	32	5971509	19210	2
+s108	241	Picture	pos_feedback	5976797	5166	1	14999	2	5000	next	other	0
+s108	242	Picture	consistent	6007129	5167	1	14665	2	5000	next	hit	360
+s108	242	Response	16	6021743	19781	1
+s108	243	Picture	pos_feedback	6026961	5167	1	14999	2	5000	next	other	0
+s108	244	Picture	consistent	6054792	5166	1	14333	2	5000	next	hit	363
+s108	244	Response	16	6068946	19320	1
+s108	245	Picture	pos_feedback	6074291	5166	1	14999	2	5000	next	other	0
+s108	246	Picture	consistent	6102123	5167	1	10166	2	5000	next	hit	366
+s108	246	Response	16	6112122	15166	1
+s108	247	Picture	pos_feedback	6117455	5166	1	14999	2	5000	next	other	0
+s108	248	Picture	consistent	6147786	5166	2	10166	4	5000	next	hit	369
+s108	248	Response	16	6157777	15157	2
+s108	249	Picture	pos_feedback	6163119	5167	1	14999	2	5000	next	other	0
+s108	250	Picture	consistent	6193450	5166	1	8500	2	5000	next	hit	372
+s108	250	Response	32	6201815	13531	1
+s108	251	Picture	pos_feedback	6207116	5166	1	14999	2	5000	next	other	0
+s108	252	Picture	consistent	6237448	5167	1	9166	2	5000	next	hit	375
+s108	252	Response	32	6246448	14167	1
+s108	253	Picture	pos_feedback	6251780	5166	1	14999	2	5000	next	other	0
+s108	254	Picture	consistent	6277112	5167	1	8166	2	5000	next	hit	378
+s108	254	Response	16	6285177	13232	1
+s108	255	Picture	pos_feedback	6290444	5166	1	14999	2	5000	next	other	0
+s108	256	Picture	consistent	6315776	5166	1	8333	2	5000	next	hit	381
+s108	256	Response	32	6324064	13454	1
+s108	257	Picture	pos_feedback	6329275	5166	1	14999	2	5000	next	other	0
+s108	258	Picture	consistent	6354607	5166	1	9333	2	5000	next	hit	384
+s108	258	Response	32	6363866	14425	1
+s108	259	Picture	pos_feedback	6369106	5166	1	14999	2	5000	next	other	0
+s108	260	Picture	consistent	6396938	5167	1	9166	2	5000	next	hit	387
+s108	260	Response	32	6406074	14303	1
+s108	261	Picture	pos_feedback	6411270	5166	1	14999	2	5000	next	other	0
+s108	262	Picture	consistent	6439102	5167	1	10499	2	5000	next	hit	390
+s108	262	Response	16	6449472	15537	1
+s108	263	Picture	pos_feedback	6454767	5166	2	15000	3	5000	next	other	0
+s108	264	Picture	consistent	6485099	5166	1	8333	2	5000	next	hit	393
+s108	264	Response	32	6493390	13457	1
+s108	265	Picture	pos_feedback	6498598	5166	1	14999	2	5000	next	other	0
+s108	266	Picture	consistent	6523930	5167	1	16165	3	5000	next	hit	396
+s108	266	Response	32	6540048	21285	1
+s108	267	Picture	pos_feedback	6545262	5167	1	14999	2	5000	next	other	0
+s108	268	Picture	consistent	6573093	5166	2	8167	3	5000	next	hit	399
+s108	268	Response	32	6581220	13293	1
+s108	269	Picture	pos_feedback	6586426	5166	1	14999	2	5000	next	other	0
+s108	270	Picture	consistent	6616757	5166	2	12166	3	5000	next	hit	402
+s108	270	Response	32	6628881	17290	2
+s108	271	Picture	pos_feedback	6634090	5167	1	14999	2	5000	next	other	0
+s108	272	Picture	consistent	6661921	5166	1	10000	2	5000	next	hit	405
+s108	272	Response	32	6671838	15083	1
+s108	273	Picture	pos_feedback	6677087	5166	1	14999	2	5000	next	other	0
+s108	274	Picture	consistent	6704919	5167	1	10999	2	5000	next	hit	408
+s108	274	Response	32	6715751	15999	1
+s108	275	Picture	pos_feedback	6721084	5166	1	14999	2	5000	next	other	0
+s108	276	Picture	consistent	6746416	5166	1	8666	2	5000	next	hit	411
+s108	276	Response	32	6755060	13810	1
+s108	277	Picture	pos_feedback	6760248	5166	2	15000	3	5000	next	other	0
+s108	278	Picture	consistent	6785580	5166	1	9833	2	5000	next	hit	414
+s108	278	Response	16	6795287	14873	1
+s108	279	Picture	pos_feedback	6800579	5166	2	14999	4	5000	next	other	0
+s108	280	Picture	consistent	6830911	5167	1	15999	2	5000	next	hit	417
+s108	280	Response	32	6846880	21136	1
+s108	281	Picture	pos_feedback	6852076	5166	1	14999	2	5000	next	other	0
+s108	282	Picture	consistent	6877408	5166	1	9999	2	5000	next	hit	420
+s108	282	Response	32	6887288	15046	1
+s108	283	Picture	pos_feedback	6892574	5167	1	14999	2	5000	next	other	0
+s108	284	Picture	consistent	6920405	5166	1	10333	2	5000	next	hit	423
+s108	284	Response	32	6930585	15346	1
+s108	285	Picture	pos_feedback	6935904	5166	1	14999	3	5000	next	other	0
+s108	286	Picture	consistent	6966236	5167	1	9333	2	5000	next	hit	426
+s108	286	Response	32	6975467	14398	1
+s108	287	Picture	pos_feedback	6980735	5166	1	14999	2	5000	next	other	0
+s108	288	Picture	consistent	7011066	5166	2	8833	3	5000	next	hit	429
+s108	288	Response	32	7019778	13878	1
+s108	289	Picture	pos_feedback	7025065	5166	2	14999	4	5000	next	other	0
+s108	290	Picture	consistent	7052897	5166	1	13666	2	5000	next	hit	432
+s108	290	Response	16	7066378	18647	1
+s108	291	Picture	pos_feedback	7071729	5166	1	14999	2	5000	next	other	0
+s108	292	Picture	consistent	7102061	5167	1	19998	3	5000	next	miss	0
+s108	293	Response	32	7122755	696	1
+s108	293	Picture	pos_feedback	7127226	5167	1	14999	2	5000	next	other	0
+s108	294	Picture	consistent	7152557	5166	2	7833	3	5000	next	hit	438
+s108	294	Response	32	7160274	12883	1
+s108	295	Response	16	7160983	593	2
+s108	295	Picture	pos_feedback	7165557	5167	1	14999	2	5000	next	other	0
+s108	296	Picture	consistent	7190889	5167	1	9499	2	5000	next	hit	442
+s108	296	Response	32	7200242	14520	1
+s108	297	Picture	pos_feedback	7205554	5166	1	14999	2	5000	next	other	0
+s108	298	Picture	consistent	7233386	5167	1	9166	2	5000	next	hit	445
+s108	298	Response	16	7242446	14227	1
+s108	299	Picture	pos_feedback	7247718	5166	1	14999	3	5000	next	other	0
+s108	300	Picture	consistent	7273050	5166	1	9499	3	5000	next	hit	448
+s108	300	Response	32	7282441	14557	1
+s108	301	Picture	pos_feedback	7287716	5167	1	14999	2	5000	next	other	0
+s108	302	Picture	consistent	7315547	5166	2	7833	3	5000	next	hit	451
+s108	302	Response	32	7323350	12969	1
+s108	303	Response	16	7323940	560	1
+s108	303	Picture	pos_feedback	7328547	5167	1	14999	2	5000	next	other	0
+s108	304	Picture	consistent	7358878	5166	1	5000	2	5000	next	hit	455
+s108	304	Response	16	7363735	10023	2
+s108	305	Response	32	7363961	83	1
+s108	305	Picture	pos_feedback	7369044	5166	1	14999	2	5000	next	other	0
+s108	306	Picture	consistent	7394376	5166	1	9833	2	5000	next	hit	459
+s108	306	Response	32	7404138	14928	2
+s108	307	Picture	pos_feedback	7409375	5166	1	14999	2	5000	next	other	0
+s108	308	Picture	consistent	7437207	5167	1	12499	2	5000	next	hit	462
+s108	308	Response	16	7449656	17616	1
+s108	309	Picture	pos_feedback	7454872	5166	1	14999	2	5000	next	other	0
+s108	310	Picture	consistent	7485204	5167	1	16832	2	5000	next	hit	465
+s108	310	Response	32	7501901	21864	1
+s108	311	Picture	pos_feedback	7507202	5166	1	14999	2	5000	next	other	0
+s108	312	Picture	consistent	7532534	5166	1	11999	2	5000	next	hit	468
+s108	312	Response	32	7544394	17026	1
+s108	313	Picture	pos_feedback	7549700	5167	1	14999	2	5000	next	other	0
+s108	314	Picture	consistent	7577531	5166	1	16166	2	5000	next	hit	471
+s108	314	Response	16	7593618	21253	1
+s108	315	Picture	pos_feedback	7598863	5166	1	14999	2	5000	next	other	0
+s108	316	Picture	consistent	7629195	5167	1	19998	3	5000	next	miss	0
+s108	317	Picture	pos_feedback	7654360	5167	1	14999	2	5000	next	other	0
+s108	318	Picture	consistent	7679692	5167	1	10332	2	5000	next	hit	476
+s108	318	Response	16	7689938	15413	2
+s108	319	Picture	pos_feedback	7695191	5167	1	14999	2	5000	next	other	0
+s108	320	Picture	consistent	7723022	5166	1	11333	2	5000	next	hit	479
+s108	320	Response	32	7734320	16464	1
+s108	321	Picture	pos_feedback	7739521	5166	1	14999	2	5000	next	other	0
+s108	322	Picture	consistent	7769853	5167	1	8999	2	5000	next	hit	482
+s108	322	Response	16	7778701	14015	1
+s108	323	Picture	pos_feedback	7784018	5166	2	14999	4	5000	next	other	0
+s108	324	Picture	consistent	7809350	5166	1	7500	2	5000	next	hit	485
+s108	324	Response	32	7816756	12572	1
+s108	325	Picture	pos_feedback	7822016	5166	1	14999	2	5000	next	other	0
+s108	326	Picture	consistent	7849848	5167	1	8499	2	5000	next	hit	488
+s108	326	Response	16	7858173	13492	1
+s108	327	Picture	pos_feedback	7863513	5166	2	15000	3	5000	next	other	0
+s108	328	Picture	consistent	7893845	5166	1	7833	2	5000	next	hit	491
+s108	328	Response	32	7901642	12963	1
+s108	329	Picture	pos_feedback	7906844	5166	1	14999	2	5000	next	other	0
+s108	330	Picture	consistent	7932176	5166	1	8333	2	5000	next	hit	494
+s108	330	Response	16	7940393	13383	1
+s108	331	Picture	pos_feedback	7945675	5166	1	14999	2	5000	next	other	0
+s108	332	Picture	consistent	7973507	5167	1	7499	2	5000	next	hit	497
+s108	332	Response	16	7980835	12495	2
+s108	333	Picture	pos_feedback	7986173	5167	1	14998	3	5000	next	other	0
+s108	334	Picture	consistent	8016504	5166	1	7833	2	5000	next	hit	500
+s108	334	Response	16	8024284	12946	1
+s108	335	Picture	pos_feedback	8029503	5166	1	14999	2	5000	next	other	0
+s108	336	Picture	consistent	8054835	5166	1	14332	2	5000	next	hit	503
+s108	336	Response	16	8069132	19463	1
+s108	337	Picture	pos_feedback	8074334	5167	1	14999	2	5000	next	other	0
+s108	337	Response	16	8092298	23131	2
+s108	338	Picture	consistent	8102165	5166	2	9500	3	5000	next	hit	507
+s108	338	Response	32	8111506	14507	1
+s108	339	Picture	pos_feedback	8116831	5166	1	14999	2	5000	next	other	0
+s108	339	Response	16	8124153	12488	1
+s108	340	Picture	consistent	8147163	5167	1	8332	3	5000	next	hit	511
+s108	340	Response	32	8155365	13369	1
+s108	341	Picture	pos_feedback	8160662	5167	1	14999	2	5000	next	other	0
+s108	342	Response	16	8181240	413	1
+s108	342	Picture	consistent	8185993	5166	2	9333	3	5000	next	hit	515
+s108	342	Response	16	8195167	14340	1
+s108	343	Picture	pos_feedback	8200493	5167	1	14999	2	5000	next	other	0
+s108	344	Picture	consistent	8228324	5166	1	7500	2	5000	next	hit	518
+s108	344	Response	32	8235750	12592	2
+s108	345	Picture	pos_feedback	8240990	5166	1	14999	2	5000	next	other	0
+s108	346	Picture	consistent	8271322	5167	1	8666	2	5000	next	hit	521
+s108	346	Response	16	8279922	13767	1
+s108	347	Picture	pos_feedback	8285154	5166	1	14999	2	5000	next	other	0
+s108	348	Picture	consistent	8310486	5167	1	8999	2	5000	next	hit	524
+s108	348	Response	16	8319330	14011	1
+s108	349	Response	32	8320019	534	1
+s108	349	Picture	pos_feedback	8324652	5167	1	14999	2	5000	next	other	0
+s108	350	Picture	consistent	8352483	5166	1	14666	2	5000	next	hit	528
+s108	350	Response	16	8367122	19805	1
+s108	351	Picture	pos_feedback	8372315	5166	1	14999	2	5000	next	other	0
+s108	352	Picture	consistent	8402647	5167	1	11499	2	5000	next	hit	531
+s108	352	Response	16	8414101	16621	2
+s108	353	Picture	pos_feedback	8419312	5166	2	14999	4	5000	next	other	0
+s108	354	Picture	consistent	8444644	5166	1	19999	2	5000	next	miss	0
+s108	355	Picture	pos_feedback	8469809	5166	1	14999	2	5000	next	other	0
+s108	355	Response	32	8471458	6815	2
+s108	356	Picture	consistent	8497641	5166	1	19999	2	5000	next	miss	0
+s108	356	Response	32	8517492	25017	1
+s108	357	Picture	pos_feedback	8522806	5166	1	14999	2	5000	next	other	0
+s108	358	Picture	consistent	8553137	5166	2	14000	3	5000	next	hit	540
+s108	358	Response	32	8566983	19012	2
+s108	359	Picture	pos_feedback	8572303	5166	1	14999	2	5000	next	other	0
+s108	360	Picture	consistent	8597635	5167	1	10999	2	5000	next	hit	543
+s108	360	Response	32	8608516	16048	2
+s108	361	Picture	pos_feedback	8613800	5166	1	14999	3	5000	next	other	0
+s108	362	Picture	consistent	8641632	5166	1	11499	2	5000	next	hit	546
+s108	362	Response	16	8653083	16617	1
+s108	363	Picture	pos_feedback	8658298	5167	1	14999	2	5000	next	other	0
+s108	364	Picture	consistent	8688629	5166	1	19999	2	5000	next	miss	0
+s108	365	Response	32	8710324	1696	1
+s108	365	Picture	pos_feedback	8713794	5166	1	14999	2	5000	next	other	0
+s108	366	Picture	consistent	8739126	5166	1	13666	2	5000	next	hit	552
+s108	366	Response	32	8752637	18677	2
+s108	367	Picture	pos_feedback	8757958	5166	1	14999	2	5000	next	other	0
+s108	368	Picture	consistent	8785790	5167	1	19998	3	5000	next	miss	0
+s108	369	Picture	pos_feedback	8810955	5167	1	14999	2	5000	next	other	0
+s108	370	Picture	consistent	8841286	5166	1	8166	3	5000	next	hit	557
+s108	370	Response	16	8849392	13272	1
+s108	371	Picture	pos_feedback	8854619	5167	1	14999	2	5000	next	other	0
+s108	372	Picture	consistent	8879951	5167	1	9666	2	5000	next	hit	560
+s108	372	Response	32	8889492	14708	1
+s108	373	Picture	pos_feedback	8894783	5166	1	14999	2	5000	next	other	0
+s108	374	Picture	consistent	8922615	5167	1	11999	2	5000	next	hit	563
+s108	374	Response	16	8934537	17089	1
+s108	375	Picture	pos_feedback	8939780	5166	1	14999	2	5000	next	other	0
+s108	376	Picture	consistent	8970112	5167	1	16832	2	5000	next	hit	566
+s108	376	Response	16	8986779	21834	1
+s108	377	Picture	pos_feedback	8992110	5166	1	14999	2	5000	next	other	0
+s108	378	Picture	consistent	9017442	5166	1	16832	2	5000	next	hit	569
+s108	378	Response	16	9034140	21864	1
+s108	379	Picture	pos_feedback	9039441	5167	1	14999	2	5000	next	other	0
+s108	380	Picture	consistent	9067272	5166	1	10333	2	5000	next	hit	572
+s108	380	Response	32	9077519	15413	2
+s108	381	Picture	pos_feedback	9082771	5166	1	14999	2	5000	next	other	0
+s108	381	Response	16	9083250	5645	1
+s108	382	Picture	consistent	9113103	5167	1	12332	2	5000	next	hit	576
+s108	382	Response	32	9125279	17343	1
+s108	383	Response	16	9127494	2059	2
+s108	383	Picture	pos_feedback	9130602	5167	1	14999	2	5000	next	other	0
+s108	384	Picture	consistent	9155933	5166	2	8500	3	5000	next	hit	580
+s108	384	Response	32	9164275	13508	2
+s108	385	Picture	pos_feedback	9169599	5166	1	14999	2	5000	next	other	0
+s108	386	Picture	consistent	9197431	5166	1	8499	2	5000	next	hit	583
+s108	386	Response	16	9205802	13537	1
+s108	387	Picture	pos_feedback	9211097	5167	1	14999	2	5000	next	other	0
+s108	388	Picture	consistent	9241428	5166	1	9333	2	5000	next	hit	586
+s108	388	Response	16	9250614	14352	1
+s108	389	Picture	pos_feedback	9255927	5166	1	14999	2	5000	next	other	0
+s108	390	Picture	consistent	9281259	5166	1	13333	2	5000	next	hit	589
+s108	390	Response	32	9294404	18311	2
+s108	391	Picture	pos_feedback	9299758	5166	1	14999	2	5000	next	other	0
+s108	392	Picture	consistent	9327589	5166	2	11333	3	5000	next	hit	592
+s108	392	Response	16	9338759	16336	2
+s108	393	Picture	pos_feedback	9344088	5166	2	15000	3	5000	next	other	0
+s108	393	Response	16	9354961	16039	1
+s108	393	Response	16	9361324	22402	2
+s108	394	Picture	consistent	9374420	5166	1	19999	2	5000	next	miss	0
+s108	395	Picture	pos_feedback	9399585	5166	1	14999	2	5000	next	other	0
+s108	396	Picture	consistent	9424917	5167	1	9499	2	5000	next	hit	599
+s108	396	Response	16	9434242	14492	1
+s108	397	Picture	pos_feedback	9439583	5167	1	14999	2	5000	next	other	0
+s108	398	Picture	consistent	9467414	5166	1	7666	2	5000	next	hit	602
+s108	398	Response	32	9475019	12771	1
+s108	399	Picture	pos_feedback	9480247	5167	1	14999	2	5000	next	other	0
+s108	400	Picture	consistent	9510578	5166	1	10499	3	5000	next	hit	605
+s108	400	Response	16	9520954	15542	1
+s108	401	Picture	pos_feedback	9526244	5167	1	14999	2	5000	next	other	0
+s108	402	Picture	consistent	9551576	5167	1	8499	2	5000	next	hit	608
+s108	402	Response	16	9559982	13573	1
+s108	403	Response	32	9560075	0	1
+s108	403	Picture	pos_feedback	9565241	5166	2	14999	4	5000	next	other	0
+s108	404	Picture	consistent	9593073	5166	1	12666	2	5000	next	hit	612
+s108	404	Response	32	9605601	17694	1
+s108	405	Picture	pos_feedback	9610905	5166	1	14999	2	5000	next	other	0
+s108	406	Picture	consistent	9641237	5167	1	9666	2	5000	next	hit	615
+s108	406	Response	16	9650878	14808	2
+s108	407	Picture	pos_feedback	9656069	5166	1	14999	2	5000	next	other	0
+s108	408	Picture	consistent	9681401	5167	1	7999	2	5000	next	hit	618
+s108	408	Response	32	9689354	13120	1
+s108	409	Picture	pos_feedback	9694567	5167	1	14999	2	5000	next	other	0
+s108	410	Picture	consistent	9722398	5166	2	6667	3	5000	next	hit	621
+s108	410	Response	16	9729012	11780	1
+s108	411	Picture	pos_feedback	9734231	5166	1	14999	2	5000	next	other	0
+s108	412	Picture	consistent	9764562	5166	2	14833	3	5000	next	hit	624
+s108	412	Response	16	9779279	19883	2
+s108	413	Picture	pos_feedback	9784561	5166	1	14999	2	5000	next	other	0
+s108	414	Picture	consistent	9809893	5166	1	14166	2	5000	next	hit	627
+s108	414	Response	16	9823887	19160	1
+s108	415	Picture	pos_feedback	9829225	5166	1	14999	2	5000	next	other	0
+s108	416	Picture	consistent	9857057	5167	1	8499	2	5000	next	hit	630
+s108	416	Response	16	9865431	13541	1
+s108	417	Picture	pos_feedback	9870722	5166	2	14999	4	5000	next	other	0
+s108	418	Picture	consistent	9901054	5166	1	11333	2	5000	next	hit	633
+s108	418	Response	32	9912209	16321	1
+s108	419	Response	16	9913021	634	2
+s108	419	Picture	pos_feedback	9917553	5166	1	14999	2	5000	next	other	0
+s108	420	Picture	consistent	9942885	5167	1	8332	3	5000	next	hit	637
+s108	420	Response	32	9951131	13413	1
+s108	421	Picture	pos_feedback	9956384	5167	1	14999	2	5000	next	other	0
+s108	422	Picture	consistent	9984215	5166	2	10166	4	5000	next	hit	640
+s108	422	Response	16	9994244	15195	1
+s108	422	Response	32	9994343	15294	2
+s108	423	Picture	pos_feedback	9999548	5167	1	14999	2	5000	next	other	0
+s108	424	Picture	consistent	10029879	5166	1	7500	2	5000	next	hit	644
+s108	424	Response	16	10037325	12612	1
+s108	425	Response	32	10038571	1192	1
+s108	425	Picture	pos_feedback	10042545	5166	1	14999	2	5000	next	other	0
+s108	426	Picture	consistent	10067877	5166	1	10166	2	5000	next	hit	648
+s108	426	Response	32	10077930	15219	1
+s108	427	Response	16	10078213	170	2
+s108	427	Picture	pos_feedback	10083209	5166	2	14999	4	5000	next	other	0
+s108	428	Picture	consistent	10111041	5166	1	12499	2	5000	next	hit	652
+s108	428	Response	32	10123444	17569	1
+s108	428	Response	16	10123454	17579	1
+s108	429	Picture	pos_feedback	10128707	5167	1	14999	2	5000	next	other	0
+s108	430	Picture	consistent	10159038	5166	1	7333	2	5000	next	hit	656
+s108	430	Response	16	10166194	12322	1
+s108	431	Response	32	10166546	175	1
+s108	431	Picture	pos_feedback	10171537	5166	1	14999	2	5000	next	other	0
+s108	432	Picture	consistent	10196869	5166	1	7333	2	5000	next	hit	660
+s108	432	Response	32	10204068	12365	1
+s108	432	Response	16	10204127	12424	1
+s108	433	Picture	pos_feedback	10209368	5166	1	14999	2	5000	next	other	0
+s108	434	Picture	consistent	10237200	5167	1	11666	2	5000	next	hit	664
+s108	434	Response	32	10248841	16808	1
+s108	435	Picture	pos_feedback	10254032	5166	1	14999	2	5000	next	other	0
+s108	436	Picture	consistent	10284363	5166	2	9333	3	5000	next	hit	667
+s108	436	Response	32	10293530	14333	1
+s108	437	Picture	pos_feedback	10298863	5167	1	14999	2	5000	next	other	0
+s108	438	Picture	consistent	10324194	5166	2	9833	3	5000	next	hit	670
+s108	438	Response	32	10333929	14901	1
+s108	439	Picture	pos_feedback	10339193	5166	2	15000	3	5000	next	other	0
+s108	440	Picture	consistent	10367025	5166	1	12499	2	5000	next	hit	673
+s108	440	Response	32	10379344	17485	2
+s108	441	Picture	pos_feedback	10384691	5167	1	14999	2	5000	next	other	0
+s108	442	Picture	consistent	10415022	5166	1	15499	2	5000	next	hit	676
+s108	442	Response	16	10430428	20572	1
+s108	443	Picture	pos_feedback	10435687	5166	2	15000	3	5000	next	other	0
+s108	444	Picture	consistent	10461019	5166	1	9666	2	5000	next	hit	679
+s108	444	Response	16	10470524	14671	1
+s108	445	Picture	pos_feedback	10475852	5167	1	14999	2	5000	next	other	0
+s108	446	Picture	consistent	10503683	5166	1	11833	2	5000	next	hit	682
+s108	446	Response	16	10515366	16849	1
+s108	447	Picture	pos_feedback	10520682	5166	1	14999	2	5000	next	other	0
+s108	448	Picture	consistent	10551014	5167	1	9666	2	5000	next	hit	685
+s108	448	Response	32	10560623	14776	1
+s108	449	Picture	pos_feedback	10565846	5166	1	14999	2	5000	next	other	0
+s108	450	Picture	consistent	10591178	5166	1	10333	2	5000	next	hit	688
+s108	450	Response	16	10601393	15381	1
+s108	451	Picture	pos_feedback	10606677	5166	1	14999	2	5000	next	other	0
+s108	452	Picture	consistent	10634508	5166	2	9833	3	5000	next	hit	691
+s108	452	Response	32	10644165	14823	2
+s108	453	Picture	pos_feedback	10649508	5167	1	14999	2	5000	next	other	0
+s108	454	Picture	consistent	10679839	5166	1	17332	2	5000	next	hit	694
+s108	454	Response	32	10697018	22345	2
+s108	455	Picture	pos_feedback	10702338	5167	1	14999	2	5000	next	other	0
+s108	456	Picture	consistent	10727669	5166	2	10000	3	5000	next	hit	697
+s108	456	Response	32	10737554	15051	1
+s108	457	Response	16	10740548	2879	1
+s108	457	Picture	pos_feedback	10742835	5166	1	14999	2	5000	next	other	0
+s108	458	Picture	consistent	10770667	5167	1	14665	3	5000	next	hit	701
+s108	458	Response	32	10785254	19754	1
+s108	459	Picture	pos_feedback	10790499	5167	1	14999	2	5000	next	other	0
+s108	460	Picture	consistent	10820830	5166	1	19999	2	5000	next	miss	0
+s108	461	Picture	pos_feedback	10845995	5166	2	14999	4	5000	next	other	0
+s108	462	Picture	consistent	10876327	5167	1	13666	2	5000	next	hit	706
+s108	462	Response	16	10889857	18697	2
+s108	463	Picture	pos_feedback	10895159	5166	1	14999	2	5000	next	other	0
+s108	464	Response	3	11063133	147809	1
+s108	465	Picture	consistent	11068482	5167	1	14999	2	5000	next	hit	710
+s108	465	Response	16	11083335	20020	1
+s108	466	Picture	pos_feedback	11088647	5166	1	14999	2	5000	next	other	0
+s108	467	Picture	consistent	11119145	5166	1	10166	2	5000	next	hit	713
+s108	467	Response	16	11129230	15251	1
+s108	468	Picture	pos_feedback	11134477	5166	2	15000	3	5000	next	other	0
+s108	469	Picture	consistent	11159976	5166	1	7499	3	5000	next	hit	716
+s108	469	Response	16	11167444	12634	1
+s108	470	Picture	pos_feedback	11172642	5167	1	14999	2	5000	next	other	0
+s108	471	Picture	consistent	11200473	5166	2	12333	3	5000	next	hit	719
+s108	471	Response	32	11212771	17464	1
+s108	472	Picture	pos_feedback	11217972	5166	1	14999	2	5000	next	other	0
+s108	472	Response	32	11231628	18822	1
+s108	473	Picture	consistent	11248304	5167	1	10666	2	5000	next	hit	723
+s108	473	Response	32	11258918	15781	2
+s108	474	Picture	pos_feedback	11264136	5166	1	14999	2	5000	next	other	0
+s108	475	Picture	consistent	11289468	5166	1	6666	2	5000	next	hit	726
+s108	475	Response	32	11296009	11707	1
+s108	476	Picture	pos_feedback	11301300	5166	2	15000	3	5000	next	other	0
+s108	477	Picture	consistent	11326632	5166	1	8333	2	5000	next	hit	729
+s108	477	Response	32	11334863	13397	2
+s108	478	Picture	pos_feedback	11340131	5166	2	15000	3	5000	next	other	0
+s108	479	Picture	consistent	11367963	5166	1	8499	3	5000	next	hit	732
+s108	479	Response	32	11376306	13509	1
+s108	480	Picture	pos_feedback	11381629	5167	1	14999	2	5000	next	other	0
+s108	481	Picture	consistent	11411960	5166	2	7167	3	5000	next	hit	735
+s108	481	Response	32	11419093	12299	1
+s108	482	Picture	pos_feedback	11424293	5166	1	14999	2	5000	next	other	0
+s108	483	Picture	consistent	11452125	5167	1	6332	3	5000	next	hit	738
+s108	483	Response	16	11458274	11316	1
+s108	484	Picture	pos_feedback	11463624	5167	1	14999	2	5000	next	other	0
+s108	485	Picture	consistent	11491455	5166	2	10166	4	5000	next	hit	741
+s108	485	Response	32	11501525	15236	2
+s108	486	Picture	pos_feedback	11506788	5167	1	14999	2	5000	next	other	0
+s108	487	Picture	consistent	11532120	5167	1	19165	2	5000	next	hit	744
+s108	487	Response	16	11551130	24177	1
+s108	488	Picture	pos_feedback	11556451	5166	2	14999	4	5000	next	other	0
+s108	489	Picture	consistent	11586783	5167	1	6999	3	5000	next	hit	747
+s108	489	Response	16	11593655	12039	1
+s108	490	Picture	pos_feedback	11598949	5167	1	14999	2	5000	next	other	0
+s108	491	Picture	consistent	11624280	5166	2	10000	3	5000	next	hit	750
+s108	491	Response	32	11634116	15002	1
+s108	492	Picture	pos_feedback	11639446	5166	1	14999	2	5000	next	other	0
+s108	493	Picture	consistent	11669778	5167	1	11166	2	5000	next	hit	753
+s108	493	Response	16	11680838	16227	1
+s108	494	Picture	pos_feedback	11686110	5166	1	14999	2	5000	next	other	0
+s108	495	Picture	consistent	11711442	5167	1	10666	2	5000	next	hit	756
+s108	495	Response	32	11721966	15691	1
+s108	496	Picture	pos_feedback	11727274	5166	1	14999	2	5000	next	other	0
+s108	497	Picture	consistent	11755106	5167	1	11499	2	5000	next	hit	759
+s108	497	Response	32	11766490	16551	1
+s108	498	Response	16	11767385	780	2
+s108	498	Picture	pos_feedback	11771771	5166	2	14999	4	5000	next	other	0
+s108	499	Picture	consistent	11802103	5167	1	5666	2	5000	next	hit	763
+s108	499	Response	16	11807591	10655	2
+s108	499	Response	32	11807706	10770	2
+s108	500	Picture	pos_feedback	11812935	5166	2	15000	3	5000	next	other	0
+s108	501	Picture	consistent	11840767	5166	1	13833	2	5000	next	hit	767
+s108	501	Response	16	11854438	18837	1
+s108	502	Picture	pos_feedback	11859766	5166	1	14999	2	5000	next	other	0
+s108	503	Picture	consistent	11890097	5166	2	15499	4	5000	next	hit	770
+s108	503	Response	16	11905475	20544	1
+s108	504	Picture	pos_feedback	11910763	5167	1	14999	2	5000	next	other	0
+s108	505	Picture	consistent	11938594	5166	2	15833	3	5000	next	hit	773
+s108	505	Response	16	11954248	20820	1
+s108	506	Picture	pos_feedback	11959593	5166	1	14999	2	5000	next	other	0
+s108	507	Picture	consistent	11987425	5167	1	10832	3	5000	next	hit	776
+s108	507	Response	32	11998080	15822	1
+s108	508	Picture	pos_feedback	12003424	5167	1	14999	2	5000	next	other	0
+s108	509	Picture	consistent	12033755	5166	1	13999	2	5000	next	hit	779
+s108	509	Response	16	12047618	19029	1
+s108	510	Response	16	12052253	4499	2
+s108	510	Picture	pos_feedback	12052921	5167	1	14999	2	5000	next	other	0
+s108	511	Picture	consistent	12080752	5166	1	8666	2	5000	next	hit	783
+s108	511	Response	32	12089387	13801	1
+s108	512	Picture	pos_feedback	12094585	5167	1	14999	2	5000	next	other	0
+s108	513	Picture	consistent	12119916	5166	2	7000	3	5000	next	hit	786
+s108	513	Response	16	12126729	11979	1
+s108	514	Picture	pos_feedback	12132082	5166	2	14999	4	5000	next	other	0
+s108	515	Picture	consistent	12157414	5166	1	8833	2	5000	next	hit	789
+s108	515	Response	32	12166143	13895	1
+s108	516	Picture	pos_feedback	12171413	5166	1	14999	2	5000	next	other	0
+s108	517	Picture	consistent	12201745	5167	1	8166	2	5000	next	hit	792
+s108	517	Response	16	12209752	13174	1
+s108	518	Picture	pos_feedback	12215077	5166	1	14999	2	5000	next	other	0
+s108	519	Picture	consistent	12240409	5166	1	13166	2	5000	next	hit	795
+s108	519	Response	32	12253552	18309	1
+s108	520	Picture	pos_feedback	12258741	5166	1	14999	2	5000	next	other	0
+s108	521	Picture	consistent	12289073	5167	1	9332	3	5000	next	hit	798
+s108	521	Response	16	12298304	14398	1
+s108	522	Picture	pos_feedback	12303572	5167	1	14999	2	5000	next	other	0
+s108	523	Picture	consistent	12328904	5167	1	9166	2	5000	next	hit	801
+s108	523	Response	32	12337947	14210	1
+s108	524	Response	16	12340479	2409	1
+s108	524	Picture	pos_feedback	12343236	5166	1	14999	2	5000	next	other	0
+s108	525	Picture	consistent	12373567	5166	2	9333	3	5000	next	hit	805
+s108	525	Response	32	12382791	14390	2
+s108	526	Picture	pos_feedback	12388067	5167	1	14999	2	5000	next	other	0
+s108	527	Picture	consistent	12415898	5166	1	7166	2	5000	next	hit	808
+s108	527	Response	16	12423019	12287	1
+s108	528	Picture	pos_feedback	12428231	5167	1	14999	2	5000	next	other	0
+s108	529	Picture	consistent	12456062	5166	2	10333	3	5000	next	hit	811
+s108	529	Response	32	12466289	15393	1
+s108	530	Picture	pos_feedback	12471561	5166	2	14999	4	5000	next	other	0
+s108	531	Picture	consistent	12496893	5166	1	9833	2	5000	next	hit	814
+s108	531	Response	32	12506559	14832	1
+s108	532	Picture	pos_feedback	12511892	5166	1	14999	2	5000	next	other	0
+s108	533	Picture	consistent	12537224	5166	1	9999	2	5000	next	hit	817
+s108	533	Response	32	12547103	15045	1
+s108	534	Response	16	12548356	1133	1
+s108	534	Picture	pos_feedback	12552390	5167	1	14999	2	5000	next	other	0
+s108	535	Picture	consistent	12580221	5166	2	8000	3	5000	next	hit	821
+s108	535	Response	32	12588094	13039	1
+s108	536	Response	16	12588787	566	2
+s108	536	Picture	pos_feedback	12593387	5166	1	14999	2	5000	next	other	0
+s108	537	Picture	consistent	12623719	5167	1	5999	2	5000	next	hit	825
+s108	537	Response	32	12629651	11099	1
+s108	538	Response	16	12630766	1048	2
+s108	538	Picture	pos_feedback	12634885	5167	1	14999	2	5000	next	other	0
+s108	539	Picture	consistent	12665216	5166	1	6500	2	5000	next	hit	829
+s108	539	Response	32	12671540	11490	1
+s108	540	Response	16	12672082	366	1
+s108	540	Picture	pos_feedback	12676882	5166	1	14999	2	5000	next	other	0
+s108	541	Picture	consistent	12702214	5167	1	9166	2	5000	next	hit	833
+s108	541	Response	16	12711300	14253	1
+s108	542	Picture	pos_feedback	12716546	5166	1	14999	2	5000	next	other	0
+s108	543	Picture	consistent	12746878	5167	1	6666	2	5000	next	hit	836
+s108	543	Response	32	12753473	11762	1
+s108	544	Picture	pos_feedback	12758710	5166	1	14999	2	5000	next	other	0
+s108	545	Picture	consistent	12784042	5166	1	13166	2	5000	next	hit	839
+s108	545	Response	16	12797185	18309	1
+s108	546	Response	32	12797365	157	1
+s108	546	Picture	pos_feedback	12802374	5166	1	14999	2	5000	next	other	0
+s108	547	Picture	consistent	12830206	5167	1	17499	2	5000	next	hit	843
+s108	547	Response	16	12847652	22613	2
+s108	548	Picture	pos_feedback	12852871	5166	1	14999	2	5000	next	other	0
+s108	549	Picture	consistent	12880703	5167	1	6166	2	5000	next	hit	846
+s108	549	Response	32	12886783	11247	1
+s108	550	Picture	pos_feedback	12892035	5166	1	14999	2	5000	next	other	0
+s108	551	Picture	consistent	12917367	5166	1	16666	2	5000	next	hit	849
+s108	551	Response	16	12933989	21788	1
+s108	552	Picture	pos_feedback	12939199	5166	1	14999	2	5000	next	other	0
+s108	553	Picture	consistent	12967031	5167	1	15999	2	5000	next	hit	852
+s108	553	Response	32	12982979	21115	1
+s108	554	Picture	pos_feedback	12988196	5166	1	14999	2	5000	next	other	0
+s108	555	Picture	consistent	13018527	5166	2	9000	3	5000	next	hit	855
+s108	555	Response	16	13027383	14022	1
+s108	556	Picture	pos_feedback	13032693	5166	1	14999	2	5000	next	other	0
+s108	557	Picture	consistent	13060525	5166	1	7499	3	5000	next	hit	858
+s108	557	Response	16	13067981	12622	1
+s108	558	Picture	pos_feedback	13073191	5167	1	14999	2	5000	next	other	0
+s108	559	Picture	consistent	13103522	5166	1	334	2	5000	next	hit	861
+s108	559	Response	16	13103751	5395	1
+s108	560	Picture	pos_feedback	13109022	5166	1	14999	2	5000	next	other	0
+s108	561	Picture	consistent	13134354	5167	1	4166	2	5000	next	hit	864
+s108	561	Response	16	13138396	9209	2
+s108	562	Response	32	13138969	449	1
+s108	562	Picture	pos_feedback	13143686	5166	2	14999	4	5000	next	other	0
+s108	563	Picture	consistent	13174018	5167	1	2333	2	5000	next	hit	868
+s108	563	Response	16	13176165	7314	2
+s108	564	Picture	pos_feedback	13181517	5166	2	14999	4	5000	next	other	0
+s108	565	Picture	consistent	13206849	5166	1	6000	2	5000	next	hit	871
+s108	565	Response	32	13212743	11060	1
+s108	566	Picture	pos_feedback	13218015	5166	1	14999	2	5000	next	other	0
+s108	567	Picture	consistent	13245847	5167	1	7833	2	5000	next	hit	874
+s108	567	Response	32	13253654	12974	1
+s108	568	Picture	pos_feedback	13258846	5166	1	14999	2	5000	next	other	0
+s108	569	Picture	consistent	13286678	5167	1	11332	2	5000	next	hit	877
+s108	569	Response	32	13297958	16447	1
+s108	570	Picture	pos_feedback	13303176	5166	2	15000	3	5000	next	other	0
+s108	571	Picture	consistent	13328508	5166	1	8833	2	5000	next	hit	880
+s108	571	Response	16	13337220	13878	1
+s108	572	Picture	pos_feedback	13342507	5166	2	14999	4	5000	next	other	0
+s108	573	Picture	consistent	13372839	5166	1	7499	2	5000	next	hit	883
+s108	573	Response	32	13380222	12549	2
+s108	574	Picture	pos_feedback	13385505	5167	1	14999	2	5000	next	other	0
+s108	575	Picture	consistent	13410836	5166	2	6000	3	5000	next	hit	886
+s108	575	Response	32	13416773	11103	1
+s108	576	Picture	pos_feedback	13422002	5166	2	14999	4	5000	next	other	0
+s108	577	Picture	consistent	13449834	5166	1	7000	2	5000	next	hit	889
+s108	577	Response	16	13456794	12126	1
+s108	578	Picture	pos_feedback	13462000	5166	1	14999	2	5000	next	other	0
+s108	579	Picture	consistent	13487332	5167	1	7999	2	5000	next	hit	892
+s108	579	Response	32	13495159	12994	1
+s108	580	Response	16	13496006	675	1
+s108	580	Picture	pos_feedback	13500498	5167	1	14999	2	5000	next	other	0
+s108	581	Picture	consistent	13528329	5166	1	9333	2	5000	next	hit	896
+s108	581	Response	16	13537626	14463	1
+s108	582	Response	32	13540076	2414	2
+s108	582	Picture	pos_feedback	13542828	5166	1	14999	2	5000	next	other	0
+s108	583	Picture	consistent	13570660	5166	1	19999	2	5000	next	miss	0
+s108	584	Picture	pos_feedback	13595825	5166	1	14999	2	5000	next	other	0
+s108	585	Picture	consistent	13626156	5166	2	11333	3	5000	next	hit	902
+s108	585	Response	32	13637459	16469	1
+s108	586	Picture	pos_feedback	13642655	5166	2	14999	4	5000	next	other	0
+s108	587	Picture	consistent	13667987	5166	1	10500	2	5000	next	hit	905
+s108	587	Response	16	13678372	15551	1
+s108	588	Picture	pos_feedback	13683653	5166	1	14999	2	5000	next	other	0
+s108	589	Picture	consistent	13713984	5166	2	9166	4	5000	next	hit	908
+s108	589	Response	16	13723105	14287	1
+s108	590	Picture	pos_feedback	13728317	5167	1	14999	2	5000	next	other	0
+s108	591	Picture	consistent	13758648	5166	1	9500	2	5000	next	hit	911
+s108	591	Response	16	13768009	14527	2
+s108	592	Picture	pos_feedback	13773314	5166	1	14999	2	5000	next	other	0
+s108	593	Picture	consistent	13803645	5166	2	7000	3	5000	next	hit	914
+s108	593	Response	16	13810575	12096	1
+s108	594	Picture	pos_feedback	13815811	5166	2	14999	4	5000	next	other	0
+s108	595	Picture	consistent	13846143	5166	1	9166	2	5000	next	hit	917
+s108	595	Response	32	13855206	14229	1
+s108	596	Picture	pos_feedback	13860475	5166	2	14999	4	5000	next	other	0
+s108	597	Picture	consistent	13885807	5166	1	19999	2	5000	next	miss	0
+s108	598	Response	32	13907361	1555	1
+s108	598	Picture	pos_feedback	13910972	5166	1	14999	2	5000	next	other	0
+s108	599	Picture	consistent	13938804	5167	1	7833	2	5000	next	hit	923
+s108	599	Response	16	13946451	12814	1
+s108	600	Picture	pos_feedback	13951803	5166	1	14999	2	5000	next	other	0
+s108	601	Picture	consistent	13977135	5167	1	10499	2	5000	next	hit	926
+s108	601	Response	16	13987608	15640	1
+s108	602	Picture	pos_feedback	13992800	5166	2	15000	3	5000	next	other	0
+s108	603	Picture	consistent	14023132	5166	1	7166	2	5000	next	hit	929
+s108	603	Response	32	14030210	12244	1
+s108	604	Picture	pos_feedback	14035464	5166	2	14999	4	5000	next	other	0
+s108	605	Picture	consistent	14063296	5166	1	6500	2	5000	next	hit	932
+s108	605	Response	16	14069724	11594	2
+s108	606	Picture	pos_feedback	14074962	5166	1	14999	2	5000	next	other	0
+s108	607	Picture	consistent	14102794	5167	1	8499	2	5000	next	hit	935
+s108	607	Response	32	14111169	13542	1
+s108	608	Response	16	14111876	583	1
+s108	608	Picture	pos_feedback	14116459	5166	2	15000	3	5000	next	other	0
+s108	609	Picture	consistent	14141791	5166	1	15333	2	5000	next	hit	939
+s108	609	Response	16	14157016	20391	1
+s108	610	Response	32	14160133	3009	1
+s108	610	Picture	pos_feedback	14162290	5166	1	14999	2	5000	next	other	0
+s108	611	Picture	consistent	14190122	5167	1	7666	2	5000	next	hit	943
+s108	611	Response	16	14197722	12767	1
+s108	612	Response	32	14198966	1178	2
+s108	612	Picture	pos_feedback	14202954	5166	1	14999	2	5000	next	other	0
+s108	613	Picture	consistent	14230786	5167	1	15332	2	5000	next	hit	947
+s108	613	Response	16	14245940	20321	1
+s108	614	Picture	pos_feedback	14251284	5166	2	15000	3	5000	next	other	0
+s108	615	Picture	consistent	14279116	5166	1	8333	2	5000	next	hit	950
+s108	615	Response	32	14287368	13418	1
+s108	616	Picture	pos_feedback	14292615	5166	1	14999	2	5000	next	other	0
+s108	617	Picture	consistent	14322947	5167	1	19998	3	5000	next	miss	0
+s108	618	Picture	pos_feedback	14348112	5167	1	14999	2	5000	next	other	0
+s108	619	Picture	consistent	14373443	5166	2	19499	3	5000	next	hit	955
+s108	619	Response	16	14392764	24487	1
+s108	620	Picture	pos_feedback	14398109	5167	1	14999	2	5000	next	other	0
+s108	620	Response	16	14411166	18224	1
+s108	621	Picture	consistent	14428440	5166	1	7833	2	5000	next	hit	959
+s108	621	Response	32	14436185	12911	1
+s108	622	Response	16	14436366	93	1
+s108	622	Picture	pos_feedback	14441439	5166	1	14999	3	5000	next	other	0
+s108	623	Picture	consistent	14466771	5166	1	4500	2	5000	next	hit	963
+s108	623	Response	16	14471093	9488	1
+s108	624	Response	32	14473052	1781	1
+s108	624	Picture	pos_feedback	14476437	5166	1	14999	2	5000	next	other	0
+s108	625	Picture	consistent	14501769	5166	1	7166	2	5000	next	hit	967
+s108	625	Response	16	14508747	12144	1
+s108	625	Response	32	14508875	12272	2
+s108	626	Picture	pos_feedback	14514101	5166	2	15000	3	5000	next	other	0
+s108	627	Picture	consistent	14544433	5166	1	14832	2	5000	next	hit	971
+s108	627	Response	32	14559126	19859	1
+s108	628	Picture	pos_feedback	14564432	5167	1	14999	2	5000	next	other	0
+s108	629	Picture	consistent	14589763	5166	2	12833	3	5000	next	hit	974
+s108	629	Response	16	14602471	17874	1
+s108	630	Picture	pos_feedback	14607762	5166	2	14999	4	5000	next	other	0
+s108	631	Picture	consistent	14635594	5166	1	19999	2	5000	next	miss	0
+s108	632	Picture	pos_feedback	14660759	5166	1	14999	2	5000	next	other	0
+s108	632	Response	32	14675697	20104	1
+s108	633	Picture	consistent	14691091	5167	1	19998	2	5000	next	miss	0
+s108	634	Response	32	14711900	811	1
+s108	634	Picture	pos_feedback	14716256	5167	1	14999	2	5000	next	other	0
+s108	635	Picture	consistent	14741587	5166	2	8500	3	5000	next	hit	983
+s108	635	Response	32	14749977	13556	1
+s108	636	Picture	pos_feedback	14755253	5166	1	14999	2	5000	next	other	0
+s108	637	Picture	consistent	14783085	5167	1	6166	2	5000	next	hit	986
+s108	637	Response	32	14789207	11289	2
+s108	638	Picture	pos_feedback	14794417	5166	2	15000	3	5000	next	other	0
+s108	639	Picture	consistent	14824749	5166	1	19999	2	5000	next	miss	0
+s108	640	Picture	pos_feedback	14849914	5166	1	14999	2	5000	next	other	0
+s108	641	Picture	consistent	14877746	5167	1	19998	3	5000	next	miss	0
+s108	642	Picture	pos_feedback	14902911	5167	1	14999	2	5000	next	other	0
+s108	643	Picture	consistent	14928243	5167	1	19998	2	5000	next	miss	0
+s108	644	Picture	pos_feedback	14953408	5167	1	14999	2	5000	next	other	0
+s108	645	Picture	consistent	14983739	5166	1	5666	3	5000	next	hit	995
+s108	645	Response	32	14989298	10725	1
+s108	646	Picture	pos_feedback	14994572	5167	1	14999	2	5000	next	other	0
+s108	647	Picture	consistent	15024903	5166	1	19999	2	5000	next	miss	0
+s108	648	Picture	pos_feedback	15050068	5166	1	14999	2	5000	next	other	0
+s108	649	Picture	consistent	15075400	5166	1	8666	2	5000	next	hit	1000
+s108	649	Response	32	15083889	13655	1
+s108	650	Picture	pos_feedback	15089233	5167	1	14999	2	5000	next	other	0
+s108	651	Picture	consistent	15114564	5166	1	19999	2	5000	next	miss	0
+s108	652	Picture	pos_feedback	15139729	5166	2	14999	4	5000	next	other	0
+s108	653	Picture	consistent	15167561	5166	1	19999	2	5000	next	miss	0
+s108	654	Picture	pos_feedback	15192726	5166	1	14999	2	5000	next	other	0
+s108	655	Picture	consistent	15220558	5167	1	19998	3	5000	next	miss	0
+s108	656	Picture	pos_feedback	15245723	5167	1	14999	2	5000	next	other	0
+s108	657	Picture	consistent	15273554	5166	2	5167	3	5000	next	hit	1009
+s108	657	Response	32	15278533	10145	1
+s108	658	Picture	pos_feedback	15283887	5166	1	14999	2	5000	next	other	0
+s108	659	Picture	consistent	15314219	5167	1	19998	2	5000	next	miss	0
+s108	660	Picture	pos_feedback	15339384	5167	1	14999	2	5000	next	other	0
+s108	661	Picture	consistent	15369715	5166	1	5500	2	5000	next	hit	1014
+s108	661	Response	16	15375055	10506	1
+s108	662	Picture	pos_feedback	15380381	5166	1	14999	2	5000	next	other	0
+s108	662	Response	16	15398278	23063	1
+s108	663	Picture	consistent	15405713	5166	1	7999	3	5000	next	hit	1018
+s108	663	Response	16	15413530	12983	1
+s108	664	Picture	pos_feedback	15418879	5167	1	14999	2	5000	next	other	0
+s108	665	Picture	consistent	15449210	5166	1	6000	2	5000	next	hit	1021
+s108	665	Response	32	15455154	11110	1
+s108	666	Picture	pos_feedback	15460376	5166	1	14999	2	5000	next	other	0
+s108	667	Picture	consistent	15485708	5166	1	6666	2	5000	next	hit	1024
+s108	667	Response	32	15492268	11726	1
+s108	668	Picture	pos_feedback	15497541	5167	1	14999	2	5000	next	other	0
+s108	669	Picture	consistent	15527872	5166	1	12499	2	5000	next	hit	1027
+s108	669	Response	16	15540311	17605	1
+s108	670	Picture	pos_feedback	15545538	5167	1	14999	2	5000	next	other	0
+s108	670	Response	16	15545621	5250	1
+s108	671	Picture	consistent	15575869	5166	1	6333	2	5000	next	hit	1031
+s108	671	Response	16	15582149	11446	1
+s108	672	Picture	pos_feedback	15587368	5166	2	14999	3	5000	next	other	0
+s108	673	Picture	consistent	15615200	5166	1	9166	2	5000	next	hit	1034
+s108	673	Response	16	15624286	14252	1
+s108	674	Picture	pos_feedback	15629532	5166	2	14999	4	5000	next	other	0
+s108	675	Picture	consistent	15657364	5166	1	12666	2	5000	next	hit	1037
+s108	675	Response	32	15669920	17722	1
+s108	676	Picture	pos_feedback	15675196	5166	1	14999	2	5000	next	other	0
+s108	677	Picture	consistent	15703028	5167	1	6333	2	5000	next	hit	1040
+s108	677	Response	32	15709321	11460	2
+s108	678	Picture	pos_feedback	15714527	5166	1	14999	2	5000	next	other	0
+s108	679	Picture	consistent	15739859	5167	1	6666	2	5000	next	hit	1043
+s108	679	Response	32	15746436	11744	1
+s108	680	Picture	pos_feedback	15751691	5166	2	15000	3	5000	next	other	0
+s108	681	Picture	consistent	15777023	5166	1	10000	2	5000	next	hit	1046
+s108	681	Response	32	15786938	15081	1
+s108	682	Picture	pos_feedback	15792189	5166	1	14999	2	5000	next	other	0
+s108	683	Picture	consistent	15822520	5166	2	18166	3	5000	next	hit	1049
+s108	683	Response	32	15840584	23230	1
+s108	684	Picture	pos_feedback	15845852	5166	1	14999	3	5000	next	other	0
+s108	685	Picture	consistent	15873684	5166	1	14166	2	5000	next	hit	1052
+s108	685	Response	32	15887775	19257	1
+s108	686	Picture	pos_feedback	15893016	5166	1	14999	2	5000	next	other	0
+s108	687	Picture	consistent	15918348	5167	1	6166	2	5000	next	hit	1055
+s108	687	Response	16	15924389	11208	1
+s108	688	Picture	pos_feedback	15929680	5166	2	15000	3	5000	next	other	0
+s108	689	Picture	consistent	15960012	5166	1	11833	2	5000	next	hit	1058
+s108	689	Response	16	15971733	16887	1
+s108	690	Picture	pos_feedback	15977011	5166	1	14999	2	5000	next	other	0
+s108	691	Picture	consistent	16004842	5166	2	17333	3	5000	next	hit	1061
+s108	691	Response	32	16022039	22363	1
+s108	692	Picture	pos_feedback	16027341	5166	1	14999	2	5000	next	other	0
+s108	693	Picture	consistent	16057673	5167	1	7832	3	5000	next	hit	1064
+s108	693	Response	32	16065428	12922	1
+s108	694	Picture	pos_feedback	16070672	5167	1	14999	2	5000	next	other	0
+s108	695	Picture	consistent	16098503	5166	2	8500	3	5000	next	hit	1067
+s108	695	Response	32	16106938	13601	1
+s108	696	Picture	pos_feedback	16112169	5166	1	14999	2	5000	next	other	0
+s108	697	Picture	consistent	16137501	5166	1	6833	2	5000	next	hit	1070
+s108	697	Response	32	16144180	11845	1
+s108	698	Picture	pos_feedback	16149500	5166	1	14999	2	5000	next	other	0
+s108	698	Response	16	16168463	24129	1
+s108	699	Picture	consistent	16174832	5166	1	19999	2	5000	next	miss	0
+s108	700	Picture	pos_feedback	16199997	5166	1	14999	2	5000	next	other	0
+s108	701	Picture	consistent	16225329	5167	1	5333	2	5000	next	hit	1076
+s108	701	Response	32	16230597	10435	1
+s108	702	Picture	pos_feedback	16235828	5166	1	14999	2	5000	next	other	0
+s108	703	Picture	consistent	16263660	5167	1	17665	2	5000	next	hit	1079
+s108	703	Response	16	16281274	22781	1
+s108	704	Picture	pos_feedback	16286492	5167	1	14999	2	5000	next	other	0
+s108	705	Picture	consistent	16316823	5166	1	5167	2	5000	next	hit	1082
+s108	705	Response	32	16321824	10167	2
+s108	706	Response	16	16322391	401	2
+s108	706	Picture	pos_feedback	16327156	5166	1	14999	2	5000	next	other	0
+s108	707	Picture	consistent	16352488	5167	1	9832	2	5000	next	hit	1086
+s108	707	Response	16	16362192	14871	1
+s108	708	Response	32	16362333	13	1
+s108	708	Picture	pos_feedback	16367487	5167	1	14999	2	5000	next	other	0
+s108	709	Picture	consistent	16395318	5166	2	7000	3	5000	next	hit	1090
+s108	709	Response	32	16402236	12084	1
+s108	710	Response	16	16404652	2334	1
+s108	710	Picture	pos_feedback	16407484	5166	1	14999	2	5000	next	other	0
+s108	711	Picture	consistent	16437816	5167	1	6833	2	5000	next	hit	1094
+s108	711	Response	32	16444549	11900	1
+s108	712	Picture	pos_feedback	16449815	5166	1	14999	2	5000	next	other	0
+s108	713	Picture	consistent	16475147	5167	1	7499	2	5000	next	hit	1097
+s108	713	Response	16	16482554	12574	1
+s108	714	Picture	pos_feedback	16487813	5167	1	14999	2	5000	next	other	0
+s108	715	Picture	consistent	16515644	5166	1	10333	2	5000	next	hit	1100
+s108	715	Response	16	16525883	15405	2
+s108	716	Picture	pos_feedback	16531143	5166	1	14999	2	5000	next	other	0
+s108	717	Picture	consistent	16561475	5167	1	5999	2	5000	next	hit	1103
+s108	717	Response	32	16567426	11118	1
+s108	718	Picture	pos_feedback	16572641	5167	1	14999	2	5000	next	other	0
+s108	719	Picture	consistent	16597972	5166	2	8500	3	5000	next	hit	1106
+s108	719	Response	32	16606393	13587	1
+s108	720	Picture	pos_feedback	16611638	5166	1	14999	2	5000	next	other	0
+s108	721	Picture	consistent	16639470	5167	1	7499	3	5000	next	hit	1109
+s108	721	Response	32	16646817	12514	2
+s108	722	Picture	pos_feedback	16652136	5167	1	14999	2	5000	next	other	0
+s108	723	Picture	consistent	16682467	5166	1	6333	2	5000	next	hit	1112
+s108	723	Response	16	16688711	11410	1
+s108	724	Picture	pos_feedback	16693966	5166	2	15000	3	5000	next	other	0
+s108	725	Picture	consistent	16719298	5166	1	13333	2	5000	next	hit	1115
+s108	725	Response	16	16732601	18469	1
+s108	726	Picture	pos_feedback	16737797	5166	2	14999	3	5000	next	other	0
+s108	727	Picture	consistent	16765629	5167	1	5999	2	5000	next	hit	1118
+s108	727	Response	16	16771576	11114	1
+s108	728	Picture	pos_feedback	16776795	5167	1	14999	2	5000	next	other	0
+s108	729	Picture	consistent	16807126	5166	1	6833	2	5000	next	hit	1121
+s108	729	Response	32	16813811	11851	1
+s108	730	Picture	pos_feedback	16819125	5166	2	14999	4	5000	next	other	0
+s108	731	Picture	consistent	16844457	5166	1	6166	3	5000	next	hit	1124
+s108	731	Response	16	16850453	11162	2
+s108	732	Picture	pos_feedback	16855790	5167	1	14999	2	5000	next	other	0
+s108	733	Picture	consistent	16883621	5166	2	19999	3	5000	next	miss	0
+s108	734	Response	32	16905039	1419	1
+s108	734	Picture	pos_feedback	16908786	5166	2	15000	3	5000	next	other	0
+s108	735	Picture	consistent	16939118	5166	1	9166	2	5000	next	hit	1130
+s108	735	Response	16	16948120	14168	1
+s108	736	Response	32	16948571	287	1
+s108	736	Picture	pos_feedback	16953450	5166	2	14999	4	5000	next	other	0
+s108	737	Picture	consistent	16978782	5166	1	7333	2	5000	next	hit	1134
+s108	737	Response	32	16986074	12458	1
+s108	738	Picture	pos_feedback	16991281	5166	2	14999	4	5000	next	other	0
+s108	738	Response	16	17004433	18318	2
+s108	739	Picture	consistent	17019113	5166	1	10166	2	5000	next	hit	1138
+s108	739	Response	32	17029124	15177	1
+s108	740	Picture	pos_feedback	17034445	5166	2	14999	4	5000	next	other	0
+s108	741	Picture	consistent	17064777	5167	1	8499	2	5000	next	hit	1141
+s108	741	Response	16	17073164	13554	1
+s108	742	Picture	pos_feedback	17078443	5167	1	14999	2	5000	next	other	0
+s108	743	Picture	consistent	17103774	5166	2	13333	3	5000	next	hit	1144
+s108	743	Response	32	17116930	18322	1
+s108	744	Picture	pos_feedback	17122273	5166	1	14999	2	5000	next	other	0
+s108	745	Picture	consistent	17150105	5166	1	12499	2	5000	next	hit	1147
+s108	745	Response	32	17162553	17614	2
+s108	746	Picture	pos_feedback	17167770	5166	2	15000	3	5000	next	other	0
+s108	747	Picture	consistent	17198102	5166	1	19999	2	5000	next	miss	0
+s108	748	Picture	pos_feedback	17223267	5166	1	14999	2	5000	next	other	0
+s108	748	Response	32	17229197	11096	1
+s108	749	Picture	consistent	17248599	5167	1	19999	2	5000	next	miss	0
+s108	750	Picture	pos_feedback	17273764	5166	1	14999	2	5000	next	other	0
+s108	750	Response	32	17283784	15186	1
+s108	751	Picture	consistent	17301595	5166	2	7500	3	5000	next	hit	1156
+s108	751	Response	16	17309032	12603	1
+s108	752	Picture	pos_feedback	17314261	5166	2	14999	4	5000	next	other	0
+s108	753	Picture	consistent	17344593	5167	1	7166	2	5000	next	hit	1159
+s108	753	Response	16	17351700	12274	1
+s108	754	Picture	pos_feedback	17356925	5166	2	14999	4	5000	next	other	0
+s108	755	Picture	consistent	17382257	5166	1	7833	2	5000	next	hit	1162
+s108	755	Response	32	17389935	12844	1
+s108	756	Picture	pos_feedback	17395256	5166	2	14999	4	5000	next	other	0
+s108	757	Picture	consistent	17423088	5166	1	5333	2	5000	next	hit	1165
+s108	757	Response	32	17428359	10437	1
+s108	758	Response	16	17428544	123	1
+s108	758	Picture	pos_feedback	17433587	5166	1	14999	2	5000	next	other	0
+s108	759	Picture	consistent	17463919	5167	1	7999	2	5000	next	hit	1169
+s108	759	Response	32	17471865	13113	1
+s108	760	Picture	pos_feedback	17477085	5167	1	14999	2	5000	next	other	0
+s108	760	Response	32	17483682	11764	1
+s108	761	Picture	consistent	17502416	5166	2	7667	3	5000	next	hit	1173
+s108	761	Response	32	17509983	12733	1
+s108	762	Picture	pos_feedback	17515249	5166	1	14999	2	5000	next	other	0
+s108	763	Picture	consistent	17543081	5167	1	13665	2	5000	next	hit	1176
+s108	763	Response	32	17556576	18662	1
+s108	764	Picture	pos_feedback	17561913	5167	1	14999	2	5000	next	other	0
+s108	765	Picture	consistent	17592244	5166	1	6666	3	5000	next	hit	1179
+s108	765	Response	16	17598847	11769	1
+s108	766	Picture	pos_feedback	17604077	5167	1	14999	2	5000	next	other	0
+s108	767	Picture	consistent	17629408	5166	2	6667	3	5000	next	hit	1182
+s108	767	Response	32	17635963	11721	1
+s108	768	Picture	pos_feedback	17641241	5166	1	14999	2	5000	next	other	0
+s108	769	Picture	consistent	17669073	5167	1	5999	2	5000	next	hit	1185
+s108	769	Response	32	17674958	11052	1
+s108	770	Picture	pos_feedback	17680239	5167	1	14999	2	5000	next	other	0
+s108	771	Picture	consistent	17710570	5166	1	11333	2	5000	next	hit	1188
+s108	771	Response	32	17721879	16475	2
+s108	772	Picture	pos_feedback	17727069	5166	1	14999	2	5000	next	other	0
+s108	773	Picture	consistent	17752401	5166	1	7333	2	5000	next	hit	1191
+s108	773	Response	32	17759578	12343	2
+s108	774	Picture	pos_feedback	17764900	5166	1	14999	2	5000	next	other	0
+s108	775	Picture	consistent	17792732	5167	1	8833	2	5000	next	hit	1194
+s108	775	Response	32	17801436	13871	1
+s108	776	Picture	pos_feedback	17806731	5166	1	14999	2	5000	next	other	0
+s108	777	Picture	consistent	17837062	5166	2	5500	3	5000	next	hit	1197
+s108	777	Response	16	17842396	10500	1
+s108	778	Picture	pos_feedback	17847728	5166	2	14999	3	5000	next	other	0
+s108	779	Picture	consistent	17873060	5166	1	6500	2	5000	next	hit	1200
+s108	779	Response	32	17879375	11481	1
+s108	780	Picture	pos_feedback	17884726	5166	1	14999	2	5000	next	other	0
+s108	781	Picture	consistent	17912558	5167	1	5499	2	5000	next	hit	1203
+s108	781	Response	16	17917926	10535	1
+s108	782	Picture	pos_feedback	17923224	5167	1	14999	2	5000	next	other	0
+s108	783	Picture	consistent	17953555	5166	1	6666	2	5000	next	hit	1206
+s108	783	Response	32	17960065	11676	2
+s108	784	Picture	pos_feedback	17965388	5167	1	14999	2	5000	next	other	0
+s108	785	Picture	consistent	17990719	5166	2	8167	3	5000	next	hit	1209
+s108	785	Response	32	17998830	13277	1
+s108	786	Picture	pos_feedback	18004052	5166	1	14999	2	5000	next	other	0
+s108	787	Picture	consistent	18031884	5167	1	5333	2	5000	next	hit	1212
+s108	787	Response	32	18037177	10460	1
+s108	788	Picture	pos_feedback	18042383	5166	1	14999	2	5000	next	other	0
+s108	789	Picture	consistent	18072714	5166	2	8833	3	5000	next	hit	1215
+s108	789	Response	32	18081436	13888	1
+s108	790	Picture	pos_feedback	18086713	5166	2	15000	3	5000	next	other	0
+s108	791	Picture	consistent	18112045	5166	1	8833	2	5000	next	hit	1218
+s108	791	Response	32	18120700	13821	1
+s108	792	Picture	pos_feedback	18126044	5166	2	14999	4	5000	next	other	0
+s108	793	Picture	consistent	18153876	5166	1	8666	2	5000	next	hit	1221
+s108	793	Response	16	18162419	13709	1
+s108	794	Picture	pos_feedback	18167709	5167	1	14999	2	5000	next	other	0
+s108	795	Picture	consistent	18198040	5166	1	9499	3	5000	next	hit	1224
+s108	795	Response	32	18207490	14616	1
+s108	796	Picture	pos_feedback	18212706	5167	1	14999	2	5000	next	other	0
+s108	797	Picture	consistent	18238037	5166	2	8333	3	5000	next	hit	1227
+s108	797	Response	32	18246272	13401	1
+s108	798	Picture	pos_feedback	18251537	5167	1	14999	2	5000	next	other	0
+s108	799	Picture	consistent	18279368	5166	1	6000	2	5000	next	hit	1230
+s108	799	Response	16	18285260	11058	2
+s108	800	Picture	pos_feedback	18290534	5166	1	14999	2	5000	next	other	0
+s108	801	Picture	consistent	18320866	5167	1	10666	2	5000	next	hit	1233
+s108	801	Response	16	18331502	15803	1
+s108	802	Picture	pos_feedback	18336698	5166	1	14999	2	5000	next	other	0
+s108	803	Picture	consistent	18362030	5167	1	6999	2	5000	next	hit	1236
+s108	803	Response	32	18368894	12031	1
+s108	804	Picture	pos_feedback	18374196	5167	1	14999	2	5000	next	other	0
+s108	805	Picture	consistent	18402027	5166	2	10333	3	5000	next	hit	1239
+s108	805	Response	16	18412284	15423	1
+s108	806	Picture	pos_feedback	18417526	5166	2	14999	4	5000	next	other	0
+s108	807	Picture	consistent	18447858	5167	1	6166	2	5000	next	hit	1242
+s108	807	Response	16	18453849	11158	1
+s108	808	Picture	pos_feedback	18459190	5166	2	15000	3	5000	next	other	0
+s108	809	Picture	consistent	18484522	5166	1	8500	2	5000	next	hit	1245
+s108	809	Response	32	18492976	13620	1
+s108	810	Picture	pos_feedback	18498188	5166	1	14999	2	5000	next	other	0
+s108	811	Picture	consistent	18526020	5167	1	11832	2	5000	next	hit	1248
+s108	811	Response	32	18537693	16840	1
+s108	812	Picture	pos_feedback	18543019	5167	1	14999	2	5000	next	other	0
+s108	813	Picture	consistent	18573350	5166	1	6500	2	5000	next	hit	1251
+s108	813	Response	16	18579802	11618	1
+s108	814	Picture	pos_feedback	18585016	5166	1	14999	2	5000	next	other	0
+s108	815	Picture	consistent	18610348	5167	1	5666	2	5000	next	hit	1254
+s108	815	Response	32	18615942	10761	1
+s108	816	Picture	pos_feedback	18621180	5166	2	14999	4	5000	next	other	0
+s108	817	Picture	consistent	18649012	5166	1	5833	2	5000	next	hit	1257
+s108	817	Response	16	18654724	10878	1
+s108	818	Picture	pos_feedback	18660011	5166	1	14999	3	5000	next	other	0
+s108	819	Picture	consistent	18690343	5167	1	7333	2	5000	next	hit	1260
+s108	819	Response	32	18697567	12391	1
+s108	820	Picture	pos_feedback	18702842	5166	1	14999	2	5000	next	other	0
+s108	821	Picture	consistent	18728174	5167	1	11832	2	5000	next	hit	1263
+s108	821	Response	32	18739978	16971	1
+s108	822	Picture	pos_feedback	18745173	5167	1	14999	2	5000	next	other	0
+s108	823	Picture	consistent	18773004	5166	2	7833	3	5000	next	hit	1266
+s108	823	Response	32	18780685	12847	1
+s108	824	Picture	pos_feedback	18786004	5167	1	14999	2	5000	next	other	0
+s108	825	Picture	consistent	18816335	5166	1	6333	2	5000	next	hit	1269
+s108	825	Response	32	18822620	11451	1
+s108	826	Response	16	18823057	389	1
+s108	826	Picture	pos_feedback	18827834	5166	1	14999	2	5000	next	other	0
+s108	827	Picture	consistent	18853166	5166	1	19999	2	5000	next	miss	0
+s108	828	Picture	pos_feedback	18878331	5166	1	14999	2	5000	next	other	0
+s108	828	Response	16	18883627	10462	1
+s108	829	Picture	consistent	18906163	5167	1	6666	2	5000	next	hit	1276
+s108	829	Response	16	18912643	11647	1
+s108	830	Picture	pos_feedback	18917995	5166	1	14999	3	5000	next	other	0
+s108	831	Picture	consistent	18948327	5167	1	7833	2	5000	next	hit	1279
+s108	831	Response	32	18956120	12960	2
+s108	832	Response	16	18956362	202	2
+s108	832	Picture	pos_feedback	18961326	5166	1	14999	2	5000	next	other	0
+s108	832	Response	16	18963257	7097	1
+s108	833	Picture	consistent	18986658	5167	1	6999	2	5000	next	hit	1284
+s108	833	Response	16	18993609	12118	1
+s108	834	Picture	pos_feedback	18998824	5167	1	14999	2	5000	next	other	0
+s108	835	Picture	consistent	19026655	5166	1	3833	2	5000	next	hit	1287
+s108	835	Response	32	19030390	8901	1
+s108	836	Picture	pos_feedback	19035655	5167	1	14999	2	5000	next	other	0
+s108	837	Picture	consistent	19065986	5166	1	5666	3	5000	next	hit	1290
+s108	837	Response	16	19071485	10665	2
+s108	838	Picture	pos_feedback	19076819	5167	1	14999	2	5000	next	other	0
+s108	839	Picture	consistent	19102151	5167	1	6999	2	5000	next	hit	1293
+s108	839	Response	32	19109054	12070	1
+s108	840	Picture	pos_feedback	19114316	5166	2	15000	3	5000	next	other	0
+s108	841	Picture	consistent	19142148	5166	1	8666	2	5000	next	hit	1296
+s108	841	Response	32	19150749	13767	1
+s108	842	Picture	pos_feedback	19155981	5167	1	14999	2	5000	next	other	0
+s108	843	Picture	consistent	19186312	5166	1	11166	2	5000	next	hit	1299
+s108	843	Response	32	19197410	16264	1
+s108	844	Picture	pos_feedback	19202644	5166	2	14999	4	5000	next	other	0
+s108	845	Picture	consistent	19227976	5166	1	7000	2	5000	next	hit	1302
+s108	845	Response	32	19234808	11998	1
+s108	846	Picture	pos_feedback	19240142	5166	1	14999	2	5000	next	other	0
+s108	847	Picture	consistent	19267974	5167	1	5999	2	5000	next	hit	1305
+s108	847	Response	16	19273916	11109	1
+s108	848	Picture	pos_feedback	19279139	5166	2	15000	3	5000	next	other	0
+s108	849	Picture	consistent	19309471	5166	1	5833	2	5000	next	hit	1308
+s108	849	Response	32	19315263	10958	2
+s108	850	Picture	pos_feedback	19320470	5166	2	15000	3	5000	next	other	0
+s108	851	Picture	consistent	19345802	5166	1	16499	2	5000	next	hit	1311
+s108	851	Response	32	19362279	21643	1
+s108	852	Picture	pos_feedback	19367468	5167	1	14999	2	5000	next	other	0
+s108	853	Picture	consistent	19395299	5166	1	19999	2	5000	next	miss	0
+s108	854	Picture	pos_feedback	19420464	5166	1	14999	2	5000	next	other	0
+s108	855	Picture	consistent	19450796	5167	1	10666	2	5000	next	hit	1316
+s108	855	Response	16	19461280	15651	1
+s108	856	Picture	pos_feedback	19466628	5166	1	14999	2	5000	next	other	0
+s108	857	Picture	consistent	19491960	5167	1	7833	2	5000	next	hit	1319
+s108	857	Response	32	19499725	12932	1
+s108	858	Picture	pos_feedback	19504959	5166	1	14999	2	5000	next	other	0
+s108	859	Picture	consistent	19532791	5167	1	6499	2	5000	next	hit	1322
+s108	859	Response	32	19539137	11513	1
+s108	860	Picture	pos_feedback	19544457	5167	1	14999	2	5000	next	other	0
+s108	861	Picture	consistent	19574788	5166	1	5500	2	5000	next	hit	1325
+s108	861	Response	16	19580134	10512	1
+s108	862	Picture	pos_feedback	19585454	5166	1	14999	2	5000	next	other	0
+s108	863	Picture	consistent	19615785	5166	2	19999	3	5000	next	miss	0
+s108	864	Response	16	19636512	728	1
+s108	864	Picture	pos_feedback	19640951	5167	1	14999	2	5000	next	other	0
+s108	865	Pause		19680890	19774		1240118
+s108	865	Resume		19680890	19774
+s108	865	Response	3	19744437	83321	1
+s108	866	Picture	consistent	19749915	5166	1	13333	2	5000	next	hit	1334
+s108	866	Response	32	19763118	18369	1
+s108	867	Picture	pos_feedback	19768414	5166	1	14999	2	5000	next	other	0
+s108	868	Picture	consistent	19796412	5166	1	8333	2	5000	next	hit	1337
+s108	868	Response	16	19804637	13391	2
+s108	869	Picture	pos_feedback	19809911	5166	2	15000	3	5000	next	other	0
+s108	870	Picture	consistent	19835243	5166	1	6000	2	5000	next	hit	1340
+s108	870	Response	32	19841196	11119	1
+s108	871	Picture	pos_feedback	19846409	5166	1	14999	2	5000	next	other	0
+s108	872	Picture	consistent	19876741	5167	1	6499	2	5000	next	hit	1343
+s108	872	Response	32	19883219	11645	1
+s108	873	Picture	pos_feedback	19888407	5167	1	14999	2	5000	next	other	0
+s108	874	Picture	consistent	19918738	5166	1	5166	3	5000	next	hit	1346
+s108	874	Response	32	19923783	10211	1
+s108	875	Picture	pos_feedback	19929071	5167	1	14999	2	5000	next	other	0
+s108	876	Picture	consistent	19959402	5166	1	6167	2	5000	next	hit	1349
+s108	876	Response	16	19965544	11308	1
+s108	877	Picture	pos_feedback	19970735	5166	1	14999	2	5000	next	other	0
+s108	878	Picture	consistent	19996067	5167	1	6666	2	5000	next	hit	1352
+s108	878	Response	32	20002711	11811	1
+s108	879	Picture	pos_feedback	20007899	5166	1	14999	2	5000	next	other	0
+s108	880	Picture	consistent	20033231	5166	1	7166	2	5000	next	hit	1355
+s108	880	Response	32	20040354	12289	1
+s108	881	Picture	pos_feedback	20045564	5167	1	14999	2	5000	next	other	0
+s108	882	Picture	consistent	20073395	5166	1	18332	3	5000	next	hit	1358
+s108	882	Response	16	20091668	23439	1
+s108	883	Picture	pos_feedback	20096894	5167	1	14999	2	5000	next	other	0
+s108	884	Picture	consistent	20124725	5166	2	6167	3	5000	next	hit	1361
+s108	884	Response	16	20130729	11170	2
+s108	885	Picture	pos_feedback	20136058	5166	1	14999	2	5000	next	other	0
+s108	886	Picture	consistent	20163890	5167	1	6999	2	5000	next	hit	1364
+s108	886	Response	32	20170779	12056	1
+s108	887	Response	16	20171534	645	1
+s108	887	Picture	pos_feedback	20176055	5166	2	15000	3	5000	next	other	0
+s108	888	Picture	consistent	20206387	5166	1	7166	2	5000	next	hit	1368
+s108	888	Response	32	20213477	12256	1
+s108	888	Response	16	20213526	12305	1
+s108	889	Response	16	20216521	2968	1
+s108	889	Picture	pos_feedback	20218719	5166	2	15000	3	5000	next	other	0
+s108	890	Picture	consistent	20249051	5166	1	4500	2	5000	next	hit	1373
+s108	890	Response	32	20253517	9632	1
+s108	891	Picture	pos_feedback	20258717	5166	1	14999	2	5000	next	other	0
+s108	892	Picture	consistent	20284049	5167	1	8666	2	5000	next	hit	1376
+s108	892	Response	16	20292591	13709	1
+s108	893	Picture	pos_feedback	20297881	5166	1	14999	2	5000	next	other	0
+s108	894	Picture	consistent	20323213	5166	1	6833	2	5000	next	hit	1379
+s108	894	Response	32	20329928	11881	1
+s108	895	Picture	pos_feedback	20335212	5166	1	14999	2	5000	next	other	0
+s108	896	Picture	consistent	20363044	5166	1	6666	2	5000	next	hit	1382
+s108	896	Response	16	20369647	11769	1
+s108	897	Picture	pos_feedback	20374877	5167	1	14999	2	5000	next	other	0
+s108	898	Picture	consistent	20405208	5166	1	6999	3	5000	next	hit	1385
+s108	898	Response	16	20412178	12136	1
+s108	899	Response	32	20412328	121	1
+s108	899	Picture	pos_feedback	20417374	5167	1	14999	2	5000	next	other	0
+s108	900	Picture	consistent	20445205	5166	2	7500	3	5000	next	hit	1389
+s108	900	Response	32	20452559	12520	1
+s108	901	Response	16	20452783	78	1
+s108	901	Picture	pos_feedback	20457871	5166	2	14999	4	5000	next	other	0
+s108	902	Picture	consistent	20483203	5166	1	7166	2	5000	next	hit	1393
+s108	902	Response	32	20490233	12196	1
+s108	902	Response	16	20490279	12242	1
+s108	903	Picture	pos_feedback	20495536	5167	1	14999	2	5000	next	other	0
+s108	904	Picture	consistent	20520867	5166	2	12500	3	5000	next	hit	1397
+s108	904	Response	16	20533200	17499	1
+s108	904	Response	32	20533216	17515	1
+s108	905	Picture	pos_feedback	20538533	5166	1	14999	2	5000	next	other	0
+s108	906	Picture	consistent	20566365	5167	1	6333	2	5000	next	hit	1401
+s108	906	Response	16	20572545	11347	2
+s108	906	Response	32	20572618	11420	1
+s108	907	Picture	pos_feedback	20577864	5166	1	14999	2	5000	next	other	0
+s108	908	Picture	consistent	20603196	5167	1	6499	2	5000	next	hit	1405
+s108	908	Response	32	20609650	11621	1
+s108	909	Response	16	20609792	97	1
+s108	909	Picture	pos_feedback	20614862	5167	1	14999	2	5000	next	other	0
+s108	910	Picture	consistent	20645193	5166	1	7500	2	5000	next	hit	1409
+s108	910	Response	32	20652559	12532	1
+s108	911	Response	16	20652712	19	2
+s108	911	Picture	pos_feedback	20657859	5166	1	14999	2	5000	next	other	0
+s108	912	Picture	consistent	20688190	5166	2	8500	3	5000	next	hit	1413
+s108	912	Response	16	20696509	13485	1
+s108	913	Picture	pos_feedback	20701856	5166	1	14999	2	5000	next	other	0
+s108	914	Picture	consistent	20732188	5167	1	6833	2	5000	next	hit	1416
+s108	914	Response	32	20738953	11932	1
+s108	915	Picture	pos_feedback	20744187	5166	1	14999	2	5000	next	other	0
+s108	916	Picture	consistent	20769519	5167	1	10666	2	5000	next	hit	1419
+s108	916	Response	16	20780151	15799	1
+s108	917	Picture	pos_feedback	20785351	5166	1	14999	2	5000	next	other	0
+s108	918	Picture	consistent	20813183	5167	1	6499	2	5000	next	hit	1422
+s108	918	Response	32	20819549	11533	2
+s108	919	Picture	pos_feedback	20824849	5167	1	14999	2	5000	next	other	0
+s108	920	Picture	consistent	20852680	5166	1	7333	2	5000	next	hit	1425
+s108	920	Response	16	20859989	12475	2
+s108	921	Picture	pos_feedback	20865179	5166	2	15000	3	5000	next	other	0
+s108	922	Picture	consistent	20890511	5166	1	6167	2	5000	next	hit	1428
+s108	922	Response	32	20896590	11245	1
+s108	923	Picture	pos_feedback	20901844	5166	1	14999	2	5000	next	other	0
+s108	924	Picture	consistent	20932175	5166	2	6833	3	5000	next	hit	1431
+s108	924	Response	32	20938962	11953	1
+s108	925	Picture	pos_feedback	20944175	5167	1	14999	2	5000	next	other	0
+s108	926	Picture	consistent	20974506	5166	1	6166	2	5000	next	hit	1434
+s108	926	Response	16	20980564	11224	2
+s108	927	Picture	pos_feedback	20985839	5167	1	14999	2	5000	next	other	0
+s108	928	Picture	consistent	21013670	5166	1	8333	2	5000	next	hit	1437
+s108	928	Response	32	21021871	13367	1
+s108	929	Picture	pos_feedback	21027169	5166	2	14999	4	5000	next	other	0
+s108	930	Picture	consistent	21057501	5166	1	6166	2	5000	next	hit	1440
+s108	930	Response	32	21063612	11277	1
+s108	931	Picture	pos_feedback	21068833	5166	2	15000	3	5000	next	other	0
+s108	932	Picture	consistent	21094165	5166	1	5000	2	5000	next	hit	1443
+s108	932	Response	32	21099087	10088	1
+s108	933	Picture	pos_feedback	21104331	5166	2	14999	3	5000	next	other	0
+s108	934	Picture	consistent	21129663	5166	1	6166	2	5000	next	hit	1446
+s108	934	Response	16	21135670	11173	1
+s108	935	Picture	pos_feedback	21140996	5167	1	14999	2	5000	next	other	0
+s108	936	Picture	consistent	21168827	5166	1	7000	2	5000	next	hit	1449
+s108	936	Response	16	21175792	12131	1
+s108	937	Picture	pos_feedback	21180993	5166	1	14999	2	5000	next	other	0
+s108	938	Picture	consistent	21208825	5167	1	6833	2	5000	next	hit	1452
+s108	938	Response	32	21215485	11827	1
+s108	939	Picture	pos_feedback	21220824	5166	1	14999	2	5000	next	other	0
+s108	940	Picture	consistent	21251156	5167	1	5999	2	5000	next	hit	1455
+s108	940	Response	16	21257064	11075	1
+s108	941	Picture	pos_feedback	21262321	5166	2	15000	3	5000	next	other	0
+s108	942	Picture	consistent	21290153	5166	1	12833	2	5000	next	hit	1458
+s108	942	Response	16	21302899	17912	1
+s108	943	Picture	pos_feedback	21308152	5166	1	14999	2	5000	next	other	0
+s108	944	Picture	consistent	21338483	5166	2	6000	3	5000	next	hit	1461
+s108	944	Response	32	21344422	11105	2
+s108	945	Picture	pos_feedback	21349649	5166	2	15000	3	5000	next	other	0
+s108	946	Picture	consistent	21377481	5166	1	8833	2	5000	next	hit	1464
+s108	946	Response	16	21386291	13976	1
+s108	947	Picture	pos_feedback	21391480	5166	1	14999	2	5000	next	other	0
+s108	947	Response	16	21392155	5841	1
+s108	948	Picture	consistent	21421812	5167	1	7333	2	5000	next	hit	1468
+s108	948	Response	32	21429029	12384	1
+s108	949	Picture	pos_feedback	21434311	5166	1	14999	2	5000	next	other	0
+s108	950	Picture	consistent	21459643	5167	1	7832	3	5000	next	hit	1471
+s108	950	Response	32	21467380	12904	1
+s108	951	Picture	pos_feedback	21472642	5167	1	14999	2	5000	next	other	0
+s108	952	Picture	consistent	21500473	5166	2	10500	3	5000	next	hit	1474
+s108	952	Response	16	21510898	15591	1
+s108	953	Picture	pos_feedback	21516139	5166	1	14999	2	5000	next	other	0
+s108	954	Picture	consistent	21541471	5166	1	10333	2	5000	next	hit	1477
+s108	954	Response	32	21551626	15321	1
+s108	955	Picture	pos_feedback	21556970	5166	1	14999	2	5000	next	other	0
+s108	956	Picture	consistent	21582302	5167	1	5999	2	5000	next	hit	1480
+s108	956	Response	32	21588139	11004	1
+s108	957	Picture	pos_feedback	21593468	5167	1	14999	2	5000	next	other	0
+s108	958	Picture	consistent	21621299	5166	1	7833	2	5000	next	hit	1483
+s108	958	Response	16	21629104	12971	1
+s108	959	Picture	pos_feedback	21634298	5166	2	15000	3	5000	next	other	0
+s108	960	Picture	consistent	21662130	5166	1	18332	2	5000	next	hit	1486
+s108	960	Response	16	21680420	23456	2
+s108	961	Picture	pos_feedback	21685629	5167	1	14999	2	5000	next	other	0
+s108	962	Picture	consistent	21710960	5166	2	19999	3	5000	next	miss	0
+s108	963	Picture	pos_feedback	21736125	5166	2	15000	3	5000	next	other	0
+s108	963	Response	32	21739880	8921	2
+s108	964	Picture	consistent	21761457	5166	1	9833	2	5000	next	hit	1492
+s108	964	Response	32	21771120	14829	1
+s108	965	Picture	pos_feedback	21776456	5166	2	14999	4	5000	next	other	0
+s108	966	Picture	consistent	21801788	5166	1	6500	2	5000	next	hit	1495
+s108	966	Response	16	21808260	11638	1
+s108	967	Picture	pos_feedback	21813454	5166	1	14999	2	5000	next	other	0
+s108	968	Picture	consistent	21843785	5166	2	8167	3	5000	next	hit	1498
+s108	968	Response	16	21851780	13161	1
+s108	969	Picture	pos_feedback	21857118	5166	1	14999	2	5000	next	other	0
+s108	970	Picture	consistent	21887449	5166	2	12000	3	5000	next	hit	1501
+s108	970	Response	32	21899288	17005	1
+s108	971	Picture	pos_feedback	21904615	5166	1	14999	2	5000	next	other	0
+s108	972	Picture	consistent	21932447	5167	1	19998	3	5000	next	miss	0
+s108	973	Picture	pos_feedback	21957612	5167	1	14999	2	5000	next	other	0
+s108	974	Picture	consistent	21987943	5166	1	6833	2	5000	next	hit	1506
+s108	974	Response	32	21994725	11948	1
+s108	975	Picture	pos_feedback	21999943	5167	1	14999	2	5000	next	other	0
+s108	976	Picture	consistent	22025274	5166	1	8833	2	5000	next	hit	1509
+s108	976	Response	16	22034028	13920	1
+s108	977	Picture	pos_feedback	22039273	5166	2	14999	4	5000	next	other	0
+s108	978	Picture	consistent	22069605	5166	1	5333	2	5000	next	hit	1512
+s108	978	Response	32	22074884	10445	1
+s108	979	Picture	pos_feedback	22080104	5166	1	14999	2	5000	next	other	0
+s108	980	Picture	consistent	22107936	5167	1	5999	3	5000	next	hit	1515
+s108	980	Response	32	22113749	10980	1
+s108	981	Picture	pos_feedback	22119102	5167	1	14999	2	5000	next	other	0
+s108	982	Picture	consistent	22144434	5167	1	6332	3	5000	next	hit	1518
+s108	982	Response	16	22150675	11408	2
+s108	983	Picture	pos_feedback	22155933	5167	1	14999	2	5000	next	other	0
+s108	984	Picture	consistent	22186264	5166	1	8000	2	5000	next	hit	1521
+s108	984	Response	32	22194106	13008	2
+s108	985	Picture	pos_feedback	22199430	5166	1	14999	2	5000	next	other	0
+s108	986	Picture	consistent	22227262	5167	1	6666	2	5000	next	hit	1524
+s108	986	Response	16	22233868	11773	1
+s108	987	Picture	pos_feedback	22239094	5166	2	14999	4	5000	next	other	0
+s108	988	Picture	consistent	22269426	5167	1	7499	2	5000	next	hit	1527
+s108	988	Response	16	22276766	12507	1
+s108	989	Picture	pos_feedback	22282092	5167	1	14999	2	5000	next	other	0
+s108	990	Picture	consistent	22307423	5166	2	6000	3	5000	next	hit	1530
+s108	990	Response	32	22313387	11130	1
+s108	991	Picture	pos_feedback	22318589	5166	2	14999	4	5000	next	other	0
+s108	992	Picture	consistent	22346421	5166	1	7500	2	5000	next	hit	1533
+s108	992	Response	16	22353838	12583	1
+s108	993	Picture	pos_feedback	22359087	5166	1	14999	2	5000	next	other	0
+s108	994	Picture	consistent	22389418	5166	2	7000	3	5000	next	hit	1536
+s108	994	Response	32	22396390	12138	1
+s108	995	Picture	pos_feedback	22401584	5166	1	14999	2	5000	next	other	0
+s108	996	Picture	consistent	22426916	5166	1	6500	2	5000	next	hit	1539
+s108	996	Response	32	22433352	11602	1
+s108	997	Picture	pos_feedback	22438582	5166	1	14999	2	5000	next	other	0
+s108	998	Picture	consistent	22463914	5167	1	7833	2	5000	next	hit	1542
+s108	998	Response	16	22471682	12935	1
+s108	999	Picture	pos_feedback	22476913	5166	1	14999	2	5000	next	other	0
+s108	1000	Picture	consistent	22504745	5167	1	5333	2	5000	next	hit	1545
+s108	1000	Response	32	22509961	10383	1
+s108	1001	Picture	pos_feedback	22515244	5166	1	14999	2	5000	next	other	0
+s108	1002	Picture	consistent	22543075	5166	2	8000	3	5000	next	hit	1548
+s108	1002	Response	32	22550910	13001	1
+s108	1003	Picture	pos_feedback	22556241	5166	2	14999	4	5000	next	other	0
+s108	1004	Picture	consistent	22581573	5166	1	8000	2	5000	next	hit	1551
+s108	1004	Response	16	22589464	13057	2
+s108	1005	Picture	pos_feedback	22594739	5166	1	14999	2	5000	next	other	0
+s108	1006	Picture	consistent	22622571	5167	1	8832	3	5000	next	hit	1554
+s108	1006	Response	16	22631267	13863	1
+s108	1007	Response	32	22631985	582	1
+s108	1007	Picture	pos_feedback	22636570	5167	1	14999	2	5000	next	other	0
+s108	1008	Picture	consistent	22666901	5166	1	14666	2	5000	next	hit	1558
+s108	1008	Response	32	22681445	19710	1
+s108	1008	Response	16	22681532	19797	1
+s108	1009	Picture	pos_feedback	22686733	5166	2	14999	3	5000	next	other	0
+s108	1010	Picture	consistent	22717065	5167	1	8666	2	5000	next	hit	1562
+s108	1010	Response	16	22725568	13670	2
+s108	1011	Picture	pos_feedback	22730897	5166	1	14999	2	5000	next	other	0
+s108	1012	Picture	consistent	22756229	5166	1	8166	2	5000	next	hit	1565
+s108	1012	Response	32	22764289	13226	1
+s108	1013	Picture	pos_feedback	22769562	5167	1	14999	2	5000	next	other	0
+s108	1014	Picture	consistent	22799893	5166	1	16166	2	5000	next	hit	1568
+s108	1014	Response	16	22816000	21273	1
+s108	1015	Picture	pos_feedback	22821225	5166	1	14999	2	5000	next	other	0
+s108	1016	Picture	consistent	22849057	5167	1	5999	2	5000	next	hit	1571
+s108	1016	Response	32	22854945	11055	1
+s108	1017	Picture	pos_feedback	22860223	5167	1	14999	2	5000	next	other	0
+s108	1018	Picture	consistent	22885554	5166	1	6833	2	5000	next	hit	1574
+s108	1018	Response	32	22892275	11887	1
+s108	1019	Picture	pos_feedback	22897554	5167	1	14999	2	5000	next	other	0
+s108	1020	Picture	consistent	22925385	5166	1	6833	2	5000	next	hit	1577
+s108	1020	Response	16	22932133	11914	2
+s108	1021	Picture	pos_feedback	22937384	5166	2	15000	3	5000	next	other	0
+s108	1022	Picture	consistent	22967716	5166	1	7333	2	5000	next	hit	1580
+s108	1022	Response	32	22974891	12341	1
+s108	1023	Picture	pos_feedback	22980215	5166	1	14999	2	5000	next	other	0
+s108	1024	Picture	consistent	23008047	5167	1	5499	3	5000	next	hit	1583
+s108	1024	Response	16	23013371	10491	2
+s108	1025	Picture	pos_feedback	23018713	5167	1	14999	2	5000	next	other	0
+s108	1026	Picture	consistent	23044044	5166	2	7333	4	5000	next	hit	1586
+s108	1026	Response	32	23051316	12438	2
+s108	1027	Picture	pos_feedback	23056544	5167	1	14999	2	5000	next	other	0
+s108	1028	Picture	consistent	23086875	5166	2	7500	3	5000	next	hit	1589
+s108	1028	Response	32	23094323	12614	1
+s108	1029	Picture	pos_feedback	23099541	5166	1	14999	2	5000	next	other	0
+s108	1030	Picture	consistent	23127373	5167	1	14665	3	5000	next	hit	1592
+s108	1030	Response	16	23141879	19673	1
+s108	1031	Picture	pos_feedback	23147205	5167	1	14999	2	5000	next	other	0
+s108	1032	Picture	consistent	23172537	5167	1	12332	2	5000	next	hit	1595
+s108	1032	Response	16	23184806	17436	2
+s108	1033	Picture	pos_feedback	23190035	5166	2	14999	4	5000	next	other	0
+s108	1034	Picture	consistent	23220367	5166	1	10999	2	5000	next	hit	1598
+s108	1034	Response	32	23231211	16010	2
+s108	1035	Picture	pos_feedback	23236533	5167	1	14999	2	5000	next	other	0
+s108	1036	Picture	consistent	23261864	5166	2	8667	3	5000	next	hit	1601
+s108	1036	Response	32	23270484	13786	1
+s108	1037	Picture	pos_feedback	23275697	5166	1	14999	2	5000	next	other	0
+s108	1038	Picture	consistent	23306028	5166	1	5167	2	5000	next	hit	1604
+s108	1038	Response	16	23311069	10207	1
+s108	1039	Picture	pos_feedback	23316361	5166	1	14999	2	5000	next	other	0
+s108	1040	Picture	consistent	23346692	5166	2	5833	4	5000	next	hit	1607
+s108	1040	Response	16	23352384	10858	1
+s108	1041	Picture	pos_feedback	23357692	5167	1	14999	2	5000	next	other	0
+s108	1042	Picture	consistent	23385523	5166	2	11333	3	5000	next	hit	1610
+s108	1042	Response	16	23396720	16363	1
+s108	1043	Picture	pos_feedback	23402022	5166	2	14999	4	5000	next	other	0
+s108	1044	Picture	consistent	23427354	5166	1	14832	3	5000	next	hit	1613
+s108	1044	Response	16	23442052	19864	2
+s108	1045	Picture	pos_feedback	23447353	5167	1	14999	2	5000	next	other	0
+s108	1046	Picture	consistent	23475184	5166	2	8333	3	5000	next	hit	1616
+s108	1046	Response	32	23483450	13432	1
+s108	1047	Picture	pos_feedback	23488684	5167	1	14999	2	5000	next	other	0
+s108	1048	Picture	consistent	23519015	5166	1	8833	2	5000	next	hit	1619
+s108	1048	Response	16	23527756	13907	1
+s108	1049	Picture	pos_feedback	23533014	5166	1	14999	2	5000	next	other	0
+s108	1050	Picture	consistent	23563346	5167	1	6999	2	5000	next	hit	1622
+s108	1050	Response	16	23570207	12028	1
+s108	1051	Picture	pos_feedback	23575512	5167	1	14999	2	5000	next	other	0
+s108	1052	Picture	consistent	23603343	5166	1	6166	3	5000	next	hit	1625
+s108	1052	Response	32	23609429	11252	1
+s108	1053	Picture	pos_feedback	23614676	5167	1	14999	2	5000	next	other	0
+s108	1054	Picture	consistent	23640008	5167	1	4999	2	5000	next	hit	1628
+s108	1054	Response	16	23644961	10120	1
+s108	1055	Picture	pos_feedback	23650174	5167	1	14999	2	5000	next	other	0
+s108	1056	Picture	consistent	23678005	5166	1	19999	2	5000	next	miss	0
+s108	1057	Picture	pos_feedback	23703170	5166	2	14999	4	5000	next	other	0
+s108	1057	Response	32	23715661	17657	2
+s108	1058	Picture	consistent	23728502	5166	1	19999	2	5000	next	miss	0
+s108	1059	Picture	pos_feedback	23753667	5166	1	14999	2	5000	next	other	0
+s108	1059	Response	32	23773223	24722	1
+s108	1060	Picture	consistent	23778999	5166	1	9666	2	5000	next	hit	1637
+s108	1060	Response	16	23788510	14677	1
+s108	1061	Picture	pos_feedback	23793831	5166	2	14999	4	5000	next	other	0
+s108	1062	Picture	consistent	23821663	5166	1	9499	3	5000	next	hit	1640
+s108	1062	Response	16	23831089	14592	2
+s108	1063	Picture	pos_feedback	23836329	5167	1	14999	2	5000	next	other	0
+s108	1064	Picture	consistent	23866660	5166	1	19999	2	5000	next	miss	0
+s108	1065	Picture	pos_feedback	23891825	5166	1	14999	3	5000	next	other	0
+s108	1066	Response	16	23915611	1120	1
+s108	1066	Picture	consistent	23919657	5166	1	19999	2	5000	next	miss	0
+s108	1067	Picture	pos_feedback	23944822	5166	1	14999	2	5000	next	other	0
+s108	1068	Picture	consistent	23970154	5167	1	9166	2	5000	next	hit	1648
+s108	1068	Response	16	23979268	14281	2
+s108	1069	Picture	pos_feedback	23984486	5166	1	14999	2	5000	next	other	0
+s108	1070	Picture	consistent	24009818	5166	1	6500	2	5000	next	hit	1651
+s108	1070	Response	16	24016212	11560	1
+s108	1071	Picture	pos_feedback	24021484	5166	1	14999	2	5000	next	other	0
+s108	1072	Picture	consistent	24049316	5167	1	19998	2	5000	next	miss	0
+s108	1073	Response	16	24070910	1596	1
+s108	1073	Picture	pos_feedback	24074481	5167	1	14999	2	5000	next	other	0
+s108	1074	Picture	consistent	24104812	5166	1	2833	2	5000	next	hit	1657
+s108	1074	Response	16	24107501	7855	1
+s108	1075	Picture	pos_feedback	24112812	5167	1	14999	2	5000	next	other	0
+s108	1076	Picture	consistent	24143143	5166	1	19999	2	5000	next	miss	0
+s108	1077	Picture	pos_feedback	24168308	5166	1	14999	2	5000	next	other	0
+s108	1078	Picture	consistent	24193640	5166	1	19998	3	5000	next	miss	0
+s108	1079	Picture	pos_feedback	24218805	5167	1	14999	2	5000	next	other	0
+s108	1080	Picture	consistent	24249137	5167	1	19998	3	5000	next	miss	0
+s108	1081	Picture	pos_feedback	24274302	5167	1	14999	2	5000	next	other	0
+s108	1082	Picture	consistent	24302133	5166	1	7000	2	5000	next	hit	1666
+s108	1082	Response	32	24309079	12112	2
+s108	1083	Picture	pos_feedback	24314299	5166	1	14999	2	5000	next	other	0
+s108	1084	Picture	consistent	24344631	5167	1	13832	2	5000	next	hit	1669
+s108	1084	Response	32	24358318	18854	1
+s108	1085	Picture	pos_feedback	24363629	5166	2	14999	4	5000	next	other	0
+s108	1086	Picture	consistent	24391461	5166	1	19999	2	5000	next	miss	0
+s108	1087	Picture	pos_feedback	24416626	5166	1	14999	2	5000	next	other	0
+s108	1088	Picture	consistent	24441958	5166	1	7166	2	5000	next	hit	1674
+s108	1088	Response	32	24449082	12290	2
+s108	1089	Picture	pos_feedback	24454290	5166	2	15000	3	5000	next	other	0
+s108	1090	Picture	consistent	24482122	5166	1	7833	2	5000	next	hit	1677
+s108	1090	Response	16	24489906	12950	2
+s108	1091	Picture	pos_feedback	24495121	5166	1	14999	2	5000	next	other	0
+s108	1092	Picture	consistent	24525453	5167	1	10332	3	5000	next	hit	1680
+s108	1092	Response	32	24535633	15347	1
+s108	1093	Picture	pos_feedback	24540952	5167	1	14999	2	5000	next	other	0
+s108	1093	Response	16	24560509	24724	1
+s108	1094	Picture	consistent	24566284	5167	1	19998	2	5000	next	miss	0
+s108	1095	Picture	pos_feedback	24591449	5167	1	14999	2	5000	next	other	0
+s108	1095	Response	32	24612129	25847	1
+s108	1096	Picture	consistent	24619280	5166	1	18499	2	5000	next	hit	1687
+s108	1096	Response	32	24637592	23478	1
+s108	1097	Picture	pos_feedback	24642945	5166	2	15000	3	5000	next	other	0
+s108	1098	Picture	consistent	24668277	5166	1	5833	2	5000	next	hit	1690
+s108	1098	Response	16	24673962	10851	1
+s108	1099	Picture	pos_feedback	24679277	5167	1	14999	2	5000	next	other	0
+s108	1100	Picture	consistent	24709608	5166	1	8000	2	5000	next	hit	1693
+s108	1100	Response	32	24717569	13127	1
+s108	1101	Picture	pos_feedback	24722774	5166	1	14999	2	5000	next	other	0
+s108	1102	Picture	consistent	24748106	5167	1	7666	2	5000	next	hit	1696
+s108	1102	Response	32	24755617	12678	2
+s108	1103	Picture	pos_feedback	24760938	5166	1	14999	2	5000	next	other	0
+s108	1104	Picture	consistent	24788770	5167	1	6666	2	5000	next	hit	1699
+s108	1104	Response	32	24795390	11787	2
+s108	1105	Picture	pos_feedback	24800602	5166	2	14999	4	5000	next	other	0
+s108	1106	Picture	consistent	24830934	5166	1	5666	2	5000	next	hit	1702
+s108	1106	Response	16	24836513	10745	1
+s108	1107	Picture	pos_feedback	24841767	5167	1	14999	2	5000	next	other	0
+s108	1108	Picture	consistent	24867098	5166	1	8166	3	5000	next	hit	1705
+s108	1108	Response	16	24875142	13210	1
+s108	1109	Picture	pos_feedback	24880431	5167	1	14999	2	5000	next	other	0
+s108	1110	Picture	consistent	24908262	5166	2	8333	3	5000	next	hit	1708
+s108	1110	Response	16	24916523	13427	1
+s108	1111	Picture	pos_feedback	24921762	5167	1	14999	2	5000	next	other	0
+s108	1112	Picture	consistent	24952093	5166	1	5166	2	5000	next	hit	1711
+s108	1112	Response	32	24957149	10222	1
+s108	1113	Picture	pos_feedback	24962426	5167	1	14999	2	5000	next	other	0
+s108	1114	Picture	consistent	24987757	5166	2	8500	3	5000	next	hit	1714
+s108	1114	Response	16	24996192	13601	2
+s108	1115	Picture	pos_feedback	25001423	5166	1	14999	2	5000	next	other	0
+s108	1116	Picture	consistent	25029255	5167	1	8666	2	5000	next	hit	1717
+s108	1116	Response	32	25037845	13757	1
+s108	1117	Picture	pos_feedback	25043087	5166	2	14999	4	5000	next	other	0
+s108	1118	Picture	consistent	25073419	5167	1	6833	2	5000	next	hit	1720
+s108	1118	Response	16	25080130	11878	1
+s108	1119	Picture	pos_feedback	25085418	5166	1	14999	2	5000	next	other	0
+s108	1120	Picture	consistent	25110750	5167	1	6166	2	5000	next	hit	1723
+s108	1120	Response	16	25116866	11283	2
+s108	1121	Response	32	25121861	4945	1
+s108	1121	Picture	pos_feedback	25122082	5166	2	15000	3	5000	next	other	0
+s108	1122	Picture	consistent	25149914	5166	1	19999	2	5000	next	miss	0
+s108	1122	Response	16	25169792	25044	2
+s108	1123	Picture	pos_feedback	25175079	5166	1	14999	2	5000	next	other	0
+s108	1124	Picture	consistent	25205411	5167	1	12999	2	5000	next	hit	1730
+s108	1124	Response	16	25218355	18111	1
+s108	1125	Picture	pos_feedback	25223576	5166	1	14999	2	5000	next	other	0
+s108	1126	Picture	consistent	25248908	5166	1	7833	2	5000	next	hit	1733
+s108	1126	Response	32	25256623	12881	2
+s108	1127	Picture	pos_feedback	25261907	5166	1	14999	2	5000	next	other	0
+s108	1128	Picture	consistent	25289739	5167	1	10999	2	5000	next	hit	1736
+s108	1128	Response	16	25300558	15986	1
+s108	1129	Response	32	25302114	1376	1
+s108	1129	Picture	pos_feedback	25305904	5166	2	14999	4	5000	next	other	0
+s108	1130	Picture	consistent	25336236	5167	1	8499	2	5000	next	hit	1740
+s108	1130	Response	16	25344623	13554	1
+s108	1131	Response	32	25345149	414	1
+s108	1131	Picture	pos_feedback	25349902	5167	1	14999	2	5000	next	other	0
+s108	1132	Picture	consistent	25375233	5166	2	6000	3	5000	next	hit	1744
+s108	1132	Response	16	25381079	11012	2
+s108	1133	Picture	pos_feedback	25386399	5166	2	14999	4	5000	next	other	0
+s108	1134	Picture	consistent	25414231	5166	1	5166	2	5000	next	hit	1747
+s108	1134	Response	32	25419313	10248	1
+s108	1135	Picture	pos_feedback	25424564	5167	1	14999	2	5000	next	other	0
+s108	1136	Picture	consistent	25454895	5166	1	19999	2	5000	next	miss	0
+s108	1137	Picture	pos_feedback	25480060	5166	1	14999	2	5000	next	other	0
+s108	1138	Picture	consistent	25505392	5166	1	10499	3	5000	next	hit	1752
+s108	1138	Response	16	25515802	15576	1
+s108	1139	Picture	pos_feedback	25521058	5167	1	14999	2	5000	next	other	0
+s108	1140	Picture	consistent	25548889	5166	2	10833	3	5000	next	hit	1755
+s108	1140	Response	32	25559633	15910	1
+s108	1141	Picture	pos_feedback	25564888	5166	2	14999	4	5000	next	other	0
+s108	1142	Picture	consistent	25595220	5166	1	7166	2	5000	next	hit	1758
+s108	1142	Response	32	25602228	12174	1
+s108	1143	Picture	pos_feedback	25607552	5166	2	14999	4	5000	next	other	0
+s108	1144	Picture	consistent	25632884	5166	1	15333	2	5000	next	hit	1761
+s108	1144	Response	16	25648163	20445	1
+s108	1145	Picture	pos_feedback	25653383	5166	1	14999	2	5000	next	other	0
+s108	1146	Picture	consistent	25681214	5166	2	11500	3	5000	next	hit	1764
+s108	1146	Response	32	25692636	16588	2
+s108	1147	Picture	pos_feedback	25697880	5166	1	14999	2	5000	next	other	0
+s108	1148	Picture	consistent	25728212	5167	1	7666	2	5000	next	hit	1767
+s108	1148	Response	32	25735736	12691	1
+s108	1149	Picture	pos_feedback	25741044	5166	1	14999	2	5000	next	other	0
+s108	1150	Picture	consistent	25766376	5166	1	19999	2	5000	next	miss	0
+s108	1151	Picture	pos_feedback	25791541	5166	1	14999	2	5000	next	other	0
+s108	1151	Response	32	25802089	15714	1
+s108	1152	Picture	consistent	25819373	5167	1	19998	2	5000	next	miss	0
+s108	1153	Picture	pos_feedback	25844538	5167	1	14999	2	5000	next	other	0
+s108	1153	Response	16	25866940	27569	1
+s108	1154	Picture	consistent	25874869	5166	1	11666	2	5000	next	hit	1776
+s108	1154	Response	16	25886414	16711	1
+s108	1155	Picture	pos_feedback	25891701	5166	2	14999	4	5000	next	other	0
+s108	1156	Picture	consistent	25917033	5166	1	6666	3	5000	next	hit	1779
+s108	1156	Response	32	25923609	11742	1
+s108	1157	Picture	pos_feedback	25928866	5167	1	14956	3	5000	next	other	0
+s108	1157	Pause		25937157	13458		803492
+s108	1157	Resume		25937157	13458
+s108	1158	Picture	consistent	25956655	5167	1	7666	2	5000	next	hit	1784
+s108	1158	Response	16	25964291	12803	2
+s108	1159	Response	32	25964408	87	1
+s108	1159	Picture	pos_feedback	25969488	5167	1	14999	2	5000	next	other	0
+s108	1160	Picture	consistent	25999819	5166	1	4833	2	5000	next	hit	1788
+s108	1160	Response	32	26004494	9841	1
+s108	1161	Picture	pos_feedback	26009818	5166	2	14999	4	5000	next	other	0
+s108	1162	Picture	consistent	26035150	5166	1	8333	2	5000	next	hit	1791
+s108	1162	Response	16	26043405	13421	1
+s108	1163	Picture	pos_feedback	26048649	5166	1	14999	2	5000	next	other	0
+s108	1164	Picture	consistent	26076481	5166	1	5499	3	5000	next	hit	1794
+s108	1164	Response	32	26081819	10504	1
+s108	1165	Picture	pos_feedback	26087147	5167	1	14999	2	5000	next	other	0
+s108	1166	Picture	consistent	26117478	5166	2	5500	3	5000	next	hit	1797
+s108	1166	Response	16	26122951	10639	1
+s108	1167	Picture	pos_feedback	26128144	5166	2	14999	4	5000	next	other	0
+s108	1168	Picture	consistent	26153476	5166	1	5666	3	5000	next	hit	1800
+s108	1168	Response	32	26158958	10648	1
+s108	1169	Picture	pos_feedback	26164309	5167	1	14999	2	5000	next	other	0
+s108	1170	Picture	consistent	26192140	5166	2	4333	4	5000	next	hit	1803
+s108	1170	Response	32	26196380	9406	1
+s108	1171	Picture	pos_feedback	26201640	5167	1	14999	2	5000	next	other	0
+s108	1172	Picture	consistent	26231971	5166	1	4833	2	5000	next	hit	1806
+s108	1172	Response	16	26236740	9935	2
+s108	1173	Picture	pos_feedback	26241971	5167	1	14999	2	5000	next	other	0
+s108	1174	Picture	consistent	26267302	5166	2	12500	3	5000	next	hit	1809
+s108	1174	Response	16	26279723	17587	1
+s108	1175	Picture	pos_feedback	26284968	5166	1	14999	2	5000	next	other	0
+s108	1176	Picture	consistent	26312800	5167	1	5166	2	5000	next	hit	1812
+s108	1176	Response	32	26317938	10305	1
+s108	1177	Picture	pos_feedback	26323132	5166	1	14999	2	5000	next	other	0
+s108	1178	Picture	consistent	26353464	5167	1	7666	2	5000	next	hit	1815
+s108	1178	Response	16	26361103	12806	1
+s108	1179	Picture	pos_feedback	26366296	5166	1	14999	3	5000	next	other	0
+s108	1180	Picture	consistent	26391628	5166	1	5500	2	5000	next	hit	1818
+s108	1180	Response	32	26397080	10618	1
+s108	1181	Picture	pos_feedback	26402294	5166	1	14999	2	5000	next	other	0
+s108	1182	Picture	consistent	26430126	5167	1	7166	2	5000	next	hit	1821
+s108	1182	Response	16	26437206	12247	1
+s108	1183	Picture	pos_feedback	26442458	5166	1	14999	2	5000	next	other	0
+s108	1184	Picture	consistent	26472790	5167	1	6499	2	5000	next	hit	1824
+s108	1184	Response	32	26479215	11592	1
+s108	1185	Picture	pos_feedback	26484456	5167	1	14999	2	5000	next	other	0
+s108	1186	Picture	consistent	26509787	5166	2	7000	3	5000	next	hit	1827
+s108	1186	Response	16	26516694	12073	1
+s108	1187	Picture	pos_feedback	26521953	5166	1	14999	3	5000	next	other	0
+s108	1188	Picture	consistent	26549785	5166	1	4500	2	5000	next	hit	1830
+s108	1188	Response	32	26554139	9520	1
+s108	1189	Picture	pos_feedback	26559451	5166	1	14999	2	5000	next	other	0
+s108	1190	Picture	consistent	26589782	5166	2	5500	3	5000	next	hit	1833
+s108	1190	Response	32	26595095	10479	1
+s108	1191	Picture	pos_feedback	26600448	5166	2	14999	4	5000	next	other	0
+s108	1192	Picture	consistent	26625780	5166	1	9333	2	5000	next	hit	1836
+s108	1192	Response	32	26634984	14370	1
+s108	1193	Picture	pos_feedback	26640279	5166	1	14999	2	5000	next	other	0
+s108	1194	Picture	consistent	26668111	5166	1	7999	3	5000	next	hit	1839
+s108	1194	Response	16	26675949	13004	1
+s108	1195	Picture	pos_feedback	26681277	5167	1	14999	2	5000	next	other	0
+s108	1196	Picture	consistent	26711608	5166	1	6666	3	5000	next	hit	1842
+s108	1196	Response	32	26718236	11794	1
+s108	1197	Picture	pos_feedback	26723441	5167	1	14999	2	5000	next	other	0
+s108	1198	Picture	consistent	26748773	5167	1	7832	3	5000	next	hit	1845
+s108	1198	Response	32	26756423	12817	1
+s108	1199	Picture	pos_feedback	26761772	5167	1	14999	2	5000	next	other	0
+s108	1200	Picture	consistent	26789603	5166	2	6167	3	5000	next	hit	1848
+s108	1200	Response	16	26795725	11288	1
+s108	1200	Response	32	26795731	11294	2
+s108	1201	Picture	pos_feedback	26800936	5166	1	14999	2	5000	next	other	0
+s108	1202	Picture	consistent	26831267	5166	2	10000	3	5000	next	hit	1852
+s108	1202	Response	16	26841212	15111	1
+s108	1203	Response	32	26841491	224	1
+s108	1203	Picture	pos_feedback	26846433	5166	1	14999	2	5000	next	other	0
+s108	1204	Picture	consistent	26871765	5166	1	6833	2	5000	next	hit	1856
+s108	1204	Response	32	26878519	11920	2
+s108	1205	Picture	pos_feedback	26883764	5166	1	14999	2	5000	next	other	0
+s108	1206	Picture	consistent	26911596	5167	1	6166	2	5000	next	hit	1859
+s108	1206	Response	16	26917684	11255	1
+s108	1207	Picture	pos_feedback	26922928	5166	2	14999	4	5000	next	other	0
+s108	1208	Picture	consistent	26953260	5166	1	6000	2	5000	next	hit	1862
+s108	1208	Response	32	26959168	11074	1
+s108	1209	Picture	pos_feedback	26964426	5166	1	14999	2	5000	next	other	0
+s108	1210	Picture	consistent	26989758	5167	1	6833	2	5000	next	hit	1865
+s108	1210	Response	32	26996456	11865	1
+s108	1211	Picture	pos_feedback	27001757	5166	1	14999	2	5000	next	other	0
+s108	1212	Picture	consistent	27029589	5167	1	5166	2	5000	next	hit	1868
+s108	1212	Response	16	27034596	10174	1
+s108	1213	Picture	pos_feedback	27039921	5166	1	14999	2	5000	next	other	0
+s108	1214	Picture	consistent	27070253	5167	1	5666	2	5000	next	hit	1871
+s108	1214	Response	16	27075841	10755	1
+s108	1215	Response	32	27075991	72	1
+s108	1215	Picture	pos_feedback	27081085	5166	1	14999	3	5000	next	other	0
+s108	1216	Picture	consistent	27106417	5166	1	11333	2	5000	next	hit	1875
+s108	1216	Response	32	27117637	16386	1
+s108	1217	Response	16	27118191	441	1
+s108	1217	Picture	pos_feedback	27122916	5166	1	14999	2	5000	next	other	0
+s108	1218	Picture	consistent	27150748	5167	1	7499	2	5000	next	hit	1879
+s108	1218	Response	32	27158163	12582	2
+s108	1219	Picture	pos_feedback	27163414	5167	1	14999	2	5000	next	other	0
+s108	1220	Picture	consistent	27193745	5166	1	8166	2	5000	next	hit	1882
+s108	1220	Response	32	27201886	13307	1
+s108	1221	Picture	pos_feedback	27207078	5167	1	14999	2	5000	next	other	0
+s108	1222	Picture	consistent	27232409	5166	1	7167	2	5000	next	hit	1885
+s108	1222	Response	32	27239528	12285	2
+s108	1223	Picture	pos_feedback	27244742	5166	1	14999	2	5000	next	other	0
+s108	1224	Picture	consistent	27272573	5166	2	5333	4	5000	next	hit	1888
+s108	1224	Response	16	27277860	10453	1
+s108	1225	Picture	pos_feedback	27283073	5167	1	14999	2	5000	next	other	0
+s108	1226	Picture	consistent	27313404	5166	1	12333	2	5000	next	hit	1891
+s108	1226	Response	32	27325561	17323	2
+s108	1227	Picture	pos_feedback	27330903	5166	1	14999	2	5000	next	other	0
+s108	1228	Picture	consistent	27356235	5166	1	4833	2	5000	next	hit	1894
+s108	1228	Response	32	27360973	9904	2
+s108	1229	Picture	pos_feedback	27366234	5166	2	14999	4	5000	next	other	0
+s108	1230	Picture	consistent	27394066	5166	1	9666	2	5000	next	hit	1897
+s108	1230	Response	16	27403687	14787	2
+s108	1231	Picture	pos_feedback	27408898	5166	1	14999	3	5000	next	other	0
+s108	1232	Picture	consistent	27439230	5167	1	7833	2	5000	next	hit	1900
+s108	1232	Response	16	27446982	12919	2
+s108	1233	Picture	pos_feedback	27452229	5166	1	14999	2	5000	next	other	0
+s108	1234	Picture	consistent	27477561	5167	1	6499	2	5000	next	hit	1903
+s108	1234	Response	32	27483945	11551	1
+s108	1235	Picture	pos_feedback	27489227	5167	1	14999	2	5000	next	other	0
+s108	1236	Picture	consistent	27517058	5166	2	5667	3	5000	next	hit	1906
+s108	1236	Response	32	27522663	10771	1
+s108	1237	Picture	pos_feedback	27527891	5166	1	14999	2	5000	next	other	0
+s108	1238	Picture	consistent	27558222	5166	2	8667	3	5000	next	hit	1909
+s108	1238	Response	32	27566714	13658	2
+s108	1239	Picture	pos_feedback	27572055	5166	1	14999	2	5000	next	other	0
+s108	1240	Picture	consistent	27597387	5167	1	9332	3	5000	next	hit	1912
+s108	1240	Response	16	27606674	14454	1
+s108	1241	Picture	pos_feedback	27611886	5167	1	14999	2	5000	next	other	0
+s108	1242	Picture	consistent	27639717	5166	2	6000	3	5000	next	hit	1915
+s108	1242	Response	32	27645643	11092	1
+s108	1243	Picture	pos_feedback	27650883	5166	2	14999	4	5000	next	other	0
+s108	1244	Picture	consistent	27681215	5167	1	7833	2	5000	next	hit	1918
+s108	1244	Response	32	27688993	12945	1
+s108	1245	Picture	pos_feedback	27694214	5166	1	14999	2	5000	next	other	0
+s108	1246	Picture	consistent	27719546	5167	1	5499	3	5000	next	hit	1921
+s108	1246	Response	16	27724861	10482	1
+s108	1247	Picture	pos_feedback	27730212	5167	1	14999	2	5000	next	other	0
+s108	1248	Picture	consistent	27758043	5166	2	7000	3	5000	next	hit	1924
+s108	1248	Response	32	27765011	12134	2
+s108	1249	Picture	pos_feedback	27770209	5166	2	14999	4	5000	next	other	0
+s108	1250	Picture	consistent	27800541	5167	1	4999	3	5000	next	hit	1927
+s108	1250	Response	32	27805476	10102	1
+s108	1251	Picture	pos_feedback	27810707	5167	1	14999	2	5000	next	other	0
+s108	1252	Picture	consistent	27836039	5167	1	6333	2	5000	next	hit	1930
+s108	1252	Response	16	27842227	11355	2
+s108	1253	Picture	pos_feedback	27847538	5166	1	14999	2	5000	next	other	0
+s108	1254	Picture	consistent	27875369	5166	2	5167	3	5000	next	hit	1933
+s108	1254	Response	32	27880367	10164	1
+s108	1255	Picture	pos_feedback	27885702	5166	1	14999	2	5000	next	other	0
+s108	1256	Picture	consistent	27916034	5167	1	7332	3	5000	next	hit	1936
+s108	1256	Response	32	27923305	12438	1
+s108	1257	Picture	pos_feedback	27928533	5167	1	14999	2	5000	next	other	0
+s108	1258	Picture	consistent	27953865	5167	1	19998	2	5000	next	miss	0
+s108	1259	Picture	pos_feedback	27979030	5167	1	14999	2	5000	next	other	0
+s108	1260	Picture	consistent	28006861	5166	1	10166	2	5000	next	hit	1941
+s108	1260	Response	32	28016893	15198	2
+s108	1261	Picture	pos_feedback	28022194	5167	1	14999	2	5000	next	other	0
+s108	1262	Picture	consistent	28052525	5166	1	6333	2	5000	next	hit	1944
+s108	1262	Response	16	28058801	11442	2
+s108	1263	Picture	pos_feedback	28064024	5166	2	14999	4	5000	next	other	0
+s108	1264	Picture	consistent	28089356	5166	1	6000	2	5000	next	hit	1947
+s108	1264	Response	32	28095258	11068	2
+s108	1265	Picture	pos_feedback	28100522	5166	1	14999	2	5000	next	other	0
+s108	1266	Pause		28188760	63073		7020081
+s108	1266	Resume		28188760	63073
+s108	1266	Response	3	28350124	224437	1
+s108	1267	Picture	consistent	28355656	5167	1	13166	2	5000	next	hit	1953
+s108	1267	Response	32	28368792	18303	1
+s108	1268	Picture	pos_feedback	28373988	5166	1	14999	2	5000	next	other	0
+s108	1269	Picture	consistent	28399320	5167	1	6833	2	5000	next	hit	1956
+s108	1269	Response	16	28406080	11927	1
+s108	1270	Picture	pos_feedback	28411319	5166	1	14999	2	5000	next	other	0
+s108	1271	Picture	consistent	28441650	5166	2	5667	3	5000	next	hit	1959
+s108	1271	Response	32	28447142	10658	1
+s108	1272	Picture	pos_feedback	28452483	5166	1	14999	2	5000	next	other	0
+s108	1273	Picture	consistent	28477815	5167	1	6666	2	5000	next	hit	1962
+s108	1273	Response	32	28484408	11760	2
+s108	1274	Picture	pos_feedback	28489647	5166	2	14999	4	5000	next	other	0
+s108	1275	Picture	consistent	28517479	5166	1	7833	2	5000	next	hit	1965
+s108	1275	Response	16	28525273	12960	1
+s108	1276	Picture	pos_feedback	28530478	5166	1	14999	2	5000	next	other	0
+s108	1277	Picture	consistent	28560810	5167	1	15999	2	5000	next	hit	1968
+s108	1277	Response	16	28576738	21095	1
+s108	1278	Picture	pos_feedback	28581975	5166	1	14999	2	5000	next	other	0
+s108	1279	Picture	consistent	28609807	5167	1	7666	2	5000	next	hit	1971
+s108	1279	Response	32	28617363	12723	2
+s108	1280	Picture	pos_feedback	28622639	5166	1	14999	2	5000	next	other	0
+s108	1281	Picture	consistent	28647971	5166	1	13332	2	5000	next	hit	1974
+s108	1281	Response	16	28661199	18394	2
+s108	1282	Picture	pos_feedback	28666470	5167	1	14999	2	5000	next	other	0
+s108	1283	Picture	consistent	28696801	5166	1	8833	2	5000	next	hit	1977
+s108	1283	Response	32	28705526	13891	2
+s108	1284	Picture	pos_feedback	28710800	5166	1	14999	3	5000	next	other	0
+s108	1285	Picture	consistent	28738632	5166	1	10333	2	5000	next	hit	1980
+s108	1285	Response	16	28748874	15408	1
+s108	1286	Picture	pos_feedback	28754131	5166	1	14999	2	5000	next	other	0
+s108	1287	Picture	consistent	28784462	5166	2	8167	3	5000	next	hit	1983
+s108	1287	Response	32	28792579	13283	1
+s108	1288	Picture	pos_feedback	28797795	5166	1	14999	2	5000	next	other	0
+s108	1289	Picture	consistent	28825627	5167	1	9499	2	5000	next	hit	1986
+s108	1289	Response	16	28835089	14629	1
+s108	1290	Picture	pos_feedback	28840292	5166	1	14999	3	5000	next	other	0
+s108	1291	Picture	consistent	28868124	5166	1	7333	2	5000	next	hit	1989
+s108	1291	Response	16	28875321	12363	1
+s108	1292	Picture	pos_feedback	28880623	5166	1	14999	2	5000	next	other	0
+s108	1293	Picture	consistent	28905955	5166	1	8833	2	5000	next	hit	1992
+s108	1293	Response	32	28914676	13887	1
+s108	1294	Picture	pos_feedback	28919954	5166	1	14999	2	5000	next	other	0
+s108	1295	Picture	consistent	28945286	5167	1	8999	2	5000	next	hit	1995
+s108	1295	Response	32	28954168	14049	2
+s108	1296	Picture	pos_feedback	28959452	5167	1	14999	2	5000	next	other	0
+s108	1297	Picture	consistent	28989783	5166	1	9499	3	5000	next	hit	1998
+s108	1297	Response	32	28999243	14626	1
+s108	1298	Picture	pos_feedback	29004449	5167	1	14999	2	5000	next	other	0
+s108	1299	Picture	consistent	29032280	5166	2	7833	3	5000	next	hit	2001
+s108	1299	Response	16	29040056	12942	1
+s108	1300	Picture	pos_feedback	29045280	5167	1	14999	2	5000	next	other	0
+s108	1301	Picture	consistent	29070611	5166	2	7833	3	5000	next	hit	2004
+s108	1301	Response	32	29078419	12974	1
+s108	1302	Picture	pos_feedback	29083611	5167	1	14999	2	5000	next	other	0
+s108	1303	Picture	consistent	29113942	5166	1	7000	2	5000	next	hit	2007
+s108	1303	Response	32	29120776	12000	1
+s108	1304	Picture	pos_feedback	29126108	5166	1	14999	2	5000	next	other	0
+s108	1305	Picture	consistent	29151440	5167	1	6333	2	5000	next	hit	2010
+s108	1305	Response	16	29157675	11402	1
+s108	1306	Picture	pos_feedback	29162939	5166	1	14999	2	5000	next	other	0
+s108	1307	Picture	consistent	29193270	5166	2	4833	4	5000	next	hit	2013
+s108	1307	Response	32	29197937	9833	1
+s108	1308	Picture	pos_feedback	29203270	5167	1	14999	2	5000	next	other	0
+s108	1309	Picture	consistent	29233601	5166	1	9500	2	5000	next	hit	2016
+s108	1309	Response	16	29242961	14526	1
+s108	1310	Picture	pos_feedback	29248267	5166	1	14999	2	5000	next	other	0
+s108	1311	Picture	consistent	29276099	5167	1	6999	2	5000	next	hit	2019
+s108	1311	Response	16	29283006	12074	1
+s108	1312	Picture	pos_feedback	29288264	5166	2	15000	3	5000	next	other	0
+s108	1313	Picture	consistent	29313596	5166	1	8000	2	5000	next	hit	2022
+s108	1313	Response	32	29321544	13114	1
+s108	1314	Picture	pos_feedback	29326762	5166	1	14999	2	5000	next	other	0
+s108	1315	Picture	consistent	29354594	5167	1	7833	2	5000	next	hit	2025
+s108	1315	Response	16	29362292	12865	1
+s108	1316	Picture	pos_feedback	29367593	5166	1	14999	2	5000	next	other	0
+s108	1317	Picture	consistent	29395425	5167	1	7166	2	5000	next	hit	2028
+s108	1317	Response	32	29402480	12222	1
+s108	1318	Picture	pos_feedback	29407757	5166	1	14999	2	5000	next	other	0
+s108	1319	Picture	consistent	29438089	5167	1	9332	2	5000	next	hit	2031
+s108	1319	Response	16	29447242	14320	1
+s108	1320	Picture	pos_feedback	29452588	5167	1	14999	2	5000	next	other	0
+s108	1321	Picture	consistent	29477919	5166	2	9667	3	5000	next	hit	2034
+s108	1321	Response	16	29487444	14691	2
+s108	1322	Picture	pos_feedback	29492752	5166	1	14999	2	5000	next	other	0
+s108	1323	Picture	consistent	29520583	5166	2	6000	3	5000	next	hit	2037
+s108	1323	Response	32	29526544	11127	1
+s108	1324	Picture	pos_feedback	29531749	5166	2	14999	4	5000	next	other	0
+s108	1325	Picture	consistent	29562081	5166	1	14832	2	5000	next	hit	2040
+s108	1325	Response	32	29576858	19943	1
+s108	1326	Picture	pos_feedback	29582080	5167	1	14999	2	5000	next	other	0
+s108	1327	Picture	consistent	29607411	5166	2	10000	3	5000	next	hit	2043
+s108	1327	Response	32	29617250	15005	1
+s108	1328	Picture	pos_feedback	29622577	5166	1	14999	2	5000	next	other	0
+s108	1329	Picture	consistent	29652909	5167	1	7499	2	5000	next	hit	2046
+s108	1329	Response	16	29660226	12484	1
+s108	1330	Picture	pos_feedback	29665574	5166	2	15000	3	5000	next	other	0
+s108	1331	Picture	consistent	29693406	5166	1	6666	2	5000	next	hit	2049
+s108	1331	Response	32	29699901	11661	1
+s108	1332	Picture	pos_feedback	29705239	5167	1	14999	2	5000	next	other	0
+s108	1333	Picture	consistent	29730570	5166	2	14833	3	5000	next	hit	2052
+s108	1333	Response	16	29745246	19842	2
+s108	1334	Picture	pos_feedback	29750569	5166	1	14999	2	5000	next	other	0
+s108	1335	Picture	consistent	29778401	5167	1	8666	2	5000	next	hit	2055
+s108	1335	Response	16	29786888	13654	1
+s108	1336	Picture	pos_feedback	29792233	5166	2	14999	3	5000	next	other	0
+s108	1337	Picture	consistent	29822565	5167	1	7999	2	5000	next	hit	2058
+s108	1337	Response	32	29830522	13124	1
+s108	1337	Response	16	29830553	13155	1
+s108	1338	Picture	pos_feedback	29835731	5167	1	14999	2	5000	next	other	0
+s108	1339	Picture	consistent	29861062	5166	2	6667	3	5000	next	hit	2062
+s108	1339	Response	32	29867663	11767	1
+s108	1340	Picture	pos_feedback	29872895	5166	1	14999	2	5000	next	other	0
+s108	1341	Picture	consistent	29900727	5167	1	8832	2	5000	next	hit	2065
+s108	1341	Response	32	29909406	13846	1
+s108	1341	Response	16	29909518	13958	2
+s108	1342	Picture	pos_feedback	29914726	5167	1	14999	2	5000	next	other	0
+s108	1343	Picture	consistent	29945057	5166	1	18666	2	5000	next	hit	2069
+s108	1343	Response	32	29963674	23783	2
+s108	1344	Response	16	29963985	262	2
+s108	1344	Picture	pos_feedback	29968889	5166	1	14999	2	5000	next	other	0
+s108	1345	Picture	consistent	29999220	5166	2	14500	3	5000	next	hit	2073
+s108	1345	Response	16	30013638	19584	1
+s108	1345	Response	32	30013675	19621	1
+s108	1346	Picture	pos_feedback	30018886	5166	1	14999	2	5000	next	other	0
+s108	1347	Picture	consistent	30049217	5166	2	11166	3	5000	next	hit	2077
+s108	1347	Response	32	30060265	16214	1
+s108	1348	Response	16	30060559	176	1
+s108	1348	Picture	pos_feedback	30065550	5167	1	14999	2	5000	next	other	0
+s108	1349	Picture	consistent	30093381	5166	1	6000	2	5000	next	hit	2081
+s108	1349	Response	32	30099239	11024	1
+s108	1350	Picture	pos_feedback	30104547	5166	1	14999	2	5000	next	other	0
+s108	1351	Picture	consistent	30129879	5166	1	5666	2	5000	next	hit	2084
+s108	1351	Response	16	30135437	10724	1
+s108	1352	Picture	pos_feedback	30140712	5167	1	14999	2	5000	next	other	0
+s108	1353	Picture	consistent	30168543	5166	1	7833	2	5000	next	hit	2087
+s108	1353	Response	32	30176289	12912	1
+s108	1354	Picture	pos_feedback	30181543	5167	1	14999	2	5000	next	other	0
+s108	1355	Picture	consistent	30206874	5166	1	6333	2	5000	next	hit	2090
+s108	1355	Response	32	30213155	11447	1
+s108	1356	Picture	pos_feedback	30218374	5167	1	14999	2	5000	next	other	0
+s108	1357	Picture	consistent	30243705	5166	1	6500	2	5000	next	hit	2093
+s108	1357	Response	32	30250154	11615	1
+s108	1358	Picture	pos_feedback	30255371	5166	1	14999	2	5000	next	other	0
+s108	1359	Picture	consistent	30283203	5166	1	5666	2	5000	next	hit	2096
+s108	1359	Response	32	30288796	10759	1
+s108	1360	Picture	pos_feedback	30294035	5166	2	15000	3	5000	next	other	0
+s108	1361	Picture	consistent	30324367	5166	1	7500	2	5000	next	hit	2099
+s108	1361	Response	16	30331703	12502	1
+s108	1362	Picture	pos_feedback	30337033	5166	1	14999	2	5000	next	other	0
+s108	1363	Picture	consistent	30367364	5166	1	7000	2	5000	next	hit	2102
+s108	1363	Response	32	30374199	12001	1
+s108	1364	Picture	pos_feedback	30379530	5166	1	14999	2	5000	next	other	0
+s108	1365	Picture	consistent	30404862	5166	1	6666	2	5000	next	hit	2105
+s108	1365	Response	32	30411498	11802	2
+s108	1366	Picture	pos_feedback	30416695	5167	1	14999	2	5000	next	other	0
+s108	1367	Picture	consistent	30444526	5166	1	8000	2	5000	next	hit	2108
+s108	1367	Response	16	30452345	12985	1
+s108	1368	Picture	pos_feedback	30457692	5166	1	14999	2	5000	next	other	0
+s108	1369	Picture	consistent	30488024	5167	1	7332	3	5000	next	hit	2111
+s108	1369	Response	16	30495283	12426	2
+s108	1370	Picture	pos_feedback	30500523	5167	1	14999	2	5000	next	other	0
+s108	1371	Picture	consistent	30525854	5166	2	11500	3	5000	next	hit	2114
+s108	1371	Response	32	30537187	16499	1
+s108	1372	Picture	pos_feedback	30542520	5166	1	14999	2	5000	next	other	0
+s108	1373	Picture	consistent	30567852	5166	1	7833	2	5000	next	hit	2117
+s108	1373	Response	16	30575598	12912	1
+s108	1374	Response	16	30579466	3781	1
+s108	1374	Picture	pos_feedback	30580851	5166	1	14999	2	5000	next	other	0
+s108	1375	Picture	consistent	30608683	5167	1	6999	2	5000	next	hit	2121
+s108	1375	Response	32	30615604	12088	2
+s108	1376	Picture	pos_feedback	30620849	5167	1	14999	2	5000	next	other	0
+s108	1377	Picture	consistent	30648680	5166	1	15333	2	5000	next	hit	2124
+s108	1377	Response	16	30663970	20456	1
+s108	1378	Picture	pos_feedback	30669179	5166	1	14999	2	5000	next	other	0
+s108	1379	Picture	consistent	30697011	5167	1	8166	2	5000	next	hit	2127
+s108	1379	Response	32	30705124	13280	1
+s108	1380	Picture	pos_feedback	30710343	5166	1	14999	2	5000	next	other	0
+s108	1381	Picture	consistent	30738175	5167	1	7499	2	5000	next	hit	2130
+s108	1381	Response	16	30745561	12553	1
+s108	1382	Picture	pos_feedback	30750840	5166	2	15000	3	5000	next	other	0
+s108	1383	Picture	consistent	30776172	5166	1	8833	2	5000	next	hit	2133
+s108	1383	Response	32	30784952	13946	1
+s108	1384	Picture	pos_feedback	30790171	5166	2	14999	4	5000	next	other	0
+s108	1385	Picture	consistent	30820503	5166	1	7166	2	5000	next	hit	2136
+s108	1385	Response	16	30827641	12304	1
+s108	1386	Picture	pos_feedback	30832835	5166	2	15000	3	5000	next	other	0
+s108	1387	Picture	consistent	30863167	5166	1	7499	3	5000	next	hit	2139
+s108	1387	Response	32	30870556	12555	2
+s108	1388	Picture	pos_feedback	30875833	5167	1	14999	2	5000	next	other	0
+s108	1389	Picture	consistent	30901165	5167	1	7166	2	5000	next	hit	2142
+s108	1389	Response	16	30908182	12184	1
+s108	1390	Picture	pos_feedback	30913497	5166	1	14999	2	5000	next	other	0
+s108	1391	Picture	consistent	30943829	5167	1	6832	3	5000	next	hit	2145
+s108	1391	Response	32	30950598	11936	1
+s108	1392	Picture	pos_feedback	30955828	5167	1	14999	2	5000	next	other	0
+s108	1393	Picture	consistent	30981160	5167	1	7666	2	5000	next	hit	2148
+s108	1393	Response	16	30988779	12786	1
+s108	1394	Picture	pos_feedback	30993992	5166	1	14999	2	5000	next	other	0
+s108	1395	Picture	consistent	31019324	5166	1	4000	2	5000	next	hit	2151
+s108	1395	Response	16	31023274	9116	1
+s108	1396	Picture	pos_feedback	31028490	5166	1	14999	2	5000	next	other	0
+s108	1397	Picture	consistent	31056322	5167	1	19998	2	5000	next	miss	0
+s108	1398	Picture	pos_feedback	31081487	5167	1	14999	2	5000	next	other	0
+s108	1398	Response	32	31081620	5300	1
+s108	1399	Picture	consistent	31109318	5166	1	8333	2	5000	next	hit	2157
+s108	1399	Response	16	31117511	13359	1
+s108	1400	Picture	pos_feedback	31122817	5166	2	15000	3	5000	next	other	0
+s108	1401	Picture	consistent	31153149	5166	1	8166	2	5000	next	hit	2160
+s108	1401	Response	32	31161229	13246	1
+s108	1402	Picture	pos_feedback	31166481	5166	2	14999	4	5000	next	other	0
+s108	1403	Picture	consistent	31194313	5166	1	7500	2	5000	next	hit	2163
+s108	1403	Response	16	31201710	12563	1
+s108	1404	Picture	pos_feedback	31206979	5166	1	14999	2	5000	next	other	0
+s108	1405	Picture	consistent	31237310	5166	2	7000	3	5000	next	hit	2166
+s108	1405	Response	16	31244218	12074	1
+s108	1406	Picture	pos_feedback	31249476	5166	1	14999	2	5000	next	other	0
+s108	1407	Picture	consistent	31274808	5166	1	7000	2	5000	next	hit	2169
+s108	1407	Response	32	31281698	12056	2
+s108	1408	Picture	pos_feedback	31286974	5166	1	14999	2	5000	next	other	0
+s108	1409	Picture	consistent	31317305	5166	2	9500	3	5000	next	hit	2172
+s108	1409	Response	16	31326773	14634	1
+s108	1410	Picture	pos_feedback	31331971	5166	1	14999	2	5000	next	other	0
+s108	1411	Picture	consistent	31357303	5166	1	9999	2	5000	next	hit	2175
+s108	1411	Response	32	31367265	15128	1
+s108	1412	Picture	pos_feedback	31372469	5167	1	14999	2	5000	next	other	0
+s108	1413	Picture	consistent	31400300	5166	1	15333	2	5000	next	hit	2178
+s108	1413	Response	16	31415543	20409	1
+s108	1414	Picture	pos_feedback	31420799	5166	1	14999	2	5000	next	other	0
+s108	1415	Picture	consistent	31448631	5167	1	16665	2	5000	next	hit	2181
+s108	1415	Response	32	31465199	21735	1
+s108	1416	Picture	pos_feedback	31470463	5167	1	14999	2	5000	next	other	0
+s108	1417	Picture	consistent	31500794	5166	1	13666	2	5000	next	hit	2184
+s108	1417	Response	16	31514417	18789	1
+s108	1418	Picture	pos_feedback	31519626	5166	1	14999	2	5000	next	other	0
+s108	1419	Picture	consistent	31547458	5167	1	11832	3	5000	next	hit	2187
+s108	1419	Response	32	31559196	16905	1
+s108	1420	Picture	pos_feedback	31564457	5167	1	14999	2	5000	next	other	0
+s108	1421	Picture	consistent	31594788	5166	1	13833	2	5000	next	hit	2190
+s108	1421	Response	32	31608492	18870	1
+s108	1422	Picture	pos_feedback	31613787	5166	1	14999	2	5000	next	other	0
+s108	1423	Picture	consistent	31639119	5167	1	13332	2	5000	next	hit	2193
+s108	1423	Response	16	31652355	18403	2
+s108	1424	Picture	pos_feedback	31657618	5167	1	14999	2	5000	next	other	0
+s108	1425	Picture	consistent	31682949	5166	2	10833	3	5000	next	hit	2196
+s108	1425	Response	32	31693668	15885	2
+s108	1426	Picture	pos_feedback	31698948	5166	2	15000	3	5000	next	other	0
+s108	1427	Picture	consistent	31724280	5166	1	12499	3	5000	next	hit	2199
+s108	1427	Response	16	31736742	17628	2
+s108	1428	Picture	pos_feedback	31741946	5167	1	14999	2	5000	next	other	0
+s108	1429	Picture	consistent	31772277	5166	1	6833	2	5000	next	hit	2202
+s108	1429	Response	16	31779008	11897	1
+s108	1430	Picture	pos_feedback	31784277	5167	1	14999	2	5000	next	other	0
+s108	1431	Picture	consistent	31812108	5166	1	10833	2	5000	next	hit	2205
+s108	1431	Response	16	31822789	15847	1
+s108	1432	Picture	pos_feedback	31828107	5166	1	14999	2	5000	next	other	0
+s108	1433	Picture	consistent	31855939	5167	1	7333	2	5000	next	hit	2208
+s108	1433	Response	32	31863148	12376	2
+s108	1434	Picture	pos_feedback	31868438	5166	1	14999	2	5000	next	other	0
+s108	1435	Picture	consistent	31898769	5166	2	11166	3	5000	next	hit	2211
+s108	1435	Response	32	31909896	16293	1
+s108	1436	Picture	pos_feedback	31915102	5167	1	14999	2	5000	next	other	0
+s108	1437	Picture	consistent	31942933	5166	2	7167	3	5000	next	hit	2214
+s108	1437	Response	32	31949947	12180	2
+s108	1438	Picture	pos_feedback	31955266	5166	1	14999	2	5000	next	other	0
+s108	1439	Picture	consistent	31985597	5166	2	11333	3	5000	next	hit	2217
+s108	1439	Response	32	31996903	16472	2
+s108	1440	Picture	pos_feedback	32002096	5166	2	14999	4	5000	next	other	0
+s108	1441	Picture	consistent	32027428	5166	1	6166	3	5000	next	hit	2220
+s108	1441	Response	32	32033448	11186	1
+s108	1442	Picture	pos_feedback	32038761	5167	1	14999	2	5000	next	other	0
+s108	1443	Picture	consistent	32069092	5166	1	13333	2	5000	next	hit	2223
+s108	1443	Response	16	32082327	18401	2
+s108	1444	Picture	pos_feedback	32087591	5166	1	14999	2	5000	next	other	0
+s108	1445	Picture	consistent	32112923	5167	1	10832	3	5000	next	hit	2226
+s108	1445	Response	16	32123733	15977	1
+s108	1446	Picture	pos_feedback	32128922	5167	1	14999	2	5000	next	other	0
+s108	1447	Picture	consistent	32154254	5167	1	6999	2	5000	next	hit	2229
+s108	1447	Response	16	32161136	12049	1
+s108	1448	Picture	pos_feedback	32166419	5166	2	15000	3	5000	next	other	0
+s108	1449	Picture	consistent	32194251	5166	1	7500	2	5000	next	hit	2232
+s108	1449	Response	16	32201585	12500	1
+s108	1450	Picture	pos_feedback	32206917	5166	1	14999	2	5000	next	other	0
+s108	1451	Picture	consistent	32232249	5167	1	18832	2	5000	next	hit	2235
+s108	1451	Response	32	32250998	23916	1
+s108	1452	Picture	pos_feedback	32256247	5166	1	14999	2	5000	next	other	0
+s108	1453	Picture	consistent	32284079	5166	1	18165	3	5000	next	hit	2238
+s108	1453	Response	16	32302059	23146	1
+s108	1454	Picture	pos_feedback	32307411	5167	1	14999	2	5000	next	other	0
+s108	1455	Picture	consistent	32332743	5167	1	10166	2	5000	next	hit	2241
+s108	1455	Response	32	32342835	15259	1
+s108	1456	Picture	pos_feedback	32348075	5166	1	14999	2	5000	next	other	0
+s108	1457	Picture	consistent	32378406	5166	2	8167	3	5000	next	hit	2244
+s108	1457	Response	16	32386423	13183	1
+s108	1458	Picture	pos_feedback	32391739	5166	1	14999	2	5000	next	other	0
+s108	1459	Picture	consistent	32419570	5166	2	12500	3	5000	next	hit	2247
+s108	1459	Response	32	32431998	17594	1
+s108	1460	Picture	pos_feedback	32437236	5166	1	14999	2	5000	next	other	0
+s108	1461	Picture	consistent	32467567	5166	2	17333	3	5000	next	hit	2250
+s108	1461	Response	32	32484719	22318	1
+s108	1462	Picture	pos_feedback	32490066	5166	1	14999	2	5000	next	other	0
+s108	1463	Picture	consistent	32515398	5166	1	19999	2	5000	next	miss	0
+s108	1464	Picture	pos_feedback	32540563	5166	1	14999	2	5000	next	other	0
+s108	1464	Response	32	32553205	17808	1
+s108	1465	Picture	consistent	32570894	5166	2	11000	3	5000	next	hit	2256
+s108	1465	Response	16	32581812	16084	2
+s108	1466	Picture	pos_feedback	32587060	5166	1	14999	2	5000	next	other	0
+s108	1467	Picture	consistent	32614892	5167	1	7166	2	5000	next	hit	2259
+s108	1467	Response	32	32621977	12252	1
+s108	1468	Picture	pos_feedback	32627224	5166	1	14999	2	5000	next	other	0
+s108	1469	Picture	consistent	32655056	5166	1	5166	2	5000	next	hit	2262
+s108	1469	Response	16	32660187	10297	2
+s108	1470	Picture	pos_feedback	32665389	5167	1	14999	2	5000	next	other	0
+s108	1471	Picture	consistent	32693220	5166	1	7500	2	5000	next	hit	2265
+s108	1471	Response	16	32700611	12557	1
+s108	1472	Picture	pos_feedback	32705886	5166	1	14999	2	5000	next	other	0
+s108	1473	Picture	consistent	32736218	5167	1	5999	2	5000	next	hit	2268
+s108	1473	Response	32	32742156	11105	1
+s108	1474	Picture	pos_feedback	32747383	5166	2	15000	3	5000	next	other	0
+s108	1475	Picture	consistent	32777715	5166	1	15999	2	5000	next	hit	2271
+s108	1475	Response	16	32793534	20985	1
+s108	1476	Picture	pos_feedback	32798880	5166	1	14999	3	5000	next	other	0
+s108	1477	Picture	consistent	32824212	5166	1	7500	2	5000	next	hit	2274
+s108	1477	Response	32	32831562	12516	1
+s108	1478	Picture	pos_feedback	32836878	5166	1	14999	2	5000	next	other	0
+s108	1479	Picture	consistent	32862210	5167	1	6499	2	5000	next	hit	2277
+s108	1479	Response	16	32868673	11630	1
+s108	1480	Picture	pos_feedback	32873876	5167	1	14999	2	5000	next	other	0
+s108	1481	Picture	consistent	32899207	5166	2	6333	4	5000	next	hit	2280
+s108	1481	Response	32	32905380	11339	1
+s108	1482	Picture	pos_feedback	32910707	5167	1	14999	2	5000	next	other	0
+s108	1483	Picture	consistent	32941038	5166	1	7500	2	5000	next	hit	2283
+s108	1483	Response	32	32948367	12495	1
+s108	1484	Picture	pos_feedback	32953704	5166	1	14999	2	5000	next	other	0
+s108	1485	Picture	consistent	32979036	5167	1	5999	3	5000	next	hit	2286
+s108	1485	Response	32	32984966	11097	1
+s108	1486	Picture	pos_feedback	32990202	5167	1	14999	2	5000	next	other	0
+s108	1487	Picture	consistent	33020533	5166	1	9833	2	5000	next	hit	2289
+s108	1487	Response	16	33030218	14851	1
+s108	1488	Picture	pos_feedback	33035532	5166	2	14999	4	5000	next	other	0
+s108	1489	Picture	consistent	33063364	5166	1	19999	2	5000	next	miss	0
+s108	1490	Picture	pos_feedback	33088529	5166	1	14999	2	5000	next	other	0
+s108	1491	Picture	consistent	33113861	5167	1	6833	2	5000	next	hit	2294
+s108	1491	Response	16	33120541	11847	1
+s108	1491	Response	32	33120668	11974	1
+s108	1492	Picture	pos_feedback	33125860	5166	1	14999	2	5000	next	other	0
+s108	1493	Picture	consistent	33156192	5167	1	12832	2	5000	next	hit	2298
+s108	1493	Response	16	33168944	17919	1
+s108	1494	Picture	pos_feedback	33174190	5166	2	14999	4	5000	next	other	0
+s108	1495	Picture	consistent	33202022	5166	1	7999	3	5000	next	hit	2301
+s108	1495	Response	32	33209885	13029	1
+s108	1496	Picture	pos_feedback	33215188	5167	1	14999	2	5000	next	other	0
+s108	1497	Picture	consistent	33243019	5166	2	6833	4	5000	next	hit	2304
+s108	1497	Response	32	33249742	11889	1
+s108	1498	Picture	pos_feedback	33255019	5167	1	14999	2	5000	next	other	0
+s108	1499	Picture	consistent	33285350	5166	1	7000	2	5000	next	hit	2307
+s108	1499	Response	16	33292180	11996	2
+s108	1500	Picture	pos_feedback	33297516	5166	1	14999	2	5000	next	other	0
+s108	1501	Picture	consistent	33322848	5166	1	8333	2	5000	next	hit	2310
+s108	1501	Response	32	33331076	13394	1
+s108	1502	Picture	pos_feedback	33336347	5166	1	14999	2	5000	next	other	0
+s108	1503	Picture	consistent	33361679	5167	1	14499	2	5000	next	hit	2313
+s108	1503	Response	16	33376009	19497	1
+s108	1504	Picture	pos_feedback	33381344	5166	1	14999	2	5000	next	other	0
+s108	1505	Picture	consistent	33409176	5166	1	2000	2	5000	next	hit	2316
+s108	1505	Response	32	33411095	7085	1
+s108	1506	Picture	pos_feedback	33416342	5166	1	14999	2	5000	next	other	0
+s108	1507	Picture	consistent	33446673	5166	2	7667	3	5000	next	hit	2319
+s108	1507	Response	32	33454251	12744	2
+s108	1508	Picture	pos_feedback	33459506	5166	1	14999	2	5000	next	other	0
+s108	1509	Picture	consistent	33484838	5167	1	7999	2	5000	next	hit	2322
+s108	1509	Response	16	33492755	13084	1
+s108	1510	Picture	pos_feedback	33498004	5167	1	14999	2	5000	next	other	0
+s108	1511	Picture	consistent	33525835	5166	1	6667	2	5000	next	hit	2325
+s108	1511	Response	32	33532460	11791	1
+s108	1512	Picture	pos_feedback	33537668	5166	1	14999	2	5000	next	other	0
+s108	1513	Picture	consistent	33567999	5166	2	7666	4	5000	next	hit	2328
+s108	1513	Response	16	33575622	12789	1
+s108	1514	Picture	pos_feedback	33580832	5167	1	14999	2	5000	next	other	0
+s108	1515	Picture	consistent	33606164	5167	1	7999	2	5000	next	hit	2331
+s108	1515	Response	16	33614126	13129	1
+s108	1516	Picture	pos_feedback	33619329	5166	2	15000	3	5000	next	other	0
+s108	1517	Picture	consistent	33647161	5166	1	6166	3	5000	next	hit	2334
+s108	1517	Response	32	33653255	11260	1
+s108	1518	Picture	pos_feedback	33658494	5167	1	14999	2	5000	next	other	0
+s108	1519	Picture	consistent	33688825	5166	1	5833	2	5000	next	hit	2337
+s108	1519	Response	32	33694480	10821	1
+s108	1520	Picture	pos_feedback	33699825	5167	1	14999	2	5000	next	other	0
+s108	1521	Picture	consistent	33725156	5166	1	8166	3	5000	next	hit	2340
+s108	1521	Response	32	33733228	13238	1
+s108	1522	Picture	pos_feedback	33738489	5167	1	14999	2	5000	next	other	0
+s108	1523	Picture	consistent	33766320	5166	2	19999	3	5000	next	miss	0
+s108	1524	Picture	pos_feedback	33791485	5166	2	15000	3	5000	next	other	0
+s108	1524	Response	32	33794523	8204	2
+s108	1525	Picture	consistent	33821817	5166	1	19999	2	5000	next	miss	0
+s108	1526	Response	16	33844373	2557	1
+s108	1526	Picture	pos_feedback	33846982	5166	1	14999	2	5000	next	other	0
+s108	1527	Picture	consistent	33872314	5167	1	7333	2	5000	next	hit	2349
+s108	1527	Response	32	33879557	12410	1
+s108	1528	Picture	pos_feedback	33884813	5166	1	14999	2	5000	next	other	0
+s108	1529	Picture	consistent	33912645	5167	1	6333	2	5000	next	hit	2352
+s108	1529	Response	32	33918912	11434	1
+s108	1530	Picture	pos_feedback	33924144	5166	1	14999	2	5000	next	other	0
+s108	1531	Picture	consistent	33954475	5166	2	7167	3	5000	next	hit	2355
+s108	1531	Response	16	33961605	12296	1
+s108	1532	Picture	pos_feedback	33966808	5166	1	14999	2	5000	next	other	0
+s108	1533	Picture	consistent	33992140	5167	1	6499	2	5000	next	hit	2358
+s108	1533	Response	16	33998479	11506	1
+s108	1534	Picture	pos_feedback	34003806	5167	1	14999	2	5000	next	other	0
+s108	1535	Picture	consistent	34031637	5166	2	8166	4	5000	next	hit	2361
+s108	1535	Response	32	34039726	13255	1
+s108	1536	Picture	pos_feedback	34044970	5167	1	14999	2	5000	next	other	0
+s108	1537	Picture	consistent	34075301	5166	1	13666	2	5000	next	hit	2364
+s108	1537	Response	16	34088839	18704	1
+s108	1538	Picture	pos_feedback	34094133	5166	2	14999	4	5000	next	other	0
+s108	1539	Picture	consistent	34119465	5166	1	7833	2	5000	next	hit	2367
+s108	1539	Response	32	34127226	12927	1
+s108	1540	Picture	pos_feedback	34132464	5166	2	14999	4	5000	next	other	0
+s108	1541	Picture	consistent	34160296	5166	1	7166	2	5000	next	hit	2370
+s108	1541	Response	32	34167426	12296	2
+s108	1542	Picture	pos_feedback	34172629	5167	1	14999	2	5000	next	other	0
+s108	1543	Picture	consistent	34202960	5166	1	14332	3	5000	next	hit	2373
+s108	1543	Response	16	34217211	19417	1
+s108	1544	Picture	pos_feedback	34222459	5167	1	14999	2	5000	next	other	0
+s108	1545	Picture	consistent	34247791	5167	1	11832	2	5000	next	hit	2376
+s108	1545	Response	16	34259533	16909	1
+s108	1546	Picture	pos_feedback	34264790	5167	1	14999	2	5000	next	other	0
+s108	1547	Picture	consistent	34292621	5166	1	7000	2	5000	next	hit	2379
+s108	1547	Response	32	34299600	12145	1
+s108	1548	Picture	pos_feedback	34304787	5166	1	14999	2	5000	next	other	0
+s108	1549	Picture	consistent	34335118	5166	2	12166	4	5000	next	hit	2382
+s108	1549	Response	16	34347225	17273	1
+s108	1550	Picture	pos_feedback	34352451	5167	1	14999	2	5000	next	other	0
+s108	1551	Picture	consistent	34377783	5167	1	5832	3	5000	next	hit	2385
+s108	1551	Response	16	34383569	10953	1
+s108	1552	Response	32	34384178	563	1
+s108	1552	Picture	pos_feedback	34388782	5167	1	14999	2	5000	next	other	0
+s108	1553	Picture	consistent	34416613	5166	2	6500	3	5000	next	hit	2389
+s108	1553	Response	32	34423068	11621	2
+s108	1554	Picture	pos_feedback	34428279	5166	2	14999	4	5000	next	other	0
+s108	1555	Picture	consistent	34458611	5167	1	6999	2	5000	next	hit	2392
+s108	1555	Response	32	34465525	12081	1
+s108	1556	Picture	pos_feedback	34470777	5167	1	14999	2	5000	next	other	0
+s108	1557	Picture	consistent	34496108	5166	2	10333	3	5000	next	hit	2395
+s108	1557	Response	32	34506361	15419	1
+s108	1558	Picture	pos_feedback	34511608	5167	1	14999	2	5000	next	other	0
+s108	1559	Picture	consistent	34539439	5166	1	8000	2	5000	next	hit	2398
+s108	1559	Response	32	34547393	13120	1
+s108	1560	Picture	pos_feedback	34552605	5166	1	14999	2	5000	next	other	0
+s108	1561	Picture	consistent	34582936	5166	2	7333	4	5000	next	hit	2401
+s108	1561	Response	32	34590084	12314	2
+s108	1562	Picture	pos_feedback	34595436	5167	1	14999	2	5000	next	other	0
+s108	1563	Picture	consistent	34620767	5166	2	6500	3	5000	next	hit	2404
+s108	1563	Response	32	34627202	11601	1
+s108	1564	Picture	pos_feedback	34632433	5166	2	14999	4	5000	next	other	0
+s108	1565	Picture	consistent	34660265	5166	1	8499	3	5000	next	hit	2407
+s108	1565	Response	16	34668685	13586	1
+s108	1566	Picture	pos_feedback	34673931	5167	1	14999	2	5000	next	other	0
+s108	1567	Picture	consistent	34704262	5166	1	6333	2	5000	next	hit	2410
+s108	1567	Response	32	34710536	11440	2
+s108	1568	Picture	pos_feedback	34715762	5167	1	14999	2	5000	next	other	0
+s108	1569	Picture	consistent	34741093	5166	1	8333	2	5000	next	hit	2413
+s108	1569	Response	32	34749328	13401	1
+s108	1570	Picture	pos_feedback	34754593	5167	1	14999	2	5000	next	other	0
+s108	1571	Picture	consistent	34782424	5166	1	3333	2	5000	next	hit	2416
+s108	1571	Response	32	34785660	8402	1
+s108	1572	Picture	pos_feedback	34790924	5167	1	14999	2	5000	next	other	0
+s108	1573	Picture	consistent	34821255	5166	1	6833	2	5000	next	hit	2419
+s108	1573	Response	32	34827911	11822	1
+s108	1574	Picture	pos_feedback	34833254	5166	1	14999	2	5000	next	other	0
+s108	1575	Picture	consistent	34858586	5166	1	10999	3	5000	next	hit	2422
+s108	1575	Response	16	34869557	16137	1
+s108	1576	Picture	pos_feedback	34874752	5167	1	14999	2	5000	next	other	0
+s108	1577	Picture	consistent	34902583	5166	1	2000	2	5000	next	hit	2425
+s108	1577	Response	32	34904538	7121	1
+s108	1578	Picture	pos_feedback	34909750	5167	1	14999	2	5000	next	other	0
+s108	1579	Picture	consistent	34940081	5166	1	3333	2	5000	next	hit	2428
+s108	1579	Response	16	34943261	8346	1
+s108	1580	Picture	pos_feedback	34948580	5166	2	15000	3	5000	next	other	0
+s108	1581	Picture	consistent	34973912	5166	1	5000	2	5000	next	hit	2431
+s108	1581	Response	16	34978849	10103	1
+s108	1582	Response	32	34979473	561	1
+s108	1582	Picture	pos_feedback	34984078	5166	1	14999	2	5000	next	other	0
+s108	1583	Response	32	35010004	3260	1
+s108	1583	Picture	consistent	35011910	5166	1	19999	2	5000	next	miss	0
+s108	1584	Picture	pos_feedback	35037075	5166	1	14999	2	5000	next	other	0
+s108	1585	Picture	consistent	35067406	5166	2	3500	3	5000	next	hit	2438
+s108	1585	Response	16	35070757	8517	1
+s108	1586	Picture	pos_feedback	35076073	5167	1	14999	2	5000	next	other	0
+s108	1587	Picture	consistent	35101404	5166	2	8000	3	5000	next	hit	2441
+s108	1587	Response	16	35109288	13050	1
+s108	1588	Picture	pos_feedback	35114570	5166	1	14999	2	5000	next	other	0
+s108	1589	Picture	consistent	35142402	5167	1	6999	2	5000	next	hit	2444
+s108	1589	Response	32	35149335	12100	1
+s108	1590	Picture	pos_feedback	35154568	5167	1	14999	2	5000	next	other	0
+s108	1591	Picture	consistent	35184899	5166	1	7833	2	5000	next	hit	2447
+s108	1591	Response	16	35192618	12885	1
+s108	1592	Picture	pos_feedback	35197898	5166	2	14999	4	5000	next	other	0
+s108	1593	Picture	consistent	35223230	5166	1	9666	2	5000	next	hit	2450
+s108	1593	Response	32	35232850	14786	1
+s108	1594	Picture	pos_feedback	35238063	5167	1	14999	2	5000	next	other	0
+s108	1595	Picture	consistent	35265894	5166	1	5833	2	5000	next	hit	2453
+s108	1595	Response	16	35271643	10915	1
+s108	1596	Picture	pos_feedback	35276893	5166	2	15000	3	5000	next	other	0
+s108	1597	Picture	consistent	35307225	5166	1	12332	3	5000	next	hit	2456
+s108	1597	Response	32	35319373	17314	1
+s108	1598	Picture	pos_feedback	35324724	5167	1	14999	2	5000	next	other	0
+s108	1599	Picture	consistent	35350056	5167	1	9166	2	5000	next	hit	2459
+s108	1599	Response	32	35359170	14281	1
+s108	1600	Picture	pos_feedback	35364388	5166	1	14999	2	5000	next	other	0
+s108	1601	Picture	consistent	35392220	5167	1	7499	2	5000	next	hit	2462
+s108	1601	Response	16	35399548	12495	1
+s108	1602	Picture	pos_feedback	35404886	5167	1	14999	2	5000	next	other	0
+s108	1603	Picture	consistent	35435217	5166	1	6500	2	5000	next	hit	2465
+s108	1603	Response	16	35441681	11630	1
+s108	1604	Picture	pos_feedback	35446883	5166	1	14999	2	5000	next	other	0
+s108	1605	Picture	consistent	35472215	5167	1	9499	2	5000	next	hit	2468
+s108	1605	Response	16	35481634	14586	2
+s108	1606	Picture	pos_feedback	35486880	5166	2	15000	3	5000	next	other	0
+s108	1607	Picture	consistent	35514712	5166	1	8166	2	5000	next	hit	2471
+s108	1607	Response	32	35522836	13290	1
+s108	1608	Picture	pos_feedback	35528045	5167	1	14999	2	5000	next	other	0
+s108	1609	Picture	consistent	35558376	5166	1	6833	2	5000	next	hit	2474
+s108	1609	Response	32	35565144	11934	1
+s108	1610	Picture	pos_feedback	35570375	5166	1	14999	3	5000	next	other	0
+s108	1611	Picture	consistent	35595707	5166	1	11666	2	5000	next	hit	2477
+s108	1611	Response	16	35607237	16696	1
+s108	1612	Response	32	35607885	512	1
+s108	1612	Picture	pos_feedback	35612539	5166	2	14999	4	5000	next	other	0
+s108	1613	Picture	consistent	35640371	5166	1	7333	2	5000	next	hit	2481
+s108	1613	Response	32	35647666	12461	1
+s108	1614	Picture	pos_feedback	35652870	5166	1	14999	2	5000	next	other	0
+s108	1615	Picture	consistent	35683202	5167	1	13165	3	5000	next	hit	2484
+s108	1615	Response	32	35696237	18202	1
+s108	1616	Response	16	35696447	80	1
+s108	1616	Picture	pos_feedback	35701534	5167	1	14999	2	5000	next	other	0
+s108	1617	Picture	consistent	35726866	5167	1	7166	2	5000	next	hit	2488
+s108	1617	Response	16	35733917	12218	1
+s108	1617	Response	32	35733931	12232	1
+s108	1618	Picture	pos_feedback	35739198	5166	1	14999	2	5000	next	other	0
+s108	1619	Picture	consistent	35767029	5166	2	6667	3	5000	next	hit	2492
+s108	1619	Response	16	35773657	11794	1
+s108	1620	Response	32	35774118	422	1
+s108	1620	Picture	pos_feedback	35778862	5166	2	14999	4	5000	next	other	0
+s108	1621	Picture	consistent	35809194	5167	1	6833	2	5000	next	hit	2496
+s108	1621	Response	32	35815933	11906	1
+s108	1622	Response	16	35816139	112	1
+s108	1622	Picture	pos_feedback	35821193	5166	1	14999	2	5000	next	other	0
+s108	1623	Picture	consistent	35846525	5167	1	5833	2	5000	next	hit	2500
+s108	1623	Response	16	35852267	10909	1
+s108	1623	Response	32	35852267	10909	1
+s108	1624	Picture	pos_feedback	35857524	5166	1	14999	2	5000	next	other	0
+s108	1625	Picture	consistent	35885356	5167	1	7499	2	5000	next	hit	2504
+s108	1625	Response	16	35892730	12541	1
+s108	1626	Picture	pos_feedback	35898022	5167	1	14999	2	5000	next	other	0
+s108	1627	Picture	consistent	35928353	5166	1	6333	2	5000	next	hit	2507
+s108	1627	Response	32	35934594	11407	1
+s108	1628	Picture	pos_feedback	35939852	5166	2	14999	4	5000	next	other	0
+s108	1629	Picture	consistent	35965184	5166	1	4667	2	5000	next	hit	2510
+s108	1629	Response	32	35969824	9806	1
+s108	1630	Picture	pos_feedback	35975017	5166	1	14999	2	5000	next	other	0
+s108	1631	Picture	consistent	36002849	5167	1	5499	2	5000	next	hit	2513
+s108	1631	Response	16	36008325	10643	1
+s108	1632	Picture	pos_feedback	36013515	5167	1	14999	2	5000	next	other	0
+s108	1633	Picture	consistent	36043846	5166	1	5666	2	5000	next	hit	2516
+s108	1633	Response	32	36049413	10733	1
+s108	1634	Picture	pos_feedback	36054679	5167	1	14999	2	5000	next	other	0
+s108	1635	Picture	consistent	36080010	5166	2	7167	3	5000	next	hit	2519
+s108	1635	Response	32	36087000	12156	2
+s108	1636	Picture	pos_feedback	36092343	5166	1	14999	2	5000	next	other	0
+s108	1637	Picture	consistent	36120175	5167	1	1000	2	5000	next	hit	2522
+s108	1637	Response	16	36121113	6105	1
+s108	1638	Picture	pos_feedback	36126341	5166	1	14999	2	5000	next	other	0
+s108	1639	Picture	consistent	36156672	5166	1	7500	2	5000	next	hit	2525
+s108	1639	Response	16	36164064	12558	1
+s108	1640	Picture	pos_feedback	36169338	5166	1	14999	2	5000	next	other	0
+s108	1641	Picture	consistent	36194670	5166	1	7333	2	5000	next	hit	2528
+s108	1641	Response	32	36201971	12467	1
+s108	1642	Picture	pos_feedback	36207169	5166	1	14999	2	5000	next	other	0
+s108	1643	Picture	consistent	36235001	5167	1	7499	2	5000	next	hit	2531
+s108	1643	Response	16	36242362	12528	1
+s108	1644	Picture	pos_feedback	36247667	5167	1	14999	2	5000	next	other	0
+s108	1645	Picture	consistent	36277998	5166	1	6000	2	5000	next	hit	2534
+s108	1645	Response	32	36283928	11096	1
+s108	1646	Picture	pos_feedback	36289164	5166	1	14999	2	5000	next	other	0
+s108	1647	Picture	consistent	36314496	5167	1	6166	2	5000	next	hit	2537
+s108	1647	Response	16	36320510	11181	1
+s108	1648	Picture	pos_feedback	36325828	5166	2	15000	3	5000	next	other	0
+s108	1649	Picture	consistent	36353660	5166	1	2667	2	5000	next	hit	2540
+s108	1649	Response	32	36356262	7768	1
+s108	1650	Response	16	36356380	53	1
+s108	1650	Picture	pos_feedback	36361493	5166	1	14999	2	5000	next	other	0
+s108	1651	Picture	consistent	36391824	5166	2	5333	4	5000	next	hit	2544
+s108	1651	Response	16	36397068	10410	1
+s108	1652	Response	32	36397502	345	1
+s108	1652	Picture	pos_feedback	36402324	5167	1	14999	2	5000	next	other	0
+s108	1653	Picture	consistent	36427656	5167	1	6166	2	5000	next	hit	2548
+s108	1653	Response	32	36433701	11212	2
+s108	1654	Response	16	36434017	195	1
+s108	1654	Picture	pos_feedback	36438988	5166	1	14999	2	5000	next	other	0
+s108	1655	Picture	consistent	36466820	5167	1	5333	2	5000	next	hit	2552
+s108	1655	Response	16	36472098	10445	1
+s108	1656	Picture	pos_feedback	36477319	5166	1	14999	2	5000	next	other	0
+s108	1657	Picture	consistent	36507651	5167	1	4499	2	5000	next	hit	2555
+s108	1657	Response	32	36512093	9609	2
+s108	1658	Picture	pos_feedback	36517317	5167	1	14999	2	5000	next	other	0
+s108	1659	Picture	consistent	36542648	5166	2	5500	3	5000	next	hit	2558
+s108	1659	Response	16	36548013	10531	1
+s108	1660	Picture	pos_feedback	36553314	5166	2	14999	4	5000	next	other	0
+s108	1661	Picture	consistent	36581146	5166	1	6833	2	5000	next	hit	2561
+s108	1661	Response	32	36587876	11896	1
+s108	1662	Picture	pos_feedback	36593145	5166	1	14999	2	5000	next	other	0
+s108	1663	Picture	consistent	36623477	5167	1	4999	3	5000	next	hit	2564
+s108	1663	Response	16	36628437	10127	1
+s108	1664	Picture	pos_feedback	36633643	5167	1	14999	2	5000	next	other	0
+s108	1665	Picture	consistent	36663974	5166	1	5833	2	5000	next	hit	2567
+s108	1665	Response	16	36669705	10897	1
+s108	1666	Picture	pos_feedback	36674974	5167	1	14999	2	5000	next	other	0

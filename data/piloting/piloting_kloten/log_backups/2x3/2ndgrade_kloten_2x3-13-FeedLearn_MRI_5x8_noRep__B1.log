@@ -1,0 +1,272 @@
+Scenario - FeedLearn_MRI_5x8_fullRand.sce
+Logfile written - 06/11/2019 10:03:03
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+2ndgrade_kloten_2x3-13	0	Pulse	199	0	0	NA
+2ndgrade_kloten_2x3-13	0	Pulse	199	10000	10000	NA
+2ndgrade_kloten_2x3-13	1	Picture	intro	10167	0	1	205495	1	0	next	other	0
+2ndgrade_kloten_2x3-13	1	Pulse	199	20000	9833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	30000	19833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	40000	29833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	50000	39833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	60000	49833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	70000	59833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	80000	69833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	90000	79833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	100000	89833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	110000	99833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	120000	109833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	130000	119833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	140000	129833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	150000	139833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	160000	149833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	170000	159833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	180000	169833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	190000	179833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	200000	189833	NA
+2ndgrade_kloten_2x3-13	1	Pulse	199	210000	199833	NA
+2ndgrade_kloten_2x3-13	1	Response	16	215512	205345	0
+2ndgrade_kloten_2x3-13	2	Picture	start	215662	0	1	50165	1	0	next	other	0
+2ndgrade_kloten_2x3-13	2	Pulse	199	220000	4338	NA
+2ndgrade_kloten_2x3-13	2	Pulse	199	230000	14338	NA
+2ndgrade_kloten_2x3-13	2	Pulse	199	240000	24338	NA
+2ndgrade_kloten_2x3-13	2	Pulse	199	250000	34338	NA
+2ndgrade_kloten_2x3-13	2	Pulse	199	260000	44338	NA
+2ndgrade_kloten_2x3-13	3	Pulse	199	270000	4333	NA
+2ndgrade_kloten_2x3-13	3	Pulse	199	280000	14333	NA
+2ndgrade_kloten_2x3-13	3	Pulse	199	290000	24333	NA
+2ndgrade_kloten_2x3-13	3	Pulse	199	300000	34333	NA
+2ndgrade_kloten_2x3-13	3	Pulse	199	310000	44333	NA
+2ndgrade_kloten_2x3-13	4	Picture	fix	316159	0	1	27333	1	0	next	other	0
+2ndgrade_kloten_2x3-13	4	Pulse	199	320000	3841	NA
+2ndgrade_kloten_2x3-13	4	Pulse	199	330000	13841	NA
+2ndgrade_kloten_2x3-13	4	Pulse	199	340000	23841	NA
+2ndgrade_kloten_2x3-13	6	Picture	stim	343492	0	1	20166	1	0	20000	incorrect	43
+2ndgrade_kloten_2x3-13	6	Pulse	199	350000	6508	NA
+2ndgrade_kloten_2x3-13	6	Pulse	199	360000	16508	NA
+2ndgrade_kloten_2x3-13	6	Response	32	361840	18348	0
+2ndgrade_kloten_2x3-13	7	Picture	fix2	363658	0	1	20333	1	0	next	other	0
+2ndgrade_kloten_2x3-13	7	Pulse	199	370000	6342	NA
+2ndgrade_kloten_2x3-13	7	Pulse	199	380000	16342	NA
+2ndgrade_kloten_2x3-13	8	Picture	feedback	383991	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	8	Pulse	199	390000	6009	NA
+2ndgrade_kloten_2x3-13	8	Pulse	199	400000	16009	NA
+2ndgrade_kloten_2x3-13	9	Picture	fix	404157	0	1	30499	1	0	next	other	0
+2ndgrade_kloten_2x3-13	9	Pulse	199	410000	5843	NA
+2ndgrade_kloten_2x3-13	9	Pulse	199	420000	15843	NA
+2ndgrade_kloten_2x3-13	9	Pulse	199	430000	25843	NA
+2ndgrade_kloten_2x3-13	11	Picture	stim	434657	0	1	20166	1	0	20000	hit	56
+2ndgrade_kloten_2x3-13	11	Pulse	199	440000	5343	NA
+2ndgrade_kloten_2x3-13	11	Response	16	449518	14862	0
+2ndgrade_kloten_2x3-13	11	Pulse	199	450000	15343	NA
+2ndgrade_kloten_2x3-13	12	Picture	fix2	454823	0	1	22666	1	0	next	other	0
+2ndgrade_kloten_2x3-13	12	Pulse	199	460000	5177	NA
+2ndgrade_kloten_2x3-13	12	Pulse	199	470000	15177	NA
+2ndgrade_kloten_2x3-13	13	Picture	feedback	477489	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	13	Pulse	199	480000	2511	NA
+2ndgrade_kloten_2x3-13	13	Pulse	199	490000	12511	NA
+2ndgrade_kloten_2x3-13	14	Picture	fix	497655	0	1	33833	1	0	next	other	0
+2ndgrade_kloten_2x3-13	14	Pulse	199	500000	2345	NA
+2ndgrade_kloten_2x3-13	14	Pulse	199	510000	12345	NA
+2ndgrade_kloten_2x3-13	14	Pulse	199	520000	22345	NA
+2ndgrade_kloten_2x3-13	14	Pulse	199	530000	32345	NA
+2ndgrade_kloten_2x3-13	16	Picture	stim	531488	0	1	20166	1	0	20000	incorrect	71
+2ndgrade_kloten_2x3-13	16	Pulse	199	540000	8512	NA
+2ndgrade_kloten_2x3-13	16	Response	32	545603	14115	0
+2ndgrade_kloten_2x3-13	16	Pulse	199	550000	18512	NA
+2ndgrade_kloten_2x3-13	17	Picture	fix2	551654	0	1	20333	1	0	next	other	0
+2ndgrade_kloten_2x3-13	17	Pulse	199	560000	8346	NA
+2ndgrade_kloten_2x3-13	17	Pulse	199	570000	18346	NA
+2ndgrade_kloten_2x3-13	18	Picture	feedback	571987	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	18	Pulse	199	580000	8013	NA
+2ndgrade_kloten_2x3-13	18	Pulse	199	590000	18013	NA
+2ndgrade_kloten_2x3-13	19	Picture	fix	592153	0	1	28833	1	0	next	other	0
+2ndgrade_kloten_2x3-13	19	Pulse	199	600000	7847	NA
+2ndgrade_kloten_2x3-13	19	Pulse	199	610000	17847	NA
+2ndgrade_kloten_2x3-13	19	Pulse	199	620000	27847	NA
+2ndgrade_kloten_2x3-13	21	Picture	stim	620986	0	1	20166	1	0	20000	incorrect	85
+2ndgrade_kloten_2x3-13	21	Pulse	199	630000	9014	NA
+2ndgrade_kloten_2x3-13	21	Response	32	633573	12588	0
+2ndgrade_kloten_2x3-13	21	Pulse	199	640000	19014	NA
+2ndgrade_kloten_2x3-13	22	Picture	fix2	641152	0	1	17500	1	0	next	other	0
+2ndgrade_kloten_2x3-13	22	Pulse	199	650000	8848	NA
+2ndgrade_kloten_2x3-13	23	Picture	feedback	658651	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	23	Pulse	199	660000	1349	NA
+2ndgrade_kloten_2x3-13	23	Pulse	199	670000	11349	NA
+2ndgrade_kloten_2x3-13	24	Picture	fix	678818	0	1	31833	1	0	next	other	0
+2ndgrade_kloten_2x3-13	24	Pulse	199	680000	1183	NA
+2ndgrade_kloten_2x3-13	24	Pulse	199	690000	11183	NA
+2ndgrade_kloten_2x3-13	24	Pulse	199	700000	21183	NA
+2ndgrade_kloten_2x3-13	24	Pulse	199	710000	31183	NA
+2ndgrade_kloten_2x3-13	26	Picture	stim	710650	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	26	Pulse	199	720000	9350	NA
+2ndgrade_kloten_2x3-13	26	Pulse	199	730000	19350	NA
+2ndgrade_kloten_2x3-13	27	Picture	fix2	730983	0	1	13666	1	0	next	other	0
+2ndgrade_kloten_2x3-13	27	Pulse	199	740000	9017	NA
+2ndgrade_kloten_2x3-13	28	Picture	feedback	744649	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	28	Pulse	199	750000	5351	NA
+2ndgrade_kloten_2x3-13	28	Pulse	199	760000	15351	NA
+2ndgrade_kloten_2x3-13	29	Picture	fix	764815	0	1	27333	1	0	next	other	0
+2ndgrade_kloten_2x3-13	29	Pulse	199	770000	5185	NA
+2ndgrade_kloten_2x3-13	29	Pulse	199	780000	15185	NA
+2ndgrade_kloten_2x3-13	29	Pulse	199	790000	25185	NA
+2ndgrade_kloten_2x3-13	31	Picture	stim	792148	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	31	Pulse	199	800000	7852	NA
+2ndgrade_kloten_2x3-13	31	Pulse	199	810000	17852	NA
+2ndgrade_kloten_2x3-13	32	Picture	fix2	812314	0	1	18833	1	0	next	other	0
+2ndgrade_kloten_2x3-13	32	Pulse	199	820000	7686	NA
+2ndgrade_kloten_2x3-13	32	Pulse	199	830000	17686	NA
+2ndgrade_kloten_2x3-13	33	Picture	feedback	831147	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	33	Pulse	199	840000	8853	NA
+2ndgrade_kloten_2x3-13	33	Pulse	199	850000	18853	NA
+2ndgrade_kloten_2x3-13	34	Picture	fix	851313	0	1	28833	1	0	next	other	0
+2ndgrade_kloten_2x3-13	34	Pulse	199	860000	8687	NA
+2ndgrade_kloten_2x3-13	34	Pulse	199	870000	18687	NA
+2ndgrade_kloten_2x3-13	34	Pulse	199	880000	28687	NA
+2ndgrade_kloten_2x3-13	36	Picture	stim	880146	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	36	Pulse	199	890000	9854	NA
+2ndgrade_kloten_2x3-13	36	Pulse	199	900000	19854	NA
+2ndgrade_kloten_2x3-13	37	Picture	fix2	900312	0	1	18666	1	0	next	other	0
+2ndgrade_kloten_2x3-13	37	Pulse	199	910000	9688	NA
+2ndgrade_kloten_2x3-13	38	Picture	feedback	918979	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	38	Pulse	199	920000	1021	NA
+2ndgrade_kloten_2x3-13	38	Pulse	199	930000	11021	NA
+2ndgrade_kloten_2x3-13	38	Response	16	936939	17961	0
+2ndgrade_kloten_2x3-13	39	Picture	fix	939145	0	1	24166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	39	Pulse	199	940000	855	NA
+2ndgrade_kloten_2x3-13	39	Pulse	199	950000	10855	NA
+2ndgrade_kloten_2x3-13	39	Pulse	199	960000	20855	NA
+2ndgrade_kloten_2x3-13	41	Picture	stim	963311	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	41	Pulse	199	970000	6689	NA
+2ndgrade_kloten_2x3-13	41	Pulse	199	980000	16689	NA
+2ndgrade_kloten_2x3-13	42	Picture	fix2	983477	0	1	24999	1	0	next	other	0
+2ndgrade_kloten_2x3-13	42	Pulse	199	990000	6523	NA
+2ndgrade_kloten_2x3-13	42	Pulse	199	1000000	16523	NA
+2ndgrade_kloten_2x3-13	43	Picture	feedback	1008476	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	43	Pulse	199	1010000	1524	NA
+2ndgrade_kloten_2x3-13	43	Pulse	199	1020000	11524	NA
+2ndgrade_kloten_2x3-13	44	Picture	fix	1028643	0	1	40999	1	0	next	other	0
+2ndgrade_kloten_2x3-13	44	Pulse	199	1030000	1357	NA
+2ndgrade_kloten_2x3-13	44	Pulse	199	1040000	11357	NA
+2ndgrade_kloten_2x3-13	44	Pulse	199	1050000	21357	NA
+2ndgrade_kloten_2x3-13	44	Pulse	199	1060000	31357	NA
+2ndgrade_kloten_2x3-13	46	Picture	stim	1069642	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	46	Pulse	199	1070000	358	NA
+2ndgrade_kloten_2x3-13	46	Pulse	199	1080000	10358	NA
+2ndgrade_kloten_2x3-13	47	Picture	fix2	1089808	0	1	10166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	47	Pulse	199	1090000	192	NA
+2ndgrade_kloten_2x3-13	48	Picture	feedback	1099974	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	48	Pulse	199	1100000	26	NA
+2ndgrade_kloten_2x3-13	48	Pulse	199	1110000	10026	NA
+2ndgrade_kloten_2x3-13	48	Pulse	199	1120000	20026	NA
+2ndgrade_kloten_2x3-13	49	Picture	fix	1120141	0	1	35832	1	0	next	other	0
+2ndgrade_kloten_2x3-13	49	Pulse	199	1130000	9859	NA
+2ndgrade_kloten_2x3-13	49	Pulse	199	1140000	19859	NA
+2ndgrade_kloten_2x3-13	49	Pulse	199	1150000	29859	NA
+2ndgrade_kloten_2x3-13	51	Picture	stim	1155973	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	51	Pulse	199	1160000	4027	NA
+2ndgrade_kloten_2x3-13	51	Pulse	199	1170000	14027	NA
+2ndgrade_kloten_2x3-13	52	Picture	fix2	1176306	0	1	16000	1	0	next	other	0
+2ndgrade_kloten_2x3-13	52	Pulse	199	1180000	3694	NA
+2ndgrade_kloten_2x3-13	52	Pulse	199	1190000	13694	NA
+2ndgrade_kloten_2x3-13	53	Picture	feedback	1192305	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	53	Pulse	199	1200000	7695	NA
+2ndgrade_kloten_2x3-13	53	Pulse	199	1210000	17695	NA
+2ndgrade_kloten_2x3-13	54	Picture	fix	1212472	0	1	27666	1	0	next	other	0
+2ndgrade_kloten_2x3-13	54	Pulse	199	1220000	7528	NA
+2ndgrade_kloten_2x3-13	54	Pulse	199	1230000	17528	NA
+2ndgrade_kloten_2x3-13	54	Pulse	199	1240000	27528	NA
+2ndgrade_kloten_2x3-13	56	Picture	stim	1240138	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	56	Pulse	199	1250000	9862	NA
+2ndgrade_kloten_2x3-13	56	Pulse	199	1260000	19862	NA
+2ndgrade_kloten_2x3-13	57	Picture	fix2	1260304	0	1	15166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	57	Pulse	199	1270000	9696	NA
+2ndgrade_kloten_2x3-13	58	Picture	feedback	1275470	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	58	Pulse	199	1280000	4530	NA
+2ndgrade_kloten_2x3-13	58	Pulse	199	1290000	14530	NA
+2ndgrade_kloten_2x3-13	59	Picture	fix	1295636	0	1	26166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	59	Pulse	199	1300000	4364	NA
+2ndgrade_kloten_2x3-13	59	Pulse	199	1310000	14364	NA
+2ndgrade_kloten_2x3-13	59	Pulse	199	1320000	24364	NA
+2ndgrade_kloten_2x3-13	61	Picture	stim	1321802	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	61	Pulse	199	1330000	8198	NA
+2ndgrade_kloten_2x3-13	61	Pulse	199	1340000	18198	NA
+2ndgrade_kloten_2x3-13	62	Picture	fix2	1342135	0	1	18833	1	0	next	other	0
+2ndgrade_kloten_2x3-13	62	Pulse	199	1350000	7865	NA
+2ndgrade_kloten_2x3-13	62	Pulse	199	1360000	17865	NA
+2ndgrade_kloten_2x3-13	63	Picture	feedback	1360968	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	63	Pulse	199	1370000	9032	NA
+2ndgrade_kloten_2x3-13	63	Pulse	199	1380000	19032	NA
+2ndgrade_kloten_2x3-13	64	Picture	fix	1381134	0	1	28833	1	0	next	other	0
+2ndgrade_kloten_2x3-13	64	Pulse	199	1390000	8866	NA
+2ndgrade_kloten_2x3-13	64	Pulse	199	1400000	18866	NA
+2ndgrade_kloten_2x3-13	66	Picture	stim	1409967	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	66	Pulse	199	1410000	33	NA
+2ndgrade_kloten_2x3-13	66	Pulse	199	1420000	10033	NA
+2ndgrade_kloten_2x3-13	66	Pulse	199	1430000	20033	NA
+2ndgrade_kloten_2x3-13	67	Picture	fix2	1430300	0	1	23666	1	0	next	other	0
+2ndgrade_kloten_2x3-13	67	Pulse	199	1440000	9700	NA
+2ndgrade_kloten_2x3-13	67	Pulse	199	1450000	19700	NA
+2ndgrade_kloten_2x3-13	68	Picture	feedback	1453966	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	68	Pulse	199	1460000	6034	NA
+2ndgrade_kloten_2x3-13	68	Pulse	199	1470000	16034	NA
+2ndgrade_kloten_2x3-13	69	Picture	fix	1474132	0	1	31833	1	0	next	other	0
+2ndgrade_kloten_2x3-13	69	Pulse	199	1480000	5868	NA
+2ndgrade_kloten_2x3-13	69	Pulse	199	1490000	15868	NA
+2ndgrade_kloten_2x3-13	69	Pulse	199	1500000	25868	NA
+2ndgrade_kloten_2x3-13	71	Picture	stim	1505965	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	71	Pulse	199	1510000	4035	NA
+2ndgrade_kloten_2x3-13	71	Pulse	199	1520000	14035	NA
+2ndgrade_kloten_2x3-13	72	Picture	fix2	1526131	0	1	13500	1	0	next	other	0
+2ndgrade_kloten_2x3-13	72	Pulse	199	1530000	3869	NA
+2ndgrade_kloten_2x3-13	73	Picture	feedback	1539631	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	73	Pulse	199	1540000	369	NA
+2ndgrade_kloten_2x3-13	73	Pulse	199	1550000	10369	NA
+2ndgrade_kloten_2x3-13	74	Picture	fix	1559797	0	1	29999	1	0	next	other	0
+2ndgrade_kloten_2x3-13	74	Pulse	199	1560000	203	NA
+2ndgrade_kloten_2x3-13	74	Pulse	199	1570000	10203	NA
+2ndgrade_kloten_2x3-13	74	Pulse	199	1580000	20203	NA
+2ndgrade_kloten_2x3-13	76	Picture	stim	1589796	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	76	Pulse	199	1590000	204	NA
+2ndgrade_kloten_2x3-13	76	Pulse	199	1600000	10204	NA
+2ndgrade_kloten_2x3-13	77	Picture	fix2	1609962	0	1	18333	1	0	next	other	0
+2ndgrade_kloten_2x3-13	77	Pulse	199	1610000	38	NA
+2ndgrade_kloten_2x3-13	77	Pulse	199	1620000	10038	NA
+2ndgrade_kloten_2x3-13	78	Picture	feedback	1628295	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	78	Pulse	199	1630000	1705	NA
+2ndgrade_kloten_2x3-13	78	Pulse	199	1640000	11705	NA
+2ndgrade_kloten_2x3-13	79	Picture	fix	1648461	0	1	34499	1	0	next	other	0
+2ndgrade_kloten_2x3-13	79	Pulse	199	1650000	1539	NA
+2ndgrade_kloten_2x3-13	79	Pulse	199	1660000	11539	NA
+2ndgrade_kloten_2x3-13	79	Pulse	199	1670000	21539	NA
+2ndgrade_kloten_2x3-13	79	Pulse	199	1680000	31539	NA
+2ndgrade_kloten_2x3-13	81	Picture	stim	1682961	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	81	Pulse	199	1690000	7039	NA
+2ndgrade_kloten_2x3-13	81	Pulse	199	1700000	17039	NA
+2ndgrade_kloten_2x3-13	82	Picture	fix2	1703127	0	1	16000	1	0	next	other	0
+2ndgrade_kloten_2x3-13	82	Pulse	199	1710000	6873	NA
+2ndgrade_kloten_2x3-13	83	Picture	feedback	1719126	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	83	Pulse	199	1720000	874	NA
+2ndgrade_kloten_2x3-13	83	Pulse	199	1730000	10874	NA
+2ndgrade_kloten_2x3-13	84	Picture	fix	1739293	0	1	22999	1	0	next	other	0
+2ndgrade_kloten_2x3-13	84	Pulse	199	1740000	707	NA
+2ndgrade_kloten_2x3-13	84	Pulse	199	1750000	10707	NA
+2ndgrade_kloten_2x3-13	84	Pulse	199	1760000	20707	NA
+2ndgrade_kloten_2x3-13	86	Picture	stim	1762292	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	86	Pulse	199	1770000	7708	NA
+2ndgrade_kloten_2x3-13	86	Pulse	199	1780000	17708	NA
+2ndgrade_kloten_2x3-13	87	Picture	fix2	1782625	0	1	25833	1	0	next	other	0
+2ndgrade_kloten_2x3-13	87	Pulse	199	1790000	7375	NA
+2ndgrade_kloten_2x3-13	87	Pulse	199	1800000	17375	NA
+2ndgrade_kloten_2x3-13	88	Picture	feedback	1808458	0	1	20166	1	0	next	other	0
+2ndgrade_kloten_2x3-13	88	Pulse	199	1810000	1542	NA
+2ndgrade_kloten_2x3-13	88	Pulse	199	1820000	11542	NA
+2ndgrade_kloten_2x3-13	89	Picture	fix	1828624	0	1	32333	1	0	next	other	0
+2ndgrade_kloten_2x3-13	89	Pulse	199	1830000	1376	NA
+2ndgrade_kloten_2x3-13	89	Pulse	199	1840000	11376	NA
+2ndgrade_kloten_2x3-13	89	Pulse	199	1850000	21376	NA
+2ndgrade_kloten_2x3-13	89	Pulse	199	1860000	31376	NA
+2ndgrade_kloten_2x3-13	91	Picture	stim	1860956	0	1	21123	1	0	20000	miss	0
+2ndgrade_kloten_2x3-13	91	Pulse	199	1870000	9044	NA
+2ndgrade_kloten_2x3-13	91	Quit		1876778	15821	NA

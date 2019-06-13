@@ -1,0 +1,49 @@
+block	trial	Vstim	Astim	match	C/I	resp	.result	RT	fb	V-file	A-file
+LR
+
+0	1	1	1	1	C	0	0	0	0	Ⴔ	DEU_o_short_1.wav
+0	2	2	1	0	C	1	1	3438	1	Ⴎ	DEU_o_short_1.wav
+0	3	3	2	0	C	2	0	1722	0	Ⴒ	DEU_m_1.wav
+0	4	1	3	0	C	0	0	0	0	Ⴔ	DEU_ch_1.wav
+0	5	2	2	0	C	2	1	2669	1	Ⴎ	DEU_m_1.wav
+0	6	3	2	0	C	2	1	1939	1	Ⴒ	DEU_m_1.wav
+0	7	3	2	0	C	1	1	2163	1	Ⴒ	DEU_m_1.wav
+0	8	1	1	1	C	1	0	1746	0	Ⴔ	DEU_o_short_1.wav
+0	9	1	3	0	C	2	0	1820	0	Ⴔ	DEU_ch_1.wav
+0	10	2	1	0	C	1	1	1772	1	Ⴎ	DEU_o_short_1.wav
+0	11	2	2	0	C	1	0	1861	0	Ⴎ	DEU_m_1.wav
+0	12	3	2	0	C	2	1	1761	1	Ⴒ	DEU_m_1.wav
+0	13	3	2	0	C	2	0	2089	0	Ⴒ	DEU_m_1.wav
+0	14	1	1	1	C	1	0	1357	0	Ⴔ	DEU_o_short_1.wav
+0	15	1	3	0	C	1	1	1988	1	Ⴔ	DEU_ch_1.wav
+avg_resp = 2247
+1	1	2	1	0	2	0	1688	0	Ⴂ	DEU_u_short_1.wav
+1	2	1	1	1	2	1	2523	1	Ⴜ	DEU_u_short_1.wav
+1	3	2	2	1	2	1	2673	1	Ⴂ	DEU_n.wav
+1	4	3	2	0	1	1	1523	1	Ⴁ	DEU_n.wav
+1	5	1	1	1	1	0	2249	0	Ⴜ	DEU_u_short_1.wav
+1	6	2	2	1	2	1	1087	1	Ⴂ	DEU_n.wav
+1	7	1	1	1	1	0	1485	0	Ⴜ	DEU_u_short_1.wav
+1	8	3	3	1	2	1	1734	1	Ⴁ	DEU_f.wav
+1	9	1	3	0	1	1	1841	1	Ⴜ	DEU_f.wav
+1	10	2	2	1	2	1	1898	1	Ⴂ	DEU_n.wav
+1	11	1	1	1	1	0	1673	0	Ⴜ	DEU_u_short_1.wav
+1	12	3	3	1	2	1	1917	1	Ⴁ	DEU_f.wav
+1	13	1	3	0	1	1	1730	1	Ⴜ	DEU_f.wav
+1	14	3	3	1	2	1	1420	1	Ⴁ	DEU_f.wav
+1	15	1	1	1	2	1	1612	1	Ⴜ	DEU_u_short_1.wav
+1	16	2	1	0	2	0	2187	0	Ⴂ	DEU_u_short_1.wav
+1	17	3	2	0	1	1	2527	1	Ⴁ	DEU_n.wav
+1	18	2	1	0	1	1	2907	1	Ⴂ	DEU_u_short_1.wav
+1	19	3	3	1	2	1	1972	1	Ⴁ	DEU_f.wav
+1	20	2	1	0	1	1	1762	1	Ⴂ	DEU_u_short_1.wav
+1	21	1	3	0	1	1	1819	1	Ⴜ	DEU_f.wav
+1	22	3	3	1	2	1	1512	1	Ⴁ	DEU_f.wav
+1	23	2	1	0	1	1	1785	1	Ⴂ	DEU_u_short_1.wav
+1	24	3	2	0	1	1	1605	1	Ⴁ	DEU_n.wav
+1	25	1	3	0	1	1	1949	1	Ⴜ	DEU_f.wav
+1	26	3	2	0	1	1	2147	1	Ⴁ	DEU_n.wav
+1	27	1	3	0	1	1	2143	1	Ⴜ	DEU_f.wav
+1	28	2	2	1	2	1	1786	1	Ⴂ	DEU_n.wav
+1	29	3	2	0	1	1	2351	1	Ⴁ	DEU_n.wav
+1	30	2	2	1	2	1	2111	1	Ⴂ	DEU_n.wav

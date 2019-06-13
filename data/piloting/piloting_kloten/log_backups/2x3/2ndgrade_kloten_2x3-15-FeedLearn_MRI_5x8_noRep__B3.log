@@ -1,0 +1,379 @@
+Scenario - FeedLearn_MRI_5x8_fullRand.sce
+Logfile written - 06/11/2019 10:58:33
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+2ndgrade_kloten-15	0	Pulse	199	0	0	NA
+2ndgrade_kloten-15	0	Pulse	199	10000	10000	NA
+2ndgrade_kloten-15	1	Picture	intro	10166	0	1	132330	1	0	next	other	0
+2ndgrade_kloten-15	1	Pulse	199	20000	9834	NA
+2ndgrade_kloten-15	1	Pulse	199	30000	19834	NA
+2ndgrade_kloten-15	1	Pulse	199	40000	29834	NA
+2ndgrade_kloten-15	1	Pulse	199	50000	39834	NA
+2ndgrade_kloten-15	1	Pulse	199	60000	49834	NA
+2ndgrade_kloten-15	1	Pulse	199	70000	59834	NA
+2ndgrade_kloten-15	1	Pulse	199	80000	69834	NA
+2ndgrade_kloten-15	1	Pulse	199	90000	79834	NA
+2ndgrade_kloten-15	1	Pulse	199	100000	89834	NA
+2ndgrade_kloten-15	1	Pulse	199	110000	99834	NA
+2ndgrade_kloten-15	1	Pulse	199	120000	109834	NA
+2ndgrade_kloten-15	1	Pulse	199	130000	119834	NA
+2ndgrade_kloten-15	1	Pulse	199	140000	129834	NA
+2ndgrade_kloten-15	1	Response	32	142310	132144	0
+2ndgrade_kloten-15	2	Picture	start	142497	0	1	50165	1	0	next	other	0
+2ndgrade_kloten-15	2	Pulse	199	150000	7503	NA
+2ndgrade_kloten-15	2	Pulse	199	160000	17503	NA
+2ndgrade_kloten-15	2	Pulse	199	170000	27503	NA
+2ndgrade_kloten-15	2	Pulse	199	180000	37503	NA
+2ndgrade_kloten-15	2	Pulse	199	190000	47503	NA
+2ndgrade_kloten-15	3	Pulse	199	200000	7498	NA
+2ndgrade_kloten-15	3	Pulse	199	210000	17498	NA
+2ndgrade_kloten-15	3	Pulse	199	220000	27498	NA
+2ndgrade_kloten-15	3	Pulse	199	230000	37498	NA
+2ndgrade_kloten-15	3	Pulse	199	240000	47498	NA
+2ndgrade_kloten-15	4	Picture	fix	242994	0	1	34999	1	0	next	other	0
+2ndgrade_kloten-15	4	Pulse	199	250000	7006	NA
+2ndgrade_kloten-15	4	Pulse	199	260000	17006	NA
+2ndgrade_kloten-15	4	Pulse	199	270000	27006	NA
+2ndgrade_kloten-15	6	Picture	stim	277993	0	1	20166	1	0	20000	hit	36
+2ndgrade_kloten-15	6	Pulse	199	280000	2007	NA
+2ndgrade_kloten-15	6	Pulse	199	290000	12007	NA
+2ndgrade_kloten-15	6	Response	16	293962	15969	0
+2ndgrade_kloten-15	7	Picture	fix2	298160	0	1	17500	1	0	next	other	0
+2ndgrade_kloten-15	7	Pulse	199	300000	1840	NA
+2ndgrade_kloten-15	7	Pulse	199	310000	11840	NA
+2ndgrade_kloten-15	8	Picture	feedback	315659	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	8	Pulse	199	320000	4341	NA
+2ndgrade_kloten-15	8	Pulse	199	330000	14341	NA
+2ndgrade_kloten-15	9	Picture	fix	335825	0	1	28833	1	0	next	other	0
+2ndgrade_kloten-15	9	Pulse	199	340000	4175	NA
+2ndgrade_kloten-15	9	Pulse	199	350000	14175	NA
+2ndgrade_kloten-15	9	Pulse	199	360000	24175	NA
+2ndgrade_kloten-15	11	Picture	stim	364658	0	1	20166	1	0	20000	hit	49
+2ndgrade_kloten-15	11	Pulse	199	370000	5342	NA
+2ndgrade_kloten-15	11	Response	16	378631	13973	0
+2ndgrade_kloten-15	11	Pulse	199	380000	15342	NA
+2ndgrade_kloten-15	12	Picture	fix2	384824	0	1	25833	1	0	next	other	0
+2ndgrade_kloten-15	12	Pulse	199	390000	5176	NA
+2ndgrade_kloten-15	12	Pulse	199	400000	15176	NA
+2ndgrade_kloten-15	12	Pulse	199	410000	25176	NA
+2ndgrade_kloten-15	13	Picture	feedback	410657	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	13	Pulse	199	420000	9343	NA
+2ndgrade_kloten-15	13	Pulse	199	430000	19343	NA
+2ndgrade_kloten-15	14	Picture	fix	430823	0	1	27333	1	0	next	other	0
+2ndgrade_kloten-15	14	Pulse	199	440000	9177	NA
+2ndgrade_kloten-15	14	Pulse	199	450000	19177	NA
+2ndgrade_kloten-15	16	Picture	stim	458156	0	1	20166	1	0	20000	hit	64
+2ndgrade_kloten-15	16	Pulse	199	460000	1844	NA
+2ndgrade_kloten-15	16	Pulse	199	470000	11844	NA
+2ndgrade_kloten-15	16	Response	16	472655	14499	0
+2ndgrade_kloten-15	17	Picture	fix2	478322	0	1	25666	1	0	next	other	0
+2ndgrade_kloten-15	17	Pulse	199	480000	1678	NA
+2ndgrade_kloten-15	17	Pulse	199	490000	11678	NA
+2ndgrade_kloten-15	17	Pulse	199	500000	21678	NA
+2ndgrade_kloten-15	18	Picture	feedback	503988	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	18	Pulse	199	510000	6012	NA
+2ndgrade_kloten-15	18	Pulse	199	520000	16012	NA
+2ndgrade_kloten-15	19	Picture	fix	524154	0	1	30499	1	0	next	other	0
+2ndgrade_kloten-15	19	Pulse	199	530000	5846	NA
+2ndgrade_kloten-15	19	Pulse	199	540000	15846	NA
+2ndgrade_kloten-15	19	Pulse	199	550000	25846	NA
+2ndgrade_kloten-15	21	Picture	stim	554654	0	1	20166	1	0	20000	incorrect	79
+2ndgrade_kloten-15	21	Pulse	199	560000	5346	NA
+2ndgrade_kloten-15	21	Pulse	199	570000	15346	NA
+2ndgrade_kloten-15	21	Response	32	570654	16001	0
+2ndgrade_kloten-15	22	Picture	fix2	574820	0	1	16000	1	0	next	other	0
+2ndgrade_kloten-15	22	Pulse	199	580000	5180	NA
+2ndgrade_kloten-15	22	Pulse	199	590000	15180	NA
+2ndgrade_kloten-15	23	Picture	feedback	590819	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	23	Pulse	199	600000	9181	NA
+2ndgrade_kloten-15	23	Pulse	199	610000	19181	NA
+2ndgrade_kloten-15	24	Picture	fix	610986	0	1	33499	1	0	next	other	0
+2ndgrade_kloten-15	24	Pulse	199	620000	9014	NA
+2ndgrade_kloten-15	24	Pulse	199	630000	19014	NA
+2ndgrade_kloten-15	24	Pulse	199	640000	29014	NA
+2ndgrade_kloten-15	26	Picture	stim	644485	0	1	20166	1	0	20000	hit	92
+2ndgrade_kloten-15	26	Pulse	199	650000	5515	NA
+2ndgrade_kloten-15	26	Response	16	656931	12446	0
+2ndgrade_kloten-15	26	Pulse	199	660000	15515	NA
+2ndgrade_kloten-15	27	Picture	fix2	664651	0	1	21499	1	0	next	other	0
+2ndgrade_kloten-15	27	Pulse	199	670000	5349	NA
+2ndgrade_kloten-15	27	Pulse	199	680000	15349	NA
+2ndgrade_kloten-15	28	Picture	feedback	686151	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	28	Pulse	199	690000	3849	NA
+2ndgrade_kloten-15	28	Pulse	199	700000	13849	NA
+2ndgrade_kloten-15	29	Picture	fix	706317	0	1	26999	1	0	next	other	0
+2ndgrade_kloten-15	29	Pulse	199	710000	3683	NA
+2ndgrade_kloten-15	29	Pulse	199	720000	13683	NA
+2ndgrade_kloten-15	29	Pulse	199	730000	23683	NA
+2ndgrade_kloten-15	31	Picture	stim	733316	0	1	20166	1	0	20000	hit	106
+2ndgrade_kloten-15	31	Pulse	199	740000	6684	NA
+2ndgrade_kloten-15	31	Response	16	747197	13881	0
+2ndgrade_kloten-15	31	Response	16	749765	16449	0
+2ndgrade_kloten-15	31	Pulse	199	750000	16684	NA
+2ndgrade_kloten-15	32	Picture	fix2	753649	0	1	22666	1	0	next	other	0
+2ndgrade_kloten-15	32	Response	32	756311	2662	0
+2ndgrade_kloten-15	32	Pulse	199	760000	6351	NA
+2ndgrade_kloten-15	32	Pulse	199	770000	16351	NA
+2ndgrade_kloten-15	33	Picture	feedback	776315	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	33	Pulse	199	780000	3685	NA
+2ndgrade_kloten-15	33	Pulse	199	790000	13685	NA
+2ndgrade_kloten-15	34	Picture	fix	796481	0	1	21166	1	0	next	other	0
+2ndgrade_kloten-15	34	Pulse	199	800000	3519	NA
+2ndgrade_kloten-15	34	Pulse	199	810000	13519	NA
+2ndgrade_kloten-15	36	Picture	stim	817648	0	1	20166	1	0	20000	incorrect	121
+2ndgrade_kloten-15	36	Pulse	199	820000	2352	NA
+2ndgrade_kloten-15	36	Response	32	829213	11566	0
+2ndgrade_kloten-15	36	Pulse	199	830000	12352	NA
+2ndgrade_kloten-15	37	Picture	fix2	837814	0	1	15166	1	0	next	other	0
+2ndgrade_kloten-15	37	Pulse	199	840000	2186	NA
+2ndgrade_kloten-15	37	Pulse	199	850000	12186	NA
+2ndgrade_kloten-15	38	Picture	feedback	852980	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	38	Pulse	199	860000	7020	NA
+2ndgrade_kloten-15	38	Pulse	199	870000	17020	NA
+2ndgrade_kloten-15	39	Picture	fix	873146	0	1	32333	1	0	next	other	0
+2ndgrade_kloten-15	39	Pulse	199	880000	6854	NA
+2ndgrade_kloten-15	39	Pulse	199	890000	16854	NA
+2ndgrade_kloten-15	39	Pulse	199	900000	26854	NA
+2ndgrade_kloten-15	41	Picture	stim	905479	0	1	20166	1	0	20000	incorrect	135
+2ndgrade_kloten-15	41	Pulse	199	910000	4521	NA
+2ndgrade_kloten-15	41	Response	32	916241	10762	0
+2ndgrade_kloten-15	41	Pulse	199	920000	14521	NA
+2ndgrade_kloten-15	42	Picture	fix2	925812	0	1	14333	1	0	next	other	0
+2ndgrade_kloten-15	42	Pulse	199	930000	4188	NA
+2ndgrade_kloten-15	42	Pulse	199	940000	14188	NA
+2ndgrade_kloten-15	43	Picture	feedback	940145	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	43	Pulse	199	950000	9855	NA
+2ndgrade_kloten-15	43	Pulse	199	960000	19855	NA
+2ndgrade_kloten-15	44	Picture	fix	960311	0	1	22999	1	0	next	other	0
+2ndgrade_kloten-15	44	Pulse	199	970000	9689	NA
+2ndgrade_kloten-15	44	Pulse	199	980000	19689	NA
+2ndgrade_kloten-15	46	Picture	stim	983310	0	1	20166	1	0	20000	incorrect	149
+2ndgrade_kloten-15	46	Pulse	199	990000	6690	NA
+2ndgrade_kloten-15	46	Pulse	199	1000000	16690	NA
+2ndgrade_kloten-15	46	Response	32	1002546	19236	0
+2ndgrade_kloten-15	47	Picture	fix2	1003477	0	1	20333	1	0	next	other	0
+2ndgrade_kloten-15	47	Pulse	199	1010000	6524	NA
+2ndgrade_kloten-15	47	Pulse	199	1020000	16524	NA
+2ndgrade_kloten-15	48	Picture	feedback	1023809	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	48	Pulse	199	1030000	6191	NA
+2ndgrade_kloten-15	48	Pulse	199	1040000	16191	NA
+2ndgrade_kloten-15	49	Picture	fix	1043976	0	1	31833	1	0	next	other	0
+2ndgrade_kloten-15	49	Pulse	199	1050000	6024	NA
+2ndgrade_kloten-15	49	Pulse	199	1060000	16024	NA
+2ndgrade_kloten-15	49	Pulse	199	1070000	26024	NA
+2ndgrade_kloten-15	51	Picture	stim	1075808	0	1	20166	1	0	20000	hit	162
+2ndgrade_kloten-15	51	Pulse	199	1080000	4192	NA
+2ndgrade_kloten-15	51	Response	16	1087309	11500	0
+2ndgrade_kloten-15	51	Pulse	199	1090000	14192	NA
+2ndgrade_kloten-15	52	Picture	fix2	1095974	0	1	18833	1	0	next	other	0
+2ndgrade_kloten-15	52	Pulse	199	1100000	4026	NA
+2ndgrade_kloten-15	52	Pulse	199	1110000	14026	NA
+2ndgrade_kloten-15	53	Picture	feedback	1114807	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	53	Pulse	199	1120000	5193	NA
+2ndgrade_kloten-15	53	Pulse	199	1130000	15193	NA
+2ndgrade_kloten-15	54	Picture	fix	1134973	0	1	35832	1	0	next	other	0
+2ndgrade_kloten-15	54	Pulse	199	1140000	5027	NA
+2ndgrade_kloten-15	54	Pulse	199	1150000	15027	NA
+2ndgrade_kloten-15	54	Pulse	199	1160000	25027	NA
+2ndgrade_kloten-15	54	Pulse	199	1170000	35027	NA
+2ndgrade_kloten-15	56	Picture	stim	1170806	0	1	20166	1	0	20000	hit	177
+2ndgrade_kloten-15	56	Pulse	199	1180000	9194	NA
+2ndgrade_kloten-15	56	Response	16	1185856	15050	0
+2ndgrade_kloten-15	56	Pulse	199	1190000	19194	NA
+2ndgrade_kloten-15	57	Picture	fix2	1190972	0	1	23666	1	0	next	other	0
+2ndgrade_kloten-15	57	Pulse	199	1200000	9028	NA
+2ndgrade_kloten-15	57	Pulse	199	1210000	19028	NA
+2ndgrade_kloten-15	58	Picture	feedback	1214638	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	58	Pulse	199	1220000	5362	NA
+2ndgrade_kloten-15	58	Pulse	199	1230000	15362	NA
+2ndgrade_kloten-15	59	Picture	fix	1234804	0	1	33833	1	0	next	other	0
+2ndgrade_kloten-15	59	Pulse	199	1240000	5196	NA
+2ndgrade_kloten-15	59	Pulse	199	1250000	15196	NA
+2ndgrade_kloten-15	59	Pulse	199	1260000	25196	NA
+2ndgrade_kloten-15	61	Picture	stim	1268637	0	1	20166	1	0	20000	hit	191
+2ndgrade_kloten-15	61	Pulse	199	1270000	1363	NA
+2ndgrade_kloten-15	61	Response	16	1279008	10371	0
+2ndgrade_kloten-15	61	Pulse	199	1280000	11363	NA
+2ndgrade_kloten-15	62	Picture	fix2	1288970	0	1	11333	1	0	next	other	0
+2ndgrade_kloten-15	62	Pulse	199	1290000	1030	NA
+2ndgrade_kloten-15	62	Pulse	199	1300000	11030	NA
+2ndgrade_kloten-15	63	Picture	feedback	1300303	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	63	Pulse	199	1310000	9697	NA
+2ndgrade_kloten-15	63	Pulse	199	1320000	19697	NA
+2ndgrade_kloten-15	64	Picture	fix	1320469	0	1	28833	1	0	next	other	0
+2ndgrade_kloten-15	64	Pulse	199	1330000	9531	NA
+2ndgrade_kloten-15	64	Pulse	199	1340000	19531	NA
+2ndgrade_kloten-15	66	Picture	stim	1349302	0	1	20166	1	0	20000	incorrect	204
+2ndgrade_kloten-15	66	Pulse	199	1350000	698	NA
+2ndgrade_kloten-15	66	Response	32	1359862	10560	0
+2ndgrade_kloten-15	66	Pulse	199	1360000	10698	NA
+2ndgrade_kloten-15	67	Picture	fix2	1369635	0	1	24999	1	0	next	other	0
+2ndgrade_kloten-15	67	Pulse	199	1370000	365	NA
+2ndgrade_kloten-15	67	Pulse	199	1380000	10365	NA
+2ndgrade_kloten-15	67	Pulse	199	1390000	20365	NA
+2ndgrade_kloten-15	68	Picture	feedback	1394634	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	68	Pulse	199	1400000	5366	NA
+2ndgrade_kloten-15	68	Pulse	199	1410000	15366	NA
+2ndgrade_kloten-15	69	Picture	fix	1414800	0	1	37999	1	0	next	other	0
+2ndgrade_kloten-15	69	Pulse	199	1420000	5200	NA
+2ndgrade_kloten-15	69	Pulse	199	1430000	15200	NA
+2ndgrade_kloten-15	69	Pulse	199	1440000	25200	NA
+2ndgrade_kloten-15	69	Pulse	199	1450000	35200	NA
+2ndgrade_kloten-15	71	Picture	stim	1452799	0	1	20166	1	0	20000	incorrect	220
+2ndgrade_kloten-15	71	Pulse	199	1460000	7201	NA
+2ndgrade_kloten-15	71	Response	32	1464174	11374	0
+2ndgrade_kloten-15	71	Pulse	199	1470000	17201	NA
+2ndgrade_kloten-15	72	Picture	fix2	1472966	0	1	20333	1	0	next	other	0
+2ndgrade_kloten-15	72	Pulse	199	1480000	7035	NA
+2ndgrade_kloten-15	72	Pulse	199	1490000	17035	NA
+2ndgrade_kloten-15	73	Picture	feedback	1493298	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	73	Pulse	199	1500000	6702	NA
+2ndgrade_kloten-15	73	Pulse	199	1510000	16702	NA
+2ndgrade_kloten-15	74	Picture	fix	1513465	0	1	24166	1	0	next	other	0
+2ndgrade_kloten-15	74	Pulse	199	1520000	6535	NA
+2ndgrade_kloten-15	74	Pulse	199	1530000	16535	NA
+2ndgrade_kloten-15	76	Picture	stim	1537631	0	1	20166	1	0	20000	miss	0
+2ndgrade_kloten-15	76	Pulse	199	1540000	2369	NA
+2ndgrade_kloten-15	76	Pulse	199	1550000	12369	NA
+2ndgrade_kloten-15	77	Picture	fix2	1557797	0	1	18666	1	0	next	other	0
+2ndgrade_kloten-15	77	Response	32	1558316	519	0
+2ndgrade_kloten-15	77	Pulse	199	1560000	2203	NA
+2ndgrade_kloten-15	77	Pulse	199	1570000	12203	NA
+2ndgrade_kloten-15	78	Picture	feedback	1576463	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	78	Pulse	199	1580000	3537	NA
+2ndgrade_kloten-15	78	Pulse	199	1590000	13537	NA
+2ndgrade_kloten-15	79	Picture	fix	1596629	0	1	30999	1	0	next	other	0
+2ndgrade_kloten-15	79	Pulse	199	1600000	3371	NA
+2ndgrade_kloten-15	79	Pulse	199	1610000	13371	NA
+2ndgrade_kloten-15	79	Pulse	199	1620000	23371	NA
+2ndgrade_kloten-15	81	Picture	stim	1627629	0	1	20166	1	0	20000	incorrect	247
+2ndgrade_kloten-15	81	Pulse	199	1630000	2371	NA
+2ndgrade_kloten-15	81	Response	32	1637795	10167	0
+2ndgrade_kloten-15	81	Pulse	199	1640000	12371	NA
+2ndgrade_kloten-15	82	Picture	fix2	1647961	0	1	13500	1	0	next	other	0
+2ndgrade_kloten-15	82	Pulse	199	1650000	2039	NA
+2ndgrade_kloten-15	82	Pulse	199	1660000	12039	NA
+2ndgrade_kloten-15	83	Picture	feedback	1661461	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	83	Pulse	199	1670000	8539	NA
+2ndgrade_kloten-15	83	Pulse	199	1680000	18539	NA
+2ndgrade_kloten-15	84	Picture	fix	1681627	0	1	23166	1	0	next	other	0
+2ndgrade_kloten-15	84	Pulse	199	1690000	8373	NA
+2ndgrade_kloten-15	84	Pulse	199	1700000	18373	NA
+2ndgrade_kloten-15	86	Picture	stim	1704793	0	1	20166	1	0	20000	hit	260
+2ndgrade_kloten-15	86	Pulse	199	1710000	5207	NA
+2ndgrade_kloten-15	86	Response	16	1716982	12189	0
+2ndgrade_kloten-15	86	Pulse	199	1720000	15207	NA
+2ndgrade_kloten-15	87	Picture	fix2	1725126	0	1	18333	1	0	next	other	0
+2ndgrade_kloten-15	87	Pulse	199	1730000	4874	NA
+2ndgrade_kloten-15	87	Pulse	199	1740000	14874	NA
+2ndgrade_kloten-15	88	Picture	feedback	1743459	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	88	Pulse	199	1750000	6541	NA
+2ndgrade_kloten-15	88	Pulse	199	1760000	16541	NA
+2ndgrade_kloten-15	89	Picture	fix	1763625	0	1	31833	1	0	next	other	0
+2ndgrade_kloten-15	89	Pulse	199	1770000	6375	NA
+2ndgrade_kloten-15	89	Pulse	199	1780000	16375	NA
+2ndgrade_kloten-15	89	Pulse	199	1790000	26375	NA
+2ndgrade_kloten-15	91	Picture	stim	1795458	0	1	20166	1	0	20000	incorrect	274
+2ndgrade_kloten-15	91	Pulse	199	1800000	4542	NA
+2ndgrade_kloten-15	91	Response	32	1809614	14156	0
+2ndgrade_kloten-15	91	Pulse	199	1810000	14542	NA
+2ndgrade_kloten-15	92	Picture	fix2	1815791	0	1	18833	1	0	next	other	0
+2ndgrade_kloten-15	92	Pulse	199	1820000	4209	NA
+2ndgrade_kloten-15	92	Pulse	199	1830000	14209	NA
+2ndgrade_kloten-15	93	Picture	feedback	1834624	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	93	Pulse	199	1840000	5376	NA
+2ndgrade_kloten-15	93	Pulse	199	1850000	15376	NA
+2ndgrade_kloten-15	94	Picture	fix	1854790	0	1	17666	1	0	next	other	0
+2ndgrade_kloten-15	94	Pulse	199	1860000	5210	NA
+2ndgrade_kloten-15	94	Response	16	1869548	14759	0
+2ndgrade_kloten-15	94	Pulse	199	1870000	15210	NA
+2ndgrade_kloten-15	96	Picture	stim	1872456	0	1	20166	1	0	20000	incorrect	288
+2ndgrade_kloten-15	96	Pulse	199	1880000	7544	NA
+2ndgrade_kloten-15	96	Response	32	1885717	13261	0
+2ndgrade_kloten-15	96	Pulse	199	1890000	17544	NA
+2ndgrade_kloten-15	97	Picture	fix2	1892622	0	1	10166	1	0	next	other	0
+2ndgrade_kloten-15	97	Pulse	199	1900000	7378	NA
+2ndgrade_kloten-15	98	Picture	feedback	1902789	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	98	Pulse	199	1910000	7211	NA
+2ndgrade_kloten-15	98	Pulse	199	1920000	17211	NA
+2ndgrade_kloten-15	99	Picture	fix	1922955	0	1	27666	1	0	next	other	0
+2ndgrade_kloten-15	99	Pulse	199	1930000	7045	NA
+2ndgrade_kloten-15	99	Pulse	199	1940000	17045	NA
+2ndgrade_kloten-15	99	Pulse	199	1950000	27045	NA
+2ndgrade_kloten-15	101	Picture	stim	1950621	0	1	20166	1	0	20000	hit	301
+2ndgrade_kloten-15	101	Pulse	199	1960000	9379	NA
+2ndgrade_kloten-15	101	Response	16	1962471	11850	0
+2ndgrade_kloten-15	101	Pulse	199	1970000	19379	NA
+2ndgrade_kloten-15	102	Picture	fix2	1970787	0	1	18666	1	0	next	other	0
+2ndgrade_kloten-15	102	Pulse	199	1980000	9213	NA
+2ndgrade_kloten-15	103	Picture	feedback	1989453	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	103	Pulse	199	1990000	547	NA
+2ndgrade_kloten-15	103	Pulse	199	2000000	10547	NA
+2ndgrade_kloten-15	104	Picture	fix	2009620	0	1	40999	1	0	next	other	0
+2ndgrade_kloten-15	104	Pulse	199	2010000	380	NA
+2ndgrade_kloten-15	104	Pulse	199	2020000	10380	NA
+2ndgrade_kloten-15	104	Pulse	199	2030000	20380	NA
+2ndgrade_kloten-15	104	Pulse	199	2040000	30380	NA
+2ndgrade_kloten-15	104	Pulse	199	2050000	40380	NA
+2ndgrade_kloten-15	106	Picture	stim	2050619	0	1	20166	1	0	20000	hit	316
+2ndgrade_kloten-15	106	Pulse	199	2060000	9381	NA
+2ndgrade_kloten-15	106	Response	16	2060659	10041	0
+2ndgrade_kloten-15	106	Pulse	199	2070000	19381	NA
+2ndgrade_kloten-15	107	Picture	fix2	2070785	0	1	16000	1	0	next	other	0
+2ndgrade_kloten-15	107	Pulse	199	2080000	9215	NA
+2ndgrade_kloten-15	108	Picture	feedback	2086784	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	108	Pulse	199	2090000	3216	NA
+2ndgrade_kloten-15	108	Pulse	199	2100000	13216	NA
+2ndgrade_kloten-15	109	Picture	fix	2106951	0	1	28833	1	0	next	other	0
+2ndgrade_kloten-15	109	Pulse	199	2110000	3049	NA
+2ndgrade_kloten-15	109	Pulse	199	2120000	13049	NA
+2ndgrade_kloten-15	109	Pulse	199	2130000	23049	NA
+2ndgrade_kloten-15	111	Picture	stim	2135783	0	1	20166	1	0	20000	incorrect	329
+2ndgrade_kloten-15	111	Pulse	199	2140000	4217	NA
+2ndgrade_kloten-15	111	Response	32	2147804	12021	0
+2ndgrade_kloten-15	111	Pulse	199	2150000	14217	NA
+2ndgrade_kloten-15	112	Picture	fix2	2155950	0	1	13666	1	0	next	other	0
+2ndgrade_kloten-15	112	Pulse	199	2160000	4051	NA
+2ndgrade_kloten-15	113	Picture	feedback	2169616	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	113	Pulse	199	2170000	384	NA
+2ndgrade_kloten-15	113	Pulse	199	2180000	10384	NA
+2ndgrade_kloten-15	114	Picture	fix	2189782	0	1	29999	1	0	next	other	0
+2ndgrade_kloten-15	114	Pulse	199	2190000	218	NA
+2ndgrade_kloten-15	114	Pulse	199	2200000	10218	NA
+2ndgrade_kloten-15	114	Pulse	199	2210000	20218	NA
+2ndgrade_kloten-15	116	Picture	stim	2219781	0	1	20166	1	0	20000	hit	343
+2ndgrade_kloten-15	116	Pulse	199	2220000	219	NA
+2ndgrade_kloten-15	116	Pulse	199	2230000	10219	NA
+2ndgrade_kloten-15	116	Response	16	2230497	10716	0
+2ndgrade_kloten-15	117	Picture	fix2	2239948	0	1	21833	1	0	next	other	0
+2ndgrade_kloten-15	117	Pulse	199	2240000	52	NA
+2ndgrade_kloten-15	117	Pulse	199	2250000	10052	NA
+2ndgrade_kloten-15	117	Pulse	199	2260000	20052	NA
+2ndgrade_kloten-15	118	Picture	feedback	2261780	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	118	Pulse	199	2270000	8220	NA
+2ndgrade_kloten-15	118	Pulse	199	2280000	18220	NA
+2ndgrade_kloten-15	119	Picture	fix	2281947	0	1	26166	1	0	next	other	0
+2ndgrade_kloten-15	119	Pulse	199	2290000	8053	NA
+2ndgrade_kloten-15	119	Pulse	199	2300000	18053	NA
+2ndgrade_kloten-15	119	Response	16	2306018	24071	0
+2ndgrade_kloten-15	121	Picture	stim	2308113	0	1	20166	1	0	20000	incorrect	356
+2ndgrade_kloten-15	121	Response	32	2308336	224	0
+2ndgrade_kloten-15	121	Pulse	199	2310000	1887	NA
+2ndgrade_kloten-15	121	Pulse	199	2320000	11887	NA
+2ndgrade_kloten-15	121	Response	32	2325567	17454	0
+2ndgrade_kloten-15	122	Picture	fix2	2328279	0	1	12333	1	0	next	other	0
+2ndgrade_kloten-15	122	Pulse	199	2330000	1721	NA
+2ndgrade_kloten-15	122	Pulse	199	2340000	11721	NA
+2ndgrade_kloten-15	123	Picture	feedback	2340612	0	1	20166	1	0	next	other	0
+2ndgrade_kloten-15	123	Pulse	199	2350000	9388	NA
+2ndgrade_kloten-15	123	Pulse	199	2360000	19388	NA
+2ndgrade_kloten-15	124	Picture	100	2360778	0	1	80165	1	0	80000	other	0
+2ndgrade_kloten-15	124	Pulse	199	2370000	9222	NA
+2ndgrade_kloten-15	124	Pulse	199	2380000	19222	NA
+2ndgrade_kloten-15	124	Pulse	199	2390000	29222	NA
+2ndgrade_kloten-15	124	Pulse	199	2400000	39222	NA
+2ndgrade_kloten-15	124	Pulse	199	2410000	49222	NA
+2ndgrade_kloten-15	124	Pulse	199	2420000	59222	NA
+2ndgrade_kloten-15	124	Pulse	199	2430000	69222	NA
+2ndgrade_kloten-15	124	Pulse	199	2440000	79222	NA

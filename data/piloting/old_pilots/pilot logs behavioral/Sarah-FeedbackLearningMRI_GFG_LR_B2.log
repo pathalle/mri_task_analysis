@@ -1,0 +1,392 @@
+Scenario - FeedbacklearningMRI_GFG.sce
+Logfile written - 02/21/2019 17:29:15
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+Sarah	0	Pulse	199	0	0	NA
+Sarah	0	Pulse	199	10000	10000	NA
+Sarah	1	Pulse	199	20000	7332	NA
+Sarah	1	Pulse	199	30000	17332	NA
+Sarah	1	Response	16	37953	25285	0
+Sarah	2	Pulse	199	40000	2039	NA
+Sarah	2	Pulse	199	50000	12039	NA
+Sarah	2	Response	16	52113	14152	0
+Sarah	2	Pulse	199	60000	22039	NA
+Sarah	2	Pulse	199	70000	32039	NA
+Sarah	2	Pulse	199	80000	42039	NA
+Sarah	3	Picture	fix	88894	0	1	18014	1	0	next	other	0
+Sarah	3	Pulse	199	90000	1106	NA
+Sarah	3	Pulse	199	100000	11106	NA
+Sarah	4	Picture	stim	106908	0	1	20182	1	0	20000	hit	17
+Sarah	4	Pulse	199	110000	3092	NA
+Sarah	4	Response	16	116915	10006	0
+Sarah	4	Pulse	199	120000	13092	NA
+Sarah	5	Picture	fix2	127257	0	1	13677	1	0	next	other	0
+Sarah	5	Pulse	199	130000	2743	NA
+Sarah	5	Pulse	199	140000	12743	NA
+Sarah	6	Picture	feedback	140935	0	1	20182	1	0	20000	other	0
+Sarah	6	Pulse	199	150000	9065	NA
+Sarah	6	Pulse	199	160000	19065	NA
+Sarah	7	Picture	fix	161451	0	1	11509	1	0	next	other	0
+Sarah	7	Pulse	199	170000	8549	NA
+Sarah	8	Picture	stim	172960	0	1	20182	1	0	20000	hit	29
+Sarah	8	Pulse	199	180000	7040	NA
+Sarah	8	Response	16	184674	11714	0
+Sarah	8	Pulse	199	190000	17040	NA
+Sarah	9	Picture	fix2	193309	0	1	14511	1	0	next	other	0
+Sarah	9	Pulse	199	200000	6691	NA
+Sarah	10	Picture	feedback	207820	0	1	20516	1	0	20000	other	0
+Sarah	10	Pulse	199	210000	2180	NA
+Sarah	10	Pulse	199	220000	12180	NA
+Sarah	11	Picture	fix	228670	0	1	20016	1	0	next	other	0
+Sarah	11	Pulse	199	230000	1330	NA
+Sarah	11	Pulse	199	240000	11330	NA
+Sarah	12	Picture	stim	248685	0	1	20516	1	0	20000	hit	41
+Sarah	12	Pulse	199	250000	1315	NA
+Sarah	12	Response	16	257074	8388	0
+Sarah	12	Pulse	199	260000	11315	NA
+Sarah	13	Picture	fix2	269368	0	1	9507	1	0	next	other	0
+Sarah	13	Pulse	199	270000	632	NA
+Sarah	14	Picture	feedback	278875	0	1	20182	1	0	20000	other	0
+Sarah	14	Pulse	199	280000	1125	NA
+Sarah	14	Pulse	199	290000	11125	NA
+Sarah	15	Picture	fix	299391	0	1	15846	1	0	next	other	0
+Sarah	15	Pulse	199	300000	609	NA
+Sarah	15	Pulse	199	310000	10609	NA
+Sarah	16	Picture	stim	315237	0	1	20182	1	0	20000	hit	53
+Sarah	16	Pulse	199	320000	4763	NA
+Sarah	16	Response	16	329715	14478	0
+Sarah	16	Pulse	199	330000	14763	NA
+Sarah	17	Picture	fix2	335586	0	1	20182	1	0	next	other	0
+Sarah	17	Pulse	199	340000	4414	NA
+Sarah	17	Pulse	199	350000	14414	NA
+Sarah	18	Picture	feedback	355768	0	1	20182	1	0	20000	other	0
+Sarah	18	Pulse	199	360000	4232	NA
+Sarah	18	Pulse	199	370000	14232	NA
+Sarah	19	Picture	fix	376118	0	1	10341	1	0	next	other	0
+Sarah	19	Pulse	199	380000	3882	NA
+Sarah	20	Picture	stim	386459	0	1	20182	1	0	20000	hit	65
+Sarah	20	Pulse	199	390000	3541	NA
+Sarah	20	Response	32	397394	10935	0
+Sarah	20	Pulse	199	400000	13541	NA
+Sarah	21	Picture	fix2	406975	0	1	20182	1	0	next	other	0
+Sarah	21	Pulse	199	410000	3025	NA
+Sarah	21	Pulse	199	420000	13025	NA
+Sarah	22	Picture	feedback	427157	0	1	20182	1	0	20000	other	0
+Sarah	22	Pulse	199	430000	2843	NA
+Sarah	22	Pulse	199	440000	12843	NA
+Sarah	23	Picture	fix	447673	0	1	28689	1	0	next	other	0
+Sarah	23	Pulse	199	450000	2327	NA
+Sarah	23	Pulse	199	460000	12327	NA
+Sarah	23	Pulse	199	470000	22327	NA
+Sarah	24	Picture	stim	476362	0	1	20182	1	0	20000	miss	0
+Sarah	24	Pulse	199	480000	3638	NA
+Sarah	24	Pulse	199	490000	13638	NA
+Sarah	25	Picture	fix2	496711	0	1	17180	1	0	next	other	0
+Sarah	25	Pulse	199	500000	3289	NA
+Sarah	25	Pulse	199	510000	13289	NA
+Sarah	26	Picture	feedback	513891	0	1	20182	1	0	20000	other	0
+Sarah	26	Pulse	199	520000	6109	NA
+Sarah	26	Pulse	199	530000	16109	NA
+Sarah	27	Picture	fix	534407	0	1	21684	1	0	next	other	0
+Sarah	27	Pulse	199	540000	5593	NA
+Sarah	27	Pulse	199	550000	15593	NA
+Sarah	28	Picture	stim	556091	0	1	20182	1	0	20000	miss	0
+Sarah	28	Pulse	199	560000	3909	NA
+Sarah	28	Pulse	199	570000	13909	NA
+Sarah	29	Picture	fix2	576440	0	1	12176	1	0	next	other	0
+Sarah	29	Pulse	199	580000	3560	NA
+Sarah	29	Response	32	581394	4954	0
+Sarah	30	Picture	feedback	588616	0	1	20182	1	0	20000	other	0
+Sarah	30	Pulse	199	590000	1384	NA
+Sarah	30	Pulse	199	600000	11384	NA
+Sarah	31	Picture	fix	609132	0	1	20850	1	0	next	other	0
+Sarah	31	Pulse	199	610000	868	NA
+Sarah	31	Pulse	199	620000	10868	NA
+Sarah	32	Picture	stim	629982	0	1	20182	1	0	20000	hit	104
+Sarah	32	Pulse	199	630000	18	NA
+Sarah	32	Pulse	199	640000	10018	NA
+Sarah	32	Response	16	641794	11813	0
+Sarah	32	Pulse	199	650000	20018	NA
+Sarah	33	Picture	fix2	650498	0	1	11676	1	0	next	other	0
+Sarah	33	Pulse	199	660000	9502	NA
+Sarah	34	Picture	feedback	662173	0	1	20182	1	0	20000	other	0
+Sarah	34	Pulse	199	670000	7827	NA
+Sarah	34	Pulse	199	680000	17827	NA
+Sarah	35	Picture	fix	682689	0	1	16846	1	0	next	other	0
+Sarah	35	Pulse	199	690000	7311	NA
+Sarah	36	Picture	stim	699536	0	1	20182	1	0	20000	hit	115
+Sarah	36	Pulse	199	700000	464	NA
+Sarah	36	Response	16	709155	9619	0
+Sarah	36	Pulse	199	710000	10464	NA
+Sarah	36	Pulse	199	720000	20464	NA
+Sarah	37	Picture	fix2	720052	0	1	16846	1	0	next	other	0
+Sarah	37	Pulse	199	730000	9948	NA
+Sarah	38	Picture	feedback	736898	0	1	20182	1	0	20000	other	0
+Sarah	38	Pulse	199	740000	3102	NA
+Sarah	38	Pulse	199	750000	13102	NA
+Sarah	39	Picture	fix	757383	0	68	24383	68	0	next	other	0
+Sarah	39	Pulse	199	760000	2617	NA
+Sarah	39	Pulse	199	770000	12617	NA
+Sarah	39	Pulse	199	780000	22617	NA
+Sarah	40	Picture	stim	781766	0	1	20182	1	0	20000	hit	129
+Sarah	40	Pulse	199	790000	8234	NA
+Sarah	40	Response	16	793795	12029	0
+Sarah	40	Pulse	199	800000	18234	NA
+Sarah	41	Picture	fix2	802116	0	1	14011	1	0	next	other	0
+Sarah	41	Pulse	199	810000	7884	NA
+Sarah	42	Picture	feedback	816126	0	1	19930	470	0	20000	other	0
+Sarah	42	Pulse	199	820000	3874	NA
+Sarah	42	Pulse	199	830000	13874	NA
+Sarah	43	Picture	fix	836967	0	45	33035	45	0	next	other	0
+Sarah	43	Pulse	199	840000	3033	NA
+Sarah	43	Pulse	199	850000	13033	NA
+Sarah	43	Pulse	199	860000	23033	NA
+Sarah	43	Pulse	199	870000	33033	NA
+Sarah	44	Picture	stim	870002	0	1	20182	1	0	20000	hit	142
+Sarah	44	Response	32	878995	8993	0
+Sarah	44	Pulse	199	880000	9998	NA
+Sarah	44	Pulse	199	890000	19998	NA
+Sarah	45	Picture	fix2	890351	0	1	21850	1	0	next	other	0
+Sarah	45	Pulse	199	900000	9649	NA
+Sarah	45	Pulse	199	910000	19649	NA
+Sarah	46	Picture	feedback	912201	0	1	20181	2	0	20000	other	0
+Sarah	46	Pulse	199	920000	7799	NA
+Sarah	46	Pulse	199	930000	17799	NA
+Sarah	47	Picture	fix	932550	0	2	19182	3	0	next	other	0
+Sarah	47	Pulse	199	940000	7450	NA
+Sarah	47	Pulse	199	950000	17450	NA
+Sarah	48	Picture	stim	951732	0	1	20113	214	0	20000	hit	156
+Sarah	48	Pulse	199	960000	8268	NA
+Sarah	48	Response	16	963395	11663	0
+Sarah	48	Pulse	199	970000	18268	NA
+Sarah	49	Picture	fix2	972248	0	1	23518	1	0	next	other	0
+Sarah	49	Pulse	199	980000	7752	NA
+Sarah	49	Pulse	199	990000	17752	NA
+Sarah	50	Picture	feedback	995766	0	1	20182	1	0	20000	other	0
+Sarah	50	Pulse	199	1000000	4234	NA
+Sarah	50	Pulse	199	1010000	14234	NA
+Sarah	51	Picture	fix	1016033	0	375	9422	376	0	next	other	0
+Sarah	51	Pulse	199	1020000	3967	NA
+Sarah	52	Picture	stim	1025455	0	2	19888	334	0	20000	hit	168
+Sarah	52	Pulse	199	1030000	4545	NA
+Sarah	52	Response	16	1034755	9300	0
+Sarah	52	Pulse	199	1040000	14545	NA
+Sarah	53	Picture	fix2	1045962	0	42	17690	42	0	next	other	0
+Sarah	53	Pulse	199	1050000	4038	NA
+Sarah	53	Pulse	199	1060000	14038	NA
+Sarah	54	Picture	feedback	1063652	0	1	20182	1	0	20000	other	0
+Sarah	54	Pulse	199	1070000	6348	NA
+Sarah	54	Pulse	199	1080000	16348	NA
+Sarah	55	Picture	fix	1084335	0	1	20848	3	0	next	other	0
+Sarah	55	Pulse	199	1090000	5665	NA
+Sarah	55	Pulse	199	1100000	15665	NA
+Sarah	56	Picture	stim	1105183	0	3	20183	3	0	20000	hit	181
+Sarah	56	Pulse	199	1110000	4817	NA
+Sarah	56	Response	32	1115395	10212	0
+Sarah	56	Pulse	199	1120000	14817	NA
+Sarah	57	Picture	fix2	1125534	0	1	17284	435	0	next	other	0
+Sarah	57	Pulse	199	1130000	4466	NA
+Sarah	57	Pulse	199	1140000	14466	NA
+Sarah	58	Picture	feedback	1142818	0	435	20058	739	0	20000	other	0
+Sarah	58	Pulse	199	1150000	7182	NA
+Sarah	58	Pulse	199	1160000	17182	NA
+Sarah	59	Picture	fix	1163563	0	1	10377	390	0	next	other	0
+Sarah	59	Pulse	199	1170000	6437	NA
+Sarah	60	Picture	stim	1173940	0	390	20146	392	0	20000	hit	193
+Sarah	60	Pulse	199	1180000	6060	NA
+Sarah	60	Response	32	1188195	14255	0
+Sarah	60	Pulse	199	1190000	16060	NA
+Sarah	61	Picture	fix2	1194420	0	1	8507	1	0	next	other	0
+Sarah	61	Pulse	199	1200000	5580	NA
+Sarah	62	Picture	feedback	1202927	0	1	20182	1	0	20000	other	0
+Sarah	62	Pulse	199	1210000	7073	NA
+Sarah	62	Pulse	199	1220000	17073	NA
+Sarah	63	Picture	fix	1223120	0	268	17503	268	0	next	other	0
+Sarah	63	Pulse	199	1230000	6880	NA
+Sarah	63	Pulse	199	1240000	16880	NA
+Sarah	64	Picture	stim	1240623	0	1	20074	361	0	20000	hit	205
+Sarah	64	Pulse	199	1250000	9377	NA
+Sarah	64	Response	32	1258195	17573	0
+Sarah	64	Pulse	199	1260000	19377	NA
+Sarah	65	Picture	fix2	1261306	0	1	5504	1	0	next	other	0
+Sarah	66	Picture	feedback	1266810	0	1	20182	1	0	20000	other	0
+Sarah	66	Pulse	199	1270000	3190	NA
+Sarah	66	Pulse	199	1280000	13190	NA
+Sarah	67	Picture	fix	1287289	0	134	24749	480	0	next	other	0
+Sarah	67	Pulse	199	1290000	2711	NA
+Sarah	67	Pulse	199	1300000	12711	NA
+Sarah	67	Pulse	199	1310000	22711	NA
+Sarah	68	Picture	stim	1312039	0	346	20063	742	0	20000	hit	217
+Sarah	68	Pulse	199	1320000	7961	NA
+Sarah	68	Response	32	1328836	16797	0
+Sarah	68	Pulse	199	1330000	17961	NA
+Sarah	69	Picture	fix2	1332669	0	61	14229	603	0	next	other	0
+Sarah	69	Pulse	199	1340000	7331	NA
+Sarah	70	Picture	feedback	1346898	0	543	20157	543	0	20000	other	0
+Sarah	70	Pulse	199	1350000	3102	NA
+Sarah	70	Pulse	199	1360000	13102	NA
+Sarah	71	Picture	fix	1367222	0	1	20683	1	0	next	other	0
+Sarah	71	Pulse	199	1370000	2778	NA
+Sarah	71	Pulse	199	1380000	12778	NA
+Sarah	72	Picture	stim	1387904	0	1	20182	1	0	20000	hit	229
+Sarah	72	Pulse	199	1390000	2096	NA
+Sarah	72	Response	16	1397396	9492	0
+Sarah	72	Pulse	199	1400000	12096	NA
+Sarah	73	Picture	fix2	1408253	0	1	17180	1	0	next	other	0
+Sarah	73	Pulse	199	1410000	1747	NA
+Sarah	73	Pulse	199	1420000	11747	NA
+Sarah	74	Picture	feedback	1425433	0	1	20683	1	0	20000	other	0
+Sarah	74	Pulse	199	1430000	4567	NA
+Sarah	74	Pulse	199	1440000	14567	NA
+Sarah	75	Picture	fix	1446283	0	1	19182	1	0	next	other	0
+Sarah	75	Pulse	199	1450000	3717	NA
+Sarah	75	Pulse	199	1460000	13717	NA
+Sarah	76	Picture	stim	1465465	0	1	20683	1	0	20000	hit	242
+Sarah	76	Pulse	199	1470000	4535	NA
+Sarah	76	Response	32	1476996	11531	0
+Sarah	76	Pulse	199	1480000	14535	NA
+Sarah	77	Picture	fix2	1486314	0	1	11843	1	0	next	other	0
+Sarah	77	Pulse	199	1490000	3686	NA
+Sarah	78	Picture	feedback	1498157	0	1	20349	1	0	20000	other	0
+Sarah	78	Pulse	199	1500000	1843	NA
+Sarah	78	Pulse	199	1510000	11843	NA
+Sarah	79	Picture	fix	1519173	0	1	27355	1	0	next	other	0
+Sarah	79	Pulse	199	1520000	827	NA
+Sarah	79	Pulse	199	1530000	10827	NA
+Sarah	79	Pulse	199	1540000	20827	NA
+Sarah	80	Picture	stim	1546528	0	1	20182	1	0	20000	hit	255
+Sarah	80	Pulse	199	1550000	3472	NA
+Sarah	80	Response	32	1556276	9748	0
+Sarah	80	Pulse	199	1560000	13472	NA
+Sarah	81	Picture	fix2	1568044	0	1	8840	1	0	next	other	0
+Sarah	81	Pulse	199	1570000	1956	NA
+Sarah	82	Picture	feedback	1576885	0	1	20182	1	0	20000	other	0
+Sarah	82	Pulse	199	1580000	3115	NA
+Sarah	82	Pulse	199	1590000	13115	NA
+Sarah	83	Picture	fix	1597734	0	1	21350	1	0	next	other	0
+Sarah	83	Pulse	199	1600000	2266	NA
+Sarah	83	Pulse	199	1610000	12266	NA
+Sarah	84	Picture	stim	1619084	0	1	20182	1	0	20000	hit	267
+Sarah	84	Pulse	199	1620000	916	NA
+Sarah	84	Response	32	1629556	10472	0
+Sarah	84	Pulse	199	1630000	10916	NA
+Sarah	85	Picture	fix2	1639433	0	1	19182	1	0	next	other	0
+Sarah	85	Pulse	199	1640000	567	NA
+Sarah	85	Pulse	199	1650000	10567	NA
+Sarah	86	Picture	feedback	1658615	0	1	20349	1	0	20000	other	0
+Sarah	86	Pulse	199	1660000	1385	NA
+Sarah	86	Pulse	199	1670000	11385	NA
+Sarah	87	Picture	fix	1679297	0	1	22684	1	0	next	other	0
+Sarah	87	Pulse	199	1680000	703	NA
+Sarah	87	Pulse	199	1690000	10703	NA
+Sarah	87	Pulse	199	1700000	20703	NA
+Sarah	88	Picture	stim	1701982	0	1	20349	1	0	20000	hit	281
+Sarah	88	Pulse	199	1710000	8018	NA
+Sarah	88	Response	16	1712916	10935	0
+Sarah	88	Pulse	199	1720000	18018	NA
+Sarah	89	Picture	fix2	1722498	0	1	11175	1	0	next	other	0
+Sarah	89	Pulse	199	1730000	7502	NA
+Sarah	90	Picture	feedback	1733673	0	1	20182	1	0	20000	other	0
+Sarah	90	Pulse	199	1740000	6327	NA
+Sarah	90	Pulse	199	1750000	16327	NA
+Sarah	91	Picture	fix	1754689	0	1	14178	1	0	next	other	0
+Sarah	91	Pulse	199	1760000	5311	NA
+Sarah	92	Picture	stim	1768867	0	1	21183	1	0	20000	hit	293
+Sarah	92	Pulse	199	1770000	1133	NA
+Sarah	92	Pulse	199	1780000	11133	NA
+Sarah	92	Response	16	1781318	12451	0
+Sarah	92	Pulse	199	1790000	21133	NA
+Sarah	93	Picture	fix2	1790217	0	1	14344	1	0	next	other	0
+Sarah	93	Pulse	199	1800000	9783	NA
+Sarah	94	Picture	feedback	1804561	0	1	21016	1	0	20000	other	0
+Sarah	94	Pulse	199	1810000	5439	NA
+Sarah	94	Pulse	199	1820000	15439	NA
+Sarah	95	Picture	fix	1826078	0	1	17179	1	0	next	other	0
+Sarah	95	Pulse	199	1830000	3922	NA
+Sarah	95	Pulse	199	1840000	13922	NA
+Sarah	96	Picture	stim	1843258	0	1	20183	1	0	20000	hit	305
+Sarah	96	Pulse	199	1850000	6742	NA
+Sarah	96	Response	32	1851797	8539	0
+Sarah	96	Pulse	199	1860000	16742	NA
+Sarah	97	Picture	fix2	1863941	0	1	21850	1	0	next	other	0
+Sarah	97	Pulse	199	1870000	6059	NA
+Sarah	97	Pulse	199	1880000	16059	NA
+Sarah	98	Picture	feedback	1885791	0	1	20182	1	0	20000	other	0
+Sarah	98	Pulse	199	1890000	4209	NA
+Sarah	98	Pulse	199	1900000	14209	NA
+Sarah	99	Picture	fix	1906307	0	1	23852	1	0	next	other	0
+Sarah	99	Pulse	199	1910000	3693	NA
+Sarah	99	Pulse	199	1920000	13693	NA
+Sarah	99	Pulse	199	1930000	23693	NA
+Sarah	100	Picture	stim	1930159	0	1	20182	1	0	20000	hit	318
+Sarah	100	Response	16	1938197	8038	0
+Sarah	100	Pulse	199	1940000	9841	NA
+Sarah	100	Pulse	199	1950000	19841	NA
+Sarah	101	Picture	fix2	1950675	0	1	11009	1	0	next	other	0
+Sarah	101	Pulse	199	1960000	9325	NA
+Sarah	102	Picture	feedback	1961684	0	1	20182	1	0	20000	other	0
+Sarah	102	Pulse	199	1970000	8316	NA
+Sarah	102	Pulse	199	1980000	18316	NA
+Sarah	103	Picture	fix	1982533	0	1	27021	1	0	next	other	0
+Sarah	103	Pulse	199	1990000	7467	NA
+Sarah	103	Pulse	199	2000000	17467	NA
+Sarah	104	Picture	stim	2009554	0	1	20182	1	0	20000	hit	331
+Sarah	104	Pulse	199	2010000	446	NA
+Sarah	104	Response	16	2019878	10324	0
+Sarah	104	Pulse	199	2020000	10446	NA
+Sarah	104	Pulse	199	2030000	20446	NA
+Sarah	105	Picture	fix2	2030070	0	1	14845	1	0	next	other	0
+Sarah	105	Pulse	199	2040000	9930	NA
+Sarah	106	Picture	feedback	2044915	0	1	20182	1	0	20000	other	0
+Sarah	106	Pulse	199	2050000	5085	NA
+Sarah	106	Pulse	199	2060000	15085	NA
+Sarah	107	Picture	fix	2065264	0	1	23852	1	0	next	other	0
+Sarah	107	Pulse	199	2070000	4736	NA
+Sarah	107	Pulse	199	2080000	14736	NA
+Sarah	108	Picture	stim	2089116	0	1	20182	1	0	20000	hit	345
+Sarah	108	Pulse	199	2090000	884	NA
+Sarah	108	Pulse	199	2100000	10884	NA
+Sarah	108	Response	32	2100198	11082	0
+Sarah	109	Picture	fix2	2109465	0	1	8006	1	0	next	other	0
+Sarah	109	Pulse	199	2110000	535	NA
+Sarah	110	Picture	feedback	2117472	0	1	20182	1	0	20000	other	0
+Sarah	110	Pulse	199	2120000	2528	NA
+Sarah	110	Pulse	199	2130000	12528	NA
+Sarah	111	Picture	fix	2137987	0	1	15179	1	0	next	other	0
+Sarah	111	Pulse	199	2140000	2013	NA
+Sarah	111	Pulse	199	2150000	12013	NA
+Sarah	112	Picture	stim	2153166	0	1	20182	1	0	20000	hit	356
+Sarah	112	Pulse	199	2160000	6834	NA
+Sarah	112	Response	16	2161158	7992	0
+Sarah	112	Pulse	199	2170000	16834	NA
+Sarah	113	Picture	fix2	2173515	0	1	15345	1	0	next	other	0
+Sarah	113	Pulse	199	2180000	6485	NA
+Sarah	114	Picture	feedback	2188860	0	1	20182	1	0	20000	other	0
+Sarah	114	Pulse	199	2190000	1140	NA
+Sarah	114	Pulse	199	2200000	11140	NA
+Sarah	115	Picture	fix	2209376	0	1	16012	1	0	next	other	0
+Sarah	115	Pulse	199	2210000	624	NA
+Sarah	115	Pulse	199	2220000	10624	NA
+Sarah	116	Picture	stim	2225389	0	1	20182	1	0	20000	hit	368
+Sarah	116	Pulse	199	2230000	4611	NA
+Sarah	116	Response	32	2234920	9531	0
+Sarah	116	Pulse	199	2240000	14611	NA
+Sarah	117	Picture	fix2	2245738	0	1	15012	1	0	next	other	0
+Sarah	117	Pulse	199	2250000	4262	NA
+Sarah	117	Pulse	199	2260000	14262	NA
+Sarah	118	Picture	feedback	2260750	0	1	20182	1	0	20000	other	0
+Sarah	118	Pulse	199	2270000	9250	NA
+Sarah	118	Pulse	199	2280000	19250	NA
+Sarah	119	Picture	fix	2281266	0	1	14511	1	0	next	other	0
+Sarah	119	Pulse	199	2290000	8734	NA
+Sarah	120	Picture	stim	2295777	0	1	20182	1	0	20000	hit	380
+Sarah	120	Pulse	199	2300000	4223	NA
+Sarah	120	Response	32	2303719	7942	0
+Sarah	120	Pulse	199	2310000	14223	NA
+Sarah	121	Picture	fix2	2316293	0	1	16012	1	0	next	other	0
+Sarah	121	Pulse	199	2320000	3707	NA
+Sarah	121	Pulse	199	2330000	13707	NA
+Sarah	122	Picture	feedback	2332305	0	1	20182	1	0	20000	other	0
+Sarah	122	Pulse	199	2340000	7695	NA
+Sarah	122	Pulse	199	2350000	17695	NA

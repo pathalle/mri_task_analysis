@@ -1,0 +1,409 @@
+Scenario - FeedbacklearningMRI_GFG.sce
+Logfile written - 02/21/2019 16:57:54
+
+Subject	Trial	Event Type	Code	Time	TTime	Uncertainty	Duration	Uncertainty	ReqTime	ReqDur	Stim Type	Pair Index
+
+Salome	0	Pulse	199	0	0	NA
+Salome	0	Pulse	199	10000	10000	NA
+Salome	1	Pulse	199	20000	7665	NA
+Salome	1	Pulse	199	30000	17665	NA
+Salome	1	Pulse	199	40000	27665	NA
+Salome	1	Pulse	199	50000	37665	NA
+Salome	1	Pulse	199	60000	47665	NA
+Salome	1	Pulse	199	70000	57665	NA
+Salome	1	Pulse	199	80000	67665	NA
+Salome	1	Pulse	199	90000	77665	NA
+Salome	1	Pulse	199	100000	87665	NA
+Salome	1	Pulse	199	110000	97665	NA
+Salome	1	Pulse	199	120000	107665	NA
+Salome	1	Pulse	199	130000	117665	NA
+Salome	1	Pulse	199	140000	127665	NA
+Salome	1	Pulse	199	150000	137665	NA
+Salome	1	Response	16	157186	144851	0
+Salome	2	Pulse	199	160000	2807	NA
+Salome	2	Response	16	168146	10953	0
+Salome	2	Pulse	199	170000	12807	NA
+Salome	2	Pulse	199	180000	22807	NA
+Salome	2	Pulse	199	190000	32807	NA
+Salome	2	Pulse	199	200000	42807	NA
+Salome	2	Response	16	205823	48630	0
+Salome	3	Picture	fix	208654	0	1	9507	1	0	next	other	0
+Salome	3	Pulse	199	210000	1346	NA
+Salome	4	Picture	stim	218162	0	1	20182	1	0	20000	incorrect	30
+Salome	4	Pulse	199	220000	1838	NA
+Salome	4	Pulse	199	230000	11838	NA
+Salome	4	Response	16	232302	14140	0
+Salome	5	Picture	fix2	238678	0	1	23518	1	0	next	other	0
+Salome	5	Pulse	199	240000	1322	NA
+Salome	5	Pulse	199	250000	11322	NA
+Salome	5	Pulse	199	260000	21322	NA
+Salome	5	Response	16	260063	21385	0
+Salome	6	Picture	feedback	262196	0	1	20349	1	0	20000	other	0
+Salome	6	Pulse	199	270000	7804	NA
+Salome	6	Pulse	199	280000	17804	NA
+Salome	7	Picture	fix	283045	0	1	27021	1	0	next	other	0
+Salome	7	Pulse	199	290000	6955	NA
+Salome	7	Response	16	299424	16379	0
+Salome	7	Pulse	199	300000	16955	NA
+Salome	7	Pulse	199	310000	26955	NA
+Salome	8	Picture	stim	310067	0	1	20182	1	0	20000	miss	0
+Salome	8	Pulse	199	320000	9934	NA
+Salome	8	Pulse	199	330000	19934	NA
+Salome	9	Picture	fix2	330416	0	1	17847	1	0	next	other	0
+Salome	9	Response	16	337823	7407	0
+Salome	9	Pulse	199	340000	9584	NA
+Salome	10	Picture	feedback	348263	0	1	20182	1	0	20000	other	0
+Salome	10	Pulse	199	350000	1737	NA
+Salome	10	Pulse	199	360000	11737	NA
+Salome	11	Picture	fix	368946	0	1	28856	1	0	next	other	0
+Salome	11	Pulse	199	370000	1054	NA
+Salome	11	Response	16	375265	6319	0
+Salome	11	Pulse	199	380000	11054	NA
+Salome	11	Pulse	199	390000	21054	NA
+Salome	12	Picture	stim	397801	0	1	20349	1	0	20000	miss	0
+Salome	12	Pulse	199	400000	2199	NA
+Salome	12	Pulse	199	410000	12199	NA
+Salome	12	Response	32	418384	20583	0
+Salome	13	Picture	fix2	418484	0	1	9507	1	0	next	other	0
+Salome	13	Pulse	199	420000	1516	NA
+Salome	14	Picture	feedback	427992	0	1	20182	1	0	20000	other	0
+Salome	14	Pulse	199	430000	2008	NA
+Salome	14	Pulse	199	440000	12008	NA
+Salome	15	Picture	fix	448341	0	1	16012	1	0	next	other	0
+Salome	15	Pulse	199	450000	1659	NA
+Salome	15	Pulse	199	460000	11659	NA
+Salome	16	Picture	stim	464353	0	1	20182	1	0	20000	incorrect	72
+Salome	16	Pulse	199	470000	5647	NA
+Salome	16	Response	32	476384	12031	0
+Salome	16	Pulse	199	480000	15647	NA
+Salome	17	Picture	fix2	485203	0	1	17514	1	0	next	other	0
+Salome	17	Pulse	199	490000	4797	NA
+Salome	17	Pulse	199	500000	14797	NA
+Salome	18	Picture	feedback	502716	0	1	20182	1	0	20000	other	0
+Salome	18	Pulse	199	510000	7284	NA
+Salome	18	Pulse	199	520000	17284	NA
+Salome	19	Picture	fix	523232	0	1	17180	1	0	next	other	0
+Salome	19	Pulse	199	530000	6768	NA
+Salome	19	Pulse	199	540000	16768	NA
+Salome	20	Picture	stim	540412	0	1	20182	1	0	20000	hit	85
+Salome	20	Pulse	199	550000	9588	NA
+Salome	20	Response	16	552304	11891	0
+Salome	20	Pulse	199	560000	19588	NA
+Salome	21	Picture	fix2	560761	0	1	8006	1	0	next	other	0
+Salome	22	Picture	feedback	568768	0	1	20349	1	0	20000	other	0
+Salome	22	Pulse	199	570000	1232	NA
+Salome	22	Pulse	199	580000	11232	NA
+Salome	23	Picture	fix	589450	0	1	14511	1	0	next	other	0
+Salome	23	Pulse	199	590000	550	NA
+Salome	23	Pulse	199	600000	10550	NA
+Salome	24	Picture	stim	603962	0	1	20349	1	0	20000	miss	0
+Salome	24	Pulse	199	610000	6038	NA
+Salome	24	Pulse	199	620000	16038	NA
+Salome	25	Picture	fix2	624478	0	1	21840	81	0	next	other	0
+Salome	25	Response	16	625184	706	0
+Salome	25	Pulse	199	630000	5522	NA
+Salome	25	Pulse	199	640000	15522	NA
+Salome	26	Picture	feedback	646317	0	81	20193	81	0	20000	other	0
+Salome	26	Pulse	199	650000	3683	NA
+Salome	26	Pulse	199	660000	13683	NA
+Salome	27	Picture	fix	667011	0	1	19682	1	0	next	other	0
+Salome	27	Pulse	199	670000	2989	NA
+Salome	27	Pulse	199	680000	12989	NA
+Salome	28	Picture	stim	686693	0	1	20182	1	0	20000	hit	109
+Salome	28	Pulse	199	690000	3307	NA
+Salome	28	Response	32	699904	13211	0
+Salome	28	Pulse	199	700000	13307	NA
+Salome	29	Picture	fix2	707042	0	1	11676	1	0	next	other	0
+Salome	29	Pulse	199	710000	2958	NA
+Salome	30	Picture	feedback	718718	0	1	20516	1	0	20000	other	0
+Salome	30	Pulse	199	720000	1282	NA
+Salome	30	Pulse	199	730000	11282	NA
+Salome	31	Picture	fix	739400	0	1	15012	1	0	next	other	0
+Salome	31	Pulse	199	740000	600	NA
+Salome	31	Pulse	199	750000	10600	NA
+Salome	32	Picture	stim	754412	0	1	20182	2	0	20000	incorrect	121
+Salome	32	Pulse	199	760000	5588	NA
+Salome	32	Response	32	767744	13332	0
+Salome	32	Pulse	199	770000	15588	NA
+Salome	33	Picture	fix2	776763	0	1	14511	1	0	next	other	0
+Salome	33	Pulse	199	780000	3237	NA
+Salome	33	Pulse	199	790000	13237	NA
+Salome	34	Picture	feedback	791274	0	1	20182	1	0	20000	other	0
+Salome	34	Pulse	199	800000	8726	NA
+Salome	34	Pulse	199	810000	18726	NA
+Salome	35	Picture	fix	811957	0	1	17514	1	0	next	other	0
+Salome	35	Pulse	199	820000	8043	NA
+Salome	36	Picture	stim	829470	0	1	20516	1	0	20000	hit	133
+Salome	36	Pulse	199	830000	530	NA
+Salome	36	Response	16	839184	9713	0
+Salome	36	Pulse	199	840000	10530	NA
+Salome	36	Pulse	199	850000	20530	NA
+Salome	37	Picture	fix2	850153	0	1	8673	1	0	next	other	0
+Salome	38	Picture	feedback	858827	0	1	20182	1	0	20000	other	0
+Salome	38	Pulse	199	860000	1173	NA
+Salome	38	Pulse	199	870000	11173	NA
+Salome	39	Picture	fix	879343	0	1	18014	1	0	next	other	0
+Salome	39	Pulse	199	880000	657	NA
+Salome	39	Pulse	199	890000	10657	NA
+Salome	40	Picture	stim	897357	0	1	20182	1	0	20000	hit	146
+Salome	40	Pulse	199	900000	2643	NA
+Salome	40	Pulse	199	910000	12643	NA
+Salome	40	Response	32	910944	13588	0
+Salome	41	Picture	fix2	917706	0	1	15012	1	0	next	other	0
+Salome	41	Pulse	199	920000	2294	NA
+Salome	41	Pulse	199	930000	12294	NA
+Salome	42	Picture	feedback	932717	0	1	20182	1	0	20000	other	0
+Salome	42	Pulse	199	940000	7283	NA
+Salome	42	Pulse	199	950000	17283	NA
+Salome	43	Picture	fix	953233	0	1	11175	1	0	next	other	0
+Salome	43	Pulse	199	960000	6767	NA
+Salome	44	Picture	stim	964409	0	1	20182	1	0	20000	hit	157
+Salome	44	Pulse	199	970000	5591	NA
+Salome	44	Response	32	979026	14617	0
+Salome	44	Pulse	199	980000	15591	NA
+Salome	45	Picture	fix2	984758	0	1	16846	1	0	next	other	0
+Salome	45	Pulse	199	990000	5242	NA
+Salome	45	Pulse	199	1000000	15242	NA
+Salome	46	Picture	feedback	1001604	0	1	20182	1	0	20000	other	0
+Salome	46	Pulse	199	1010000	8396	NA
+Salome	46	Pulse	199	1020000	18396	NA
+Salome	47	Picture	fix	1022120	0	1	33026	1	0	next	other	0
+Salome	47	Pulse	199	1030000	7880	NA
+Salome	47	Pulse	199	1040000	17880	NA
+Salome	47	Pulse	199	1050000	27880	NA
+Salome	48	Picture	stim	1055146	0	1	20182	1	0	20000	incorrect	172
+Salome	48	Pulse	199	1060000	4854	NA
+Salome	48	Pulse	199	1070000	14854	NA
+Salome	48	Response	16	1071505	16359	0
+Salome	49	Picture	fix2	1075662	0	1	14511	1	0	next	other	0
+Salome	49	Pulse	199	1080000	4338	NA
+Salome	49	Pulse	199	1090000	14338	NA
+Salome	50	Picture	feedback	1090173	0	1	20182	1	0	20000	other	0
+Salome	50	Pulse	199	1100000	9827	NA
+Salome	50	Pulse	199	1110000	19827	NA
+Salome	51	Picture	fix	1110689	0	1	19182	1	0	next	other	0
+Salome	51	Pulse	199	1120000	9311	NA
+Salome	52	Picture	stim	1129871	0	1	20182	1	0	20000	hit	184
+Salome	52	Pulse	199	1130000	129	NA
+Salome	52	Pulse	199	1140000	10129	NA
+Salome	52	Response	32	1144785	14914	0
+Salome	52	Pulse	199	1150000	20129	NA
+Salome	53	Picture	fix2	1150220	0	1	13177	1	0	next	other	0
+Salome	53	Pulse	199	1160000	9780	NA
+Salome	54	Picture	feedback	1163397	0	1	20182	1	0	20000	other	0
+Salome	54	Pulse	199	1170000	6603	NA
+Salome	54	Pulse	199	1180000	16603	NA
+Salome	55	Picture	fix	1183746	0	1	24352	1	0	next	other	0
+Salome	55	Pulse	199	1190000	6254	NA
+Salome	55	Pulse	199	1200000	16254	NA
+Salome	56	Picture	stim	1208098	0	1	20516	1	0	20000	incorrect	196
+Salome	56	Pulse	199	1210000	1902	NA
+Salome	56	Response	32	1219905	11807	0
+Salome	56	Pulse	199	1220000	11902	NA
+Salome	57	Picture	fix2	1228948	0	1	21850	1	0	next	other	0
+Salome	57	Pulse	199	1230000	1052	NA
+Salome	57	Pulse	199	1240000	11052	NA
+Salome	57	Pulse	199	1250000	21052	NA
+Salome	58	Picture	feedback	1250798	0	1	21016	1	0	20000	other	0
+Salome	58	Pulse	199	1260000	9202	NA
+Salome	58	Pulse	199	1270000	19202	NA
+Salome	59	Picture	fix	1272482	0	1	19515	1	0	next	other	0
+Salome	59	Pulse	199	1280000	7518	NA
+Salome	59	Pulse	199	1290000	17518	NA
+Salome	60	Picture	stim	1291997	0	1	20182	1	0	20000	incorrect	210
+Salome	60	Pulse	199	1300000	8003	NA
+Salome	60	Response	16	1307987	15990	0
+Salome	60	Pulse	199	1310000	18003	NA
+Salome	61	Picture	fix2	1312346	0	1	11009	1	0	next	other	0
+Salome	61	Pulse	199	1320000	7654	NA
+Salome	62	Picture	feedback	1323354	0	1	20182	1	0	20000	other	0
+Salome	62	Pulse	199	1330000	6646	NA
+Salome	62	Pulse	199	1340000	16646	NA
+Salome	63	Picture	fix	1344037	0	1	21684	1	0	next	other	0
+Salome	63	Pulse	199	1350000	5963	NA
+Salome	63	Pulse	199	1360000	15963	NA
+Salome	64	Picture	stim	1365721	0	1	20349	1	0	20000	hit	223
+Salome	64	Pulse	199	1370000	4279	NA
+Salome	64	Pulse	199	1380000	14279	NA
+Salome	64	Response	16	1382705	16984	0
+Salome	65	Picture	fix2	1386237	0	1	5504	1	0	next	other	0
+Salome	65	Pulse	199	1390000	3763	NA
+Salome	66	Picture	feedback	1391741	0	1	20516	1	0	20000	other	0
+Salome	66	Pulse	199	1400000	8259	NA
+Salome	66	Pulse	199	1410000	18259	NA
+Salome	67	Picture	fix	1412424	0	1	20683	1	0	next	other	0
+Salome	67	Pulse	199	1420000	7576	NA
+Salome	67	Pulse	199	1430000	17576	NA
+Salome	68	Picture	stim	1433106	0	1	20349	1	0	20000	hit	234
+Salome	68	Pulse	199	1440000	6894	NA
+Salome	68	Response	32	1447106	13999	0
+Salome	68	Pulse	199	1450000	16894	NA
+Salome	69	Picture	fix2	1453956	0	1	19682	1	0	next	other	0
+Salome	69	Pulse	199	1460000	6044	NA
+Salome	69	Pulse	199	1470000	16044	NA
+Salome	70	Picture	feedback	1473638	0	1	20349	1	0	20000	other	0
+Salome	70	Pulse	199	1480000	6362	NA
+Salome	70	Pulse	199	1490000	16362	NA
+Salome	71	Picture	fix	1494154	0	1	27354	1	0	next	other	0
+Salome	71	Pulse	199	1500000	5846	NA
+Salome	71	Pulse	199	1510000	15846	NA
+Salome	71	Pulse	199	1520000	25846	NA
+Salome	72	Picture	stim	1521508	0	1	20183	1	0	20000	incorrect	248
+Salome	72	Pulse	199	1530000	8492	NA
+Salome	72	Response	32	1532865	11357	0
+Salome	72	Pulse	199	1540000	18492	NA
+Salome	73	Picture	fix2	1541858	0	1	20182	1	0	next	other	0
+Salome	73	Pulse	199	1550000	8142	NA
+Salome	73	Pulse	199	1560000	18142	NA
+Salome	74	Picture	feedback	1562040	0	1	20349	1	0	20000	other	0
+Salome	74	Pulse	199	1570000	7960	NA
+Salome	74	Pulse	199	1580000	17960	NA
+Salome	75	Picture	fix	1582723	0	1	23852	1	0	next	other	0
+Salome	75	Pulse	199	1590000	7277	NA
+Salome	75	Pulse	199	1600000	17277	NA
+Salome	76	Picture	stim	1606575	0	1	20182	1	0	20000	incorrect	261
+Salome	76	Pulse	199	1610000	3425	NA
+Salome	76	Response	32	1619425	12851	0
+Salome	76	Pulse	199	1620000	13425	NA
+Salome	77	Picture	fix2	1626924	0	1	17514	1	0	next	other	0
+Salome	77	Pulse	199	1630000	3076	NA
+Salome	77	Pulse	199	1640000	13076	NA
+Salome	78	Picture	feedback	1644438	0	1	20182	1	0	20000	other	0
+Salome	78	Pulse	199	1650000	5562	NA
+Salome	78	Pulse	199	1660000	15562	NA
+Salome	79	Picture	fix	1664787	0	1	14178	1	0	next	other	0
+Salome	79	Pulse	199	1670000	5213	NA
+Salome	80	Picture	stim	1678964	0	1	20048	341	0	20000	incorrect	273
+Salome	80	Pulse	199	1680000	1036	NA
+Salome	80	Response	16	1688306	9341	0
+Salome	80	Pulse	199	1690000	11036	NA
+Salome	81	Picture	fix2	1699647	0	1	15948	268	0	next	other	0
+Salome	81	Pulse	199	1700000	353	NA
+Salome	81	Pulse	199	1710000	10353	NA
+Salome	82	Picture	feedback	1715595	0	268	20247	268	0	20000	other	0
+Salome	82	Pulse	199	1720000	4405	NA
+Salome	82	Pulse	199	1730000	14405	NA
+Salome	83	Picture	fix	1736176	0	1	20516	443	0	next	other	0
+Salome	83	Pulse	199	1740000	3824	NA
+Salome	83	Pulse	199	1750000	13824	NA
+Salome	84	Picture	stim	1756691	0	443	20182	443	0	20000	incorrect	286
+Salome	84	Pulse	199	1760000	3309	NA
+Salome	84	Response	16	1768306	11614	0
+Salome	84	Pulse	199	1770000	13309	NA
+Salome	85	Picture	fix2	1777041	0	1	14511	1	0	next	other	0
+Salome	85	Pulse	199	1780000	2959	NA
+Salome	85	Pulse	199	1790000	12959	NA
+Salome	86	Picture	feedback	1791552	0	1	20182	1	0	20000	other	0
+Salome	86	Pulse	199	1800000	8448	NA
+Salome	86	Pulse	199	1810000	18448	NA
+Salome	87	Picture	fix	1812068	0	1	16846	1	0	next	other	0
+Salome	87	Pulse	199	1820000	7932	NA
+Salome	88	Picture	stim	1828914	0	1	20182	1	0	20000	incorrect	299
+Salome	88	Pulse	199	1830000	1086	NA
+Salome	88	Pulse	199	1840000	11086	NA
+Salome	88	Response	32	1845906	16991	0
+Salome	89	Picture	fix2	1849263	0	1	15011	2	0	next	other	0
+Salome	89	Pulse	199	1850000	737	NA
+Salome	89	Pulse	199	1860000	10737	NA
+Salome	90	Picture	feedback	1864274	0	2	20183	2	0	20000	other	0
+Salome	90	Pulse	199	1870000	5726	NA
+Salome	90	Pulse	199	1880000	15726	NA
+Salome	91	Picture	fix	1884791	0	1	10251	439	0	next	other	0
+Salome	91	Pulse	199	1890000	5209	NA
+Salome	92	Picture	stim	1895042	0	438	19969	781	0	20000	incorrect	310
+Salome	92	Pulse	199	1900000	4958	NA
+Salome	92	Response	32	1909507	14465	0
+Salome	92	Pulse	199	1910000	14958	NA
+Salome	93	Picture	fix2	1915648	0	1	8782	371	0	next	other	0
+Salome	93	Pulse	199	1920000	4352	NA
+Salome	94	Picture	feedback	1924430	0	370	19938	710	0	20000	other	0
+Salome	94	Pulse	199	1930000	5570	NA
+Salome	94	Pulse	199	1940000	15570	NA
+Salome	95	Picture	fix	1945171	0	1	10458	252	0	next	other	0
+Salome	95	Pulse	199	1950000	4829	NA
+Salome	96	Picture	stim	1955630	0	252	20232	252	0	20000	incorrect	322
+Salome	96	Pulse	199	1960000	4370	NA
+Salome	96	Pulse	199	1970000	14370	NA
+Salome	96	Response	32	1973426	17797	0
+Salome	97	Picture	fix2	1976029	0	1	14511	1	0	next	other	0
+Salome	97	Pulse	199	1980000	3971	NA
+Salome	97	Pulse	199	1990000	13971	NA
+Salome	98	Picture	feedback	1990540	0	1	20013	435	0	20000	other	0
+Salome	98	Pulse	199	2000000	9460	NA
+Salome	98	Pulse	199	2010000	19460	NA
+Salome	99	Picture	fix	2011390	0	1	22684	1	0	next	other	0
+Salome	99	Pulse	199	2020000	8610	NA
+Salome	99	Pulse	199	2030000	18610	NA
+Salome	100	Picture	stim	2034074	0	1	20169	382	0	20000	hit	334
+Salome	100	Pulse	199	2040000	5926	NA
+Salome	100	Response	16	2049186	15112	0
+Salome	100	Pulse	199	2050000	15926	NA
+Salome	101	Picture	fix2	2054757	0	1	16562	330	0	next	other	0
+Salome	101	Pulse	199	2060000	5243	NA
+Salome	101	Pulse	199	2070000	15243	NA
+Salome	102	Picture	feedback	2071318	0	330	20134	330	0	20000	other	0
+Salome	102	Pulse	199	2080000	8682	NA
+Salome	102	Pulse	199	2090000	18682	NA
+Salome	103	Picture	fix	2091619	0	205	20641	569	0	next	other	0
+Salome	103	Pulse	199	2100000	8381	NA
+Salome	103	Pulse	199	2110000	18381	NA
+Salome	104	Picture	stim	2112260	0	364	20223	365	0	20000	hit	347
+Salome	104	Pulse	199	2120000	7740	NA
+Salome	104	Response	16	2127907	15648	0
+Salome	104	Pulse	199	2130000	17740	NA
+Salome	105	Picture	fix2	2132984	0	1	19515	1	0	next	other	0
+Salome	105	Pulse	199	2140000	7016	NA
+Salome	105	Pulse	199	2150000	17016	NA
+Salome	106	Picture	feedback	2152499	0	1	20016	506	0	20000	other	0
+Salome	106	Pulse	199	2160000	7501	NA
+Salome	106	Pulse	199	2170000	17501	NA
+Salome	107	Picture	fix	2173349	0	1	24957	267	0	next	other	0
+Salome	107	Pulse	199	2180000	6651	NA
+Salome	107	Pulse	199	2190000	16651	NA
+Salome	108	Picture	stim	2198305	0	267	20245	267	0	20000	miss	0
+Salome	108	Pulse	199	2200000	1695	NA
+Salome	108	Pulse	199	2210000	11695	NA
+Salome	109	Picture	fix2	2218706	0	40	14142	389	0	next	other	0
+Salome	109	Pulse	199	2220000	1294	NA
+Salome	109	Response	16	2221507	2801	0
+Salome	109	Pulse	199	2230000	11294	NA
+Salome	110	Picture	feedback	2232848	0	349	20028	597	0	20000	other	0
+Salome	110	Pulse	199	2240000	7152	NA
+Salome	110	Pulse	199	2250000	17152	NA
+Salome	111	Picture	fix	2253567	0	45	15689	46	0	next	other	0
+Salome	111	Pulse	199	2260000	6433	NA
+Salome	112	Picture	stim	2269256	0	1	20183	2	0	20000	incorrect	373
+Salome	112	Pulse	199	2270000	744	NA
+Salome	112	Pulse	199	2280000	10744	NA
+Salome	112	Response	16	2286068	16811	0
+Salome	113	Picture	fix2	2289566	0	175	12216	175	0	next	other	0
+Salome	113	Pulse	199	2290000	434	NA
+Salome	113	Pulse	199	2300000	10434	NA
+Salome	114	Picture	feedback	2301782	0	1	20182	1	0	20000	other	0
+Salome	114	Pulse	199	2310000	8218	NA
+Salome	114	Pulse	199	2320000	18218	NA
+Salome	115	Picture	fix	2322298	0	1	21350	1	0	next	other	0
+Salome	115	Pulse	199	2330000	7702	NA
+Salome	115	Pulse	199	2340000	17702	NA
+Salome	116	Picture	stim	2343648	0	1	20683	1	0	20000	incorrect	385
+Salome	116	Pulse	199	2350000	6352	NA
+Salome	116	Response	16	2355267	11619	0
+Salome	116	Pulse	199	2360000	16352	NA
+Salome	117	Picture	fix2	2364831	0	1	11009	1	0	next	other	0
+Salome	117	Pulse	199	2370000	5169	NA
+Salome	118	Picture	feedback	2375840	0	1	20516	1	0	20000	other	0
+Salome	118	Pulse	199	2380000	4160	NA
+Salome	118	Pulse	199	2390000	14160	NA
+Salome	119	Picture	fix	2396689	0	1	23852	1	0	next	other	0
+Salome	119	Pulse	199	2400000	3311	NA
+Salome	119	Pulse	199	2410000	13311	NA
+Salome	119	Pulse	199	2420000	23311	NA
+Salome	120	Picture	stim	2420541	0	1	20349	1	0	20000	hit	398
+Salome	120	Pulse	199	2430000	9459	NA
+Salome	120	Response	16	2431668	11127	0
+Salome	120	Pulse	199	2440000	19459	NA
+Salome	121	Picture	fix2	2442058	0	1	11175	1	0	next	other	0
+Salome	121	Pulse	199	2450000	7942	NA
+Salome	122	Picture	feedback	2453233	0	1	20182	1	0	20000	other	0
+Salome	122	Pulse	199	2460000	6767	NA
+Salome	122	Pulse	199	2470000	16767	NA
