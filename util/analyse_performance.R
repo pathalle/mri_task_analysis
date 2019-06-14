@@ -6,12 +6,13 @@ library(plyr)
 library(dplyr)
 library(ggplot2)
 library(gridExtra)
+library(tidyr)
 
 
 task <- "fbl_kloten"
 #set inputs
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3"
-dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
+dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3"
+#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
 # make sure output directory exists already
 diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
 
@@ -154,7 +155,7 @@ plotting <-  data %>%
   group_by(subj_idx,block) %>%
   tally() 
 
-plotting$n <- plotting$n/32
+plotting$n <- plotting$n/nrow(plotting)
 plotting$block = as.factor(plotting$block)
 ggplot(plotting, aes(x=block, y=n, colour=block)) + 
   geom_boxplot(outlier.colour="red", outlier.shape=8,
@@ -176,19 +177,33 @@ sum(b3$n)/nrow(b3)
 
 overall_mean <- sum(plotting$n)/nrow(plotting)
 
+
+# compute mean reaction time for each participant for each block
 data_for_rt_plot <- data[which(data$fb!=2),]
-mean_rts <- data_for_rt_plot %>% 
-  summarize(average=mean(rt))
+mean_rts = aggregate(data_for_rt_plot$rt,
+                by = list(subj_idx = data_for_rt_plot$subj_idx, block = data_for_rt_plot$block),
+                FUN = mean)
+mean_rts$block = as.factor(mean_rts$block)
 
+ggplot(mean_rts, aes(x=block, y=x, colour=block)) + 
+  geom_boxplot(outlier.colour="red", outlier.shape=8,
+               outlier.size=4) + 
+  scale_y_continuous(limits=c(0.6,1.8)) +
+  ylab("RT") +
+  ggtitle("Mean reaction time per block (2x3)") +
+  geom_dotplot(binaxis='y', stackdir='center', dotsize=0.5) + 
+  scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))
 
-ggplot(data=data_for_rt_plot, aes(x=trial, y=rt, fill=subj_idx, colour=subj_idx)) +
-  geom_line()+
-  scale_x_continuous(breaks = c(1,4,8,12,16,20,24,28,32),limits=c(-0.5,32))  +
-  #scale_y_continuous(breaks = c(0,0.5,1,1.5),limits=c(0,1.75))   +
-  #geom_point(aes(fill=block, colour=block),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
-  xlab("Trial") +
-  ylab("mean RT")
+c1 <- mean_rts[which(mean_rts$block==1),]
+sum(c1$x)/nrow(c1)
 
+c2 <- mean_rts[which(mean_rts$block==2),]
+sum(c2$x)/nrow(c2)
+
+c3 <- mean_rts[which(mean_rts$block==3),]
+sum(c3$x)/nrow(c3)
+
+overall_mean_rt <- sum(mean_rts$x)/nrow(mean_rts)
 
 setwd(diroutput)
 write_csv(data,path = paste("summarized_performance_",task,".csv",sep=""),col_names = TRUE,quote=FALSE)
