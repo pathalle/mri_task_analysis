@@ -7,12 +7,12 @@ library(dplyr)
 library(ggplot2)
 library(gridExtra)
 library(tidyr)
-
+library(wesanderson)
 
 task <- "fbl_kloten"
 #set inputs
-dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3"
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
+#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3"
+dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
 # make sure output directory exists already
 diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
 
@@ -51,8 +51,8 @@ compute_cumulative_sums <- function(data){
   new_data <- data[FALSE,]
   new_cols <- data.frame(cumsum_fb = integer(0), trial_separate = integer(0))
   new_data <- cbind(new_cols,new_data)
-  for(i in unique(data$subjID)){
-    df_subj[[i]] <- subset(data, subjID == i)
+  for(i in unique(data$subj_idx)){
+    df_subj[[i]] <- subset(data, subj_idx == i)
     for(j in unique(df_subj[[i]]$block)){
       df_subj_block <- subset(df_subj[[i]],block==j)
       # compute cumulative sum for each auditory stimulus in a given block of a subject
@@ -67,7 +67,7 @@ compute_cumulative_sums <- function(data){
         new_data <- as_tibble(rbind(new_data,df_subj_block_astim[[k]]))
         # reorder data
         new_data <- new_data[
-          with(new_data, order(subjID, block,trial)),
+          with(new_data, order(subj_idx, block,trial)),
           ]
       }
     }
@@ -78,14 +78,14 @@ compute_cumulative_sums <- function(data){
 get_summary_stats <- function(data){
   ### #How many missing responses per block (fb == 2)
   miss_per_block <- data %>%
-    select(subjID,RT, fb,block) %>%
+    select(subj_idx,RT, fb,block) %>%
     filter(fb==2)  %>%
     group_by(subjID,block) %>%
     tally()
   
   ### #RTs per block
   RT_per_block <- data %>%
-    select(subjID,RT, fb,block) %>%
+    select(subj_idx,RT, fb,block) %>%
     filter(fb!=2)  %>%
     group_by(subjID, fb,block) %>%
     summarise(mean_rt = mean(RT))
@@ -108,26 +108,39 @@ get_summary_stats <- function(data){
     "miss_per_block"=miss_per_block,"rt_per_block"=RT_per_block,"rt_across_blocks"=RT_across_blocks,"hits_per_sextile"=correct_per_sextile))
 }
 
-split_trials <- function(data){
+split_trials_2x3 <- function(data){
   data$trial <- as.integer(data$trial)
   data$quartile <- 0
-  data[which(data$trial <= 10),]$quartile = 
-  data[which(data$trial > 10 & data$trial <= 20),]$quartile = 2
-  data[which(data$trial > 20 & data$trial <= 30),]$quartile = 3
-  data[which(data$trial > 30 & data$trial <= 40),]$quartile = 4
+  data[which(data$trial <= 6),]$quartile = 1
+  data[which(data$trial > 6 & data$trial <= 12),]$quartile = 2
+  data[which(data$trial > 12 & data$trial <= 18),]$quartile = 3
+  data[which(data$trial > 18 & data$trial <= 24),]$quartile = 4
   data <- data[
-    with(data, order(subjID, block,trial)),
+    with(data, order(subj_idx, block,trial)),
     ]
   return(data)
 }
+
+split_trials_2x4 <- function(data){
+  data$trial <- as.integer(data$trial)
+  data$quartile <- 0
+  data[which(data$trial <= 8),]$quartile = 1
+    data[which(data$trial > 8 & data$trial <= 16),]$quartile = 2
+  data[which(data$trial > 16 & data$trial <= 24),]$quartile = 3
+  data[which(data$trial > 24 & data$trial <= 32),]$quartile = 4
+  data <- data[
+    with(data, order(subj_idx, block,trial)),
+    ]
+  return(data)
+}
+
 
 
 ## prepare data
 data <- gather_data(files)
 #data <- data[which(data$rt > 0.15),]
 #data <- data[which(data$block ==1)]
-#data_with_cumulsum <- compute_cumulative_sums(data)
-#data_quartiles <- split_trials(data_with_cumulsum)
+
 #summary_stats <- get_summary_stats(data_sextiles)
 #data_with_cumsum <- compute_cumulative_sums(data_sextiles)
 # add column with information to which sextile a sequence of trials belongs"
@@ -200,13 +213,54 @@ sum(c1$x)/nrow(c1)
 c2 <- mean_rts[which(mean_rts$block==2),]
 sum(c2$x)/nrow(c2)
 
-c3 <- mean_rts[which(mean_rts$block==3),]
-sum(c3$x)/nrow(c3)
+#c3 <- mean_rts[which(mean_rts$block==3),]
+#sum(c3$x)/nrow(c3)
 
 overall_mean_rt <- sum(mean_rts$x)/nrow(mean_rts)
 
+# compute cumulative sums and quartiles
+data_with_cumulsum <- compute_cumulative_sums(data)
+data_quartiles <- split_trials_2x4(data_with_cumulsum)
+
+# for the visualization, for the subject who completed block 3, b3 will count as b2
+data_quartiles[which(data_quartiles$block=="3"),]$block <- rep(2,nrow(data_quartiles[which(data_quartiles$block=="3"),]))
+unique(data_quartiles$block)
+
+## correct responses per quartile
+correct_per_quartile <-  data_quartiles %>%
+  select(subj_idx, fb,block,quartile) %>%
+  filter(fb==1) %>%
+  group_by(subj_idx,block,quartile) %>%
+  tally() 
+correct_per_quartile
+
+correct_per_quartile$block = as.factor(correct_per_quartile$block)
+levels(correct_per_quartile$block) <- c("Block 1", "Block 2")
+correct_per_quartile$quartile = as.factor(correct_per_quartile$quartile)
+wes_cols= wes_palette("GrandBudapest1", n = 2)
+
+
+ggplot(correct_per_quartile, aes(quartile,n,group=subj_idx)) +
+  stat_boxplot(geom="errorbar", width=.5)+
+  geom_boxplot(fill=wes_cols[1])+
+  xlab("Quartile") +
+  ylab("Number of correct responses") +
+  ggtitle("Correct responses per quartile for each block (2x3)") +
+  theme_bw()+
+  stat_summary(fun.y=median, geom="smooth", aes(group=0),lwd=1,col=wes_cols[2])+
+  geom_jitter(position = position_jitter(0.2)) + 
+  facet_grid(.~block)
+
 setwd(diroutput)
 write_csv(data,path = paste("summarized_performance_",task,".csv",sep=""),col_names = TRUE,quote=FALSE)
+
+miss_per_block <- data %>%
+  select(subj_idx,rt, fb,block) %>%
+  filter(fb==2)  %>%
+  group_by(subj_idx,block) %>%
+  tally()
+miss_per_block$n <- miss_per_block$n/32
+sum(miss_per_block$n)/nrow(miss_per_block)
 
 #######
 
@@ -215,9 +269,9 @@ write_csv(data,path = paste("summarized_performance_",task,".csv",sep=""),col_na
 
 attach(data_with_cumulsum)
 for(i in unique(data_with_cumulsum$subjID)){
-  subset_all = subset(data_with_cumulsum, subjID==i & fb!=2)
+  subset_all = subset(data_with_cumulsum, sub_idx==i & fb!=2)
   subset_all$fb = factor(subset_all$fb, labels=c("Neg","Pos"))
-  p = ggplot(subset_all, aes(x=RT, fill=fb, color=fb)) +
+  p = ggplot(subset_all, aes(x=rt, fill=fb, color=fb)) +
     geom_histogram(fill="white", alpha=0.5, position="dodge") +
     geom_density(alpha=.2) +
     facet_grid(rows = vars(block))
