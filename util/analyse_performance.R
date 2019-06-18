@@ -11,8 +11,9 @@ library(wesanderson)
 
 task <- "fbl_kloten"
 #set inputs
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3"
-dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
+#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
+dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
+#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
 # make sure output directory exists already
 diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
 
@@ -108,7 +109,7 @@ get_summary_stats <- function(data){
     "miss_per_block"=miss_per_block,"rt_per_block"=RT_per_block,"rt_across_blocks"=RT_across_blocks,"hits_per_sextile"=correct_per_sextile))
 }
 
-split_trials_2x3 <- function(data){
+split_trials_24 <- function(data){
   data$trial <- as.integer(data$trial)
   data$quartile <- 0
   data[which(data$trial <= 6),]$quartile = 1
@@ -121,7 +122,7 @@ split_trials_2x3 <- function(data){
   return(data)
 }
 
-split_trials_2x4 <- function(data){
+split_trials_32 <- function(data){
   data$trial <- as.integer(data$trial)
   data$quartile <- 0
   data[which(data$trial <= 8),]$quartile = 1
@@ -134,17 +135,11 @@ split_trials_2x4 <- function(data){
   return(data)
 }
 
+wes_cols= wes_palette("GrandBudapest1", n = 2)
 
-
-## prepare data
+## load data
 data <- gather_data(files)
-#data <- data[which(data$rt > 0.15),]
-#data <- data[which(data$block ==1)]
 
-#summary_stats <- get_summary_stats(data_sextiles)
-#data_with_cumsum <- compute_cumulative_sums(data_sextiles)
-# add column with information to which sextile a sequence of trials belongs"
-#Save as CSV
 
 ## show how many observation (=trials) per subj per block
 trials_per_subj_per_block <- data %>%
@@ -168,16 +163,19 @@ plotting <-  data %>%
   group_by(subj_idx,block) %>%
   tally() 
 
-plotting$n <- plotting$n/nrow(plotting)
+
+
+plotting$n <- plotting$n/32
 plotting$block = as.factor(plotting$block)
 ggplot(plotting, aes(x=block, y=n, colour=block)) + 
   geom_boxplot(outlier.colour="red", outlier.shape=8,
                outlier.size=4) + 
   scale_y_continuous(limits=0:1) +
   ylab("accuracy") +
-  ggtitle("Mean accuracy per block (2x4)") +
+  ggtitle("Mean accuracy per block (2x3[32])") +
   geom_dotplot(binaxis='y', stackdir='center', dotsize=0.5) + 
-  scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))
+  scale_color_manual(values=c("#999999", "#E69F00")) + 
+  theme_bw()
 
 b1 <- plotting[which(plotting$block==1),]
 sum(b1$n)/nrow(b1)
@@ -220,7 +218,7 @@ overall_mean_rt <- sum(mean_rts$x)/nrow(mean_rts)
 
 # compute cumulative sums and quartiles
 data_with_cumulsum <- compute_cumulative_sums(data)
-data_quartiles <- split_trials_2x4(data_with_cumulsum)
+data_quartiles <- split_trials_32(data_with_cumulsum)
 
 # for the visualization, for the subject who completed block 3, b3 will count as b2
 data_quartiles[which(data_quartiles$block=="3"),]$block <- rep(2,nrow(data_quartiles[which(data_quartiles$block=="3"),]))
@@ -237,7 +235,7 @@ correct_per_quartile
 correct_per_quartile$block = as.factor(correct_per_quartile$block)
 levels(correct_per_quartile$block) <- c("Block 1", "Block 2")
 correct_per_quartile$quartile = as.factor(correct_per_quartile$quartile)
-wes_cols= wes_palette("GrandBudapest1", n = 2)
+
 
 
 ggplot(correct_per_quartile, aes(quartile,n,group=subj_idx)) +

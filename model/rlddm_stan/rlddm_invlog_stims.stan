@@ -13,17 +13,19 @@ data {
 }
 
 parameters {
-  // alpha (a): Boundary separation or Speed-accuracy trade-off 
-  // delta (v): Drift rate 
-  // tau (ter): Nondecision time + Motor response time + encoding time
-  // a_mod: modulator for decision boundary
-  // v_mod: modulator for drift diffusion rate
+  // alpha (a): Boundary separation or Speed-accuracy trade-off (high alpha means high accuracy). alpha > 0
+  // delta (v): Drift rate Quality of the stimulus (delta close to 0 means ambiguous stimulus or weak ability). 0 < delta
+  // tau (ter): Nondecision time + Motor response time + encoding time (high means slow encoding, execution). 0 < ter (in seconds)
+  // a_mod: 
+  // v_mod: 
+  /// upper boundary of tau must be smaller than minimum RT to avoid zero likelihood for fast responses.
+  //tau can for physiological reasone not be faster than 0.1 s.*/
 
-  // Hyper-parameters
+  // Hyper(group)-parameters
   vector[6] mu_pr;
   vector<lower=0>[6] sigma;
 
-  // Subject-level raw parameters
+  // Subject-level raw parameters (for Matt trick)
   vector[N] alpha_pr;
   vector[N] eta_pr_pos;
   vector[N] eta_pr_neg;
@@ -41,7 +43,7 @@ transformed parameters {
   vector<lower=0, upper=10>[N] v_mod;             // scaling parameter
   vector<lower=RTbound, upper=max(minRT)>[N] tau; // nondecision time
 
-  alpha = exp(mu_pr[1] + sigma[1] * alpha_pr); //
+  alpha = exp(mu_pr[1] + sigma[1] * alpha_pr); // exp (.): natural exponential of argument.
   eta_neg = exp(mu_pr[2] + sigma[2] * eta_pr_pos);
   eta_pos = exp(mu_pr[3] + sigma[3] * eta_pr_neg);
   a_mod = exp(mu_pr[4] + sigma[4] * a_mod_pr);
@@ -60,7 +62,7 @@ model {
   mu_pr  ~ normal(0, 1);
   sigma ~ normal(0, 0.2);
 
-  // Individual parameters
+  // Individual parameters for non-centered parameterization
   alpha_pr ~ normal(0, 1);
   eta_pr_pos ~ normal(0,1);
   eta_pr_neg ~ normal(0,1);
@@ -78,10 +80,10 @@ model {
       delta[trial] = (ev[trial,2] - ev[trial,1]) * v_mod[s];
       // if lower bound
       if (response[trial]==1){
-        RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,-(delta[trial]));
-        log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,-(delta[trial]));
+        RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,-delta[trial]);
+        log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,-delta[trial]);
         // if the anwswer is wrong, update ev for lower value with neg lr, ev for positive answer stays the same
-        ev[trial+1,1] = ev[trial,1] + (inv_logit(eta_neg[s]) * (value[trial]-ev[trial,1]));
+        ev[trial+1,1] = ev[trial,1] + inv_logit(eta_neg[s]) * (value[trial]-ev[trial,1]);
         ev[trial+1,2] = ev[trial,2];
       }
       // if upper bound (resp = 2)
@@ -89,17 +91,17 @@ model {
         RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,delta[trial]);
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,delta[trial]);
         // if the anwswer is correct, update ev for upper value with pos lr, ev for neg answer stays the same
-        ev[trial+1,2] = ev[trial,2] + (inv_logit(eta_pos[s]) * (value[trial]-ev[trial,2]));
+        ev[trial+1,2] = ev[trial,2] + inv_logit(eta_pos[s]) * (value[trial]-ev[trial,2]);
         ev[trial+1,1] = ev[trial,1];
       }
     }
     // in last cycle, don't update anymore
     delta[last[s]] = (ev[last[s]-1,2] - ev[last[s]-1,1]) * v_mod[s];
     if (response[last[s]]==1){
-      RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,-(delta[last[s]]));
-      log_lik[last[s]] = wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,-(delta[last[s]]));
+      RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,-delta[last[s]]);
+      log_lik[last[s]] = wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,-delta[last[s]]);
     }
-    if (response[last[s]]==2){
+    else{
       RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,delta[last[s]]);
       log_lik[last[s]] = wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,delta[last[s]]);
     }
@@ -107,9 +109,9 @@ model {
 }
 generated quantities {
   // For group level parameters
-  real<lower=0> mu_alpha;                  // boundary separation
-  real<lower=0> mu_eta_neg;                 // learning rate lower
-  real<lower=0> mu_eta_pos;                // learning rate upper
+  real<lower=0> mu_alpha;          // boundary separation
+  real<lower=0> mu_eta_neg;    // learning rate
+  real<lower=0> mu_eta_pos; 
   real<lower=0> mu_a_mod;                  // biundary separation modification
   real<lower=0> mu_v_mod;                  // drift rate modification
   real<lower=RTbound, upper=max(minRT)> mu_tau; // nondecision time

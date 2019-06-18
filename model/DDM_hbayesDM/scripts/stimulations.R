@@ -57,17 +57,17 @@ dat <- list("N" = n_subj, "T"=n_trials,"RTbound" = 0.15,"minRT" = minRT, "iter" 
             "RT" = raw_data$RT, "first" = first, "last" = last, "value"=value, "stims" = stims)  # names list of numbers
 
 
-############ SIMULATION ##################
+############ SIMULATION inclunding inverse logit ##################
 
 # extract posterior values
 posterior_means <- fit_summary$summary[19:24,1]
 
-v_mod <- 0.5182816
-eta_pos <- 0.6148918
-eta_neg <- 0.7110666
-alpha <- 1.5797116
-a_mod <- 0.0769706
-tau <- 0.6743383
+v_mod <- 0.004885427
+eta_pos <- 1.687821991
+eta_neg <- 0.192118828
+alpha <- 1.516379240
+a_mod <- 0.069487627
+tau <- 0.681932623
 
 
 ev <- matrix(data=0, nrow=dat$T,ncol=2)
@@ -82,11 +82,11 @@ for(s in 1:dat$N){
   for(trial in (first[s]:(last[s]-1))){
     delta[trial] <- (ev[trial,2]-ev[trial,1]) * v_mod
     if(dat$response[trial]==1){
-      ev[trial+1,1] <- ev[trial,1] + inv.logit(eta_neg) * (dat$value[trial]-ev[trial,1])
+      ev[trial+1,1] <- ev[trial,1] + (inv.logit(eta_neg) * (dat$value[trial]-ev[trial,1]))
       ev[trial+1,2] <- ev[trial,2]
     }
-    else{
-      ev[trial+1,2] <- ev[trial,2] + inv.logit(eta_pos) * (dat$value[trial]-ev[trial,2])
+    if(dat$response[trial]==2){
+      ev[trial+1,2] <- ev[trial,2] + (inv.logit(eta_pos) * (dat$value[trial]-ev[trial,2]))
       ev[trial+1,1] <- ev[trial,1]
     }
     delta[last[s]] =  (ev[last[s]-1,2]-ev[last[s]-1,1]) * v_mod

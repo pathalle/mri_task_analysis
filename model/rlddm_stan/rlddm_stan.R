@@ -85,8 +85,8 @@ fit_invlog <- rstan::sampling(object  = stanmodel_invlog,
                        data    = dat,
                        init    = "random",
                        chains  = 2,
-                       iter    = 4000,
-                       warmup  = 1000,
+                       iter    = 10000,
+                       warmup  = 2000,
                        thin    = 1,
                        control = list(adapt_delta   = 0.95,
                                       stepsize      = 1,
@@ -95,13 +95,16 @@ fit_invlog <- rstan::sampling(object  = stanmodel_invlog,
 
 parValsinvl <- rstan::extract(fit_invlog, permuted = TRUE)
 
+rstan::stan_diag(fit_invlog, info = 'sample') # shows three plots together
+rstan::stan_par(fit_invlog, par = "alpha")
+
+
 ## now access the data of the fit 
 
 
-fit_summary_invlog <- summary(fit_invlog)
+fit_summary_invlog <- rstan::summary(fit_invlog)
 
 print(fit_summary_invlog$summary)
-
 
 #########
 

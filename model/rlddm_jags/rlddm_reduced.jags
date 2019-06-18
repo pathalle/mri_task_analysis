@@ -49,7 +49,7 @@ for (s in 1:S) {
           log_lik[trial] <- logdensity.wiener(RT[trial], a[s] * pow(iter[trial]/10,i[s]),t[s],0.5,v[trial])
           ev[trial+1,correct[trial]] <- ev[trial,correct[trial]] + ilogit(eta[s,correct[trial]] * (value[trial]-ev[trial,correct[trial]]))
           ### adjust ev for incorrect
-          ev[trial+1,incorrect[trial]] <- ev[trial,incorrect[trial]] + ilogit(eta[s,incorrect[trial]] * (value[trial]-ev[trial,incorrect[trial]]))
+          ev[trial+1,incorrect[trial]] <- ev[trial,incorrect[trial]] + ilogit(eta[s,incorrect[trial]]) * (value[trial]-ev[trial,incorrect[trial]])
           }
      for (trial in last[s]) {
           v[trial] <- (ev[trial,1] - ev[trial,2]) * m[s]
