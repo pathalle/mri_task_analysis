@@ -8,12 +8,13 @@ library(ggplot2)
 library(gridExtra)
 library(tidyr)
 library(wesanderson)
+library(viridis)
 
 task <- "fbl_kloten"
 #set inputs
 #dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
-dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
+#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
+dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
 # make sure output directory exists already
 diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
 
@@ -135,10 +136,27 @@ split_trials_32 <- function(data){
   return(data)
 }
 
+split_trials_octile <- function(data){
+  data$trial <- as.integer(data$trial)
+  data$octile <- 0
+  data[which(data$trial <= 8),]$octile = 1
+  data[which(data$trial > 8 & data$trial <= 16),]$octile = 2
+  data[which(data$trial > 16 & data$trial <= 24),]$octile = 3
+  data[which(data$trial > 24 & data$trial <= 32),]$octile = 4
+  data <- data[
+    with(data, order(subj_idx, block,trial)),
+    ]
+  return(data)
+}
+
 wes_cols= wes_palette("GrandBudapest1", n = 2)
 
 ## load data
 data <- gather_data(files)
+
+# for the visualization, for the subject who completed block 3, b3 will count as b2
+data[which(data$block=="3"),]$block <- rep(2,nrow(data[which(data$block=="3"),]))
+unique(data$block)
 
 
 ## show how many observation (=trials) per subj per block
@@ -157,37 +175,30 @@ fb_per_subj_per_block <- data %>%
   group_by(subj_idx,block) %>%
   tally() 
 
-plotting <-  data %>%
+mean_accuracy <-  data %>%
   select(subj_idx, fb,block) %>%
   filter(fb==1) %>%
   group_by(subj_idx,block) %>%
   tally() 
 
-
-
-plotting$n <- plotting$n/32
-plotting$block = as.factor(plotting$block)
-ggplot(plotting, aes(x=block, y=n, colour=block)) + 
+mean_accuracy$n <- mean_accuracy$n/32
+mean_accuracy$block = as.factor(mean_accuracy$block)
+ggplot(mean_accuracy, aes(x=block, y=n, colour=block)) + 
   geom_boxplot(outlier.colour="red", outlier.shape=8,
                outlier.size=4) + 
   scale_y_continuous(limits=0:1) +
   ylab("accuracy") +
-  ggtitle("Mean accuracy per block (2x3[32])") +
+  ggtitle("Mean accuracy per block (2x4[32])") +
   geom_dotplot(binaxis='y', stackdir='center', dotsize=0.5) + 
-  scale_color_manual(values=c("#999999", "#E69F00")) + 
-  theme_bw()
+  scale_color_manual(values=c("#999999", "#E69F00"))
 
-b1 <- plotting[which(plotting$block==1),]
+b1 <- mean_accuracy[which(mean_accuracy$block==1),]
 sum(b1$n)/nrow(b1)
 
-b2 <- plotting[which(plotting$block==2),]
+b2 <- mean_accuracy[which(mean_accuracy$block==2),]
 sum(b2$n)/nrow(b2)
 
-b3 <- plotting[which(plotting$block==3),]
-sum(b3$n)/nrow(b3)
-
-overall_mean <- sum(plotting$n)/nrow(plotting)
-
+overall_mean <- sum(mean_accuracy$n)/nrow(mean_accuracy)
 
 # compute mean reaction time for each participant for each block
 data_for_rt_plot <- data[which(data$fb!=2),]
@@ -201,7 +212,7 @@ ggplot(mean_rts, aes(x=block, y=x, colour=block)) +
                outlier.size=4) + 
   scale_y_continuous(limits=c(0.6,1.8)) +
   ylab("RT") +
-  ggtitle("Mean reaction time per block (2x3)") +
+  ggtitle("Mean reaction time per block (2x4[32])") +
   geom_dotplot(binaxis='y', stackdir='center', dotsize=0.5) + 
   scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))
 
@@ -211,46 +222,53 @@ sum(c1$x)/nrow(c1)
 c2 <- mean_rts[which(mean_rts$block==2),]
 sum(c2$x)/nrow(c2)
 
-#c3 <- mean_rts[which(mean_rts$block==3),]
-#sum(c3$x)/nrow(c3)
-
 overall_mean_rt <- sum(mean_rts$x)/nrow(mean_rts)
 
 # compute cumulative sums and quartiles
 data_with_cumulsum <- compute_cumulative_sums(data)
-data_quartiles <- split_trials_32(data_with_cumulsum)
-
-# for the visualization, for the subject who completed block 3, b3 will count as b2
-data_quartiles[which(data_quartiles$block=="3"),]$block <- rep(2,nrow(data_quartiles[which(data_quartiles$block=="3"),]))
-unique(data_quartiles$block)
+data_octile <- split_trials_octile(data_with_cumulsum)
 
 ## correct responses per quartile
-correct_per_quartile <-  data_quartiles %>%
-  select(subj_idx, fb,block,quartile) %>%
+correct_per_octile <-  data_octile %>%
+  select(subj_idx, fb,block,octile) %>%
   filter(fb==1) %>%
-  group_by(subj_idx,block,quartile) %>%
+  group_by(subj_idx,block,octile) %>%
   tally() 
-correct_per_quartile
 
-correct_per_quartile$block = as.factor(correct_per_quartile$block)
-levels(correct_per_quartile$block) <- c("Block 1", "Block 2")
-correct_per_quartile$quartile = as.factor(correct_per_quartile$quartile)
-
+correct_per_octile$block = as.factor(correct_per_octile$block)
+levels(correct_per_octile$block) <- c("Block 1", "Block 2")
+correct_per_octile$octile = as.factor(correct_per_octile$octile)
 
 
-ggplot(correct_per_quartile, aes(quartile,n,group=subj_idx)) +
-  stat_boxplot(geom="errorbar", width=.5)+
-  geom_boxplot(fill=wes_cols[1])+
-  xlab("Quartile") +
+ggplot(correct_per_octile, aes(octile,n)) +
+  geom_boxplot(fill="lightgray")+
+  geom_line(aes(group=subj_idx,col=subj_idx),alpha=0.5,linetype="dashed",position=position_jitter(w=0.05, h=0.05)) +
+  scale_color_viridis(discrete = TRUE, option = "C")+
+  scale_fill_viridis(discrete = TRUE) +
+  geom_point(aes(group=subj_idx,shape=subj_idx,col=subj_idx),size=2) +
+  scale_shape_manual(values=1:nlevels(correct_per_octile$subj_idx)) +
+  xlab("Octile") +
   ylab("Number of correct responses") +
-  ggtitle("Correct responses per quartile for each block (2x3)") +
+  ggtitle("Correct responses per octile for each block (2x4)[32]") +
   theme_bw()+
-  stat_summary(fun.y=median, geom="smooth", aes(group=0),lwd=1,col=wes_cols[2])+
-  geom_jitter(position = position_jitter(0.2)) + 
+  stat_summary(fun.y=median, geom="smooth", aes(group=0),lwd=0.8,col=wes_cols[2])+
+  #geom_jitter(aes(col=subj_idx))+
   facet_grid(.~block)
 
-setwd(diroutput)
-write_csv(data,path = paste("summarized_performance_",task,".csv",sep=""),col_names = TRUE,quote=FALSE)
+ggplot(correct_per_octile, aes(octile,n,group=block)) +
+  geom_line(aes(color=block),linetype="dashed",alpha=1) +
+  #stat_summary(fun.y=median, geom="smooth", aes(group=0),lwd=0.8,col=wes_cols[2])+
+  #scale_color_viridis(discrete = TRUE, option = "C")+
+  #scale_fill_viridis(discrete = TRUE) +
+  #geom_point(aes(group=subj_idx,shape=subj_idx,col=subj_idx),size=2) +
+  #scale_shape_manual(values=1:nlevels(correct_per_octile$subj_idx)) +
+  xlab("Octile") +
+  ylab("Number of correct responses") +
+  ggtitle("Correct responses per octile for each subject per block (2x4)[32]") +
+  facet_wrap( ~ subj_idx, ncol=3)
+
+  #geom_jitter(aes(col=subj_idx))+
+
 
 miss_per_block <- data %>%
   select(subj_idx,rt, fb,block) %>%
@@ -262,8 +280,10 @@ sum(miss_per_block$n)/nrow(miss_per_block)
 
 #######
 
+setwd(diroutput)
+write_csv(data,path = paste("summarized_performance_",task,".csv",sep=""),col_names = TRUE,quote=FALSE)
 
-
+######
 
 attach(data_with_cumulsum)
 for(i in unique(data_with_cumulsum$subjID)){
