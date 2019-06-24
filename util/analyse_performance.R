@@ -12,9 +12,9 @@ library(viridis)
 
 task <- "fbl_kloten"
 #set inputs
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
+dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
 #dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
-dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
+#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
 # make sure output directory exists already
 diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
 
@@ -142,7 +142,7 @@ split_trials_octile <- function(data){
   data[which(data$trial <= 8),]$octile = 1
   data[which(data$trial > 8 & data$trial <= 16),]$octile = 2
   data[which(data$trial > 16 & data$trial <= 24),]$octile = 3
-  data[which(data$trial > 24 & data$trial <= 32),]$octile = 4
+  #data[which(data$trial > 24 & data$trial <= 32),]$octile = 4
   data <- data[
     with(data, order(subj_idx, block,trial)),
     ]
@@ -153,11 +153,14 @@ wes_cols= wes_palette("GrandBudapest1", n = 2)
 
 ## load data
 data <- gather_data(files)
+data$block = as.factor(data$block)
+levels(data$block) <- c("Block 1", "Block 2")
+data$aStim = as.factor(data$aStim)
+
 
 # for the visualization, for the subject who completed block 3, b3 will count as b2
 data[which(data$block=="3"),]$block <- rep(2,nrow(data[which(data$block=="3"),]))
 unique(data$block)
-
 
 ## show how many observation (=trials) per subj per block
 trials_per_subj_per_block <- data %>%
@@ -181,8 +184,7 @@ mean_accuracy <-  data %>%
   group_by(subj_idx,block) %>%
   tally() 
 
-mean_accuracy$n <- mean_accuracy$n/32
-mean_accuracy$block = as.factor(mean_accuracy$block)
+mean_accuracy$n <- mean_accuracy$n/24
 ggplot(mean_accuracy, aes(x=block, y=n, colour=block)) + 
   geom_boxplot(outlier.colour="red", outlier.shape=8,
                outlier.size=4) + 
@@ -192,12 +194,11 @@ ggplot(mean_accuracy, aes(x=block, y=n, colour=block)) +
   geom_dotplot(binaxis='y', stackdir='center', dotsize=0.5) + 
   scale_color_manual(values=c("#999999", "#E69F00"))
 
-b1 <- mean_accuracy[which(mean_accuracy$block==1),]
-sum(b1$n)/nrow(b1)
-
-b2 <- mean_accuracy[which(mean_accuracy$block==2),]
-sum(b2$n)/nrow(b2)
-
+# compute mean accuracy per block
+acc_b1 <- mean_accuracy[which(mean_accuracy$block=="Block 1"),]
+mean_acc_b1 <- sum(acc_b1$n)/nrow(acc_b1)
+acc_b2 <- mean_accuracy[which(mean_accuracy$block=="Block 2"),]
+mean_acc_b2 <- sum(acc_b2$n)/nrow(acc_b2)
 overall_mean <- sum(mean_accuracy$n)/nrow(mean_accuracy)
 
 # compute mean reaction time for each participant for each block
@@ -205,7 +206,6 @@ data_for_rt_plot <- data[which(data$fb!=2),]
 mean_rts = aggregate(data_for_rt_plot$rt,
                 by = list(subj_idx = data_for_rt_plot$subj_idx, block = data_for_rt_plot$block),
                 FUN = mean)
-mean_rts$block = as.factor(mean_rts$block)
 
 ggplot(mean_rts, aes(x=block, y=x, colour=block)) + 
   geom_boxplot(outlier.colour="red", outlier.shape=8,
@@ -216,17 +216,58 @@ ggplot(mean_rts, aes(x=block, y=x, colour=block)) +
   geom_dotplot(binaxis='y', stackdir='center', dotsize=0.5) + 
   scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))
 
-c1 <- mean_rts[which(mean_rts$block==1),]
-sum(c1$x)/nrow(c1)
-
-c2 <- mean_rts[which(mean_rts$block==2),]
-sum(c2$x)/nrow(c2)
-
+rt_b1 <- mean_rts[which(mean_rts$block=="Block 1"),]
+mean_rt_b1 <- sum(rt_b1$x)/nrow(rt_b1)
+rt_b2 <- mean_rts[which(mean_rts$block=="Block 2"),]
+mean_rt_b2 <- sum(rt_b2$x)/nrow(rt_b2)
 overall_mean_rt <- sum(mean_rts$x)/nrow(mean_rts)
 
 # compute cumulative sums and quartiles
-data_with_cumulsum <- compute_cumulative_sums(data)
+data_no_miss <- data[which(data$fb!=2),]
+data_with_cumulsum <- compute_cumulative_sums(data_no_miss)
 data_octile <- split_trials_octile(data_with_cumulsum)
+
+###### get individual learning trajectories
+attach(data_octile)
+ggplot(data=data_octile[which(data_octile$block==1),], aes(x=trial_separate, y=cumulsum_fb, group=aStim, color=aStim)) +
+  geom_line()+
+  geom_point(aes(fill=aStim),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+  scale_x_continuous(breaks = unique(trial_separate),limits=c(1,10.5))  +
+  scale_y_continuous(breaks = c(0,1,2,3,4,5,6,7,8,9,10),limits=c(0,10)) +
+  ylab("Cumulative sum of feedback")+
+  xlab("Trial per stimulus") +
+guides(alpha=FALSE)+
+  theme(axis.title = element_text(size=12),
+        title = element_text(size=14),
+        plot.subtitle = element_text(size=14,color="darkblue"),
+        legend.text=element_text(size=12),
+        panel.grid.major = element_line(colour="white"),
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "gray88"))+
+  facet_wrap( ~ subj_idx, ncol=3) +
+  labs(title="Cumulative sum of hits per auditory stimulus (2x3[24][Block 1])")
+
+
+###### get individual learning trajectories
+attach(data_octile)
+ggplot(data=data_octile[which(data_octile$block==2),], aes(x=trial_separate, y=cumulsum_fb, group=aStim, color=aStim)) +
+  geom_line()+
+  geom_point(aes(fill=aStim),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+  scale_x_continuous(breaks = unique(trial_separate),limits=c(1,10.5))  +
+  scale_y_continuous(breaks = c(0,1,2,3,4,5,6,7,8,9,10),limits=c(0,10)) +
+  ylab("Cumulative sum of feedback")+
+  xlab("Trial per stimulus") +
+  guides(alpha=FALSE)+
+  theme(axis.title = element_text(size=12),
+        title = element_text(size=14),
+        plot.subtitle = element_text(size=14,color="darkblue"),
+        legend.text=element_text(size=12),
+        panel.grid.major = element_line(colour="white"),
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "gray88"))+
+  facet_wrap( ~ subj_idx, ncol=3) +
+  labs(title="Cumulative sum of hits per auditory stimulus (2x3[24][Block 2])")
+#facet_wrap( ~ subj_idx, ncol=3)
 
 ## correct responses per quartile
 correct_per_octile <-  data_octile %>%
@@ -235,8 +276,6 @@ correct_per_octile <-  data_octile %>%
   group_by(subj_idx,block,octile) %>%
   tally() 
 
-correct_per_octile$block = as.factor(correct_per_octile$block)
-levels(correct_per_octile$block) <- c("Block 1", "Block 2")
 correct_per_octile$octile = as.factor(correct_per_octile$octile)
 
 
@@ -247,9 +286,9 @@ ggplot(correct_per_octile, aes(octile,n)) +
   scale_fill_viridis(discrete = TRUE) +
   geom_point(aes(group=subj_idx,shape=subj_idx,col=subj_idx),size=2) +
   scale_shape_manual(values=1:nlevels(correct_per_octile$subj_idx)) +
-  xlab("Octile") +
+  xlab("Quartile") +
   ylab("Number of correct responses") +
-  ggtitle("Correct responses per octile for each block (2x4)[32]") +
+  ggtitle("Correct responses per quartile for each block (2x4)[24]") +
   theme_bw()+
   stat_summary(fun.y=median, geom="smooth", aes(group=0),lwd=0.8,col=wes_cols[2])+
   #geom_jitter(aes(col=subj_idx))+
@@ -262,9 +301,9 @@ ggplot(correct_per_octile, aes(octile,n,group=block)) +
   #scale_fill_viridis(discrete = TRUE) +
   #geom_point(aes(group=subj_idx,shape=subj_idx,col=subj_idx),size=2) +
   #scale_shape_manual(values=1:nlevels(correct_per_octile$subj_idx)) +
-  xlab("Octile") +
+  xlab("Quartile") +
   ylab("Number of correct responses") +
-  ggtitle("Correct responses per octile for each subject per block (2x4)[32]") +
+  ggtitle("Correct responses per quartile for each subject per block (2x4)[32]") +
   facet_wrap( ~ subj_idx, ncol=3)
 
   #geom_jitter(aes(col=subj_idx))+
@@ -275,7 +314,7 @@ miss_per_block <- data %>%
   filter(fb==2)  %>%
   group_by(subj_idx,block) %>%
   tally()
-miss_per_block$n <- miss_per_block$n/32
+miss_per_block$n <- miss_per_block$n/24
 sum(miss_per_block$n)/nrow(miss_per_block)
 
 #######

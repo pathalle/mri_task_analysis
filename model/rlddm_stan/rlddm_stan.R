@@ -52,7 +52,7 @@ get_astim_trials <- function(data){
 ### data loading and preprocessing
 
 path <- dirname(rstudioapi::getActiveDocumentContext()$path)
-model_path <- paste0(path,"/rlddm_per_stimulus.stan")
+model_path <- paste0(path,"/rlddm_per_stimulus_v2.stan")
 data_path <- paste0(path,"/test_input.txt")
 setwd(path)
 raw_data <- data.table::fread(file = data_path, header = TRUE, sep = "\t", data.table = TRUE,
@@ -117,6 +117,7 @@ n_trials <- nrow(raw_data)
 dat <- list("N" = n_subj, "T"=n_trials,"RTbound" = 0.15,"minRT" = minRT, "iter" = raw_data$trial, "response" = raw_data$response, "trial_astim" = raw_data$trial_astim,
             "stim_assoc" = raw_data$aStim, "stim_nassoc" = raw_data$vStimNassoc, "RT" = raw_data$RT, "first" = first, "last" = last, "value"=value, "n_stims"=8)  # names list of numbers
 
+### with fixed learning rates ###
 
 stanmodel_per_stimulus <- rstan::stan_model(model_path)
 
@@ -134,29 +135,72 @@ fit_invlog <- rstan::sampling(object  = stanmodel_per_stimulus,
 
 parValsinvl <- rstan::extract(fit_invlog, permuted = TRUE)
 
-rstan::stan_diag(fit_invlog, info = 'sample') # shows three plots together
-rstan::stan_par(fit_invlog, par = "alpha")
-
-
-## now access the data of the fit 
-
-
 fit_summary_invlog <- rstan::summary(fit_invlog)
 
-print(fit_summary_invlog$summary)
+tail(fit_summary_invlog$summary)
 rstan::stan_par(fit_invlog, par = "ev_hat[1,1]")
 
-parValsinvl$ev_hat[4000,,2]
+# show the trajectory for the ev of the 1st stimulus:
+## Low association strength
+## Value changes at: 9, 16, 
 parValsinvl$ev_hat[4000,,1]
 
-inv.logit(parValsinvl$eta_pos[4000])
-inv.logit(parValsinvl$eta_neg[4000])
+parValsinvl$ev_hat[4000,,2]
+parValsinvl$ev_hat[4000,,3]
+parValsinvl$ev_hat[4000,,4]
+parValsinvl$ev_hat[4000,,5]
+parValsinvl$ev_hat[4000,,6]
+parValsinvl$ev_hat[4000,,7]
+parValsinvl$ev_hat[4000,,8]
 
-
+# t1: initialized at 0.5
+parValsinvl$ev_hat[4000,1,]
+# t2: update 
+parValsinvl$ev_hat[4000,2,]
+# t3: update
+parValsinvl$ev_hat[4000,3,]
 
 #########
 
+### with fixed learning rates and updates for both associated and non-associated stimulus###
 
+stanmodel_v2 <- rstan::stan_model(model_path)
+
+fit_v2 <- rstan::sampling(object  = stanmodel_v2,
+                              data    = dat,
+                              init    = "random",
+                              chains  = 2,
+                              iter    = 4000,
+                              warmup  = 1000,
+                              thin    = 1,
+                              control = list(adapt_delta   = 0.95,
+                                             stepsize      = 1,
+                                             max_treedepth = 10),
+                              verbose =TRUE)
+
+parVals_v2 <- rstan::extract(fit_v2, permuted = TRUE)
+
+fit_summary_v2 <- rstan::summary(fit_v2)
+
+tail(fit_summary_v2$summary)
+rstan::stan_par(fit_v2, par = "ev_hat[1,1]")
+
+parVals_v2$ev_hat[4000,38,]
+parVals_v2$delta_hat[4000,]
+
+# start of ev values print(fit_summary_v2$summary[27,])
+ev_mean <-  matrix(data= NA, nrow=dat$T, ncol=8)
+ev_mean[1,] <- fit_summary_v2$summary[27:34,1]
+for(i in 0:38){
+  ev_mean[i,] <- fit_summary_v2$summary[(19+i*8):(26+i*8),1]
+}
+# get delta values
+fit_summary_v2$summary[331:368,]
+tail(fit_summary_v2$summary)
+#########
+
+rstan::stan_diag(fit_invlog, info = 'sample') # shows three plots together
+rstan::stan_par(fit_invlog, par = "alpha")
 
 parVals <- rstan::extract(fit, permuted = TRUE)
 

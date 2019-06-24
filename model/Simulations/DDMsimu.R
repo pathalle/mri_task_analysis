@@ -10,7 +10,7 @@
   # n_steps : number of time steps,
   # n_iterations : number of decision processes.
 
-DDMsimu <- function(v, a = 30, z = -5, eta = 0.75, t0 = 100, n_steps = 3000, n_iterations = 20) {
+DDMsimu <- function(v, a = 20, z = 0.5, eta = 0.75, t0 = 100, n_steps = 1000, n_iterations = 20) {
 
   motor_delay <- 100 # Delay between reaching the boundary and made the motor command
   # Temps par step fixe. Mais mettre dans les arguments une durée en millisecondes.
@@ -100,7 +100,7 @@ DDMsimu <- function(v, a = 30, z = -5, eta = 0.75, t0 = 100, n_steps = 3000, n_i
   mtext("Drift Diffusion Model simulation", side = 3, line = 1, cex = 1.5, col = "black", outer = TRUE)
 }
 
-DDMsimu(0.4)
+DDMsimu(-0.5)
 
 ## generate random data
 library(RWiener)
