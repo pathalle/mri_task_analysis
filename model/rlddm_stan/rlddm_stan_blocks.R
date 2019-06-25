@@ -15,6 +15,7 @@ library("rstan", lib.loc="C:/Program Files/R/R-3.5.2/library")
 library("Rcpp", lib.loc="C:/Program Files/R/R-3.5.2/library")
 library("hBayesDM", lib.loc="C:/Program Files/R/R-3.5.2/library")
 library("boot")
+library("readr")
 require("tidyr")
 
 ###
@@ -72,16 +73,20 @@ setwd(data_path)
 files <- dir(pattern=".txt", recursive=TRUE)
 raw_data <- gather_data(files)
 
-#data_path <- paste0(path,"/test_input.txt")
-#setwd(path)
-#raw_data <- data.table::fread(file = data_path, header = TRUE, sep = "\t", data.table = TRUE,
- #                             fill = TRUE, stringsAsFactors = TRUE, logical01 = FALSE)
+###################### for test file
+setwd(path)
 
-#raw_data <- cbind(rep(substr(data_path,1,12),dim(raw_data)[1]),raw_data)
+colnames(raw_data)
+raw_data <- data.table::fread(file = data_path, header = TRUE, sep = "\t", data.table = TRUE,
+                              fill = TRUE, stringsAsFactors = TRUE, logical01 = FALSE)
+
+raw_data <- cbind(rep(substr(data_path,1,12),dim(raw_data)[1]),raw_data)
 #D<-D[D$resp!=0,] # remove 'too slow ' responses 
 ### Rename and transform some columns
-colnames(raw_data)[1] <- "subjID"
+#######################
 
+
+colnames(raw_data)[1] <- "subjID"
 raw_data$rt <- raw_data$rt/1000
 names(raw_data)[names(raw_data)=="rt"] <- "RT"
 # automatically filter missed responses (since RT = 0)
@@ -102,14 +107,15 @@ raw_data <- get_astim_trials(raw_data)
 
 ## prepare data for jags
 #raw_data$row <- seq.int(nrow(raw_data))
-DT_trials <- raw_data[, .N, by = "subjID"]
+DT_trials <- raw_data[, .N, by = list(subjID,block)]
+
 subjs     <- DT_trials$subjID
 n_subj    <- length(subjs)
 # get minRT
 minRT <- with(raw_data, aggregate(RT, by = list(y = subjID), FUN = min)[["x"]])
 ifelse(is.null(dim(minRT)),minRT<-as.array(minRT))
 
-# change blocks
+
 for (subj in subjs){
   sub <- which(raw_data$subjID==subj)
   raw_data[sub,]$block <- as.factor(raw_data[sub,]$block)
@@ -117,22 +123,38 @@ for (subj in subjs){
   raw_data[sub,]$block <- as.integer(raw_data[sub,]$block)
 }
 
-raw_data <- raw_data[which(raw_data$block==1),]
+raw_data$trial_subj <- rep("NA",nrow(raw_data))
 # since we discarded some observations, we have to assign new trial numbers 
 for (subj in subjs){
   sub <- which(raw_data$subjID==subj)
-  raw_data[sub,]$trial <- seq.int(nrow(raw_data[sub,]))
+  raw_data[sub,]$trial_subj <- seq.int(nrow(raw_data[sub,]))
 }
 
-DT_trials <- raw_data[, .N, by = "subjID"]
-DT_trials
+raw_data$trial_blocks <- rep("NA",nrow(raw_data))
+for (subj in subjs){
+  for (b in 1:3){
+    sub <- which(raw_data$subjID==subj & raw_data$block==b)
+      raw_data[sub,]$trial_blocks <- seq.int(nrow(raw_data[sub,]))
+    }
+  }
 
+raw_data$all_trials <- seq.int(nrow(raw_data))
 # first is Sx1 matrix identifying all first trials of a subject for each choice
-first <- which(raw_data$trial==1)
+first_b1 <- which(raw_data$trial_blocks==1)
+last_b1 <- as.integer(first_b1 + DT_trials[which(DT_trials$block==1),]$N -1)
+first_b2 <- last_b1 + 1
+last_b2 <- as.integer(first_b1 + DT_trials[which(DT_trials$block==2),]$N -1)
+first_b3 <- last_b2 + 1
+last_b3 <- as.integer(first_b1 + DT_trials[which(DT_trials$block==3),]$N -1)
 # if N=1 transform int to 1-d array
 ifelse(is.null(dim(first)),first<-as.array(first))
 # last is a Sx1 matrix identifying all last trials of a subject for each choice
-last <- as.integer(first + DT_trials$N - 1)
+
+
+
+
+
+#last <- as.integer(first + DT_trials$N - 1)
 ifelse(is.null(dim(last)),last<-as.array(last))
 # incorrect is the inverse vector of choice and is needed to update the ev for the non-choices
 raw_data$incorrect <- as.integer(ifelse(raw_data$correct==1, 0, 1))
@@ -146,23 +168,24 @@ n_trials <- nrow(raw_data)
 
 
 dat <- list("N" = n_subj, "T"=n_trials,"RTbound" = 0.15,"minRT" = minRT, "iter" = raw_data$trial, "response" = raw_data$response, "trial_astim" = raw_data$trial_astim,
-            "stim_assoc" = raw_data$aStim, "stim_nassoc" = raw_data$vStimNassoc, "RT" = raw_data$RT, "first" = first, "last" = last, "value"=value, "n_stims"=8)  # names list of numbers
+            "stim_assoc" = raw_data$aStim, "stim_nassoc" = raw_data$vStimNassoc, "RT" = raw_data$RT, "first" = first, "last" = last, "value"=value, "n_stims"=8,
+            "n_blocks"=3)  # names list of numbers
 
 ### with fixed learning rates ###
 
 stanmodel_per_stimulus <- rstan::stan_model(model_path)
 
 fit_invlog <- rstan::sampling(object  = stanmodel_per_stimulus,
-                              data    = dat,
-                              init    = "random",
-                              chains  = 2,
-                              iter    = 8000,
-                              warmup  = 2000,
-                              thin    = 1,
-                              control = list(adapt_delta   = 0.95,
-                                             stepsize      = 1,
-                                             max_treedepth = 10),
-                              verbose =TRUE)
+                       data    = dat,
+                       init    = "random",
+                       chains  = 2,
+                       iter    = 4000,
+                       warmup  = 1000,
+                       thin    = 1,
+                       control = list(adapt_delta   = 0.95,
+                                      stepsize      = 1,
+                                      max_treedepth = 10),
+                       verbose =TRUE)
 
 parValsinvl <- rstan::extract(fit_invlog, permuted = TRUE)
 
@@ -198,23 +221,26 @@ parValsinvl$ev_hat[4000,3,]
 stanmodel_v2 <- rstan::stan_model(model_path)
 
 fit_v2 <- rstan::sampling(object  = stanmodel_v2,
-                          data    = dat,
-                          init    = "random",
-                          chains  = 2,
-                          iter    = 8000,
-                          warmup  = 2000,
-                          thin    = 1,
-                          control = list(adapt_delta   = 0.95,
-                                         stepsize      = 1,
-                                         max_treedepth = 10),
-                          verbose =TRUE)
+                              data    = dat,
+                              init    = "random",
+                              chains  = 2,
+                              iter    = 4000,
+                              warmup  = 1000,
+                              thin    = 1,
+                              control = list(adapt_delta   = 0.95,
+                                             stepsize      = 1,
+                                             max_treedepth = 10),
+                              verbose =TRUE)
 
 parVals_v2 <- rstan::extract(fit_v2, permuted = TRUE)
 
 fit_summary_v2 <- rstan::summary(fit_v2)
 
+
+fit_summary_v2$summary[1:20,]
 tail(fit_summary_v2$summary)
 rstan::stan_par(fit_v2, par = "ev_hat[1,1]")
+
 
 parVals_v2$ev_hat[4000,38,]
 parVals_v2$delta_hat[4000,]
@@ -225,8 +251,11 @@ ev_mean[1,] <- fit_summary_v2$summary[27:34,1]
 for(i in 0:38){
   ev_mean[i,] <- fit_summary_v2$summary[(19+i*8):(26+i*8),1]
 }
+# get v_mod
+v_mod <- fit_summary_v2$summary[17,1]
 # get delta values
-fit_summary_v2$summary[331:368,]
+deltas <- fit_summary_v2$summary[331:368,1]
+deltas*v_mod
 tail(fit_summary_v2$summary)
 #########
 

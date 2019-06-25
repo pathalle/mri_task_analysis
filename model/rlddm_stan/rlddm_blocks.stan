@@ -1,8 +1,9 @@
 data {
   int<lower=1> N;      // Number of subjects
+  int<lower=1> B;          // number of blocks
   real minRT[N];       // minimum RT for each subject of the observed data
-  int first[N];        // first trial of subject
-  int last[N];         // last trial of subject
+  int first[B,N];        // first trial of subject
+  int last[B,N];         // last trial of subject
   int<lower=1> T;      // Number of observations
   real RTbound;        // lower bound of RT across all subjects (e.g., 0.1 second)
   real iter[T];        // trial of given observation
@@ -57,8 +58,8 @@ transformed parameters {
 }
 
 model {
-  real eta_neg = logit(0.07);
-  real eta_pos = logit(0.07);
+  real eta_neg = logit(0.075);
+  real eta_pos = logit(0.075);
   vector[T] log_lik;
   real ev[T,n_stims];
   vector[T] delta;
@@ -126,13 +127,10 @@ generated quantities {
   real<lower=RTbound, upper=max(minRT)> mu_tau; // nondecision time
   
   real ev_hat[T,n_stims];
-  real pe_hat[T];
-  real assoc_active_pair[T];
-  real assoc_inactive_pair[T];
   vector[T] delta_hat;
   
-  real eta_neg_gen = logit(0.07);
-  real eta_pos_gen = logit(0.07);
+  real eta_neg_gen = logit(0.075);
+  real eta_pos_gen = logit(0.075);
   
   // Assign group level parameter values
   mu_alpha = exp(mu_pr[1]);
@@ -149,8 +147,6 @@ generated quantities {
       // ev for neg values
       ev_hat[first[s],a] = 0.5;
     }
-    assoc_active_pair[first[s]] = 0.5;
-    assoc_inactive_pair[first[s]] = 0.5;
     for(trial in (first[s]):(last[s]-1)) {
       for(a in 1:n_stims){
         ev_hat[trial+1,a] = ev_hat[trial,a];
@@ -158,27 +154,15 @@ generated quantities {
       delta_hat[trial] = (ev_hat[trial,stim_assoc[trial]] - ev_hat[trial,stim_nassoc[trial]]) * v_mod[s];
       // if lower bound
       if (response[trial]==1){
-        pe_hat[trial] = value[trial]-(ev_hat[trial,stim_nassoc[trial]]);
         ev_hat[trial+1,stim_nassoc[trial]] = ev_hat[trial,stim_nassoc[trial]] - (inv_logit(eta_neg_gen) * (value[trial]-(1-ev_hat[trial,stim_nassoc[trial]])));
         ev_hat[trial+1,stim_assoc[trial]] = ev_hat[trial,stim_assoc[trial]] - (inv_logit(eta_neg_gen) * (value[trial]-ev_hat[trial,stim_assoc[trial]]));
       }
       // if upper bound (resp = 2)
       else{
-        pe_hat[trial] = value[trial]-(ev_hat[trial,stim_assoc[trial]]);
         ev_hat[trial+1,stim_nassoc[trial]] = ev_hat[trial,stim_nassoc[trial]] + (inv_logit(eta_pos_gen) * (value[trial]-(1-ev_hat[trial,stim_nassoc[trial]])));
         ev_hat[trial+1,stim_assoc[trial]] = ev_hat[trial,stim_assoc[trial]] + (inv_logit(eta_pos_gen) * (value[trial]-ev_hat[trial,stim_assoc[trial]]));
       }
-      assoc_active_pair[trial] = ev_hat[trial+1,stim_assoc[trial]];
-      assoc_inactive_pair[trial] = ev_hat[trial+1,stim_nassoc[trial]];
     }
-    if (response[last[s]] == 1){
-      pe_hat[last[s]] = value[last[s]]-(ev_hat[last[s],stim_nassoc[last[s]]]);
-    }
-    else{
-      pe_hat[last[s]] = value[last[s]]-(ev_hat[last[s],stim_assoc[last[s]]]);
-    }
-    assoc_active_pair[last[s]] = ev_hat[last[s],stim_assoc[last[s]]];
-    assoc_inactive_pair[last[s]] = ev_hat[last[s],stim_nassoc[last[s]]];
     delta_hat[last[s]] = (ev_hat[last[s]-1,stim_assoc[last[s]]] - ev_hat[last[s]-1,stim_nassoc[last[s]]]) * v_mod[s];
   }
 }
