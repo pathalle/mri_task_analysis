@@ -168,30 +168,6 @@ parValsinvl <- rstan::extract(fit_invlog, permuted = TRUE)
 
 fit_summary_invlog <- rstan::summary(fit_invlog)
 
-tail(fit_summary_invlog$summary)
-rstan::stan_par(fit_invlog, par = "ev_hat[1,1]")
-
-# show the trajectory for the ev of the 1st stimulus:
-## Low association strength
-## Value changes at: 9, 16, 
-parValsinvl$ev_hat[4000,,1]
-
-parValsinvl$ev_hat[4000,,2]
-parValsinvl$ev_hat[4000,,3]
-parValsinvl$ev_hat[4000,,4]
-parValsinvl$ev_hat[4000,,5]
-parValsinvl$ev_hat[4000,,6]
-parValsinvl$ev_hat[4000,,7]
-parValsinvl$ev_hat[4000,,8]
-
-# t1: initialized at 0.5
-parValsinvl$ev_hat[4000,1,]
-# t2: update 
-parValsinvl$ev_hat[4000,2,]
-# t3: update
-parValsinvl$ev_hat[4000,3,]
-
-#########
 
 ### with fixed learning rates and updates for both associated and non-associated stimulus###
 
@@ -200,9 +176,9 @@ stanmodel_v2 <- rstan::stan_model(model_path)
 fit_v2 <- rstan::sampling(object  = stanmodel_v2,
                           data    = dat,
                           init    = "random",
-                          chains  = 2,
-                          iter    = 8000,
-                          warmup  = 2000,
+                          chains  = 3,
+                          iter    = 10000,
+                          warmup  = 3000,
                           thin    = 1,
                           control = list(adapt_delta   = 0.95,
                                          stepsize      = 1,
@@ -213,21 +189,62 @@ parVals_v2 <- rstan::extract(fit_v2, permuted = TRUE)
 
 fit_summary_v2 <- rstan::summary(fit_v2)
 
+fithead(fit_summary_v2$summary)
 tail(fit_summary_v2$summary)
-rstan::stan_par(fit_v2, par = "ev_hat[1,1]")
 
-parVals_v2$ev_hat[4000,38,]
-parVals_v2$delta_hat[4000,]
-
-# start of ev values print(fit_summary_v2$summary[27,])
 ev_mean <-  matrix(data= NA, nrow=dat$T, ncol=8)
 ev_mean[1,] <- fit_summary_v2$summary[27:34,1]
 for(i in 0:38){
   ev_mean[i,] <- fit_summary_v2$summary[(19+i*8):(26+i*8),1]
 }
-# get delta values
-fit_summary_v2$summary[331:368,]
-tail(fit_summary_v2$summary)
+
+
+assoc_active_pair <- rep("NA",dat$T)
+for (i in 1:dat$T){
+  index <- paste0("assoc_active_pair[",i,"]")
+  assoc_active_pair[i] <- fit_summary_v2$summary[index,1]
+}
+
+assoc_inactive_pair <- rep("NA",dat$T)
+for (i in 1:dat$T){
+  index <- paste0("assoc_inactive_pair[",i,"]")
+  assoc_inactive_pair[i] <- fit_summary_v2$summary[index,1]
+}
+
+pe_pos_hat <- rep("NA",dat$T)
+for (i in 1:dat$T){
+  index <- paste0("pe_pos_hat[",i,"]")
+  pe_pos_hat[i] <- fit_summary_v2$summary[index,1]
+}
+
+pe_neg_hat <- rep("NA",dat$T)
+for (i in 1:dat$T){
+  index <- paste0("pe_neg_hat[",i,"]")
+  pe_neg_hat[i] <- fit_summary_v2$summary[index,1]
+}
+
+deltas <- rep("NA",dat$T)
+for (i in 1:dat$T){
+  index <- paste0("delta_hat[",i,"]")
+  deltas[i] <- fit_summary_v2$summary[index,1]
+}
+
+v_mod <- rep("NA",dat$N)
+for (i in 1:dat$N){
+  index <- paste0("v_mod[",i,"]")
+  v_mod[i] <- fit_summary_v2$summary[index,1]
+}
+
+write.csv(assoc_active_pair,paste(data_path,"/assoc_active_pair.csv",sep=""),quote=FALSE,row.names=FALSE)
+write.csv(assoc_inactive_pair,paste(data_path,"/assoc_inactive_pair.csv",sep=""),quote=FALSE,row.names=FALSE)
+write.csv(pe_hat,paste(data_path,"/pe_hat.csv",sep=""),quote=FALSE,row.names=FALSE)
+write.csv(deltas,paste(data_path,"/deltas.csv",sep=""),quote=FALSE,row.names=FALSE)
+
+v_mods <- rep("NA", 15)
+for (i in 1:15){
+  index <- paste0("v_mod[",i,"]")
+  v_mods[i] <- fit_summary_v2$summary[index,1]
+}
 #########
 
 rstan::stan_diag(fit_invlog, info = 'sample') # shows three plots together

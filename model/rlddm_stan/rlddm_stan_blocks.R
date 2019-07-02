@@ -16,7 +16,8 @@ library("Rcpp", lib.loc="C:/Program Files/R/R-3.5.2/library")
 library("hBayesDM", lib.loc="C:/Program Files/R/R-3.5.2/library")
 library("boot")
 library("readr")
-require("tidyr")
+library("tidyr")
+library("dplyr")
 
 ###
 gather_data <- function(files){
@@ -33,7 +34,7 @@ gather_data <- function(files){
   return(transformed)
 }
 
-get_astim_trials <- function(data){
+#get_astim_trials <- function(data){
   df_subj <- list()
   #data<-data[data$choice!=0,] # remove 'too slow ' responses 
   new_data <- data[FALSE,]
@@ -63,7 +64,7 @@ get_astim_trials <- function(data){
 
 ## define paths
 path <- "N:/Users/phaller/mri_task_analysis"
-model_path <- paste0(path,"/model/rlddm_stan/rlddm_per_stimulus_v2.stan")
+model_path <- paste0(path,"/model/rlddm_stan/rlddm_blocks.stan")
 #data_path <- paste0(path,"/test_input.txt")
 data_path <- paste0(path,"/data/piloting/pilots_biokurs")
 
@@ -89,33 +90,19 @@ raw_data <- cbind(rep(substr(data_path,1,12),dim(raw_data)[1]),raw_data)
 colnames(raw_data)[1] <- "subjID"
 raw_data$rt <- raw_data$rt/1000
 names(raw_data)[names(raw_data)=="rt"] <- "RT"
+
 # automatically filter missed responses (since RT = 0)
 raw_data <- raw_data[which(raw_data$RT > 0.15),]
-#raw_data$subjID = rep('01',nrow(raw_data))
-
-# raw data: fb = 0 incorrect, fb = 1 correct, (fb = 2 missed)
-# encoding for simulation: lower (incorrect) response=1, upper (correct) response =2 
-raw_data$response = raw_data$fb+1
-# raw_data$nonresponse = abs(raw_data$fb-2) # not used atm
-
-# split vstim columns
-raw_data <- raw_data %>% separate(vStims, c("vStim1", "vStim2"),sep="\\_")
-# get new column with non-associated stimulus
-raw_data$vStimNassoc <- ifelse(raw_data$aStim==raw_data$vStim1,as.integer(raw_data$vStim2),as.integer(raw_data$vStim1))
-
-raw_data <- get_astim_trials(raw_data)
-
-## prepare data for jags
-#raw_data$row <- seq.int(nrow(raw_data))
-DT_trials <- raw_data[, .N, by = list(subjID,block)]
-
-subjs     <- DT_trials$subjID
-n_subj    <- length(subjs)
-# get minRT
-minRT <- with(raw_data, aggregate(RT, by = list(y = subjID), FUN = min)[["x"]])
-ifelse(is.null(dim(minRT)),minRT<-as.array(minRT))
+raw_data$trial <- as.integer(raw_data$trial)
+#raw_data$trial_subj <- rep("NA",nrow(raw_data))
+# since we discarded some observations, we have to assign new trial numbers 
+for (subj in subjs){
+  sub <- which(raw_data$subjID==subj)
+  raw_data[sub,]$trial <- seq.int(nrow(raw_data[sub,]))
+}
 
 
+# rename blocks
 for (subj in subjs){
   sub <- which(raw_data$subjID==subj)
   raw_data[sub,]$block <- as.factor(raw_data[sub,]$block)
@@ -123,162 +110,134 @@ for (subj in subjs){
   raw_data[sub,]$block <- as.integer(raw_data[sub,]$block)
 }
 
-raw_data$trial_subj <- rep("NA",nrow(raw_data))
-# since we discarded some observations, we have to assign new trial numbers 
-for (subj in subjs){
-  sub <- which(raw_data$subjID==subj)
-  raw_data[sub,]$trial_subj <- seq.int(nrow(raw_data[sub,]))
-}
 
-raw_data$trial_blocks <- rep("NA",nrow(raw_data))
-for (subj in subjs){
-  for (b in 1:3){
-    sub <- which(raw_data$subjID==subj & raw_data$block==b)
-      raw_data[sub,]$trial_blocks <- seq.int(nrow(raw_data[sub,]))
-    }
-  }
+# raw data: fb = 0 incorrect, fb = 1 correct, (fb = 2 missed)
+# encoding for simulation: lower (incorrect) response=1, upper (correct) response =2 
+raw_data$response = raw_data$fb+1
+# raw_data$nonresponse = abs(raw_data$fb-2) # not used atm
 
-raw_data$all_trials <- seq.int(nrow(raw_data))
-# first is Sx1 matrix identifying all first trials of a subject for each choice
-first_b1 <- which(raw_data$trial_blocks==1)
-last_b1 <- as.integer(first_b1 + DT_trials[which(DT_trials$block==1),]$N -1)
-first_b2 <- last_b1 + 1
-last_b2 <- as.integer(first_b1 + DT_trials[which(DT_trials$block==2),]$N -1)
-first_b3 <- last_b2 + 1
-last_b3 <- as.integer(first_b1 + DT_trials[which(DT_trials$block==3),]$N -1)
+raw_data$aStim <- as.double(raw_data$aStim)
+# split vstim columns
+raw_data <- raw_data %>% separate(vStims, c("vStim1", "vStim2"),sep="\\_")
+raw_data$vStim1 <- as.double(raw_data$vStim1)
+raw_data$vStim2 <- as.double(raw_data$vStim2)
+# get new column with non-associated stimulus
+
+raw_data[which(raw_data$block==2),]$aStim = raw_data[which(raw_data$block==2),]$aStim + 8
+raw_data[which(raw_data$block==2),]$vStim1 = raw_data[which(raw_data$block==2),]$vStim1 + 8
+raw_data[which(raw_data$block==2),]$vStim2 = raw_data[which(raw_data$block==2),]$vStim2 + 8
+
+raw_data[which(raw_data$block==3),]$aStim = raw_data[which(raw_data$block==3),]$aStim + 16
+raw_data[which(raw_data$block==3),]$vStim1 = raw_data[which(raw_data$block==3),]$vStim1 + 16
+raw_data[which(raw_data$block==3),]$vStim2 = raw_data[which(raw_data$block==3),]$vStim2 + 16
+
+raw_data$vStimNassoc <- ifelse(raw_data$aStim==raw_data$vStim1,raw_data$vStim2,raw_data$vStim1)
+
+#raw_data <- get_astim_trials(raw_data)
+
+DT_trials <- raw_data[, .N, by = subjID]
+subjs     <- DT_trials$subjID
+n_subj    <- length(subjs)
+# get minRT
+minRT <- with(raw_data, aggregate(RT, by = list(y = subjID), FUN = min)[["x"]])
+ifelse(is.null(dim(minRT)),minRT<-as.array(minRT))
+
+
+first <- which(raw_data$trial==1)
 # if N=1 transform int to 1-d array
-ifelse(is.null(dim(first)),first<-as.array(first))
+first<-as.array(first)
 # last is a Sx1 matrix identifying all last trials of a subject for each choice
-
-
-
-
-
-#last <- as.integer(first + DT_trials$N - 1)
-ifelse(is.null(dim(last)),last<-as.array(last))
+last <- (first + DT_trials$N - 1)
+last<-as.array(last)
 # incorrect is the inverse vector of choice and is needed to update the ev for the non-choices
-raw_data$incorrect <- as.integer(ifelse(raw_data$correct==1, 0, 1))
+#raw_data$incorrect <- as.integer(ifelse(raw_data$correct==1, 0, 1))
 # define the values for the rewards: if upper resp, value = 1
 value <- ifelse(raw_data$response==2, 1, 0)
-## all RT with negative choices -> -1
-#new_RT <- ifelse(raw_data$correct==1, raw_data$RT*-1, raw_data$RT)
-## # obs
+
+
 n_trials <- nrow(raw_data)
-## 
+
+#blocks <- tapply(raw_data$block,raw_data$subjID, max,simplify = TRUE)
+blocks <- aggregate( raw_data$block ~ raw_data$subjID, FUN = max )
+blocks <- blocks$`raw_data$block`
+ifelse(is.null(dim(blocks)),last<-as.array(blocks))
 
 
-dat <- list("N" = n_subj, "T"=n_trials,"RTbound" = 0.15,"minRT" = minRT, "iter" = raw_data$trial, "response" = raw_data$response, "trial_astim" = raw_data$trial_astim,
-            "stim_assoc" = raw_data$aStim, "stim_nassoc" = raw_data$vStimNassoc, "RT" = raw_data$RT, "first" = first, "last" = last, "value"=value, "n_stims"=8,
-            "n_blocks"=3)  # names list of numbers
+stims_per_block <- 8
+dat <- list("N" = n_subj, "T"=n_trials,"RTbound" = 0.15,"minRT" = minRT, "iter" = raw_data$trial, "response" = raw_data$response, 
+            "stim_assoc" = raw_data$aStim, "stim_nassoc" = raw_data$vStimNassoc, "RT" = raw_data$RT, "first" = first, "last" = last, "value"=value, "n_stims"=stims_per_block*blocks)  # names list of numbers
 
 ### with fixed learning rates ###
 
-stanmodel_per_stimulus <- rstan::stan_model(model_path)
+stanmodel <- rstan::stan_model(model_path)
 
-fit_invlog <- rstan::sampling(object  = stanmodel_per_stimulus,
+fit <- rstan::sampling(object  = stanmodel,
                        data    = dat,
                        init    = "random",
                        chains  = 2,
-                       iter    = 4000,
-                       warmup  = 1000,
+                       iter    = 7000,
+                       warmup  = 2000,
                        thin    = 1,
                        control = list(adapt_delta   = 0.95,
                                       stepsize      = 1,
                                       max_treedepth = 10),
                        verbose =TRUE)
 
-parValsinvl <- rstan::extract(fit_invlog, permuted = TRUE)
-
-fit_summary_invlog <- rstan::summary(fit_invlog)
-
-tail(fit_summary_invlog$summary)
-rstan::stan_par(fit_invlog, par = "ev_hat[1,1]")
-
-# show the trajectory for the ev of the 1st stimulus:
-## Low association strength
-## Value changes at: 9, 16, 
-parValsinvl$ev_hat[4000,,1]
-
-parValsinvl$ev_hat[4000,,2]
-parValsinvl$ev_hat[4000,,3]
-parValsinvl$ev_hat[4000,,4]
-parValsinvl$ev_hat[4000,,5]
-parValsinvl$ev_hat[4000,,6]
-parValsinvl$ev_hat[4000,,7]
-parValsinvl$ev_hat[4000,,8]
-
-# t1: initialized at 0.5
-parValsinvl$ev_hat[4000,1,]
-# t2: update 
-parValsinvl$ev_hat[4000,2,]
-# t3: update
-parValsinvl$ev_hat[4000,3,]
-
-#########
-
-### with fixed learning rates and updates for both associated and non-associated stimulus###
-
-stanmodel_v2 <- rstan::stan_model(model_path)
-
-fit_v2 <- rstan::sampling(object  = stanmodel_v2,
-                              data    = dat,
-                              init    = "random",
-                              chains  = 2,
-                              iter    = 4000,
-                              warmup  = 1000,
-                              thin    = 1,
-                              control = list(adapt_delta   = 0.95,
-                                             stepsize      = 1,
-                                             max_treedepth = 10),
-                              verbose =TRUE)
-
-parVals_v2 <- rstan::extract(fit_v2, permuted = TRUE)
-
-fit_summary_v2 <- rstan::summary(fit_v2)
-
-
-fit_summary_v2$summary[1:20,]
-tail(fit_summary_v2$summary)
-rstan::stan_par(fit_v2, par = "ev_hat[1,1]")
-
-
-parVals_v2$ev_hat[4000,38,]
-parVals_v2$delta_hat[4000,]
-
-# start of ev values print(fit_summary_v2$summary[27,])
-ev_mean <-  matrix(data= NA, nrow=dat$T, ncol=8)
-ev_mean[1,] <- fit_summary_v2$summary[27:34,1]
-for(i in 0:38){
-  ev_mean[i,] <- fit_summary_v2$summary[(19+i*8):(26+i*8),1]
-}
-# get v_mod
-v_mod <- fit_summary_v2$summary[17,1]
-# get delta values
-deltas <- fit_summary_v2$summary[331:368,1]
-deltas*v_mod
-tail(fit_summary_v2$summary)
-#########
-
-rstan::stan_diag(fit_invlog, info = 'sample') # shows three plots together
-rstan::stan_par(fit_invlog, par = "alpha")
-
 parVals <- rstan::extract(fit, permuted = TRUE)
 
-## now access the data of the fit 
-print(names(parVals))
+fit_summary <- rstan::summary(fit)
 
-head(parVals$mu_pr)
+head(fit_summary$summary)
+tail(fit_summary$summary)
+
+assoc_active_pair <- rep("NA",dat$T)
+for (i in 1:dat$T){
+  index <- paste0("assoc_active_pair[",i,"]")
+  assoc_active_pair[i] <- fit_summary$summary[index,1]
+}
+assoc_active_pair <- as.double(assoc_active_pair)
+
+assoc_inactive_pair <- rep("NA",dat$T)
+for (i in 1:dat$T){
+  index <- paste0("assoc_inactive_pair[",i,"]")
+  assoc_inactive_pair[i] <- fit_summary$summary[index,1]
+}
+assoc_inactive_pair <- as.double(assoc_inactive_pair)
+
+pe_hat <- rep("NA",dat$T)
+for (i in 1:dat$T){
+  index <- paste0("pe_hat[",i,"]")
+  pe_hat[i] <- fit_summary$summary[index,1]
+}
+pe_hat <- as.double(pe_hat)
+
+deltas <- rep("NA",dat$T)
+for (i in 1:dat$T){
+  index <- paste0("delta_hat[",i,"]")
+  deltas[i] <- fit_summary$summary[index,1]
+}
+deltas <- as.double(deltas)
+
+v_mod <- rep("NA",dat$N)
+for (i in 1:dat$N){
+  index <- paste0("v_mod[",i,"]")
+  v_mod[i] <- fit_summary$summary[index,1]
+}
+v_mod <- as.double(v_mod)
+
+raw_data <- raw_data[,-19]
+data_out <- cbind(raw_data,assoc_active=as.array(assoc_active_pair),assoc_inactive=as.array(assoc_inactive_pair),deltas=as.array(deltas),drift=rep("NA",dat$T))
+for(i in 1:n_subj){
+  subj = as.character(subjs[i])
+  #data_out[which(data_out$subjID==subj),]$drift = data_out[which(data_out$subjID==subj),]$deltas * v_mod[i]
+  data_out[which(data_out$subjID==subj),]$drift = as.double(data_out[which(data_out$subjID==subj),]$drift)
+  write.table(data_out[which(data_out$subjID==subj),], paste0(subj,"_params",".csv"), sep=",", row.names=FALSE, col.names=TRUE)
+}
 
 
-fit_summary <- summary(fit)
-# In fit_summary$summary all chains are merged whereas fit_summary$c_summary contains summaries for each chain individually. 
-# Typically we want the summary for all chains merged
-print(names(fit_summary))
-print(fit_summary$summary)
 
+write.csv(assoc_active_pair,paste(data_path,"/assoc_active_pair.csv",sep=""),quote=FALSE,row.names=FALSE)
+write.csv(assoc_inactive_pair,paste(data_path,"/assoc_inactive_pair.csv",sep=""),quote=FALSE,row.names=FALSE)
+write.csv(pe_hat,paste(data_path,"/pe_hat.csv",sep=""),quote=FALSE,row.names=FALSE)
+write.csv(deltas,paste(data_path,"/deltas.csv",sep=""),quote=FALSE,row.names=FALSE)
 
-mean(parVals$alpha)
-mean(parVals$tau)
-# eta is 3 dimensional: 1-d: iteration, 2-d: subject, 3-d: pos or neg eta
-mean(parVals$eta_pos)
-mean(parVals$eta_neg)

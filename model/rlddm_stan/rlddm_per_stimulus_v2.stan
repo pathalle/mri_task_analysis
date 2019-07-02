@@ -86,12 +86,11 @@ model {
       for(a in 1:n_stims){
         ev[trial+1,a] = ev[trial,a];
       }
-      delta[trial] = (ev[trial,stim_assoc[trial]] - ev[trial,stim_nassoc[trial]]) * v_mod[s];
+      delta[trial] = (ev[trial,stim_assoc[trial]] + ev[trial,stim_nassoc[trial]])/2 * v_mod[s];
       // if lower bound
       if (response[trial]==1){
         RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,-(delta[trial]));
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,-(delta[trial]));
-        // if the anwswer is wrong, update ev for lower value with neg lr, ev for positive answer stays the same
         ev[trial+1,stim_nassoc[trial]] = ev[trial,stim_nassoc[trial]] - (inv_logit(eta_neg) * (value[trial]-(1-ev[trial,stim_nassoc[trial]])));
         ev[trial+1,stim_assoc[trial]] = ev[trial,stim_assoc[trial]] - (inv_logit(eta_neg) * (value[trial]-ev[trial,stim_assoc[trial]]));
       }
@@ -99,13 +98,12 @@ model {
       else{
         RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,delta[trial]);
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,delta[trial]);
-        // if the anwswer is correct, update ev for upper value with pos lr, ev for neg answer stays the same
         ev[trial+1,stim_nassoc[trial]] = ev[trial,stim_nassoc[trial]] + (inv_logit(eta_pos) * (value[trial]-(1-ev[trial,stim_nassoc[trial]])));
         ev[trial+1,stim_assoc[trial]] = ev[trial,stim_assoc[trial]] + (inv_logit(eta_pos) * (value[trial]-ev[trial,stim_assoc[trial]]));
       }
     }
     // in last cycle, don't update anymore
-    delta[last[s]] = (ev[last[s]-1,stim_assoc[last[s]]] - ev[last[s]-1,stim_nassoc[last[s]]]) * v_mod[s];
+    delta[last[s]] = (ev[last[s]-1,stim_assoc[last[s]]] - ev[last[s]-1,stim_nassoc[last[s]]])/2 * v_mod[s];
     if (response[last[s]]==1){
       RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,-(delta[last[s]]));
       log_lik[last[s]] = wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,-(delta[last[s]]));
@@ -155,30 +153,25 @@ generated quantities {
       for(a in 1:n_stims){
         ev_hat[trial+1,a] = ev_hat[trial,a];
       }
-      delta_hat[trial] = (ev_hat[trial,stim_assoc[trial]] - ev_hat[trial,stim_nassoc[trial]]) * v_mod[s];
+      delta_hat[trial] = (ev_hat[trial,stim_assoc[trial]] + ev_hat[trial,stim_nassoc[trial]])/2 * v_mod[s];
+      assoc_active_pair[trial] = ev_hat[trial,stim_assoc[trial]];
+      assoc_inactive_pair[trial] = ev_hat[trial,stim_nassoc[trial]];
+      pe_hat[trial] = value[trial]-(ev_hat[trial,stim_assoc[trial]]);
       // if lower bound
       if (response[trial]==1){
-        pe_hat[trial] = value[trial]-(ev_hat[trial,stim_nassoc[trial]]);
         ev_hat[trial+1,stim_nassoc[trial]] = ev_hat[trial,stim_nassoc[trial]] - (inv_logit(eta_neg_gen) * (value[trial]-(1-ev_hat[trial,stim_nassoc[trial]])));
         ev_hat[trial+1,stim_assoc[trial]] = ev_hat[trial,stim_assoc[trial]] - (inv_logit(eta_neg_gen) * (value[trial]-ev_hat[trial,stim_assoc[trial]]));
       }
       // if upper bound (resp = 2)
       else{
-        pe_hat[trial] = value[trial]-(ev_hat[trial,stim_assoc[trial]]);
+
         ev_hat[trial+1,stim_nassoc[trial]] = ev_hat[trial,stim_nassoc[trial]] + (inv_logit(eta_pos_gen) * (value[trial]-(1-ev_hat[trial,stim_nassoc[trial]])));
         ev_hat[trial+1,stim_assoc[trial]] = ev_hat[trial,stim_assoc[trial]] + (inv_logit(eta_pos_gen) * (value[trial]-ev_hat[trial,stim_assoc[trial]]));
       }
-      assoc_active_pair[trial] = ev_hat[trial+1,stim_assoc[trial]];
-      assoc_inactive_pair[trial] = ev_hat[trial+1,stim_nassoc[trial]];
-    }
-    if (response[last[s]] == 1){
-      pe_hat[last[s]] = value[last[s]]-(ev_hat[last[s],stim_nassoc[last[s]]]);
-    }
-    else{
-      pe_hat[last[s]] = value[last[s]]-(ev_hat[last[s],stim_assoc[last[s]]]);
-    }
+    pe_hat[last[s]] = value[last[s]]-(ev_hat[last[s],stim_nassoc[last[s]]]);
     assoc_active_pair[last[s]] = ev_hat[last[s],stim_assoc[last[s]]];
     assoc_inactive_pair[last[s]] = ev_hat[last[s],stim_nassoc[last[s]]];
-    delta_hat[last[s]] = (ev_hat[last[s]-1,stim_assoc[last[s]]] - ev_hat[last[s]-1,stim_nassoc[last[s]]]) * v_mod[s];
+    delta_hat[last[s]] = (ev_hat[last[s]-1,stim_assoc[last[s]]] + ev_hat[last[s]-1,stim_nassoc[last[s]]])/2 * v_mod[s];
+    }
   }
 }
