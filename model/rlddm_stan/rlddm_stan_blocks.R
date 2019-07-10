@@ -27,7 +27,8 @@ gather_data <- function(files){
     no_col <- max(count.fields(files[i], sep = "\t"))
     D <- read_delim(
       files[i],"\t", escape_double = FALSE, locale = locale(), trim_ws = TRUE)
-    D <- cbind(rep(substr(files[i],1,12),dim(D)[1]),D)
+    #D <- cbind(rep(substr(files[i],1,12),dim(D)[1]),D) for adult pilots
+    D <- cbind(rep(substr(files[i],17,22),dim(D)[1]),D)
     datalist[[i]] <- D
   }
   transformed <- data.table::rbindlist(datalist) # combine all data frames in on
@@ -66,7 +67,8 @@ gather_data <- function(files){
 path <- "N:/Users/phaller/mri_task_analysis"
 model_path <- paste0(path,"/model/rlddm_stan/rlddm_blocks.stan")
 #data_path <- paste0(path,"/test_input.txt")
-data_path <- paste0(path,"/data/piloting/pilots_biokurs")
+data_path <- paste0(path,"/data/piloting/piloting_kloten/2x4")
+#data_path <- paste0(path,"/data/piloting/pilots_biokurs")
 
 
 ### load data
@@ -91,6 +93,10 @@ colnames(raw_data)[1] <- "subjID"
 raw_data$rt <- raw_data$rt/1000
 names(raw_data)[names(raw_data)=="rt"] <- "RT"
 
+DT_trials <- raw_data[, .N, by = subjID]
+subjs <- DT_trials$subjID
+n_subj    <- length(subjs)
+
 # automatically filter missed responses (since RT = 0)
 raw_data <- raw_data[which(raw_data$RT > 0.15),]
 raw_data$trial <- as.integer(raw_data$trial)
@@ -106,7 +112,8 @@ for (subj in subjs){
 for (subj in subjs){
   sub <- which(raw_data$subjID==subj)
   raw_data[sub,]$block <- as.factor(raw_data[sub,]$block)
-  levels(raw_data[sub,]$block) <- c("1","2","3")
+  #levels(raw_data[sub,]$block) <- c("1","2","3")
+  levels(raw_data[sub,]$block) <- c("1","2")
   raw_data[sub,]$block <- as.integer(raw_data[sub,]$block)
 }
 
@@ -123,21 +130,24 @@ raw_data$vStim1 <- as.double(raw_data$vStim1)
 raw_data$vStim2 <- as.double(raw_data$vStim2)
 # get new column with non-associated stimulus
 
-raw_data[which(raw_data$block==2),]$aStim = raw_data[which(raw_data$block==2),]$aStim + 8
-raw_data[which(raw_data$block==2),]$vStim1 = raw_data[which(raw_data$block==2),]$vStim1 + 8
-raw_data[which(raw_data$block==2),]$vStim2 = raw_data[which(raw_data$block==2),]$vStim2 + 8
+raw_data[which(raw_data$block==2),]$aStim = raw_data[which(raw_data$block==2),]$aStim + 4
+raw_data[which(raw_data$block==2),]$vStim1 = raw_data[which(raw_data$block==2),]$vStim1 + 4
+raw_data[which(raw_data$block==2),]$vStim2 = raw_data[which(raw_data$block==2),]$vStim2 + 4
 
-raw_data[which(raw_data$block==3),]$aStim = raw_data[which(raw_data$block==3),]$aStim + 16
-raw_data[which(raw_data$block==3),]$vStim1 = raw_data[which(raw_data$block==3),]$vStim1 + 16
-raw_data[which(raw_data$block==3),]$vStim2 = raw_data[which(raw_data$block==3),]$vStim2 + 16
+#raw_data[which(raw_data$block==2),]$aStim = raw_data[which(raw_data$block==2),]$aStim + 8
+#raw_data[which(raw_data$block==2),]$vStim1 = raw_data[which(raw_data$block==2),]$vStim1 + 8
+#raw_data[which(raw_data$block==2),]$vStim2 = raw_data[which(raw_data$block==2),]$vStim2 + 8
+
+#raw_data[which(raw_data$block==3),]$aStim = raw_data[which(raw_data$block==3),]$aStim + 16
+#raw_data[which(raw_data$block==3),]$vStim1 = raw_data[which(raw_data$block==3),]$vStim1 + 16
+#raw_data[which(raw_data$block==3),]$vStim2 = raw_data[which(raw_data$block==3),]$vStim2 + 16
 
 raw_data$vStimNassoc <- ifelse(raw_data$aStim==raw_data$vStim1,raw_data$vStim2,raw_data$vStim1)
 
 #raw_data <- get_astim_trials(raw_data)
 
 DT_trials <- raw_data[, .N, by = subjID]
-subjs     <- DT_trials$subjID
-n_subj    <- length(subjs)
+
 # get minRT
 minRT <- with(raw_data, aggregate(RT, by = list(y = subjID), FUN = min)[["x"]])
 ifelse(is.null(dim(minRT)),minRT<-as.array(minRT))
@@ -160,18 +170,18 @@ n_trials <- nrow(raw_data)
 #blocks <- tapply(raw_data$block,raw_data$subjID, max,simplify = TRUE)
 blocks <- aggregate( raw_data$block ~ raw_data$subjID, FUN = max )
 blocks <- blocks$`raw_data$block`
-ifelse(is.null(dim(blocks)),last<-as.array(blocks))
+ifelse(is.null(dim(blocks)),blocks<-as.array(blocks))
 
 
-stims_per_block <- 8
+stims_per_block <- 4
 dat <- list("N" = n_subj, "T"=n_trials,"RTbound" = 0.15,"minRT" = minRT, "iter" = raw_data$trial, "response" = raw_data$response, 
             "stim_assoc" = raw_data$aStim, "stim_nassoc" = raw_data$vStimNassoc, "RT" = raw_data$RT, "first" = first, "last" = last, "value"=value, "n_stims"=stims_per_block*blocks)  # names list of numbers
-
+dat
 ### with fixed learning rates ###
 
 stanmodel <- rstan::stan_model(model_path)
 
-fit <- rstan::sampling(object  = stanmodel,
+fit_children <- rstan::sampling(object  = stanmodel,
                        data    = dat,
                        init    = "random",
                        chains  = 2,
@@ -182,6 +192,10 @@ fit <- rstan::sampling(object  = stanmodel,
                                       stepsize      = 1,
                                       max_treedepth = 10),
                        verbose =TRUE)
+
+# save model
+saveRDS(fit, "fit1.rds")
+# fit <- readRDS("fit1.rds") 
 
 parVals <- rstan::extract(fit, permuted = TRUE)
 

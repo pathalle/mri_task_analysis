@@ -79,8 +79,6 @@ model {
     for(a in 1:n_stims){
       // ev for pos values
       ev[first[s],a] = 0.5;
-      // ev for neg values
-      ev[first[s],a] = 0.5;
     }
     for(trial in (first[s]):(last[s]-1)) {
       for(a in 1:n_stims){
@@ -143,8 +141,6 @@ generated quantities {
   for (s in 1:N){
     for(a in 1:n_stims){
       // ev for pos values
-      ev_hat[first[s],a] = 0.5;
-      // ev for neg values
       ev_hat[first[s],a] = 0.5;
     }
     assoc_active_pair[first[s]] = 0.5;

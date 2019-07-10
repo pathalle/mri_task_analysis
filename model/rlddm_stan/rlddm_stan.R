@@ -189,7 +189,7 @@ parVals_v2 <- rstan::extract(fit_v2, permuted = TRUE)
 
 fit_summary_v2 <- rstan::summary(fit_v2)
 
-fithead(fit_summary_v2$summary)
+head(fit_summary_v2$summary)
 tail(fit_summary_v2$summary)
 
 ev_mean <-  matrix(data= NA, nrow=dat$T, ncol=8)

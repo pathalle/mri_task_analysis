@@ -12,9 +12,9 @@ library(viridis)
 
 task <- "fbl_kloten"
 #set inputs
-dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
+#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
 #dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
+dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
 # make sure output directory exists already
 diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
 
@@ -61,7 +61,7 @@ compute_cumulative_sums <- function(data){
       for(k in unique(df_subj_block$aStim)){
         df_subj_block_astim <- list()
         df_subj_block_astim[[k]] <- subset(df_subj_block, aStim==k )
-        new_col <- cumsum(df_subj_block_astim[[k]]$fb)
+        new_col <- cumsum(df_subj_block_astim[[k]]$fbprime)
         new_col_trial <- 1:nrow(df_subj_block_astim[[k]])
         new_cols <- cbind(new_col,new_col_trial)
         df_subj_block_astim[[k]]<- as_tibble(cbind(new_cols,df_subj_block_astim[[k]]))
@@ -142,7 +142,7 @@ split_trials_octile <- function(data){
   data[which(data$trial <= 8),]$octile = 1
   data[which(data$trial > 8 & data$trial <= 16),]$octile = 2
   data[which(data$trial > 16 & data$trial <= 24),]$octile = 3
-  #data[which(data$trial > 24 & data$trial <= 32),]$octile = 4
+  data[which(data$trial > 24 & data$trial <= 32),]$octile = 4
   data <- data[
     with(data, order(subj_idx, block,trial)),
     ]
@@ -153,14 +153,18 @@ wes_cols= wes_palette("GrandBudapest1", n = 2)
 
 ## load data
 data <- gather_data(files)
+
+# redefine fb for visualization
+data$fbprime <- rep("NA",nrow(data))
+data[which(data$fb==0),]$fbprime = -1
+data[which(data$fb==1),]$fbprime = 1
+data[which(data$fb==2),]$fbprime = 0
+
+# for the visualization, for the subject who completed block 3, b3 will count as b2
+data[which(data$block==3),]$block <- rep(2,nrow(data[which(data$block==3),]))
 data$block = as.factor(data$block)
 levels(data$block) <- c("Block 1", "Block 2")
 data$aStim = as.factor(data$aStim)
-
-
-# for the visualization, for the subject who completed block 3, b3 will count as b2
-data[which(data$block=="3"),]$block <- rep(2,nrow(data[which(data$block=="3"),]))
-unique(data$block)
 
 ## show how many observation (=trials) per subj per block
 trials_per_subj_per_block <- data %>%
@@ -184,7 +188,7 @@ mean_accuracy <-  data %>%
   group_by(subj_idx,block) %>%
   tally() 
 
-mean_accuracy$n <- mean_accuracy$n/24
+mean_accuracy$n <- mean_accuracy$n/32
 ggplot(mean_accuracy, aes(x=block, y=n, colour=block)) + 
   geom_boxplot(outlier.colour="red", outlier.shape=8,
                outlier.size=4) + 
@@ -196,10 +200,15 @@ ggplot(mean_accuracy, aes(x=block, y=n, colour=block)) +
 
 # compute mean accuracy per block
 acc_b1 <- mean_accuracy[which(mean_accuracy$block=="Block 1"),]
-mean_acc_b1 <- sum(acc_b1$n)/nrow(acc_b1)
+mean_acc_b1 <- mean(acc_b1$n)
+sd_acc_b1 <- sd(acc_b1$n)
+
 acc_b2 <- mean_accuracy[which(mean_accuracy$block=="Block 2"),]
-mean_acc_b2 <- sum(acc_b2$n)/nrow(acc_b2)
-overall_mean <- sum(mean_accuracy$n)/nrow(mean_accuracy)
+mean_acc_b2 <- mean(acc_b2$n)
+sd_acc_b2 <- sd(acc_b2$n)
+
+overall_mean <- mean(mean_accuracy$n)
+overall_sd <- sd(mean_accuracy$n)
 
 # compute mean reaction time for each participant for each block
 data_for_rt_plot <- data[which(data$fb!=2),]
@@ -217,17 +226,43 @@ ggplot(mean_rts, aes(x=block, y=x, colour=block)) +
   scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))
 
 rt_b1 <- mean_rts[which(mean_rts$block=="Block 1"),]
-mean_rt_b1 <- sum(rt_b1$x)/nrow(rt_b1)
+mean_rt_b1 <- mean(rt_b1$x)
+sd_rt_b1 <- sd(rt_b1$x)
+
 rt_b2 <- mean_rts[which(mean_rts$block=="Block 2"),]
-mean_rt_b2 <- sum(rt_b2$x)/nrow(rt_b2)
-overall_mean_rt <- sum(mean_rts$x)/nrow(mean_rts)
+mean_rt_b2 <- mean(rt_b2$x)
+sd_rt_b2 <- sd(rt_b2$x)
+
+overall_mean_rt <- mean(mean_rts$x)
+overall_sd_rt <- sd(mean_rts$x)
 
 # compute cumulative sums and quartiles
-data_no_miss <- data[which(data$fb!=2),]
-data_with_cumulsum <- compute_cumulative_sums(data_no_miss)
-data_octile <- split_trials_octile(data_with_cumulsum)
+#data_no_miss <- data[which(data$fb!=2),]
+data_with_cumulsum <- compute_cumulative_sums(data)
+data_octile <- split_trials_octile(data_with_cumulsum) # make sure you uncomment the last line of the function with 32-version
 
 ###### get individual learning trajectories
+attach(data_octile)
+ggplot(data=data_octile[which(data_octile$block=="Block 1"),], aes(x=trial_separate, y=cumulsum_fb, group=aStim, color=aStim)) +
+  geom_line()+
+  geom_point(aes(fill=aStim),colour="black",alpha=.5, shape=21, size=3,position=position_dodge(0.2))+
+  scale_x_continuous(breaks = unique(trial_separate),limits=c(0.5,13.5))  +
+  scale_y_continuous(breaks = -13:13,limits=c(-13,13)) +
+  ylab("Cumulative sum of feedback")+
+  xlab("Trial per stimulus") +
+  guides(alpha=FALSE)+
+  theme(axis.title = element_text(size=12),
+        title = element_text(size=14),
+        plot.subtitle = element_text(size=14,color="darkblue"),
+        legend.text=element_text(size=12),
+        panel.grid.major = element_line(colour="white"),
+        panel.grid.minor = element_blank(),
+        panel.background = element_rect(fill = "gray88"))+
+  facet_wrap( ~ subj_idx, ncol=3) +
+  labs(title="Cumulative sum of hits per astim (2x4[32][B1])")
+
+
+
 attach(data_octile)
 ggplot(data=data_octile[which(data_octile$block==1),], aes(x=trial_separate, y=cumulsum_fb, group=aStim, color=aStim)) +
   geom_line()+
