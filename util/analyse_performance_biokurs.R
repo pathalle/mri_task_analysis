@@ -12,9 +12,10 @@ library(viridis)
 
 task <- "fbl_kloten"
 #set inputs
+#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/pilots_biokurs"
 #dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
-dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
+dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
+#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
 # make sure output directory exists already
 diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
 
@@ -160,22 +161,11 @@ data[which(data$fb==0),]$fbprime = -1
 data[which(data$fb==1),]$fbprime = 1
 data[which(data$fb==2),]$fbprime = 0
 
-# for the visualization, for the subject who completed block 3, b3 will count as b2
+# for the visualization, for the subject who completed block 3, b3 will count as b2 
 data[which(data$block==3),]$block <- rep(2,nrow(data[which(data$block==3),]))
-
-data[which(data$block==2),]$aStim = data[which(data$block==2),]$aStim + 4
-data <- data %>% separate(vStims, c("vStim1", "vStim2"),sep="\\_")
-data$vStim1 <- as.double(data$vStim1)
-data$vStim2 <- as.double(data$vStim2)
-data[which(data$block==2),]$vStim1 = data[which(data$block==2),]$vStim1 + 4
-data[which(data$block==2),]$vStim2 = data[which(data$block==2),]$vStim2 + 4
-
-data <- compute_cumulative_sums(data)
-data = data[which(data$trial_separate!=1),]
-
-data$aStim = as.factor(data$aStim)
 data$block = as.factor(data$block)
 levels(data$block) <- c("Block 1", "Block 2")
+data$aStim = as.factor(data$aStim)
 
 ## show how many observation (=trials) per subj per block
 trials_per_subj_per_block <- data %>%
@@ -200,79 +190,24 @@ mean_accuracy <-  data %>%
   tally() 
 
 counts_per_stimulus <-  data %>%
-  select(subj_idx,aStim) %>%
-  group_by(subj_idx,aStim,.drop=FALSE) %>%
+  select(subj_idx,block,aStim) %>%
+  group_by(subj_idx,block,aStim,.drop=FALSE) %>%
   tally() 
 
 correct_counts_per_stimulus <-  data %>%
-  select(subj_idx, fb,aStim) %>%
+  select(subj_idx, fb,block,aStim) %>%
   filter(fb==1) %>%
-  group_by(subj_idx,aStim,.drop = FALSE) %>%
+  group_by(subj_idx,block,aStim,.drop = FALSE) %>%
   tally() 
 
 correct_counts_per_stimulus$accuracy <- correct_counts_per_stimulus$n/counts_per_stimulus$n
-mean_accuracy <- aggregate(correct_counts_per_stimulus$accuracy, list(correct_counts_per_stimulus$subj_idx), mean)
-mean_accuracy$h0 <- 0.5
-t.test(mean_accuracy$x, mean_accuracy$h0, paired = TRUE, alternative = "two.sided")
 
-last_four = rbind(data[which(data$aStim==1&data$trial_separate>=5),],
-data[which(data$aStim==2&data$trial_separate>=4),],
- data[which(data$aStim==3&data$trial_separate>=4),],
- data[which(data$aStim==4&data$trial_separate>=7),],
- data[which(data$aStim==5&data$trial_separate>=7),],
-data[which(data$aStim==6&data$trial_separate>=4),],
- data[which(data$aStim==7&data$trial_separate>=4),],
-data[which(data$aStim==8&data$trial_separate>=5),])
-
-
-l4_counts_per_stimulus <-  last_four %>%
-  select(subj_idx,aStim) %>%
-  group_by(subj_idx,aStim,.drop=FALSE) %>%
-  tally() 
-
-l4_correct_counts_per_stimulus <- last_four %>%
-  select(subj_idx, fb,aStim) %>%
-  filter(fb==1) %>%
-  group_by(subj_idx,aStim,.drop = FALSE) %>%
-  tally() 
-
-l4_correct_counts_per_stimulus$aStim = as.double(l4_correct_counts_per_stimulus$aStim )
-l4_correct_counts_per_stimulus$block = "NA"
-l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim<=4),]$block = "Block 1"
-l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim>4),]$block = "Block 2"
-l4_correct_counts_per_stimulus$aStim = as.factor(l4_correct_counts_per_stimulus$aStim )
-
-ggplot(l4_correct_counts_per_stimulus, aes(x=aStim, y=accuracy, fill=block))+
+ggplot(correct_counts_per_stimulus, aes(x=block, y=accuracy, fill=aStim))+
   geom_bar(stat="identity", position=position_dodge()) +
-  geom_hline(yintercept=0.7,linetype="dashed", color="red") +
   facet_wrap( ~ subj_idx, ncol=3) +
   scale_fill_manual(values = wes_palette("Darjeeling2", n = 4))+
-  ggtitle("Accuracy per stimulus of last 4 presentations per item (2x4)")
-
-l4_correct_counts_per_stimulus$accuracy <- l4_correct_counts_per_stimulus$n/l4_counts_per_stimulus$n
-l4_mean_accuracy <- aggregate(l4_correct_counts_per_stimulus$accuracy, list(l4_correct_counts_per_stimulus$subj_idx), mean)
-l4_mean_accuracy$h0 <- 0.5
-t.test(l4_mean_accuracy$x, l4_mean_accuracy$h0, paired = TRUE, alternative = "two.sided")
-
-acc_s1 <- l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim==1),]
-acc_s2 <- l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim==2),]
-acc_s3 <- l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim==3),]
-acc_s4 <- l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim==4),]
-acc_s5 <- l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim==5),]
-acc_s6 <- l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim==6),]
-acc_s7 <- l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim==7),]
-acc_s8 <- l4_correct_counts_per_stimulus[which(l4_correct_counts_per_stimulus$aStim==8),]
-
-t.test(acc_s1$accuracy-0.5, paired = FALSE, alternative = "two.sided")
-t.test(acc_s2$accuracy-0.5, paired = FALSE, alternative = "two.sided")
-#t.test(acc_s3$accuracy-0.5, paired = FALSE, alternative = "two.sided")
-#t.test(acc_s4$accuracy-0.5, paired = FALSE, alternative = "two.sided")
-#t.test(acc_s5$accuracy-0.5, paired = FALSE, alternative = "two.sided")
-#t.test(acc_s6$accuracy-0.5, paired = FALSE, alternative = "two.sided")
-#t.test(acc_s7$accuracy-0.5, paired = FALSE, alternative = "two.sided")
-t.test(acc_s8$accuracy-0.5, paired = FALSE, alternative = "two.sided")
-
- ## now for trials 
+  ggtitle("Accuracy per stimulus (2x3[32])")
+  
 
 mean_accuracy$n <- mean_accuracy$n/32
 ggplot(mean_accuracy, aes(x=block, y=n, colour=block)) + 
