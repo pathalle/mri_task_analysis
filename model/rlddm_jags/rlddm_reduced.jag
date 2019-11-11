@@ -13,7 +13,7 @@ mg_sd    ~  dunif(0.001,5)
 mg_tau   <- pow(mg_sd,-2)
 tg_mu    ~  dunif(0.05,1)
 tg_sd    ~  dunif(0.001,5)
-tg_tau   <- pow(tg_sd,-2)
+tg_tau   <- pow(tg_sd,-2 )
 for (v in 1:2){
      etag[v]     ~  dnorm(etag_mu,etag_tau)
      eta_sd[v]  ~  dunif(0.001, 5)

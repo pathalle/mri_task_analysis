@@ -1,20 +1,20 @@
 .libPaths()
 
-assign(".lib.loc", "C:/Program Files/R/R-3.5.3/library", envir = environment(.libPaths))
+#assign(".lib.loc", "C:/Program Files/R/R-3.5.2/library", envir = environment(.libPaths))
 
 # after successful installation, load required packages
-library("StanHeaders", lib.loc="C:/Program Files/R/R-3.5.3/library")
-library("rstan", lib.loc="C:/Program Files/R/R-3.5.3/library")
-#Sys.setenv(LOCAL_CPPFLAGS = '-march=native')
-library("Rcpp", lib.loc="C:/Program Files/R/R-3.5.3/library")
-library("hBayesDM", lib.loc="C:/Program Files/R/R-3.5.3/library")
-library("boot", lib.loc="C:/Program Files/R/R-3.5.3/library")
-library("readr", lib.loc="C:/Program Files/R/R-3.5.3/library")
-library("tidyr", lib.loc="C:/Program Files/R/R-3.5.3/library")
-library("dplyr", lib.loc="C:/Program Files/R/R-3.5.3/library")
+library("StanHeaders")
+library("rstan")
+options(mc.cores = 3)
+library("Rcpp")
+library("hBayesDM")
+library("boot")
+library("readr")
+library("tidyr")
+library("dplyr")
 
-library("bayesplot", lib.loc="C:/Program Files/R/R-3.5.3/library")
-library("rstanarm", lib.loc="C:/Program Files/R/R-3.5.3/library")
+library("bayesplot")
+library("rstanarm")
 
 ##########################
 # LOADING AND PREPARING  #
@@ -35,38 +35,9 @@ gather_data <- function(files){
   return(transformed)
 }
 
-# not in use 
-# get_astim_trials <- function(data){
-#   df_subj <- list()
-#   #data<-data[data$choice!=0,] # remove 'too slow ' responses 
-#   new_data <- data[FALSE,]
-#   new_col_trial <- data.frame(trial_astim = integer(0))
-#   new_data <- cbind(new_data,new_col_trial)
-#   for(i in unique(data$subjID)){
-#     df_subj[[i]] <- subset(data, subjID == i)
-#     for(j in unique(df_subj[[i]]$block)){
-#       df_subj_block <- subset(df_subj[[i]],block==j)
-#       # compute cumulative sum for each auditory stimulus in a given block of a subject
-#       for(k in unique(df_subj_block$aStim)){
-#         df_subj_block_astim <- list()
-#         df_subj_block_astim[[k]] <- subset(df_subj_block, aStim==k )
-#         new_col_trial <- 1:nrow(df_subj_block_astim[[k]])
-#         df_subj_block_astim[[k]]<- cbind(df_subj_block_astim[[k]],new_col_trial)
-#         colnames(df_subj_block_astim[[k]])[ncol(df_subj_block_astim[[k]])] <- "trial_astim"
-#         new_data <- rbind(new_data,df_subj_block_astim[[k]])
-#         # reorder data
-#         new_data <- new_data[
-#           with(new_data, order(subjID, block,trial)),
-#           ]
-#       }
-#     }
-#   }
-#   return(new_data)
-# }
-
 ## define paths
-path <- "N:/Users/phaller/mri_task_analysis"
-model_path <- paste0(path,"/model/rlddm_stan/rlddm_blocks.stan")
+path <- "C:/Rscripts"
+model_path <- paste0(path,"/model/rlddm_stan/rlddm_02.stan")
 data_path <- paste0(path,"/data/piloting/pilots_biokurs/subjects")
 
 
@@ -96,7 +67,6 @@ for (subj in subjs){
 DT_trials_per_block <- raw_data[, .N, by = list(subjID,block)]
 raw_data$block <- as.factor(raw_data$block)
 
-
 # rename blocks
 for (subj in subjs){
   sub <- which(raw_data$subjID==subj)
@@ -109,6 +79,7 @@ for (subj in subjs){
   raw_data[sub]$block <- c(b1,b2,b3)
 }
 raw_data$block <- as.integer(raw_data$block)
+
 
 # raw data: fb = 0 incorrect, fb = 1 correct, (fb = 2 missed)
 # encoding for simulation: lower (incorrect) response=1, upper (correct) response =2 
@@ -156,42 +127,37 @@ blocks <- blocks$`raw_data$block`
 # if N=1 transform int to 1-d array
 ifelse(is.null(dim(blocks)),blocks<-as.array(blocks))
 
-
 stims_per_block <- 8
 dat <- list("N" = n_subj, "T"=n_trials,"RTbound" = 0.15,"minRT" = minRT, "iter" = raw_data$trial, "response" = raw_data$response, 
             "stim_assoc" = raw_data$aStim, "stim_nassoc" = raw_data$vStimNassoc, "RT" = raw_data$RT, "first" = first, "last" = last, "value"=value, "n_stims"=stims_per_block*blocks)  # names list of numbers
-
-
-
-#################
-# SIMULATE DATA #
-#################
-
-stanmodel <- rstan::stan_model(model_path)
-
 
 
 ###############
 # LOAD MODEL  #
 ###############
 
+#init_f <- function () list(mu = rnorm(1, 15, 2.), sigma = max(0,rnorm(1, 3, 1) ))
+
 stanmodel <- rstan::stan_model(model_path)
 
 fit <- rstan::sampling(object  = stanmodel,
                        data    = dat,
-                       init    = "random",
-                       chains  = 4,
-                       iter    = 2000,
+                       pars    = c("alpha","a_mod","v_mod","tau","eta_pos","eta_neg","assoc_active_pair","assoc_inactive_pair","delta_hat","pe_hat"),
+                       #init    = "random",
+                       chains  = 3,
+                       iter    = 4000,
                        warmup  = 1000,
                        thin    = 1,
-                       control = list(adapt_delta   = 0.95,
-                                      stepsize      = 1,
-                                      max_treedepth = 10),
-                       verbose =TRUE)
+                       init_r = 0.05,
+                       save_warmup = FALSE,
+                       control = list(adapt_delta   = 0.999,
+                                      stepsize      = 0.05,
+                                      max_treedepth = 20),
+                       verbose =FALSE)
 
 # save model
-saveRDS(fit, "fit_vp01-17_october.rds")
-fit <- readRDS("N:/Users/phaller/modeling_data/fit1.rds")
+saveRDS(fit, "fit_02b.rds")
+#fit <- readRDS("N:/Users/phaller/modeling_data/fit1.rds")
 # fit <- readRDS("fit1.rds") 
 
 parVals <- rstan::extract(fit, permuted = TRUE)
@@ -234,6 +200,20 @@ for (i in 1:dat$N){
 }
 tau <- as.double(tau)
 
+eta_pos <- rep("NA",dat$N)
+for (i in 1:dat$N){
+  index <- paste0("eta_pos[",i,"]")
+  eta_pos[i] <- fit_summary$summary[index,1]
+}
+eta_pos <- as.double(eta_pos)
+
+eta_neg <- rep("NA",dat$N)
+for (i in 1:dat$N){
+  index <- paste0("eta_neg[",i,"]")
+  eta_neg[i] <- fit_summary$summary[index,1]
+}
+eta_neg <- as.double(eta_neg)
+
 # delta = average of upper and lower response boundary
 deltas <- rep("NA",dat$T)
 for (i in 1:dat$T){
@@ -266,6 +246,7 @@ for (i in 1:dat$T){
 }
 pe_hat <- as.double(pe_hat)
 
+
 # add the trial-by-trial regressors to the dataset
 tbtregs <- cbind(raw_data[,1:9],raw_data[,18],raw_data[,14:16],pe=as.array(pe_hat),delta=as.array(deltas),drift=rep(0,dat$T),assoc_active=as.array(assoc_active_pair),assoc_inactive=as.array(assoc_inactive_pair))
 for(i in 1:n_subj){
@@ -285,11 +266,11 @@ mean_drift <-  rep("NA",dat$N)
 mean_drift <- aggregate(list(drift=tbtregs$drift),list(subjID=tbtregs$subjID), mean)
 subj_params <- cbind(mean_drift,alpha,alpha_mod,tau,drift_mod)
 # write out subject parameters
-write.table(subj_params, "subj_params_vp01-17.csv", sep=",", row.names=FALSE, col.names=TRUE,quote = FALSE)
+write.table(subj_params, "subj_params_02a.csv", sep=",", row.names=FALSE, col.names=TRUE,quote = FALSE)
 
 
 ### Analysis
-path <- "N:/Users/phaller/modeling_data"
+path <- "C:/Rscripts/modeling_data"
 setwd(path)
-fit <- readRDS("fit_pilots_biokurs_vp01-17.rds") 
-
+fit <- readRDS("fit_pilots_biokurs_02_a.rds") 
+parVals <- rstan::extract(fit, permuted = TRUE)

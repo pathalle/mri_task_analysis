@@ -10,14 +10,11 @@ library(tidyr)
 library(wesanderson)
 library(viridis)
 
-task <- "fbl_kloten"
+task <- "biokurs"
 #set inputs
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/pilots_biokurs"
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
-dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4"
+dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/pilots_biokurs/subjects"
 # make sure output directory exists already
-diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
+diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/pilots_biokurs/"
 
 setwd(dirinput)
 files <- dir(pattern=".txt", recursive=TRUE)
@@ -29,7 +26,7 @@ gather_data <- function(files){
     no_col <- max(count.fields(files[i], sep = "\t"))
     D <- read_delim(
       files[i],"\t", escape_double = FALSE, locale = locale(), trim_ws = TRUE)
-    D <- cbind(rep(substr(files[i],17,22),dim(D)[1]),D)
+    D <- cbind(rep(substr(files[i],11,12),dim(D)[1]),D)
     #D<-D[D$resp!=0,] # remove 'too slow ' responses 
     ### Rename and transform some columns
     colnames(D)[1] <- "subj_idx"
@@ -53,7 +50,7 @@ compute_cumulative_sums <- function(data){
   #data<-data[data$choice!=0,] # remove 'too slow ' responses 
   new_data <- data[FALSE,]
   new_cols <- data.frame(cumsum_fb = integer(0), trial_separate = integer(0))
-  new_data <- cbind(new_cols,new_data)
+  new_data <- cbind(new_data,new_cols)
   for(i in unique(data$subj_idx)){
     df_subj[[i]] <- subset(data, subj_idx == i)
     for(j in unique(df_subj[[i]]$block)){
@@ -111,39 +108,15 @@ get_summary_stats <- function(data){
     "miss_per_block"=miss_per_block,"rt_per_block"=RT_per_block,"rt_across_blocks"=RT_across_blocks,"hits_per_sextile"=correct_per_sextile))
 }
 
-split_trials_24 <- function(data){
-  data$trial <- as.integer(data$trial)
-  data$quartile <- 0
-  data[which(data$trial <= 6),]$quartile = 1
-  data[which(data$trial > 6 & data$trial <= 12),]$quartile = 2
-  data[which(data$trial > 12 & data$trial <= 18),]$quartile = 3
-  data[which(data$trial > 18 & data$trial <= 24),]$quartile = 4
-  data <- data[
-    with(data, order(subj_idx, block,trial)),
-    ]
-  return(data)
-}
 
-split_trials_32 <- function(data){
-  data$trial <- as.integer(data$trial)
-  data$quartile <- 0
-  data[which(data$trial <= 8),]$quartile = 1
-    data[which(data$trial > 8 & data$trial <= 16),]$quartile = 2
-  data[which(data$trial > 16 & data$trial <= 24),]$quartile = 3
-  data[which(data$trial > 24 & data$trial <= 32),]$quartile = 4
-  data <- data[
-    with(data, order(subj_idx, block,trial)),
-    ]
-  return(data)
-}
-
-split_trials_octile <- function(data){
+split_trials <- function(data){
   data$trial <- as.integer(data$trial)
   data$octile <- 0
   data[which(data$trial <= 8),]$octile = 1
   data[which(data$trial > 8 & data$trial <= 16),]$octile = 2
   data[which(data$trial > 16 & data$trial <= 24),]$octile = 3
   data[which(data$trial > 24 & data$trial <= 32),]$octile = 4
+  data[which(data$trial > 33),] = 5
   data <- data[
     with(data, order(subj_idx, block,trial)),
     ]
@@ -156,16 +129,51 @@ wes_cols= wes_palette("GrandBudapest1", n = 2)
 data <- gather_data(files)
 
 # redefine fb for visualization
-data$fbprime <- rep("NA",nrow(data))
-data[which(data$fb==0),]$fbprime = -1
-data[which(data$fb==1),]$fbprime = 1
-data[which(data$fb==2),]$fbprime = 0
+#data$fbprime <- rep("NA",nrow(data))
+#data[which(data$fb==0),]$fbprime = -1
+#data[which(data$fb==1),]$fbprime = 1
+#data[which(data$fb==2),]$fbprime = 0
 
-# for the visualization, for the subject who completed block 3, b3 will count as b2 
-data[which(data$block==3),]$block <- rep(2,nrow(data[which(data$block==3),]))
-data$block = as.factor(data$block)
-levels(data$block) <- c("Block 1", "Block 2")
+# count number of trials for each subject
+DT_trials <- data[, .N, by = subj_idx]
+subjs <- DT_trials$subj_idx
+
+# rename blocks for each subject to 1st, 2nd and 3rd block
+data$block_abs = as.factor(data$block)
+for (subj in subjs){
+  sub <- which(data$subj_idx==subj)
+  data[sub,]$block <- as.factor(data[sub,]$block)
+  levels(data[sub,]$block) <- c("1","2","3")
+  data[sub,]$block <- as.integer(data[sub,]$block)
+}
+
+
 data$aStim = as.factor(data$aStim)
+data$resp = as.factor(data$resp)
+data$fb = as.factor(data$fb)
+
+data_nomiss <- data[which(data$resp!=0),]
+
+mu <- ddply(data_nomiss, .(fb,subj_idx), summarise, grp.mean=mean(rt))
+
+
+p <- ggplot(data_nomiss) + geom_density(alpha=0.3,adjust=3/4) + aes(x=rt, fill=fb,y=..scaled..) +
+  scale_fill_discrete(name = "Response", labels = c("Incorrect", "Correct")) +
+  geom_vline(data=mu, aes(xintercept=grp.mean, color=fb), linetype="dashed")  +
+  scale_color_discrete(name = "Response", labels = c("Incorrect", "Correct")) +
+  labs(title="Reaction time distributions",x="Reaction time[ms]", y = "Density") +
+  facet_wrap(~subj_idx) + 
+  theme(text = element_text(size=9),
+        axis.text.x = element_text(angle=45, hjust=1)) 
+p
+# + geom_vline(aes(xintercept=mean(rt)), color="blue", linetype="dashed", size=1)
+
+mean_rts = aggregate(data_nomiss$rt,
+                     by = list(subj_idx = data_nomiss$subj_idx),
+                     FUN = mean)
+mean_rts$x <- mean_rts$x - mean(mean_rts$x)
+
+D_matrix_centered <- cbind(D_matrix_centered,mean_rt = mean_rts[c(1,2,3,4,5,6,7,8,10,11,12,14,15,16),]$x)
 
 ## show how many observation (=trials) per subj per block
 trials_per_subj_per_block <- data %>%
@@ -189,8 +197,14 @@ mean_accuracy <-  data %>%
   group_by(subj_idx,block) %>%
   tally() 
 
+responses_per_block <- data  %>%
+  select(subj_idx,block,aStim,fb) %>%
+  group_by(subj_idx,block,aStim,fb) %>%
+  tally() 
+
 counts_per_stimulus <-  data %>%
-  select(subj_idx,block,aStim) %>%
+  select(subj_idx,block,aStim,fb) %>%
+  filter(fb!=2) %>%
   group_by(subj_idx,block,aStim,.drop=FALSE) %>%
   tally() 
 
@@ -200,13 +214,34 @@ correct_counts_per_stimulus <-  data %>%
   group_by(subj_idx,block,aStim,.drop = FALSE) %>%
   tally() 
 
+missed_per_stimulus <-  data %>%
+  select(subj_idx, fb,block,aStim) %>%
+  filter(fb==2) %>%
+  group_by(subj_idx,block,aStim,.drop = FALSE) %>%
+  tally() 
+
+responses_per_block$block <- as.factor(responses_per_block$block)
+responses_per_block$aStim <- as.factor(responses_per_block$aStim)
+
+ggplot(missed_per_stimulus, aes(x=block, y=n, fill=version)) + 
+  geom_boxplot() +
+  geom_dotplot(binaxis='y', stackdir='center',
+               position=position_dodge(1)) +
+  scale_fill_brewer(palette="RdBu") + theme_minimal()
+
+ggplot(missed_per_stimulus, aes(x=block, y=n, fill=aStim))+
+  geom_bar(stat="identity", position=position_dodge()) +
+  facet_wrap( ~ subj_idx, ncol=3) +
+  scale_fill_manual(values = wes_palette("Darjeeling2", n = 4))+
+  ggtitle("Omissions per block per stimulus")
+
 correct_counts_per_stimulus$accuracy <- correct_counts_per_stimulus$n/counts_per_stimulus$n
 
 ggplot(correct_counts_per_stimulus, aes(x=block, y=accuracy, fill=aStim))+
   geom_bar(stat="identity", position=position_dodge()) +
   facet_wrap( ~ subj_idx, ncol=3) +
   scale_fill_manual(values = wes_palette("Darjeeling2", n = 4))+
-  ggtitle("Accuracy per stimulus (2x3[32])")
+  ggtitle("Accuracy per stimulus")
   
 
 mean_accuracy$n <- mean_accuracy$n/32
@@ -236,14 +271,21 @@ data_for_rt_plot <- data[which(data$fb!=2),]
 mean_rts = aggregate(data_for_rt_plot$rt,
                 by = list(subj_idx = data_for_rt_plot$subj_idx, block = data_for_rt_plot$block),
                 FUN = mean)
+mean_rts$subj_idx <- as.factor(mean_rts$subj_idx)
 
-ggplot(mean_rts, aes(x=block, y=x, colour=block)) + 
+ggplot(mean_rts, aes(x=subj_idx, y=x, colour=block)) + 
   geom_boxplot(outlier.colour="red", outlier.shape=8,
                outlier.size=4) + 
   scale_y_continuous(limits=c(0.6,1.8)) +
   ylab("RT") +
   ggtitle("Mean reaction time per block (2x4[32])") +
   geom_dotplot(binaxis='y', stackdir='center', dotsize=0.5) + 
+  scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))
+
+ggplot(mean_rts, aes(x=subj_idx, y=x, colour=block)) + 
+  geom_bar(stat="identity", fill="white",position=position_dodge()) +
+  ylab("RT") +
+  ggtitle("Mean reaction time per block") +
   scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))
 
 rt_b1 <- mean_rts[which(mean_rts$block=="Block 1"),]

@@ -22,13 +22,16 @@ parameters {
   // v_mod: modulator for drift diffusion rate
 
   // Hyper-parameters
-  vector[6] mu_pr;
-  vector<lower=0>[6] sigma;
+  vector[4] mu_pr;
+  vector<lower=0>[4] sigma;
+
+  vector[2] mu_eta_pr;
+  vector<lower=0>[2] sigma_eta_pr;
 
   // Subject-level raw parameters
   vector[N] alpha_pr;
-  //vector[N] eta_pr_pos;
-  //vector[N] eta_pr_neg;
+  vector[N] eta_pr_pos;
+  vector[N] eta_pr_neg;
   vector[N] a_mod_pr;
   vector[N] v_mod_pr;
   vector[N] tau_pr;
@@ -37,38 +40,41 @@ parameters {
 
 transformed parameters {
   // Transform subject-level raw parameters
-  vector<lower=0>[N] alpha;                       // boundary separation
-  //vector<lower=0>[N] eta_pos; // learning parameter for upper boundary
-  //vector[N] eta_neg; // learning parameter for lower boundary
+  vector<lower=0>[N] alpha;
+  vector<lower=0, upper=0.2>[N] eta_neg; // learning parameter for lower boundary// boundary separation
+  vector<lower=0, upper=0.2>[N] eta_pos; // learning parameter for upper boundary
   vector[N] a_mod;           // choice consistency
   vector<lower=0, upper=10>[N] v_mod;             // scaling parameter
   vector<lower=RTbound, upper=max(minRT)>[N] tau; // nondecision time
 
   alpha = exp(mu_pr[1] + sigma[1] * alpha_pr); //
-  //eta_neg = exp(mu_pr[2] + sigma[2] * eta_pr_pos);
-  //eta_pos = exp(mu_pr[3] + sigma[3] * eta_pr_neg);
-  a_mod = exp(mu_pr[4] + sigma[4] * a_mod_pr);
-  v_mod = exp(mu_pr[5] + sigma[5] * v_mod_pr);
+  eta_neg = exp(mu_eta_pr[1] + sigma_eta_pr[1]) * fabs(eta_pr_neg);
+  eta_pos = exp(mu_eta_pr[2] + sigma_eta_pr[2]) * fabs(eta_pr_pos);
+  a_mod = exp(mu_pr[2] + sigma[2] * a_mod_pr);
+  v_mod = exp(mu_pr[3] + sigma[3] * v_mod_pr);
   for (s in 1:N) {
-    tau[s]  = Phi_approx(mu_pr[6] + sigma[6] * tau_pr[s]) * (minRT[s] - RTbound) + RTbound;
+    tau[s]  = Phi_approx(mu_pr[4] + sigma[4] * tau_pr[s]) * (minRT[s] - RTbound) + RTbound;
     tau[s] = fabs(tau[s]);
   }
 }
 
 model {
-  real eta_neg = logit(0.07);
-  real eta_pos = logit(0.07);
+  //real eta_neg = logit(0.07);
+  //real eta_pos = logit(0.07);
   vector[T] log_lik;
   real ev[T,max(n_stims)];
   vector[T] delta;
   // Hyperparameters
   mu_pr  ~ normal(0, 1);
   sigma ~ normal(0, 0.2);
+  
+  mu_eta_pr ~ normal(-7, 0.3);
+  sigma_eta_pr~ normal(0,0.2);
 
   // Individual parameters
   alpha_pr ~ normal(0, 1);
-  //eta_pr_pos ~ normal(0,1);
-  //eta_pr_neg ~ normal(0,1);
+  eta_pr_pos ~ normal(0,1); // before (-5, 0.05)
+  eta_pr_neg ~ normal(0,1);
   a_mod_pr ~ normal(0, 1);
   v_mod_pr ~ normal(0, 1);
   tau_pr   ~ normal(0, 1);
@@ -88,15 +94,15 @@ model {
       if (response[trial]==1){
         RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,-(delta[trial]));
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,-(delta[trial]));
-        ev[trial+1,stim_nassoc[trial]] = ev[trial,stim_nassoc[trial]] - (inv_logit(eta_neg) * (value[trial]-(1-ev[trial,stim_nassoc[trial]])));
-        ev[trial+1,stim_assoc[trial]] = ev[trial,stim_assoc[trial]] - (inv_logit(eta_neg) * (value[trial]-ev[trial,stim_assoc[trial]]));
+        ev[trial+1,stim_nassoc[trial]] = ev[trial,stim_nassoc[trial]] - (eta_neg[s] * (value[trial]-(1-ev[trial,stim_nassoc[trial]])));
+        ev[trial+1,stim_assoc[trial]] = ev[trial,stim_assoc[trial]] - (eta_neg[s] * (value[trial]-ev[trial,stim_assoc[trial]]));
       }
       // if upper bound (resp = 2)
       else{
         RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,delta[trial]);
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,delta[trial]);
-        ev[trial+1,stim_nassoc[trial]] = ev[trial,stim_nassoc[trial]] + (inv_logit(eta_pos) * (value[trial]-(1-ev[trial,stim_nassoc[trial]])));
-        ev[trial+1,stim_assoc[trial]] = ev[trial,stim_assoc[trial]] + (inv_logit(eta_pos) * (value[trial]-ev[trial,stim_assoc[trial]]));
+        ev[trial+1,stim_nassoc[trial]] = ev[trial,stim_nassoc[trial]] + (eta_pos[s] * (value[trial]-(1-ev[trial,stim_nassoc[trial]])));
+        ev[trial+1,stim_assoc[trial]] = ev[trial,stim_assoc[trial]] + (eta_pos[s] * (value[trial]-ev[trial,stim_assoc[trial]]));
       }
     }
     // in last cycle, don't update anymore
@@ -113,29 +119,26 @@ model {
 }
 generated quantities {
   // For group level parameters
-  real<lower=0> mu_alpha;                  // boundary separation
-  real<lower=0> mu_eta_neg;                 // learning rate lower
-  real<lower=0> mu_eta_pos;                // learning rate upper
-  real<lower=0> mu_a_mod;                  // boundary separation modification
-  real<lower=0> mu_v_mod;                  // drift rate modification
-  real<lower=RTbound, upper=max(minRT)> mu_tau; // nondecision time
+  //<lower=0> mu_alpha;                  // boundary separation
+  //real<lower=0> mu_eta_neg;                 // learning rate lower
+  //real<lower=0> mu_eta_pos;                // learning rate upper
+  //real<lower=0> mu_a_mod;                  // boundary separation modification
+  //real<lower=0> mu_v_mod;                  // drift rate modification
+  //real<lower=RTbound, upper=max(minRT)> mu_tau; // nondecision time
   
   real ev_hat[T,max(n_stims)];
   real pe_hat[T];
   real assoc_active_pair[T];
   real assoc_inactive_pair[T];
   vector[T] delta_hat;
-  
-  real eta_neg_gen = logit(0.07);
-  real eta_pos_gen = logit(0.07);
-  
+
   // Assign group level parameter values
-  mu_alpha = exp(mu_pr[1]);
-  mu_eta_neg = exp(mu_pr[2]);
-  mu_eta_pos = exp(mu_pr[3]);
-  mu_a_mod =  exp(mu_pr[4]);
-  mu_v_mod =  exp(mu_pr[5]);
-  mu_tau = Phi_approx(mu_pr[6]) * (mean(minRT)-RTbound) + RTbound;
+  //mu_alpha = exp(mu_pr[1]);
+  //mu_eta_neg = exp(mu_pr[2]);
+  //mu_eta_pos = exp(mu_pr[3]);
+  //mu_a_mod =  exp(mu_pr[4]);
+  //mu_v_mod =  exp(mu_pr[5]);
+  //mu_tau = Phi_approx(mu_pr[6]) * (mean(minRT)-RTbound) + RTbound;
   
   for (s in 1:N){
     for(a in 1:n_stims[s]){
@@ -154,14 +157,14 @@ generated quantities {
       pe_hat[trial] = value[trial]-(ev_hat[trial,stim_assoc[trial]]);
       // if lower bound
       if (response[trial]==1){
-        ev_hat[trial+1,stim_nassoc[trial]] = ev_hat[trial,stim_nassoc[trial]] - (inv_logit(eta_neg_gen) * (value[trial]-(1-ev_hat[trial,stim_nassoc[trial]])));
-        ev_hat[trial+1,stim_assoc[trial]] = ev_hat[trial,stim_assoc[trial]] - (inv_logit(eta_neg_gen) * (value[trial]-ev_hat[trial,stim_assoc[trial]]));
+        ev_hat[trial+1,stim_nassoc[trial]] = ev_hat[trial,stim_nassoc[trial]] - (eta_neg[s] * (value[trial]-(1-ev_hat[trial,stim_nassoc[trial]])));
+        ev_hat[trial+1,stim_assoc[trial]] = ev_hat[trial,stim_assoc[trial]] - (eta_neg[s] * (value[trial]-ev_hat[trial,stim_assoc[trial]]));
       }
       // if upper bound (resp = 2)
       else{
 
-        ev_hat[trial+1,stim_nassoc[trial]] = ev_hat[trial,stim_nassoc[trial]] + (inv_logit(eta_pos_gen) * (value[trial]-(1-ev_hat[trial,stim_nassoc[trial]])));
-        ev_hat[trial+1,stim_assoc[trial]] = ev_hat[trial,stim_assoc[trial]] + (inv_logit(eta_pos_gen) * (value[trial]-ev_hat[trial,stim_assoc[trial]]));
+        ev_hat[trial+1,stim_nassoc[trial]] = ev_hat[trial,stim_nassoc[trial]] + (eta_pos[s] * (value[trial]-(1-ev_hat[trial,stim_nassoc[trial]])));
+        ev_hat[trial+1,stim_assoc[trial]] = ev_hat[trial,stim_assoc[trial]] + (eta_pos[s] * (value[trial]-ev_hat[trial,stim_assoc[trial]]));
       }
     pe_hat[last[s]] = value[last[s]]-(ev_hat[last[s],stim_nassoc[last[s]]]);
     assoc_active_pair[last[s]] = ev_hat[last[s],stim_assoc[last[s]]];

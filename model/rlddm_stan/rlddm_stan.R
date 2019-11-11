@@ -64,7 +64,7 @@ get_astim_trials <- function(data){
 path <- "N:/Users/phaller/mri_task_analysis"
 model_path <- paste0(path,"/model/rlddm_stan/rlddm_per_stimulus_v2.stan")
 #data_path <- paste0(path,"/test_input.txt")
-data_path <- paste0(path,"/data/piloting/pilots_biokurs")
+data_path <- paste0(path,"/data/piloting/pilots_biokurs/subjects")
 
 
 ### load data

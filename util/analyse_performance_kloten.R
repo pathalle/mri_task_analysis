@@ -12,23 +12,6 @@ library(tidyr)
 library(wesanderson)
 library(viridis)
 
-
-task <- "fbl_kloten"
-#set inputs
-dirinput1 <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
-dirinput2 <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
-dirinput3 <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4_24"
-#dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/pilots_allread_children/old_format"
-# make sure output directory exists already
-diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
-
-setwd(dirinput)
-files <- dir(pattern=".txt", recursive=TRUE)
-dirinput <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/pilots_allread_children/old_format"
-
-setwd(dirinput)
-files2 <- dir(pattern=".txt", recursive=TRUE)
-
 gather_data <- function(files){
   # summarize all data in 1 data frame
   datalist <- list()
@@ -36,7 +19,7 @@ gather_data <- function(files){
     no_col <- max(count.fields(files[i], sep = "\t"))
     D <- read_delim(
       files[i],"\t", escape_double = FALSE, locale = locale(), trim_ws = TRUE)
-    D <- cbind(rep(substr(files[i],3,6),dim(D)[1]),D)
+    D <- cbind(rep(substr(files[i],21,22),dim(D)[1]),D)
     #D<-D[D$resp!=0,] # remove 'too slow ' responses 
     ### Rename and transform some columns
     colnames(D)[1] <- "subj_idx"
@@ -187,10 +170,31 @@ split_trials_octile <- function(data){
 
 wes_cols= wes_palette("GrandBudapest1", n = 2)
 
+task <- "fbl_kloten"
 ## load data
-data <- gather_data(files)
-data_2 <- 
+#set directories
+# make sure output directory exists already
+diroutput <- "N:/Users/phaller/mri_task_analysis/data/piloting/analysis/"
 
+dirinput1 <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_24"
+setwd(dirinput1)
+files1 <- dir(pattern=".txt", recursive=TRUE)
+data1 <- gather_data(files1)
+data1 <- cbind(version=rep("2x3-24",nrow(data1)),data1)
+
+dirinput2 <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x3_32"
+setwd(dirinput2)
+files2 <- dir(pattern=".txt", recursive=TRUE)
+data2 <- gather_data(files2)
+data2 <- cbind(version=rep("2x3-32",nrow(data2)),data2)
+
+dirinput3 <- "N:/Users/phaller/mri_task_analysis/data/piloting/piloting_kloten/2x4_24"
+setwd(dirinput3)
+files3 <- dir(pattern=".txt", recursive=TRUE)
+data3 <- gather_data(files3)
+data3 <- cbind(version=rep("2x4-24",nrow(data3)),data3)
+
+data <- rbind(data1,data2,data3)
 
 # redefine fb for visualization
 data$fbprime <- rep("NA",nrow(data))
@@ -200,20 +204,6 @@ data[which(data$fb==2),]$fbprime = 0
 
 # for the visualization, for the subject who completed block 3, b3 will count as b2
 data[which(data$block==3),]$block <- rep(2,nrow(data[which(data$block==3),]))
-
-data[which(data$block==2),]$aStim = data[which(data$block==2),]$aStim + 4
-data <- data %>% separate(vStims, c("vStim1", "vStim2"),sep="\\_")
-data$vStim1 <- as.double(data$vStim1)
-data$vStim2 <- as.double(data$vStim2)
-data[which(data$block==2),]$vStim1 = data[which(data$block==2),]$vStim1 + 4
-data[which(data$block==2),]$vStim2 = data[which(data$block==2),]$vStim2 + 4
-
-data <- compute_cumulative_sums(data)
-# exclude missed trials
-data = data[which(data$fb!=2),]
-data = recompute_cumulative_sums(data)
-
-data$aStim = as.factor(data$aStim)
 data$block = as.factor(data$block)
 levels(data$block) <- c("Block 1", "Block 2")
 
@@ -249,6 +239,23 @@ correct_counts_per_stimulus <-  data %>%
   filter(fb==1) %>%
   group_by(subj_idx,aStim,.drop = FALSE) %>%
   tally() 
+
+missed_per_block <-  data %>%
+  select(subj_idx, version, block, fb) %>%
+  filter(fb==2) %>%
+  group_by(version,block,.drop = FALSE) %>%
+  tally() 
+
+summarise(group_by(missed_per_block, block, version),
+          mean=mean(value), sd=sd(value))
+
+cbPalette=c("forestgreen","gold1", "darkred")
+ggplot(missed_per_stimulus, aes(x=version, y=n, fill=block)) + 
+  geom_boxplot(outlier.size=0,outlier.shape=NA,alpha=0.5) +
+  geom_point(pch = 21, position = position_jitterdodge())  +
+  scale_fill_manual(values=cbPalette)+ # Boxplot fill color
+  scale_color_manual(values = cbPalette) # Jitter color palette
+
 
 correct_counts_per_stimulus$accuracy <- correct_counts_per_stimulus$n/counts_per_stimulus$n
 mean_accuracy <- aggregate(correct_counts_per_stimulus$accuracy, list(correct_counts_per_stimulus$subj_idx), mean)
@@ -332,6 +339,15 @@ t.test(acc_s2$accuracy-0.5, paired = FALSE, alternative = "two.sided")
 t.test(acc_s8$accuracy-0.5, paired = FALSE, alternative = "two.sided")
 
  ## now for trials 
+
+
+
+data <- compute_cumulative_sums(data)
+# exclude missed trials
+data = data[which(data$fb!=2),]
+data = recompute_cumulative_sums(data)
+
+data$aStim = as.factor(data$aStim)
 
 mean_accuracy$n <- mean_accuracy$n/32
 ggplot(mean_accuracy, aes(x=block, y=n, colour=block)) + 

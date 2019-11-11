@@ -12,6 +12,7 @@ data {
   int stim_assoc[T];   // index of associated sound-symbol pair
   int stim_nassoc[T];  // index of presented non-associated symbol
   int n_stims[N];      // number of items learned by each subject (represents # blocks)
+  int<lower = 0, upper = 1> run_estimation; // a switch to evaluate the likelihood
 }
 
 parameters {
@@ -86,14 +87,18 @@ model {
       delta[trial] = (ev[trial,stim_assoc[trial]] + ev[trial,stim_nassoc[trial]])/2 * v_mod[s];
       // if lower bound
       if (response[trial]==1){
-        RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,-(delta[trial]));
+        if(run_estimation==1){
+          RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,-(delta[trial]));
+        }
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,-(delta[trial]));
         ev[trial+1,stim_nassoc[trial]] = ev[trial,stim_nassoc[trial]] - (inv_logit(eta_neg) * (value[trial]-(1-ev[trial,stim_nassoc[trial]])));
         ev[trial+1,stim_assoc[trial]] = ev[trial,stim_assoc[trial]] - (inv_logit(eta_neg) * (value[trial]-ev[trial,stim_assoc[trial]]));
       }
       // if upper bound (resp = 2)
       else{
-        RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,delta[trial]);
+        if(run_estimation==1){
+          RT[trial] ~  wiener(alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s] ,0.5,delta[trial]);
+        }
         log_lik[trial] = wiener_lpdf(RT[trial] | alpha[s] * pow(iter[trial]/10,a_mod[s]),tau[s],0.5,delta[trial]);
         ev[trial+1,stim_nassoc[trial]] = ev[trial,stim_nassoc[trial]] + (inv_logit(eta_pos) * (value[trial]-(1-ev[trial,stim_nassoc[trial]])));
         ev[trial+1,stim_assoc[trial]] = ev[trial,stim_assoc[trial]] + (inv_logit(eta_pos) * (value[trial]-ev[trial,stim_assoc[trial]]));
@@ -102,11 +107,15 @@ model {
     // in last cycle, don't update anymore
     delta[last[s]] = (ev[last[s]-1,stim_assoc[last[s]]] - ev[last[s]-1,stim_nassoc[last[s]]])/2 * v_mod[s];
     if (response[last[s]]==1){
-      RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,-(delta[last[s]]));
+      if(run_estimation==1){
+        RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,-(delta[last[s]]));
       log_lik[last[s]] = wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,-(delta[last[s]]));
+      }
     }
     if (response[last[s]]==2){
-      RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,delta[last[s]]);
+      if(run_estimation==1){
+        RT[last[s]] ~  wiener(alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s] ,0.5,delta[last[s]]);
+      }
       log_lik[last[s]] = wiener_lpdf(RT[last[s]] | alpha[s] * pow(iter[last[s]]/10,a_mod[s]),tau[s],0.5,delta[last[s]]);
     }
   }
