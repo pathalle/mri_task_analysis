@@ -137,6 +137,7 @@ data <- gather_data(files)
 # count number of trials for each subject
 DT_trials <- data[, .N, by = subj_idx]
 subjs <- DT_trials$subj_idx
+n_subj    <- length(subjs)
 
 # rename blocks for each subject to 1st, 2nd and 3rd block
 data$block_abs = as.factor(data$block)
@@ -154,6 +155,19 @@ data$fb = as.factor(data$fb)
 
 data_nomiss <- data[which(data$resp!=0),]
 
+mean_rts = aggregate(data_nomiss$rt,
+                     by = list(subj_idx = data_nomiss$subj_idx),
+                     FUN = mean)
+mean_rts$x <- mean_rts$x - mean(mean_rts$x)
+
+mean_rts_split = aggregate(data_nomiss$rt,
+                     by = list(subj_idx = data_nomiss$subj_idx, fb= data_nomiss$fb),
+                     FUN = mean)
+
+D_matrix_centered <- cbind(D_matrix_centered,mean_rt = mean_rts[c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17),]$x)
+
+
+
 mu <- ddply(data_nomiss, .(fb,subj_idx), summarise, grp.mean=mean(rt))
 
 
@@ -168,12 +182,11 @@ p <- ggplot(data_nomiss) + geom_density(alpha=0.3,adjust=3/4) + aes(x=rt, fill=f
 p
 # + geom_vline(aes(xintercept=mean(rt)), color="blue", linetype="dashed", size=1)
 
-mean_rts = aggregate(data_nomiss$rt,
-                     by = list(subj_idx = data_nomiss$subj_idx),
-                     FUN = mean)
-mean_rts$x <- mean_rts$x - mean(mean_rts$x)
-
-D_matrix_centered <- cbind(D_matrix_centered,mean_rt = mean_rts[c(1,2,3,4,5,6,7,8,10,11,12,14,15,16),]$x)
+for(i in 1:n_subj){
+  subj = as.character(subjs[i])
+  write.table(data_nomiss[which(data_nomiss$subj_idx==subj),], paste0(subj,"_raw_pars",".csv"),
+              quote=FALSE, sep=",", row.names=FALSE, col.names=TRUE)
+}
 
 ## show how many observation (=trials) per subj per block
 trials_per_subj_per_block <- data %>%
