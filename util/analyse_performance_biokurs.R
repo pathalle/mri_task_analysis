@@ -9,6 +9,7 @@ library(gridExtra)
 library(tidyr)
 library(wesanderson)
 library(viridis)
+library(tidyr)
 
 task <- "biokurs"
 #set inputs
@@ -44,7 +45,6 @@ gather_data <- function(files){
   transformed <- data.table::rbindlist(datalist) # combine all data frames in on
   return(transformed)
 }
- 
 compute_cumulative_sums <- function(data){
   df_subj <- list()
   #data<-data[data$choice!=0,] # remove 'too slow ' responses 
@@ -74,7 +74,6 @@ compute_cumulative_sums <- function(data){
   }
   return(as_tibble(new_data))
 }
-
 get_summary_stats <- function(data){
   ### #How many missing responses per block (fb == 2)
   miss_per_block <- data %>%
@@ -107,8 +106,6 @@ get_summary_stats <- function(data){
   return(list(
     "miss_per_block"=miss_per_block,"rt_per_block"=RT_per_block,"rt_across_blocks"=RT_across_blocks,"hits_per_sextile"=correct_per_sextile))
 }
-
-
 split_trials <- function(data){
   data$trial <- as.integer(data$trial)
   data$octile <- 0
@@ -129,10 +126,17 @@ wes_cols= wes_palette("GrandBudapest1", n = 2)
 data <- gather_data(files)
 
 # redefine fb for visualization
-#data$fbprime <- rep("NA",nrow(data))
-#data[which(data$fb==0),]$fbprime = -1
-#data[which(data$fb==1),]$fbprime = 1
-#data[which(data$fb==2),]$fbprime = 0
+data$fbprime <- rep("NA",nrow(data))
+data[which(data$fb==0),]$fbprime = -1
+data[which(data$fb==1),]$fbprime = 1
+data[which(data$fb==2),]$fbprime = 0
+
+data_cumsum <- data %>% group_by(subj_idx,block) %>% mutate(csum = cumsum(fbprime))
+data_cumsum <- data_cumsum[which(data_cumsum$trial==40),]
+
+mean_learning_score = aggregate(data_cumsum$csum,
+                     by = list(subj_idx = data_cumsum$subj_idx),
+                     FUN = mean)
 
 # count number of trials for each subject
 DT_trials <- data[, .N, by = subj_idx]
@@ -158,11 +162,19 @@ data_nomiss <- data[which(data$resp!=0),]
 mean_rts = aggregate(data_nomiss$rt,
                      by = list(subj_idx = data_nomiss$subj_idx),
                      FUN = mean)
-mean_rts$x <- mean_rts$x - mean(mean_rts$x)
 
 mean_rts_split = aggregate(data_nomiss$rt,
                      by = list(subj_idx = data_nomiss$subj_idx, fb= data_nomiss$fb),
                      FUN = mean)
+
+mean_rts_split <- spread(mean_rts_split, fb, x)
+mean_rts <- merge(mean_rts, mean_rts_split)
+
+
+performance_values <- cbind(subjID=params_rlddm$subjID, average_rt = mean_rts$x, rt_pos = mean_rts$`1`, rt_neg = mean_rts$`0`, avg_learning_score=mean_learning_score$x)
+performance_values <- data.frame(performance_values)
+
+write_csv(performance_values,path = paste("performance_values.csv",sep=","),col_names = TRUE,quote=FALSE)
 
 D_matrix_centered <- cbind(D_matrix_centered,mean_rt = mean_rts[c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17),]$x)
 
@@ -170,16 +182,21 @@ D_matrix_centered <- cbind(D_matrix_centered,mean_rt = mean_rts[c(1,2,3,4,5,6,7,
 
 mu <- ddply(data_nomiss, .(fb,subj_idx), summarise, grp.mean=mean(rt))
 
+t.test(mean_rts$`0`, mean_rts$`1`, alternative = "two.sided", var.equal = FALSE)
 
 p <- ggplot(data_nomiss) + geom_density(alpha=0.3,adjust=3/4) + aes(x=rt, fill=fb,y=..scaled..) +
   scale_fill_discrete(name = "Response", labels = c("Incorrect", "Correct")) +
   geom_vline(data=mu, aes(xintercept=grp.mean, color=fb), linetype="dashed")  +
   scale_color_discrete(name = "Response", labels = c("Incorrect", "Correct")) +
-  labs(title="Reaction time distributions",x="Reaction time[ms]", y = "Density") +
+  labs(x="RT[ms]", y = "Density") +
   facet_wrap(~subj_idx) + 
   theme(text = element_text(size=9),
-        axis.text.x = element_text(angle=45, hjust=1)) 
+        axis.text.x = element_text(angle=45, hjust=1),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank()) 
 p
+ggsave("rtdists_nogrid.eps", device=cairo_ps)
+
 # + geom_vline(aes(xintercept=mean(rt)), color="blue", linetype="dashed", size=1)
 
 for(i in 1:n_subj){
@@ -207,7 +224,7 @@ fb_per_subj_per_block <- data %>%
 mean_accuracy <-  data %>%
   select(subj_idx, fb,block) %>%
   filter(fb==1) %>%
-  group_by(subj_idx,block) %>%
+  group_by(subj_idx) %>%
   tally() 
 
 responses_per_block <- data  %>%
